@@ -163,7 +163,7 @@ return [
 
     '3BA' => 'gambling AKDxxxx, bez bocznego dojścia',
 
-    '4T' => '???',
+    '4T' => '??? TEST',
 
     '4K' => '???',
 
