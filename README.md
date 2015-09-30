@@ -1,1 +1,1 @@
-# bridge_cc
+Karta konwencyjna BB - MJ
