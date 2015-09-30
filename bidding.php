@@ -70,8 +70,8 @@ return [
     '1C-3P' => '12-15 PC, krótkość pik',
     '1C-3BA' => '12-15 PC, krótkość karo',
     '1C-4T' => '12-15 PC, krótkość trefl',
-    '1C-4K' => '???',
-    '1C-4C' => '???',
+    '1C-4K' => 'podniesienie do 4C bez ambicji',
+    '1C-4C' => 'blokujące',
 
     '1P-1BA' => '7-11 PC bez fitu',
     '1P-2BA' => '10-12 PC, fit 4+(3) z krótkością',
@@ -83,8 +83,8 @@ return [
     '1P-3BA' => '12-15 PC, krótkość kier',
     '1P-4T' => '12-15 PC, krótkość trefl',
     '1P-4K' => '12-15 PC, krótkość karo',
-    '1P-4C' => '???',
-    '1P-4P' => '???',
+    '1P-4C' => 'podniesienie do 4P bez ambicji',
+    '1P-4P' => 'blokujące',
 
     '1BA-2P' => 'inwit do 3BA lub transfer na trefle (z dołem odp. 2BA, z górą 3T)',
     '1BA-2BA' => 'transfer na kara (3T góra, 3K dół)',
