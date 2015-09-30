@@ -1,3 +1,9 @@
+# Nowy format pliku!
+#  po lewej odzywki
+#  separator to =>
+#  po prawej wyjasnienie licytacji
+#  linie z hashem na poczatku to komentarze
+
 1T                          => 12-14 PC skład równy lub 15+ z piątką trefli lub 18+ skład dowolny
 1T-1K                       => negat, 0-6 PC skład dowolny, 7-11 PC młode, 13-15 PC w składzie równym chęć grania BA z drugiej ręki, 16+ skład równy
 1T-1K-1C-3P                 => transfer na BA
