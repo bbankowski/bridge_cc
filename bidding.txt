@@ -173,7 +173,7 @@
 2K-2C                       => do koloru lub naturalny inwit na kierach
 2K-2P                       => do koloru lub inwit z fitem kier
 2K-2BA                      => pytanie
-2K-3T                       => forsing na własnym kolorze
+2K-3T                       => forsing na własnym kolorze (3K automat i dalej naturalnie wezwanie do cue-bidu)
 2K-3K                       => inwit z fitem w obu starszych
 2K-3C                       => blok z fitem w obu starszych
 2K-3P                       => naturalny inwit
@@ -189,11 +189,11 @@
 
 ### OTWARCIE 2P ###
 2P                          => 5-11 PC, 5+ pików i 5+ młodszy
-2C-2BA                      => pytanie
-2C-3T                       => do koloru
-2C-3K                       => inwit do końcówki pikowej
-2C-3C                       => naturalne, inwit
-2C-3P                       => taktyczne
+2P-2BA                      => pytanie
+2P-3T                       => do koloru
+2P-3K                       => inwit do końcówki pikowej
+2P-3C                       => naturalne, inwit
+2P-3P                       => taktyczne
 
 ### OTWARCIE 2BA ###
 2BA                         => 5-11 PC, 5+ trefli i 5+ kar
