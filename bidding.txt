@@ -170,11 +170,13 @@
 
 ### OTWARCIE 2K ###
 2K                          => mini-multi, 5-11 PC na starszym kolorze 6+, nie otwieramy z układami 6-4 na starych
-2K-2C                       => do gry
-2K-2C                       => do gry
-2K-2C                       => do gry
-2K-2C                       => do gry
-2K-2C                       => do gry
+2K-2C                       => do koloru lub naturalny inwit na kierach
+2K-2P                       => do koloru lub inwit z fitem kier
+2K-2BA                      => pytanie
+2K-3T                       => forsing na własnym kolorze
+2K-3K                       => inwit z fitem w obu starszych
+2K-3C                       => blok z fitem w obu starszych
+2K-3P                       => naturalny inwit
 
 ### OTWARCIE 2C ###
 2C                          => 5-11 PC, 5+ kierów i 5+ inny
