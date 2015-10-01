@@ -179,6 +179,12 @@
 2K-3K                       => inwit z fitem w obu starszych
 2K-3C                       => blok z fitem w obu starszych
 2K-3P                       => naturalny inwit
+2K-2BA-3T                   => góra, FG
+2K-2BA-3T-3K                => relay, pytanie o kolor
+2K-2BA-3T-3K-3C             => piki
+2K-2BA-3T-3K-3P             => kiery
+2K-2BA-3K                   => słabe, kiery (3C do pasa)
+2K-2BA-3C                   => słabe, piki (3P do pasa)
 
 ### OTWARCIE 2C ###
 2C                          => 5-11 PC, 5+ kierów i 5+ inny
