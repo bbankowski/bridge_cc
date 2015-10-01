@@ -114,7 +114,10 @@
 1BA-4K                      => transfer na kiery
 1BA-4C                      => transfer na piki
 1BA-4P                      => kolory młodsze, bez aspiracji
-
+1BA-2T-2K-3C                => 5-6 pików i 4 kiery, FG
+1BA-2T-2K-3C-3BA-4C         => 6 pików
+1BA-2T-2K-3P                => 5-6 kierów i 4 piki, FG
+1BA-2T-2K-3P-3BA-4K         => 6 kierów
 
 ### OTWARCIE 2T ###
 2T                          => 11-14 PC, 6+ trefli lub 5+ trefli i 4 w starszym
