@@ -121,7 +121,7 @@
 1BA-2C-2BA                  => góra, fit z dwoma starszymi figurami
 1BA-2C-3T                   => góra, 5 trefli z fitem
 1BA-2C-3K                   => góra, 5 kar z fitem
-1BA-2C-3C                   => góra, 5 kierów z fite
+1BA-2C-3C                   => góra, 5 kierów z fitem
 1BA-2C-3P                   => góra, fit 4+
 1BA-2T-2K-3C                => 5-6 pików i 4 kiery, FG
 1BA-2T-2K-3C-3BA-4C         => 6 pików
