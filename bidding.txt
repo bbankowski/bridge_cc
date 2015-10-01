@@ -79,6 +79,7 @@
 1C-4T                       => 12-15 PC, krótkość trefl
 1C-4K                       => podniesienie do 4C bez ambicji
 1C-4C                       => blokujące
+1C-2C-3C                    => blokujące
 
 ### OTWARCIE 1P ###
 1P                          => 12-17 PC, 5+ pików
@@ -94,6 +95,7 @@
 1P-4K                       => 12-15 PC, krótkość karo
 1P-4C                       => podniesienie do 4P bez ambicji
 1P-4P                       => blokujące
+1P-2P-3P                    => blokujące
 
 ### OTWARCIE 1BA ###
 1BA                         => 15-17 PC, skład równy, możliwa starsza piątka lub młodsza szóstka
