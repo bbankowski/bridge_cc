@@ -114,10 +114,15 @@
 1BA-4K                      => transfer na kiery
 1BA-4C                      => transfer na piki
 1BA-4P                      => kolory młodsze, bez aspiracji
-1BA-2K-3T                   => góra, 5 trefli z fitem
-1BA-2K-3T                   => góra, 5 kar z fitem
 1BA-2K-2BA                  => góra, fit z dwoma starszymi figurami
+1BA-2K-3T                   => góra, 5 trefli z fitem
+1BA-2K-3K                   => góra, 5 kar z fitem
 1BA-2K-3C                   => góra, fit 4+
+1BA-2C-2BA                  => góra, fit z dwoma starszymi figurami
+1BA-2C-3T                   => góra, 5 trefli z fitem
+1BA-2C-3K                   => góra, 5 kar z fitem
+1BA-2C-3C                   => góra, 5 kierów z fite
+1BA-2C-3P                   => góra, fit 4+
 1BA-2T-2K-3C                => 5-6 pików i 4 kiery, FG
 1BA-2T-2K-3C-3BA-4C         => 6 pików
 1BA-2T-2K-3P                => 5-6 kierów i 4 piki, FG
