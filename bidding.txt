@@ -55,6 +55,7 @@
 1T-1C-2T-2K                 => sztuczny GF
 1T-1C-2T-3K					=> 5-5, FG
 1T-1C-2K                    => odwrotka 445566 (po interwencji przeciwnika kolorem 2K naturalne, z fitem X)
+1T-1C-2K-2C-3C      => pytanie o krótkość (analogicznie po innych odpowiedziach na odwrotkę)
 1T-1C-3C-3P					=> pytanie o krótkość
 1T-1P-2T                    => 15+ PC, 5+ trefli
 1T-1P-2T-2K                 => sztuczny GF
@@ -119,7 +120,10 @@
 1C-1P-2C-2BA				=> FG
 1C-1P-2K-2BA				=> inwit
 1C-1P-2K-3T					=> czwarty kolor, FG
+1C-2T-3C-4T                 => samouzgodnienie trefli
 1C-1BA                      => 7-11 PC bez fitu
+1C-2T                       => 12+ PC, FG, kolor 5+ i/lub fit
+1C-2K                       => 12+ PC, FG, kolor 5+
 1C-2C-3C                    => blokujące
 1C-2P                       => 10-12 PC, fit 4+(3) z krótkością
 1C-2P-2BA                   => pytanie o krótkość
@@ -136,6 +140,9 @@
 ### OTWARCIE 1P ###
 1P                          => 12-17 PC, 5+ pików
 1P-1BA                      => 7-11 PC bez fitu
+1P-2T                       => 12+ PC, FG, kolor 5+ i/lub fit
+1P-2K                       => 12+ PC, FG, kolor 5+
+1P-2C                       => 12+ PC, FG, kolor 5+
 1P-2BA                      => 10-12 PC, fit 4+(3) z krótkością
 1P-2BA-3T                   => pytanie o krótkość
 1P-3C                       => 10-12 PC, fit 4+(3) bez krótkości
@@ -148,6 +155,7 @@
 1P-4C                       => podniesienie do 4P bez ambicji
 1P-4P                       => blokujące
 1P-2P-3P                    => blokujące
+1P-2T-3P-4T                 => samouzgodnienie trefli
 
 ### OTWARCIE 1BA ###
 1BA                         => 15-17 PC, skład równy, możliwa starsza piątka lub młodsza szóstka
