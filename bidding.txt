@@ -63,7 +63,6 @@
 1T-1C-2K-3C         => silny na szóstce
 1T-1C-2K-2C-3C      => pytanie o krótkość (analogicznie po innych odpowiedziach na odwrotkę)
 1T-1C-3C-3P					=> pytanie o krótkość
-1T-1P-2K            => odwrotka (licytacja analogiczna jak po rebidzie 1 kier)
 1T-1P-2T                    => 15+ PC, 5+ trefli
 1T-1P-2T-2K                 => sztuczny GF
 1T-1P-2T-3K					=> 5-5, FG
