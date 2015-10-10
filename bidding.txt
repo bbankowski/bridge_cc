@@ -332,3 +332,6 @@
 ### OTWARCIE 4P ###
 4P                          => naturalne, blokujące
 
+### LICYTACJA PO PASIE ###
+pas-1C-2T                   => drury
+pas-1P-2T                   => drury
