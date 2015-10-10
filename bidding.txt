@@ -335,3 +335,4 @@
 ### LICYTACJA PO PASIE ###
 pas-1C-2T                   => drury
 pas-1P-2T                   => drury
+pas-1C-2T-2C                => minimalne otwarcie, NF
