@@ -336,3 +336,6 @@
 pas-1C-2T                   => drury
 pas-1P-2T                   => drury
 pas-1C-2T-2C                => minimalne otwarcie, NF
+
+### LICYTACJA PO KONTRZE ###
+1C-X-1BA                    => 7-9 PC, fit
