@@ -388,3 +388,4 @@ pas-1C-2T-2K                => otwarcie nieminimalne, nic nie mówi o karach, 1F
 2K-2BA-pas-3C           => transfer na piki
 2K-2BA-pas-3P           => transfer na trefle
 2K-2BA-pas-3BA          => do gry
+2K-X                    => wywolawcza z 4 kierami lub objasniajaca
