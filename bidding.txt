@@ -356,6 +356,8 @@ pas-1T-2P                   => 3-6 PC, kolor 6+
 * 1K-X-2P                 => 3-6 PC, kolor 6+
 * 1T-X-2C                 => 3-6 PC, kolor 6+
 * 1T-X-2P                 => 3-6 PC, kolor 6+
+* 4BA-X-XX                => karna, reszta szczebelkami
+* 4BA-5T-X                => karna, reszta szczebelkami (tak samo po innych wejsciach)
 
 ### W OBRONIE ###
 
@@ -424,5 +426,4 @@ pas-1T-2P                   => 3-6 PC, kolor 6+
 4BA-6T                => 2 lub 5 wartosci, dama atu, król w srodkowym kolorze bocznym lub 2 pozostale króle
 4BA-6K                => 2 lub 5 wartosci, dama atu, król w najwyższym kolorze bocznym lub 2 pozostale króle
 4BA-6C                => 2 lub 5 wartosci, dama atu, 3 króle
-
 
