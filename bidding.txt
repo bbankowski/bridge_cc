@@ -342,22 +342,31 @@ pas-1T-2P                   => 3-6 PC, kolor 6+
 
 ### PO INTERWENCJI ###
 
-* 1C-X-1BA                => 7-9 PC, fit
-* 2K-X-XX                 => pokaż kolor
-* 2K-X-2C                 => do pasa
-* 2K-X-2P                 => do pasa
-* 1BA-X-XX                => punkty, pozostale odzywki zgodnie jak bez kontry
-* 1BA-2C-2BA              => lebensohl (tak samo po innych odzywkach 2 w kolor)
-* 1BA-2C-X                => negatywna (tak samo po innych odzywkach 2 w kolor)
-* 1BA-pas-2K-X-pas        => brak fitu (tak samo po innych transferach)
-* 1BA-pas-2K-X-XX         => karna (tak samo po innych transferach)
-* 1BA-pas-2K-X-2C         => z fitem (tak samo po innych transferach)
-* 1K-X-2C                 => 3-6 PC, kolor 6+
-* 1K-X-2P                 => 3-6 PC, kolor 6+
-* 1T-X-2C                 => 3-6 PC, kolor 6+
-* 1T-X-2P                 => 3-6 PC, kolor 6+
-* 4BA-X-XX                => karna, reszta szczebelkami
-* 4BA-5T-X                => karna, reszta szczebelkami (tak samo po innych wejsciach)
+* Po kontrze na otwarcie 1 w mlodszy
+1K-X-2C                 => 3-6 PC, kolor 6+
+1K-X-2P                 => 3-6 PC, kolor 6+
+1T-X-2C                 => 3-6 PC, kolor 6+
+1T-X-2P                 => 3-6 PC, kolor 6+
+
+* Po kontrze na otwarcie 1 w starszy
+1C-X-1BA                => 7-9 PC, fit
+
+* Po kontrze na multi
+2K-X-XX                 => pokaż kolor
+2K-X-2C                 => do pasa
+2K-X-2P                 => do pasa
+
+* Po otwarciu 1BA
+1BA-X-XX                => punkty, pozostale odzywki zgodnie jak bez kontry
+1BA-2C-2BA              => lebensohl (tak samo po innych odzywkach 2 w kolor)
+1BA-2C-X                => negatywna (tak samo po innych odzywkach 2 w kolor)
+1BA-pas-2K-X-pas        => brak fitu (tak samo po innych transferach)
+1BA-pas-2K-X-XX         => karna (tak samo po innych transferach)
+1BA-pas-2K-X-2C         => z fitem (tak samo po innych transferach)
+
+* Po blackwoodzie
+4BA-X-XX                => karna, reszta szczebelkami
+4BA-5T-X                => karna, reszta szczebelkami (tak samo po innych wejsciach)
 
 ### W OBRONIE ###
 
