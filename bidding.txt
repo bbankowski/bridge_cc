@@ -405,6 +405,14 @@ pas-1T-2P                   => 3-6 PC, kolor 6+
 2K-2BA-pas-3BA          => do gry
 2K-X                    => wywolawcza z 4 kierami lub objasniajaca
 
+^ Po slabych otwarciach 2C/2P (monokolor lub dwukolorowki) i 2K w znaczeniu monokolor karowy
+2C-2BA                  => 16-18 PC, równy sklad (może być starsza piatka, mlodsza szostka)
+2C-2BA-pas-3T           => transfer na kara
+2C-2BA-pas-3K           => 4 piki
+2C-2BA-pas-3C           => transfer na piki
+2C-2BA-pas-3P           => transfer na trefle
+2C-2BA-pas-3BA          => do gry
+
 ### KONWENCJE ###
 
 & Blackwood 102 i kolorowe króle
