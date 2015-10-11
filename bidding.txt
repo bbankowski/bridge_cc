@@ -339,14 +339,18 @@ pas-1C-2T-2C                => minimalne otwarcie, NF
 
 ### PO INTERWENCJI ###
 * 1C-X-1BA                => 7-9 PC, fit
-
 ### W OBRONIE ###
 ^ 1C-1BA                  => 8-15 PC, 5+ w mlodym, 4 piki
 ^ 1P-1BA                  => 8-15 PC, 5+ w mlodym, 4 kiery
-^ 1K-1BA                  => 8-15 PC, 5+ trefli, 4 starsza
+^ 1K-1BA                  => klasyczne, 15-17 PC
 ^ 1T-1BA                  => klasyczne, 15-17 PC
 ^ 1BA-X                   => 5 mlodsza, 4 starsza
 ^ 1BA-2T                  => 5+ 4+ na starych
 ^ 1BA-2K                  => 6+ w starym
 ^ 1BA-2C                  => 5+ mlody, 5+ kierów
 ^ 1BA-2P                  => 5+ mlody, 5+ pików
+^ 2K-2BA                  => 16-18 PC, równy sklad (może być starsza piatka, mlodsza szostka)
+^ 2K-2BA-pas-3T           => transfer na kara
+^ 2K-2BA-pas-3K           => transfer na kiery
+^ 2K-2BA-pas-3C           => transfer na piki
+^ 2K-2BA-pas-3P           => transfer na trefle
