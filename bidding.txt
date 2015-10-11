@@ -337,6 +337,8 @@ pas-1C-2T                   => drury
 pas-1P-2T                   => drury
 pas-1C-2T-2C                => minimalne otwarcie, NF
 pas-1C-2T-2K                => otwarcie nieminimalne, nic nie mówi o karach, 1F
+pas-1T-2C                   => 3-6 PC, kolor 6+
+pas-1T-2P                   => 3-6 PC, kolor 6+
 
 ### PO INTERWENCJI ###
 
@@ -350,6 +352,10 @@ pas-1C-2T-2K                => otwarcie nieminimalne, nic nie mówi o karach, 1F
 * 1BA-pas-2K-X-pas        => brak fitu (tak samo po innych transferach)
 * 1BA-pas-2K-X-XX         => karna (tak samo po innych transferach)
 * 1BA-pas-2K-X-2C         => z fitem (tak samo po innych transferach)
+* 1K-X-2C                 => 3-6 PC, kolor 6+
+* 1K-X-2P                 => 3-6 PC, kolor 6+
+* 1T-X-2C                 => 3-6 PC, kolor 6+
+* 1T-X-2P                 => 3-6 PC, kolor 6+
 
 ### W OBRONIE ###
 
@@ -398,3 +404,17 @@ pas-1C-2T-2K                => otwarcie nieminimalne, nic nie mówi o karach, 1F
 2K-2BA-pas-3P           => transfer na trefle
 2K-2BA-pas-3BA          => do gry
 2K-X                    => wywolawcza z 4 kierami lub objasniajaca
+
+### KONWENCJE ###
+
+& Blackwood 102 i kolorowe króle
+4BA-5T                => 1 lub 4 wartosci
+4BA-5K                => 0 lub 3 wartosci
+4BA-5C                => 2 lub 5 wartosci, bez damy atu
+4BA-5P                => 2 lub 5 wartosci, dama atu, brak króli
+4BA-5BA               => 2 lub 5 wartosci, dama atu, król w najniższym kolorze bocznym lub 2 pozostale króle
+4BA-6T                => 2 lub 5 wartosci, dama atu, król w srodkowym kolorze bocznym lub 2 pozostale króle
+4BA-6K                => 2 lub 5 wartosci, dama atu, król w najwyższym kolorze bocznym lub 2 pozostale króle
+4BA-6C                => 2 lub 5 wartosci, dama atu, 3 króle
+
+
