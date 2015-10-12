@@ -372,9 +372,13 @@ pas-1T-2P                   => 3-6 PC, kolor 6+
 1T-X-2P                 => 3-6 PC, kolor 6+
 
 * Po kontrze na otwarcie 1 w starszy
-1C-X-XX					=> 10+, bez fitu
+1C-X-XX					=> 10+ PC, bez fitu
 1C-X-1BA                => 7-9 PC, fit
-1C-X-2C					=> 2-6, fit
+1C-X-2BA                => 10-12 PC, fit
+1C-X-3BA                => 13-15 PC, fit
+1C-X-2C					=> 2-6 PC, fit
+
+* Po wejsciu kolorem na otwarcie 1 w starszy
 1C-2K-2P				=> naturalne, nieforsujące (inne sekwencje analogicznie)
 1C-2K-2BA				=> słabe na niższym kolorze lub forsing z fitem
 1C-2K-3T				=> naturalne, FG
@@ -387,7 +391,7 @@ pas-1T-2P                   => 3-6 PC, kolor 6+
 1C-2K-4C				=> do gry, taktyczne
 
 * Po kontrze na multi
-1K-X-pas				=> z karami, nf
+2K-X-pas				=> z karami, nf
 2K-X-XX                 => pokaż kolor
 2K-X-2C                 => do pasa
 2K-X-2P                 => do pasa
