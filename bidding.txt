@@ -52,7 +52,7 @@
 1T-1K-4T-4K					=> uzgodnienie kar
 1T-1K-4T-4C					=> cue-bid na treflach
 1T-1K-4T-4P					=> cue-bid na treflach
-1T-1C-1P-2T					=> magister (później 3T = sign-off, 3K = inwit 6-4)
+1T-1C-1P-2T					=> magister
 1T-1C-1P-2T-2K				=> 12-14, bez 3 kierów, kiepska ręka
 1T-1C-1P-2T-2C				=> 12-14, 3 kiery, kiepska ręka
 1T-1C-1P-2T-2P				=> 12-14, 3 kiery, dobra ręka
