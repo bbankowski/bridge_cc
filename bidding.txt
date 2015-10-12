@@ -164,6 +164,10 @@
 1P                          => 12-17 PC, 5+ pików
 1P-1BA                      => 7-11 PC bez fitu
 1P-2T                       => 12+ PC, FG, kolor 5+ i/lub fit
+1P-2T-2C-3C-3P				=> słabe 5422 (3BA dalej wywołanie cue-bidu)
+1P-2T-2C-3C-3BA				=> nadwyżka 5422
+1P-2T-2C-3C-4T				=> krótkość
+1P-2T-2C-3C-4K				=> krótkość
 1P-2K                       => 12+ PC, FG, kolor 5+
 1P-2C                       => 12+ PC, FG, kolor 5+
 1P-2BA                      => 10-12 PC, fit 4+(3) z krótkością
@@ -354,6 +358,8 @@ pas-1C-2T                   => drury
 pas-1P-2T                   => drury
 pas-1C-2T-2C                => minimalne otwarcie, NF
 pas-1C-2T-2K                => otwarcie nieminimalne, nic nie mówi o karach, 1F
+pas-1T-2T					=> góra pasa, kolor 5+
+pas-1T-2K					=> góra pasa, kolor 5+
 pas-1T-2C                   => 3-6 PC, kolor 6+
 pas-1T-2P                   => 3-6 PC, kolor 6+
 
@@ -366,12 +372,30 @@ pas-1T-2P                   => 3-6 PC, kolor 6+
 1T-X-2P                 => 3-6 PC, kolor 6+
 
 * Po kontrze na otwarcie 1 w starszy
+1C-X-XX					=> 10+, bez fitu
 1C-X-1BA                => 7-9 PC, fit
+1C-X-2C					=> 2-6, fit
+1C-2K-2P				=> naturalne, nieforsujące (inne sekwencje analogicznie)
+1C-2K-2BA				=> słabe na niższym kolorze lub forsing z fitem
+1C-2K-3T				=> naturalne, FG
+1C-2K-3K				=> inwit z fitem
+1C-2K-3C				=> blokujące z fitem
+1C-2K-3P				=> kolor + fit
+1C-2K-3BA				=> do gry
+1C-2K-4T				=> kolor + fit
+1C-2K-4K				=> krótkość, fit
+1C-2K-4C				=> do gry, taktyczne
 
 * Po kontrze na multi
+1K-X-pas				=> z karami, nf
 2K-X-XX                 => pokaż kolor
 2K-X-2C                 => do pasa
 2K-X-2P                 => do pasa
+2K-X-3T					=> do pasa
+2K-X-3K					=> inwit z fitami
+2K-X-3C					=> blok z fitami
+2K-X-4T					=> pokaż kolor transferem
+2K-X-4K					=> pokaż kolor naturalnie
 
 * Po otwarciu 1BA
 1BA-X-XX                => punkty, pozostale odzywki zgodnie jak bez kontry
@@ -388,7 +412,7 @@ pas-1T-2P                   => 3-6 PC, kolor 6+
 ### W OBRONIE ###
 
 ^ Po polskim treflu
-1T-1BA                  => klasyczne, 15-17 PC
+1T-1BA                  => klasyczne, 15-17 PC (po kontrze uciekamy naturalnie, reszta jak po otwarciu)
 1T-X                    => wywolawcza
 1T-2T                   => 54 kolory stare
 1T-2K                   => slabe, kolor 6+
@@ -399,14 +423,20 @@ pas-1T-2P                   => 3-6 PC, kolor 6+
 1T-2T-X-2K              => do pasa
 1T-2T-X-pas             => karny
 
+^ Po silnym treflu
+1T-X					=> ?
+1T-1K					=> ?
+1T-1C					=> ?
+
 ^ Po otwarciach 1 w kolor
-1C-1BA                  => 8-15 PC, 5+ w mlodym, 4 piki
-1P-1BA                  => 8-15 PC, 5+ w mlodym, 4 kiery
-1K-1BA                  => klasyczne, 15-17 PC
-1K-2K                   => 54 kolory stare
+1K-1BA                  => klasyczne, 15-17 PC (po kontrze uciekamy naturalnie, reszta jak po otwarciu)
+1K-2K                   => 55 kolory stare
 1K-2C                   => slabe, kolor 6+
 1K-2P                   => slabe, kolor 6+
 1K-2BA                  => trefle i stary
+1C-1BA                  => 8-15 PC, 5+ w mlodym, 4 piki
+1P-1BA                  => 8-15 PC, 5+ w mlodym, 4 kiery
+
 
 ^ Po klasycznym BA (15-17 PC)
 1BA-X                   => 5 mlodsza, 4 starsza
@@ -423,6 +453,10 @@ pas-1T-2P                   => 3-6 PC, kolor 6+
 1BA-2C                  => kolor 5+
 1BA-2P                  => kolor 5+
 1BA-2BA                 => 55 w kolorach mlodych
+
+^ Po 2T na starych
+2T-X					=> ?
+2T-2K					=> ?
 
 ^ Po multi i wilkoszu
 2K-2BA                  => 16-18 PC, równy sklad (może być starsza piatka, mlodsza szostka)
@@ -443,7 +477,7 @@ pas-1T-2P                   => 3-6 PC, kolor 6+
 
 ### KONWENCJE ###
 
-& Blackwood 102 i kolorowe króle
+& Blackwood 102 i kolorowe króle/damy (kolejny szczebel oprócz koloru uzgodnionego)
 4BA-5T                => 1 lub 4 wartosci
 4BA-5K                => 0 lub 3 wartosci
 4BA-5C                => 2 lub 5 wartosci, bez damy atu
