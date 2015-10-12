@@ -426,6 +426,12 @@ pas-1T-2P                   => 3-6 PC, kolor 6+
 1T-2T-X-XX              => pokaż lepszy kolor
 1T-2T-X-2K              => do pasa
 1T-2T-X-pas             => karny
+1T-2T-pas-2K            => pokaż lepszy kolor
+1T-2T-pas-2BA           => naturalne, NF
+1T-2T-pas-2C            => wybór koloru, NF
+1T-2T-pas-2P            => wybór koloru, NF
+1T-2T-pas-3C            => wybór koloru, NF
+1T-2T-pas-3P            => wybór koloru, NF
 
 ^ Po silnym treflu
 1T-X					=> ?
