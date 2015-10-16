@@ -539,3 +539,6 @@ pas-1T-2P                   => 3-6 PC, kolor 6+
 4BA-6K                => 2 lub 5 wartosci, dama atu, król w najwyższym kolorze bocznym lub 2 pozostale króle
 4BA-6C                => 2 lub 5 wartosci, dama atu, 3 króle
 
+& Po splinterze przeciwnika
+4K-pas    => sugestia wistu w młodszy z pozostałych kolorów
+4K-X      => sugestia wistu w starszy z pozostałych kolorow
