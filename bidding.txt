@@ -13,6 +13,12 @@
 1T-1K-1P-3C                 => transfer na 3BA
 1T-1K-1BA                   => 18-20 PC, dalej jak po otwarciu 1BA
 1T-1K-2T					=> 5+ trefli, jeżeli z 4P to 18+, F1 (dalsza licytacja naturalna)
+1T-1K-2T-2K					=> pytanie GF
+1T-1K-2T-2C					=> 5-6 kierów
+1T-1K-2T-2P         => 5-6 pików
+1T-1K-2T-2BA				=> góra negatu
+1T-1K-2T-3T         => najsłabsza licytacja
+1T-1K-2T-3K         => 5-6 kar, 8-11
 1T-1K-2T-3P					=> transfer na 3BA
 1T-1K-2K                    => acol
 1T-1K-2K-2C					=> negat
@@ -62,6 +68,9 @@
 1T-1C-1P-2T-3C				=> 18+, 5P, 3 kiery
 1T-1C-1P-2T-3P				=> 18+, 5P, bez 3 kierów
 1T-1C-1P-2T-3BA				=> 18+, 4P, bez 3 kierów
+1T-1C-1P-2K				  => 6K-4P NF
+1T-1C-1P-3T         => 5-5 FG
+1T-1C-1P-3K         => 5-5 FG
 1T-1C-1BA-2T				=> magister (później 3T = sign-off, 3K = inwit 6-4)
 1T-1C-2T                    => 15+ PC, 5+ trefli (jeśli z czwórką pików to 18+)
 1T-1C-2T-2K                 => sztuczny GF
