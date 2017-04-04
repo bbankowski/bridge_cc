@@ -522,15 +522,24 @@ pas-1T-2P                   => 3-6 PC, kolor 6+
 2T-2K					=> naturalne
 2T-2K					=> naturalne
 2T-2K					=> naturalne
-2T-2BA					=> dowolne 5-5
+2T-2BA				=> 5-5 młodszy starszy
+2T-3T         => 5-5 na młodych
+2T-3K         => 5-5 na starych
 2T-2BA-3T				=> licytacja do koloru
-2T-3T					=> blokujące
-2T-3K					=> blokujące
-2T-3C					=> blokujące  (licytacja kontra na odzywkę sztuczną jest na wprost, a naturalną wywoławcza)
 
-^ Po multi i wilkoszu
-2K-2BA                  => 16-18 PC, równy sklad (może być starsza piatka, mlodsza szostka, dalsza licytacja jak po silnym 2BA)
+^ Po 2K Multi i Wilkosz
+2K-2BA                  => 15-18 PC, równy sklad (może być starsza piatka, mlodsza szostka, dalsza licytacja jak po silnym 2BA)
 2K-X                    => wywolawcza z 4 kierami lub objasniajaca
+
+^ Po 2K Flannery (5+C-4P 11-15)
+2K-X          => wywoławcza do kierów
+2K-2C         => słabsze 5-5 piki i młodszy
+2K-2P         => naturalne
+2K-2BA        => 15-PC, równy skład
+2K-3T         => naturalne
+2K-3K         => naturalne
+2K-3C         => silne 5-5 piki i młodszy
+2K-3P         => naturalne, konstruktywne
 
 ^ Po slabych otwarciach 2C/2P (monokolor lub dwukolorowki) i 2K w znaczeniu monokolor karowy
 2C-2BA                  => 16-18 PC, równy sklad (może być starsza piatka, mlodsza szostka)
@@ -539,6 +548,11 @@ pas-1T-2P                   => 3-6 PC, kolor 6+
 2C-2BA-pas-3C           => transfer na piki
 2C-2BA-pas-3P           => transfer na trefle
 2C-2BA-pas-3BA          => do gry
+
+^ Po silnym 2BA
+2BA-X				    => 5-5 młodszy starszy
+2BA-3T          => 5-5 na młodych
+2BA-3K          => 5-5 na starych            
 
 ### KONWENCJE ###
 
