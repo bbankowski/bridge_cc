@@ -127,7 +127,7 @@
 1K-2T-2K					=> słaba ręka
 1K-2T-2C					=> rewers
 1K-2T-2P					=> rewers
-1K-2T-2BA					=> nadwyżka
+1K-2T-2BA					=> 4-4-4-1
 1K-2T-3T					=> fit, nie obiecuje nadwyżek
 1K-2T-3K					=> 15-18, 6+kar
 1K-2T-3C					=> nadwyżka, splinter z fitem trefl
