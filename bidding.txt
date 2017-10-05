@@ -372,13 +372,17 @@
 4T                          => naturalne, blokujące
 
 ### OTWARCIE 4K ###
-4K                          => naturalne, blokujące
+4K                          => 5K-5P albo 6C
 
 ### OTWARCIE 4C ###
-4C                          => naturalne, blokujące
+4C                          => 5C-5T albo 6P
 
 ### OTWARCIE 4P ###
-4P                          => naturalne, blokujące
+4P                          => 5P-5T albo 5C-5K
+
+### OTWARCIE 4BA ###
+4BA                         => 5P-5C albo 5T-5K
+
 
 ### LICYTACJA PO PASIE ###
 pas-1C-2T                   => drury
