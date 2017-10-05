@@ -391,6 +391,9 @@
 4K-3C                       => do koloru
 4K-3P                       => do koloru
 4K-3BA                      => do gry
+4K-4K                       => do koloru
+4K-4C                       => do gry
+4K-4P                       => do gry
 
 ### OTWARCIE 4C ###
 4C                          => 5C-5T albo 6P
