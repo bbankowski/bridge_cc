@@ -373,6 +373,24 @@
 
 ### OTWARCIE 4K ###
 4K                          => 5K-5P albo 6C
+4K-pas                      => do koloru, nic nie mówi o karach
+4K-2C                       => do koloru
+4K-2P                       => do koloru
+4K-2P-2BA                   => 6C, góra
+4K-2P-3T                    => 6C, góra, wartość w treflach
+4K-2P-3K                    => 6C, góra, wartość w karach
+4K-2P-3C                    => 6C
+4K-2BA                      => pytanie, FG
+4K-2BA-3T                   => 6C, góra
+4K-2BA-3K                   => 5K-5P, dół
+4K-2BA-3C                   => 6C, dół
+4K-2BA-3P                   => 5K-5P, góra
+4K-2BA-3BA                  => 6C, dobry kolor
+4K-3T                       => naturalne (lub wskazanie wistu), F1
+4K-3K                       => do koloru
+4K-3C                       => do koloru
+4K-3P                       => do koloru
+4K-3BA                      => do gry
 
 ### OTWARCIE 4C ###
 4C                          => 5C-5T albo 6P
