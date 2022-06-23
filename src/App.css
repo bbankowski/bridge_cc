@@ -1,0 +1,44 @@
+.App {
+    font-size: 16px;
+}
+
+.App-header {
+}
+
+.App-openings {
+    margin: 10px;
+}
+
+.App-openings-header {
+    font-weight: bold;
+}
+
+.App-openings a {
+    text-decoration: none;
+    color: black;
+}
+
+.App-openings a:hover {
+    background-color: lightgray;
+    text-decoration: none;
+}
+
+.App-openings div {
+    padding: 3px;
+}
+
+.App-bids {
+    margin: 10px;
+}
+
+.App-bids-header {
+    font-weight: bold;
+}
+
+.App-bids div {
+    padding: 3px;
+}
+
+.App-card-img {
+    width: 13px;
+}
