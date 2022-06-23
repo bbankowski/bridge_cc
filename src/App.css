@@ -1,16 +1,6 @@
 .App {
-    font-size: 16px;
-}
-
-.App-header {
-}
-
-.App-openings {
-    margin: 10px;
-}
-
-.App-openings-header {
-    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .App-openings a {
@@ -19,26 +9,18 @@
 }
 
 .App-openings a:hover {
-    background-color: lightgray;
+    background-color: #f5f5f5;
     text-decoration: none;
-}
-
-.App-openings div {
-    padding: 3px;
-}
-
-.App-bids {
-    margin: 10px;
-}
-
-.App-bids-header {
-    font-weight: bold;
-}
-
-.App-bids div {
-    padding: 3px;
 }
 
 .App-card-img {
     width: 13px;
+}
+
+.App-description {
+    padding-left: 5px;
+}
+
+.App-bid {
+    margin-top: 20px;
 }
