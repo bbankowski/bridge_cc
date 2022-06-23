@@ -26,7 +26,7 @@ function App() {
                         items[0] = (items[0] ?? '').trim()
                         items[1] = (items[1] ?? '').trim()
 
-                        if (items[0].length === 2) {
+                        if (items[0].length === 2 || items[0].length === 3) {
                             openings.push(items)
                             setOpenings(openings)
                         }
@@ -59,13 +59,14 @@ function App() {
         bid = bid.trim()
         if (bid.length === 2) {
             let color = getColor(bid[1])
-            return <span>{bid[0]}<img className="App-card-img" src={color} alt=""/>{additionalString ? " " + additionalString : ""}</span>
+            return <span>{bid[0]}<img className="App-card-img" src={color}
+                                      alt=""/>{additionalString ? " " + additionalString : ""}</span>
         }
         if (bid.length > 3) {
             let bids = bid.split("-")
             return [bids.map((bid, index, row) => renderSingleBid(bid, index + 1 === row.length ? null : "-"))]
         }
-        return bid
+        return <span>{bid}{additionalString ? " " + additionalString + " " : ""}</span>
     }
 
     function renderOpening(index, opening, description) {
@@ -74,9 +75,9 @@ function App() {
     }
 
     function renderBid(index, bid, description) {
-        if (bid.length === 2) {
-            return <h4 className={"title is-4" + (index > 0 ? " App-bid" : "")} id={"opening-" + bid}>Dalsza licytacja po
-                otwarciu {renderSingleBid(bid)}</h4>
+        if (bid.length === 2 || bid.length === 3) {
+            return <h4 className={"title is-4" + (index > 0 ? " App-bid" : "")} id={"opening-" + bid}>Dalsza licytacja
+                po otwarciu {renderSingleBid(bid)}</h4>
         }
 
         if (bid.startsWith("^") || bid.startsWith("&") || bid.startsWith("*")) {
@@ -88,7 +89,7 @@ function App() {
             if (bid.startsWith(previousBid)) {
                 previousBids.push(previousBid)
                 bid = bid.slice(previousBid.length + 1).trim()
-                return <div key={"bid" + index} style={{paddingLeft: (10 * previousBid.length) + "px"}}>
+                return <div key={"bid" + index} style={{paddingLeft: (7 * (previousBid.length - 2)) + "px"}}>
                     <b>{renderSingleBid(bid)}</b> <span className="App-description">{description}</span>
                 </div>;
             }
@@ -100,8 +101,8 @@ function App() {
     return (
         <div className="container App">
             <h1 className="title">Karta konwencyjna</h1>
-            <h2 className="subtitle">Bartosz Bańkowski <span className="tag">13886</span> - Marek Jarosz <span
-                className="tag">10287</span></h2>
+            <p className="subtitle">Bartosz Bańkowski <span className="tag">13886</span><br/>Marek Jarosz <span
+                className="tag">10287</span></p>
 
             <div className="App-openings box">
                 <h4 className="title is-4">Otwarcia</h4>
@@ -110,7 +111,14 @@ function App() {
             <div className="box">
                 {bids.map((bid, index) => {
                     const renderedLine = renderBid(index, bid[0], bid[1])
-                    previousBids.push(bid[0])
+
+                    let currentBidParts = bid[0].split("-")
+                    let cumulativeBid = null
+                    currentBidParts.forEach(bid => {
+                        cumulativeBid = cumulativeBid === null ? bid : (cumulativeBid + "-" + bid)
+                        previousBids.push(cumulativeBid)
+                    })
+
                     return renderedLine
                 })}
             </div>
