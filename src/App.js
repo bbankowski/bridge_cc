@@ -102,7 +102,7 @@ function App() {
         <div className="container App">
             <h1 className="title">Karta konwencyjna</h1>
             <p className="subtitle">Bartosz Bańkowski <span className="tag">13886</span><br/>Marek Jarosz <span
-                className="tag">10287</span></p>
+                className="tag">10237</span></p>
 
             <div className="App-openings box">
                 <h4 className="title is-4">Otwarcia</h4>
