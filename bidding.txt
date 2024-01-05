@@ -82,6 +82,12 @@
 1T-1K-4T-4C					=> cue-bid na treflach
 1T-1K-4T-4P					=> cue-bid na treflach
 
+1T-1C-2T                    => 15+ PC, 5+ trefli (jeśli z czwórką pików to 18+)
+1T-1C-2K                    => odwrotka 445566 (po interwencji przeciwnika kolorem 2K naturalne, z fitem X)
+1T-1P-2T                    => 15+ PC, 5+ trefli
+1T-1P-2K                    => odwrotka 445566 (po interwencji przeciwnika kolorem 2K naturalne, z fitem X)
+1T-3BA-4T                   => F1
+
 1T-1C-1P-2T					=> magister
 1T-1C-1P-2K				  => 6K-4P NF
 1T-1C-1P-3T         => 5-5 FG
@@ -99,26 +105,27 @@
 
 1T-1C-1BA-2T				=> magister (później 3T = sign-off, 3K = inwit 6-4)
 
-1T-1C-2T                    => 15+ PC, 5+ trefli (jeśli z czwórką pików to 18+)
 1T-1C-2T-2K                 => sztuczny GF
 1T-1C-2T-3K					=> 5-5, FG
-1T-1C-2K                    => odwrotka 445566 (po interwencji przeciwnika kolorem 2K naturalne, z fitem X)
+
 1T-1C-2K-2C         => słaby na czwórce
 1T-1C-2K-2P         => silny na czwórce
 1T-1C-2K-2BA        => słaby na piątce
 1T-1C-2K-3T         => silny na piątce
 1T-1C-2K-3K         => słaby na szóstce
 1T-1C-2K-3C         => silny na szóstce
+
 1T-1C-2K-2C-3C      => pytanie o krótkość (analogicznie po innych odpowiedziach na odwrotkę)
+
 1T-1C-3C-3P					=> pytanie o krótkość
+
 1T-1P-1BA-2T				=> magister (później 3T = sign-off, 3K = inwit 6-4)
-1T-1P-2T                    => 15+ PC, 5+ trefli
+
 1T-1P-2T-2K                 => sztuczny GF
 1T-1P-2T-3K					=> 5-5, FG
 1T-1P-2T-3C					=> 5-5, FG
-1T-1P-2K                    => odwrotka 445566 (po interwencji przeciwnika kolorem 2K naturalne, z fitem X)
+
 1T-1P-3P-3BA				=> pytanie o krótkość
-1T-3BA-4T                   => F1
 
 ### OTWARCIE 1K ###
 1K                          => 12-17 PC, 5+ kar lub 4 kara i 5 trefli lub 4441
