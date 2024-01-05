@@ -130,11 +130,11 @@ function App() {
         currentBidParts = chunkMaxLength(currentBidParts, 4, currentBidParts.length)
 
         let rootBid = bid.substring(0, bid.lastIndexOf('-'))
-        let foundRootBid = bids[bids[index][3]]
+        let foundRootBid = currentBidType === null ? bids[bids[index][3]] : null
         return <div>
             <div className="App-bidTable" id={"bid-" + rootBid}>
                 <div className="App-bidTableHeader">Licytacja
-                    po {renderSingleBid(rootBid.substring(bid.indexOf('-') + 1))}{foundRootBid && (': ' + foundRootBid[1])} </div>
+                    po {renderSingleBid(rootBid)}{foundRootBid && (': ' + foundRootBid[1])} </div>
                 <table>
                     <tbody>
                     {currentBidParts.map((currentBidFours, index) => {
