@@ -453,6 +453,7 @@
 #4BA-4P                      => do gry
 
 ### LICYTACJA PO PASIE ###
+pas              => brak otwarcia
 pas-1C-2T                   => drury
 pas-1P-2T                   => drury
 pas-1C-2T-2C                => minimalne otwarcie, NF
