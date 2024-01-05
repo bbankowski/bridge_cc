@@ -25,6 +25,8 @@ function App() {
                         const items = line.split("=>")
                         items[0] = (items[0] ?? '').trim()
                         items[1] = (items[1] ?? '').trim()
+                        items[2] = null
+                        items[3] = null
 
                         if (items[0].length === 2 || items[0].length === 3) {
                             openings.push(items)
@@ -33,6 +35,33 @@ function App() {
 
                         return items
                     });
+
+                // set parents
+                for (let i = 0; i < bids.length; i++) {
+                    let bid = bids[i]
+                    for (let j = i - 1; j >= 0; j--) {
+                        let parentBid = bids[j]
+                        if (bid[0].startsWith(parentBid[0])) {
+                            bid[2] = j
+                            break;
+                        }
+                    }
+                }
+
+                // set exact parents
+                for (let i = 0; i < bids.length; i++) {
+                    let bid = bids[i]
+                    for (let j = i - 1; j >= 0; j--) {
+                        let parentBid = bids[j]
+                        if (bid[0].substring(0, bid[0].lastIndexOf('-')) === parentBid[0]) {
+                            bid[3] = j
+                            break;
+                        }
+                    }
+                }
+
+                console.log(bids)
+
                 setBids(bids)
             })
         })
@@ -79,7 +108,7 @@ function App() {
         return Array.from({length: maxLength}, () => arr.splice(0, chunkSize));
     }
 
-    function renderBidTable(bid, description) {
+    function renderBidTable(index, bid, description) {
         const weStartBidding = currentBidType === "*" || currentBidType === null
 
         let currentBidParts = bid.split("-")
@@ -100,13 +129,12 @@ function App() {
         }
         currentBidParts = chunkMaxLength(currentBidParts, 4, currentBidParts.length)
 
-        console.log(currentBidParts)
         let rootBid = bid.substring(0, bid.lastIndexOf('-'))
-        let foundRootBid = bids.find(thisBid => thisBid[0] === rootBid)
+        let foundRootBid = bids[bids[index][3]]
         return <div>
             <div className="App-bidTable" id={"bid-" + rootBid}>
                 <div className="App-bidTableHeader">Licytacja
-                    po {renderSingleBid(rootBid.substring(bid.indexOf('-') + 1))}{typeof (foundRootBid) === 'object' ? ': ' + foundRootBid[1] + '' : ''} </div>
+                    po {renderSingleBid(rootBid.substring(bid.indexOf('-') + 1))}{foundRootBid && (': ' + foundRootBid[1])} </div>
                 <table>
                     <tbody>
                     {currentBidParts.map((currentBidFours, index) => {
@@ -132,8 +160,6 @@ function App() {
     }
 
     function renderBid(index, bid, description, originalBid) {
-        console.log(index + ": " + currentBidType + " - " + bid + " => " + description + " - " + previousBids)
-
         if (bid.length === 2 || bid.length === 3) {
             return <h4 className={"title is-4" + (index > 0 ? " App-bid" : "")} id={"opening-" + bid}>Dalsza licytacja
                 po otwarciu {renderSingleBid(bid)}</h4>
@@ -159,7 +185,7 @@ function App() {
         }
 
         if (bid.includes('-')) {
-            return renderBidTable(originalBid, description)
+            return renderBidTable(index, originalBid, description)
         }
 
         return <div key={"bid" + index}><b>{bid}</b> {description}</div>
