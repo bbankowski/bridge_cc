@@ -6,7 +6,20 @@
 #
 ### OTWARCIE 1T ###
 1T                          => 12-14 PC skład równy lub 15+ z piątką trefli lub 18+ skład dowolny
+
 1T-1K                       => negat, 0-6 PC skład dowolny, 7-11 PC młode, 13-15 PC w składzie równym chęć grania BA z drugiej ręki, 16+ skład równy
+1T-1BA                      => 7-10 PC
+1T-2T                       => 12+ PC, FG, kolor 5+
+1T-2K                       => 12+ PC, FG, kolor 5+
+1T-2C                       => 12+ PC, FG, dobry kolor 6+
+1T-2P                       => 12+ PC, FG, dobry kolor 6+
+1T-2BA                      => inwit
+1T-3T                       => inwit, kolor 6+
+1T-3K                       => inwit, kolor 6+
+1T-3C                       => kolor 7+, dwie starsze figury
+1T-3P                       => kolor 7+, dwie starsze figury
+1T-3BA                      => 13-15 w równym (wyklucza starszą czwórkę i młodszą piątkę)
+
 1T-1K-1P					=> 4+ (może być 5T-4P 15-17)
 1T-1K-1C-2P                 => 7-11 PC, młode
 1T-1K-1C-3P                 => transfer na 3BA
@@ -91,17 +104,6 @@
 1T-1P-2T-3C					=> 5-5, FG
 1T-1P-2K                    => odwrotka 445566 (po interwencji przeciwnika kolorem 2K naturalne, z fitem X)
 1T-1P-3P-3BA				=> pytanie o krótkość
-1T-1BA                      => 7-10 PC
-1T-2T                       => 12+ PC, FG, kolor 5+
-1T-2K                       => 12+ PC, FG, kolor 5+
-1T-2C                       => 12+ PC, FG, dobry kolor 6+
-1T-2P                       => 12+ PC, FG, dobry kolor 6+
-1T-2BA                      => inwit
-1T-3T                       => inwit, kolor 6+
-1T-3K                       => inwit, kolor 6+
-1T-3C                       => kolor 7+, dwie starsze figury
-1T-3P                       => kolor 7+, dwie starsze figury
-1T-3BA                      => 13-15 w równym (wyklucza starszą czwórkę i młodszą piątkę)
 1T-3BA-4T                   => F1
 
 ### OTWARCIE 1K ###
