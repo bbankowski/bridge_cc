@@ -352,6 +352,7 @@
 2C-3K                       => inwit do końcówki kierowej
 2C-3C                       => taktyczne
 2C-3P                       => naturalne, inwit
+2C-3BA                      => do gry
 
 ### OTWARCIE 2P ###
 2P                          => 5-11 PC, 5+ pików i 5+ młodszy
