@@ -256,49 +256,8 @@
 
 ### OTWARCIE 2T ###
 2T                          => 11-14 PC, 6+ trefli lub 5+ trefli i 4 w starszym
+
 2T-2K                       => relay
-2T-2K-2C                    => 4 kiery
-2T-2K-2C-2P                 => relay
-2T-2K-2C-2P-2BA             => 2425
-2T-2K-2C-2P-3T              => 6-4
-2T-2K-2C-2P-3T-3K           => pytanie o krótkość
-2T-2K-2C-2P-3T-3K-3C        => krótkość karo
-2T-2K-2C-2P-3T-3K-3P        => singiel pik
-2T-2K-2C-2P-3T-3K-3BA       => renons pik
-2T-2K-2C-2P-3K              => 1435
-2T-2K-2C-2P-3C              => 2425 zrgupowanie w kolorach
-2T-2K-2C-2P-3P              => 3415
-2T-2K-2C-2BA                => inwit
-2T-2K-2C-3T                 => raczej do pasa
-2T-2K-2C-3K                 => FG nat
-2T-2K-2C-3C                 => inwit
-2T-2K-2C-3P                 => splinter z fitem kier
-2T-2K-2P                    => 4 piki
-2T-2K-2P-2BA                => relay
-2T-2K-2P-2BA-3T             => 6-4
-2T-2K-2P-2BA-3T-3K          => pytanie o krótkość
-2T-2K-2P-2BA-3T-3K-3C       => singiel kier
-2T-2K-2P-2BA-3T-3K-3P       => krótkość karo
-2T-2K-2P-2BA-3T-3K-3BA      => renons kier
-2T-2K-2P-2BA-3K             => 4135
-2T-2K-2P-2BA-3C             => 4315
-2T-2K-2P-2BA-3P             => 4225 zgrupowanie w kolorach
-2T-2K-2P-2BA-3BA            => 4225 ręka zrównoważona
-2T-2K-2P-3T                 => raczej do pasa
-2T-2K-2P-3K                 => FG nat
-2T-2K-2P-3C                 => FG nat
-2T-2K-2P-3P                 => inwit
-2T-2K-2BA                   => 6 trefli bez krótkości
-2T-2K-2BA-3T                => do pasa
-2T-2K-2BA-3K                => naturalne FG
-2T-2K-2BA-3C                => naturalne FG
-2T-2K-2BA-3P                => naturalne FG
-2T-2K-2BA-4T                => FG, wywołanie cue-bidu
-2T-2K-3T                    => 6 trefli z krótkością (3K o krótkość i 3BA=karowa)
-2T-2K-3K                    => xx46 góra (ze słabszą ręką 3T)
-2T-2K-3C                    => x4x6 góra
-2T-2K-3P                    => 4xx6 góra
-2T-2K-3BA                   => AKDxxx trefl
 2T-2C                       => naturalne, nf
 2T-2P                       => naturalne, nf
 2T-2BA                      => inwit (11-12 PC)
@@ -307,6 +266,58 @@
 2T-3C                       => kolor 6+ inwit
 2T-3P                       => kolor 6+ inwit
 2T-3BA                      => do gry
+
+2T-2K-2C                    => 4 kiery
+2T-2K-2P                    => 4 piki
+2T-2K-2BA                   => 6 trefli bez krótkości
+2T-2K-3T                    => 6 trefli z krótkością (3K o krótkość i 3BA=karowa)
+2T-2K-3K                    => xx46 góra (ze słabszą ręką 3T)
+2T-2K-3C                    => x4x6 góra
+2T-2K-3P                    => 4xx6 góra
+2T-2K-3BA                   => AKDxxx trefl
+
+2T-2K-2C-2P                 => relay
+
+2T-2K-2C-2P-2BA             => 2425
+2T-2K-2C-2P-3T              => 6-4
+2T-2K-2C-2P-3K              => 1435
+2T-2K-2C-2P-3C              => 2425 zrgupowanie w kolorach
+2T-2K-2C-2P-3P              => 3415
+2T-2K-2C-2BA                => inwit
+2T-2K-2C-3T                 => raczej do pasa
+2T-2K-2C-3K                 => FG nat
+2T-2K-2C-3C                 => inwit
+2T-2K-2C-3P                 => splinter z fitem kier
+
+2T-2K-2C-2P-3T-3K           => pytanie o krótkość
+
+2T-2K-2C-2P-3T-3K-3C        => krótkość karo
+2T-2K-2C-2P-3T-3K-3P        => singiel pik
+2T-2K-2C-2P-3T-3K-3BA       => renons pik
+
+2T-2K-2P-2BA                => relay
+2T-2K-2P-2BA-3K             => 4135
+2T-2K-2P-2BA-3C             => 4315
+2T-2K-2P-2BA-3P             => 4225 zgrupowanie w kolorach
+2T-2K-2P-2BA-3BA            => 4225 ręka zrównoważona
+2T-2K-2P-3T                 => raczej do pasa
+2T-2K-2P-3K                 => FG nat
+2T-2K-2P-3C                 => FG nat
+2T-2K-2P-3P                 => inwit
+
+2T-2K-2P-2BA-3T             => 6-4
+
+2T-2K-2P-2BA-3T-3K          => pytanie o krótkość
+
+2T-2K-2P-2BA-3T-3K-3C       => singiel kier
+2T-2K-2P-2BA-3T-3K-3P       => krótkość karo
+2T-2K-2P-2BA-3T-3K-3BA      => renons kier
+
+2T-2K-2BA-3T                => do pasa
+2T-2K-2BA-3K                => naturalne FG
+2T-2K-2BA-3C                => naturalne FG
+2T-2K-2BA-3P                => naturalne FG
+2T-2K-2BA-4T                => FG, wywołanie cue-bidu
 
 ### OTWARCIE 2K ###
 2K                          => mini-multi, 5-11 PC na starszym kolorze 6+, nie otwieramy z układami 6-4 na starych
