@@ -664,6 +664,28 @@ pas-1C-2T-2K                => otwarcie nieminimalne, nic nie mówi o karach
 1K-X-2C                 => 3-6 PC, kolor 6+
 1K-X-2P                 => 3-6 PC, kolor 6+
 
+1K-2C-X                 => kontra wywoławcza
+1K-2C-2P                => 5+ pików, NF
+1K-2C-2BA               => 5+trefli, INV+
+1K-2C-3T                => z fitem, INV+
+1K-2C-3K                => pytanie o trzymanie, FG
+1K-2C-3C                => 5+ pików, INV+
+1K-2C-3P                => transfer na 3BA
+1K-2C-3BA               => do gry
+1K-2C-4T                => 5-5 piki i trefle, FG
+1K-2C-4K                => blokujące
+
+1K-2P-X                 => kontra wywoławcza
+1K-2P-2BA               => 5+trefli, INV+
+1K-2P-3T                => z fitem, INV+
+1K-2P-3K                => 5+ kierów, INV+
+1K-2P-3C                => pytanie o trzymanie, FG
+1K-2P-3P                => transfer na 3BA
+1K-2P-3BA               => do gry
+1K-2P-4T                => 5-5 kiery i trefle, FG
+1K-2P-4K                => blokujące
+
+
 
 * Po interwencji na otwarcie 1 w starszy
 1C-X-XX					=> 10+ PC, bez fitu
