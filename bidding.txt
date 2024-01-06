@@ -421,14 +421,48 @@
 ### OTWARCIE 3T ###
 3T                          => po partii kolor 7+ i dwie starsze figury, przed partią wskazuje najdłuższy kolor (siła dowolna)
 
+3T-3K                       => naturalne, F1
+3T-3C                       => naturalne, F1
+3T-3P                       => naturalne, F1
+3T-3BA                      => do gry
+3T-4T                       => przedłużenie bloku
+3T-4K                       => forsujące uzgodnienie trefli (drugi kolor młodszy)
+3T-4C                       => do gry
+3T-4P                       => do gry
+
+
 ### OTWARCIE 3K ###
 3K                          => po partii kolor 7+ i dwie starsze figury, przed partią wskazuje najdłuższy kolor (siła dowolna)
+
+3K-3C                       => naturalne, F1
+3K-3P                       => naturalne, F1
+3K-3BA                      => do gry
+3K-4T                       => forsujące uzgodnienie kar (drugi kolor młodszy)
+3K-4K                       => przedłużenie bloku
+3K-4C                       => do gry
+3K-4P                       => do gry
 
 ### OTWARCIE 3C ###
 3C                          => po partii kolor 7+ i dwie starsze figury, przed partią wskazuje najdłuższy kolor (siła dowolna)
 
+3C-3P                       => natrualne, F1
+3C-3BA                      => do gry
+3C-4T                       => cue bid na kierach
+3C-4K                       => cue bid na kierach
+3C-4C                       => do gry
+3C-4P                       => do gry
+3C-4BA                      => blackwood na kierach
+
 ### OTWARCIE 3P ###
 3P                          => po partii kolor 7+ i dwie starsze figury, przed partią wskazuje najdłuższy kolor (siła dowolna)
+
+3P-3BA                      => do gry
+3P-4T                       => cue bid na pikach
+3P-4K                       => cue bid na pikach
+3P-4C                       => do gry
+3P-4P                       => do gry
+3P-4BA                      => blackwood na pikach
+
 
 ### OTWARCIE 3BA ###
 3BA                         => gambling AKDxxxx, bez bocznego dojścia
@@ -436,12 +470,16 @@
 3BA-4K                      => pytanie
 3BA-4C                      => do gry
 3BA-4P                      => do gry
+3BA-4BA                     => 4 lewy, inwit do szlemika w przypadku posiadania ośmiu kart na otwarcie
+3BA-5T                      => do koloru
+
 
 3BA-4K-4C                   => krótkość kier
 3BA-4K-4P                   => krótkość pik
 3BA-4K-4BA                  => krótkość w drugim młodszym
 3BA-4K-5T                   => 2-2-2-7
 3BA-4K-5K                   => 2-2-7-2
+
 
 
 ### OTWARCIE 4T ###
