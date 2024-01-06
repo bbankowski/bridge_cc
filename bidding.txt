@@ -22,7 +22,7 @@
 
 1T-1K-1BA                   => 18-20 PC, dalej jak po otwarciu 1BA
 1T-1K-1P					=> 4+ (może być 5T-4P 15-17)
-1T-1K-2T					=> 5+ trefli, jeżeli z 4P to 18+, F1 (dalsza licytacja naturalna)
+1T-1K-2T					=> 5+ trefli, jeżeli z 4P to 18+
 1T-1K-2K                    => acol
 1T-1K-2C					=> podacol na kierach
 1T-1K-2P					=> podacol na pikach
@@ -34,16 +34,21 @@
 1T-1K-4T					=> dwukolorówka 5-5 (trefle i kara)
 
 1T-1K-1C-2P                 => 7-11 PC, młode
+1T-1K-1C-2BA                => 16+ PC, skład zrównoważony
+1T-1K-1C-3T                 => 9-11, 6 trefli
+1T-1K-1C-3K                 => 9-11, 6 kar
 1T-1K-1C-3P                 => transfer na 3BA
 
+1T-1K-1P-3T                 => 9-11, 6 trefli
+1T-1K-1P-3K                 => 9-11, 6 kar
 1T-1K-1P-3C                 => transfer na 3BA
 
 1T-1K-2T-2K					=> pytanie GF
 1T-1K-2T-2C					=> 5-6 kierów
-1T-1K-2T-2P         => 5-6 pików
+1T-1K-2T-2P                 => 5-6 pików
 1T-1K-2T-2BA				=> góra negatu
-1T-1K-2T-3T         => najsłabsza licytacja
-1T-1K-2T-3K         => 5-6 kar, 8-11
+1T-1K-2T-3T                 => fit, słaba ręka
+1T-1K-2T-3K                 => 5-6 kar, 8-11
 1T-1K-2T-3P					=> transfer na 3BA
 
 1T-1K-2K-2C					=> negat
@@ -84,14 +89,12 @@
 
 1T-1C-2T                    => 15+ PC, 5+ trefli (jeśli z czwórką pików to 18+)
 1T-1C-2K                    => odwrotka 445566 (po interwencji przeciwnika kolorem 2K naturalne, z fitem X)
-1T-1P-2T                    => 15+ PC, 5+ trefli
-1T-1P-2K                    => odwrotka 445566 (po interwencji przeciwnika kolorem 2K naturalne, z fitem X)
-1T-3BA-4T                   => F1
+1T-1C-3C                    => 15-17, 5+ trefli-4 kiery lub 4=4=1=4 (dalej 3P o krótkość) 
 
 1T-1C-1P-2T					=> magister
-1T-1C-1P-2K				  => 6K-4P NF
-1T-1C-1P-3T         => 5-5 FG
-1T-1C-1P-3K         => 5-5 FG
+1T-1C-1P-2K				    => 6K-4P NF
+1T-1C-1P-3T                 => 5-5 FG
+1T-1C-1P-3K                 => 5-5 FG
 
 1T-1C-1P-2T-2K				=> 12-14, bez 3 kierów, kiepska ręka
 1T-1C-1P-2T-2C				=> 12-14, 3 kiery, kiepska ręka
@@ -108,18 +111,14 @@
 1T-1C-2T-2K                 => sztuczny GF
 1T-1C-2T-3K					=> 5-5, FG
 
-1T-1C-2K-2C         => słaby na czwórce
-1T-1C-2K-2P         => silny na czwórce
-1T-1C-2K-2BA        => słaby na piątce
-1T-1C-2K-3T         => silny na piątce
-1T-1C-2K-3K         => słaby na szóstce
-1T-1C-2K-3C         => silny na szóstce
-
-1T-1C-2K-2C-3C      => pytanie o krótkość (analogicznie po innych odpowiedziach na odwrotkę)
+1T-1C-2K-2C-3C              => pytanie o krótkość (analogicznie po innych odpowiedziach na odwrotkę)
 
 1T-1C-3C-3P					=> pytanie o krótkość
 
 1T-1P-1BA-2T				=> magister (później 3T = sign-off, 3K = inwit 6-4)
+
+1T-1P-2T                    => 15+ PC, 5+ trefli
+1T-1P-2K                    => odwrotka 445566 (po interwencji przeciwnika kolorem 2K naturalne, z fitem X)
 
 1T-1P-2T-2K                 => sztuczny GF
 1T-1P-2T-3K					=> 5-5, FG
@@ -127,61 +126,71 @@
 
 1T-1P-3P-3BA				=> pytanie o krótkość
 
+1T-3BA-4T                   => 16+ naturalne, F1
+1T-3BA-4K                   => 18+ naturalne, F1
+1T-3BA-4C                   => 18+ naturalne, F1
+1T-3BA-4P                   => 18+ naturalne, F1
+
 ### OTWARCIE 1K ###
 1K                          => 12-17 PC, 5+ kar lub 4 kara i 5 trefli lub 4441
 1K-1C						=> 4+ kiery, F1
-1K-1C-1P-2BA				=> inwit
-1K-1C-2T-2C					=> pozytywna ręka, delikatny inwit
-1K-1C-2BA                   => 15-17 PC, 6+ kar, brak 3-kartowego fitu
-1K-1C-3K                    => 15-17 PC, 6+ kar, 3-kartowy fit
-1K-1C-3C-3P                 => pytanie o krótkość
 1K-1P						=> 4+ piki, F1
-1K-1P-1BA                   => może być singiel pik przy 1444 albo 1453
-1K-1P-2T-2K					=> negatywny wybór koloru
-1K-1P-2T-2C-2P              => fit 3-kartowy
-1K-1P-2T-2C-3P              => fit 3-kartowy, nadwyżka
-1K-1P-2T-2P					=> pozytywna ręka, delikatny inwit
-1K-1P-2T-2BA				=> inwit
-1K-1P-2BA                   => 15-17 PC, 6+ kar, brak 3-kartowego fitu
-1K-1P-3K                    => 15-17 PC, 6+ kar, 3-kartowy fit
-1K-1P-3P-3BA                => pytanie o krótkość
 1K-1BA                      => 6-9 bez starszej czwóki
 1K-2T                       => 12+ PC, FG, kolor 5+
-1K-2T-2K					=> słaba ręka
-1K-2T-2C					=> rewers
-1K-2T-2P					=> rewers
-1K-2T-2BA					=> 4-4-4-1
-1K-2T-3T					=> fit, nie obiecuje nadwyżek
-1K-2T-3K					=> 15-18, 6+kar
-1K-2T-3C					=> nadwyżka, splinter z fitem trefl
-1K-2T-3P					=> nadwyżka, splinter z fitem trefl
 1K-2K                       => 10+ PC, fit 4+, forsuje do 3 karo
 1K-2C                       => 3-6, kolor 6+
 1K-2P                       => 3-6, kolor 6+
 1K-2BA                      => 10-12 bez starszej czwórki
 1K-3T                       => 0-6 PC blokujące z fitem lub FG z fitem z krótkością, po automacie 3 karo licytujemy krótkość
-1K-3T-3K-3BA                => krótkość trefl
 1K-3K                       => 7-9 PC, fit 4+
 1K-3C                       => 10-12 PC, fit 4+, krótkość kier
 1K-3P                       => 10-12 PC, fit 4+, krótkość pik
-1K-4T                       => 10-12 PC, fit 4+, krótkość trefl
 1K-3BA                      => do gry
+1K-4T                       => 10-12 PC, fit 4+, krótkość trefl
+
+
+1K-1C-2BA                   => 15-17 PC, 6+ kar, brak 3-kartowego fitu
+1K-1C-3K                    => 15-17 PC, 6+ kar, 3-kartowy fit
+1K-1C-3C-3P                 => pytanie o krótkość
+
+1K-1C-1P-2T				    => czwarty kolor
+1K-1C-1P-2BA				=> inwit
+1K-1C-1P-3T				    => 5-5 FG
+
+1K-1C-2T-2C					=> pozytywna ręka, delikatny inwit
+
+1K-1P-1BA                   => może być singiel pik przy 1444 albo 1453
+
+1K-1P-2T-2K					=> negatywny wybór koloru
+1K-1P-2T-2C-2P              => fit 3-kartowy
+1K-1P-2T-2C-3P              => fit 3-kartowy, nadwyżka
+1K-1P-2T-2P					=> pozytywna ręka, delikatny inwit
+1K-1P-2T-2BA				=> inwit
+
+1K-1P-2BA                   => 15-17 PC, 6+ kar, brak 3-kartowego fitu
+1K-1P-3K                    => 15-17 PC, 6+ kar, 3-kartowy fit
+1K-1P-3P-3BA                => pytanie o krótkość
+
+1K-2T-2K					=> słaba ręka
+1K-2T-2C					=> rewers
+1K-2T-2P					=> rewers
+1K-2T-2BA					=> 4=4=4=1
+1K-2T-3T					=> fit, nie obiecuje nadwyżek
+1K-2T-3K					=> 15-18, 6+kar
+1K-2T-3C					=> nadwyżka, splinter z fitem trefl
+1K-2T-3P					=> nadwyżka, splinter z fitem trefl
+
+1K-3T-3K-3BA                => krótkość trefl
+
 
 
 ### OTWARCIE 1C ###
 1C                          => 12-17 PC, 5+ kierów (z siłą 15-17 i składem 5332 otwieramy zawsze 1BA)
-1C-1P-2C-2BA				=> FG
-1C-1P-2K-2BA				=> inwit
-1C-1P-2K-3T					=> czwarty kolor, FG
-1C-1P-2BA					=> 15-17, 6 kierów, bez 3 pików
-1C-1P-3C					=> 15-17, 6 kierów, 3 piki
-1C-2T-3C-4T                 => samouzgodnienie trefli
+1C-1P                       => 6+ PC, 4+ piki
 1C-1BA                      => 7-11 PC bez fitu, nie forsujące
 1C-2T                       => 12+ PC, FG, kolor 5+ i/lub fit
 1C-2K                       => 12+ PC, FG, kolor 5+
-1C-2C-3C                    => blokujące
 1C-2P                       => 10-12 PC, fit 4+(3) z krótkością
-1C-2P-2BA                   => pytanie o krótkość
 1C-2BA                      => 10-12 PC, fit 4+(3) bez krótkości
 1C-3T                       => 10-12 PC, kolor 6+ z dwoma starszymi figurami
 1C-3K                       => 10-12 PC, kolor 6+ z dwoma starszymi figurami
@@ -192,18 +201,27 @@
 1C-4K                       => podniesienie do 4C bez ambicji
 1C-4C                       => blokujące
 
+1C-1P-2K-2BA				=> inwit
+1C-1P-2K-3T					=> czwarty kolor, FG
+1C-1P-2C-2BA				=> FG
+1C-1P-2BA					=> 15-17, 6 kierów, bez 3 pików
+1C-1P-3C					=> 15-17, 6 kierów, 3 piki
+
+1C-2T-3C-4T                 => samouzgodnienie trefli
+
+1C-2C-3C                    => blokujące
+
+1C-2P-2BA                   => pytanie o krótkość (3C = pikowa)
+
+
+
 ### OTWARCIE 1P ###
 1P                          => 12-17 PC, 5+ pików
 1P-1BA                      => 7-11 PC bez fitu
 1P-2T                       => 12+ PC, FG, kolor 5+ i/lub fit
-1P-2T-2C-3C-3P				=> słabe 5422 (3BA dalej wywołanie cue-bidu)
-1P-2T-2C-3C-3BA				=> nadwyżka 5422
-1P-2T-2C-3C-4T				=> krótkość
-1P-2T-2C-3C-4K				=> krótkość
 1P-2K                       => 12+ PC, FG, kolor 5+
 1P-2C                       => 12+ PC, FG, kolor 5+
 1P-2BA                      => 10-12 PC, fit 4+(3) z krótkością
-1P-2BA-3T                   => pytanie o krótkość
 1P-3C                       => 10-12 PC, fit 4+(3) bez krótkości
 1P-3T                       => 10-12 PC, kolor 6+ z dwoma starszymi figurami
 1P-3K                       => 10-12 PC, kolor 6+ z dwoma starszymi figurami
@@ -213,13 +231,26 @@
 1P-4K                       => 12-15 PC, krótkość karo
 1P-4C                       => podniesienie do 4P bez ambicji
 1P-4P                       => blokujące
+
+1P-2T-2C-3C-3P				=> słabe 5422 (3BA dalej wywołanie cue-bidu)
+1P-2T-2C-3C-3BA				=> nadwyżka 5422
+1P-2T-2C-3C-4T				=> krótkość
+1P-2T-2C-3C-4K				=> krótkość
+
 1P-2P-3P                    => blokujące
+
+1P-2BA-3T                   => pytanie o krótkość
+
 1P-2T-3P-4T                 => samouzgodnienie trefli
 
 ### OTWARCIE 1BA ###
 1BA                         => 15-17 PC, skład równy, bardzo możliwa starsza piątka lub młodsza szóstka
 
+1BA-2T                      => Stayman
+1BA-2K                      => transfer na kiery
+1BA-2C                      => transfer na piki
 1BA-2P                      => inwit do 3BA lub transfer na trefle (z dołem odp. 2BA, z górą 3T)
+1BA-2BA                     => transfer na kara
 1BA-3T                      => 6-8 PC, kolor 6+ z dwoma starszymi figurami
 1BA-3K                      => 6-8 PC, kolor 6+ z dwoma starszymi figurami
 1BA-3C                      => FG, skład 5431 z singlem kier
@@ -229,20 +260,6 @@
 1BA-4C                      => transfer na piki
 1BA-4P                      => kolory młodsze, bez aspiracji
 
-1BA-2K-2BA                  => góra, fit z dwoma starszymi figurami
-1BA-2K-3T                   => góra, 5 trefli z fitem
-1BA-2K-3K                   => góra, 5 kar z fitem
-1BA-2K-3C                   => góra, fit 4+
-
-1BA-2C-2BA                  => góra, fit z dwoma starszymi figurami
-1BA-2C-3T                   => góra, 5 trefli z fitem
-1BA-2C-3K                   => góra, 5 kar z fitem
-1BA-2C-3C                   => góra, 5 kierów z fitem
-1BA-2C-3P                   => góra, fit 4+
-
-1BA-2BA                     => transfer na kara
-1BA-2BA-3T					=> góra (dalej z krótkości, 3K do pasa, 3BA inwit szlemikowy)
-1BA-2BA-3K					=> dół (dalej z krótkości, 3BA inwit szlemikowy)
 
 1BA-2T-2K-2C                => stare, nieforsujące
 1BA-2T-2K-2P                => 4 piki i 5 trefli, słabe
@@ -250,6 +267,12 @@
 1BA-2T-2K-3P                => 5-6 kierów i 4 piki, FG
 
 1BA-2T-2C-2P                => 4 piki i 5 młodsza, słabe
+
+1BA-2K-2BA                  => góra, fit z dwoma starszymi figurami (analogicznie po transferze na piki)
+1BA-2K-3T                   => góra, 5 trefli z fitem
+1BA-2K-3K                   => góra, 5 kar z fitem
+1BA-2K-3C                   => góra, fit 4+
+
 1BA-2K-2C-3T                => nowy kolor na wysokości 3 to FG
 1BA-2K-2C-3C                => inwit
 1BA-2K-2C-2BA               => inwit
@@ -257,9 +280,10 @@
 
 1BA-2C-2P-3C				=> 5-5, FG
 
-1BA-2T-2K-3C-3BA-4C         => 6 pików
+1BA-2BA-3T					=> góra (dalej z krótkości, 3K do pasa, 3BA inwit szlemikowy)
+1BA-2BA-3K					=> dół (dalej z krótkości, 3BA inwit szlemikowy)
 
-1BA-2T-2K-3P-3BA-4K         => 6 kierów
+
 
 ### OTWARCIE 2T ###
 2T                          => 11-14 PC, 6+ trefli lub 5+ trefli i 4 w starszym
@@ -335,17 +359,22 @@
 2K-3K                       => inwit z fitem w obu starszych
 2K-3C                       => blok z fitem w obu starszych
 2K-3P                       => naturalny inwit
+
 2K-2BA-3T                   => dół
-2K-2BA-3T-3K                => relay, pytanie o kolor
-2K-2BA-3T-3C                => do koloru
-2K-2BA-3T-3P                => do koloru
-2K-2BA-3T-3K-3C             => piki
-2K-2BA-3T-3K-3P             => kiery
 2K-2BA-3K                   => góra, kiery (3C wywołanie cue-bidu)
 2K-2BA-3C                   => góra, piki (3P wywołanie cue-bidu)
 
+2K-2BA-3T-3K                => relay, pytanie o kolor
+2K-2BA-3T-3C                => do koloru
+2K-2BA-3T-3P                => do koloru
+
+2K-2BA-3T-3K-3C             => piki
+2K-2BA-3T-3K-3P             => kiery
+
+
 ### OTWARCIE 2C ###
 2C                          => 5-11 PC, 5+ kierów i 5+ inny
+
 2C-2P                       => do koloru
 2C-2BA                      => pytanie FG
 2C-3T                       => do koloru
@@ -356,6 +385,7 @@
 
 ### OTWARCIE 2P ###
 2P                          => 5-11 PC, 5+ pików i 5+ młodszy
+
 2P-2BA                      => pytanie FG
 2P-3T                       => do koloru
 2P-3K                       => inwit do końcówki pikowej
@@ -364,9 +394,17 @@
 
 ### OTWARCIE 2BA ###
 2BA                         => 5-11 PC, 5+ trefli i 5+ kar
+
 2BA-3T                      => wybór kontraktu
 2BA-3K                      => wybór kontraktu
 2BA-3C                      => FG, pytanie o skład
+2BA-3P						=> pytanie o fity w starych
+2BA-3BA						=> do gry
+2BA-4T						=> blokujące
+2BA-4K						=> blokujące
+2BA-4C						=> do gry
+2BA-4P						=> do gry
+
 2BA-3C-3P					=> 2-1-5-5
 2BA-3C-3BA					=> 1-2-5-5	
 2BA-3C-4T					=> 6 trefli
@@ -374,20 +412,14 @@
 2BA-3C-4C					=> 0-3-5-5
 2BA-3C-4P					=> 3-0-5-5
 2BA-3C-4BA					=> 6-6
-2BA-3P						=> pytanie o fity w starych
+
 2BA-3P-3BA					=> brak 2/3 kart w starych
 2BA-3P-4T					=> 2/3 kiery
 2BA-3P-4K					=> 2/3 piki
-2BA-3BA						=> do gry
-2BA-4T						=> blokujące
-2BA-4K						=> blokujące
-2BA-4C						=> do gry
-2BA-4P						=> do gry
 
 
 ### OTWARCIE 3T ###
 3T                          => po partii kolor 7+ i dwie starsze figury, przed partią wskazuje najdłuższy kolor (siła dowolna)
-
 
 ### OTWARCIE 3K ###
 3K                          => po partii kolor 7+ i dwie starsze figury, przed partią wskazuje najdłuższy kolor (siła dowolna)
@@ -402,32 +434,25 @@
 3BA                         => gambling AKDxxxx, bez bocznego dojścia
 3BA-4T                      => do koloru
 3BA-4K                      => pytanie
+3BA-4C                      => do gry
+3BA-4P                      => do gry
+
 3BA-4K-4C                   => krótkość kier
 3BA-4K-4P                   => krótkość pik
 3BA-4K-4BA                  => krótkość w drugim młodszym
 3BA-4K-5T                   => 2-2-2-7
 3BA-4K-5K                   => 2-2-7-2
-3BA-4C                      => do gry
-3BA-4P                      => do gry
+
 
 ### OTWARCIE 4T ###
 #4T                          => naturalne, blokujące
 
 ### OTWARCIE 4K ###
 #4K                          => 5K-5P albo 6C
+
 #4K-pas                      => do koloru, nic nie mówi o karach
 #4K-2C                       => do koloru
 #4K-2P                       => do koloru
-#4K-2P-2BA                   => 6C, góra
-#4K-2P-3T                    => 6C, góra, wartość w treflach
-#4K-2P-3K                    => 6C, góra, wartość w karach
-#4K-2P-3C                    => 6C
-#4K-2BA                      => pytanie, FG
-#4K-2BA-3T                   => 6C, góra
-#4K-2BA-3K                   => 5K-5P, dół
-#4K-2BA-3C                   => 6C, dół
-#4K-2BA-3P                   => 5K-5P, góra
-#4K-2BA-3BA                  => 6C, dobry kolor
 #4K-3T                       => naturalne (lub wskazanie wistu), F1
 #4K-3K                       => do koloru
 #4K-3C                       => do koloru
@@ -437,18 +462,23 @@
 #4K-4C                       => do gry
 #4K-4P                       => do gry
 
+#4K-2P-2BA                   => 6C, góra
+#4K-2P-3T                    => 6C, góra, wartość w treflach
+#4K-2P-3K                    => 6C, góra, wartość w karach
+#4K-2P-3C                    => 6C
+
+#4K-2BA                      => pytanie, FG
+#4K-2BA-3T                   => 6C, góra
+#4K-2BA-3K                   => 5K-5P, dół
+#4K-2BA-3C                   => 6C, dół
+#4K-2BA-3P                   => 5K-5P, góra
+#4K-2BA-3BA                  => 6C, dobry kolor
+
+
 ### OTWARCIE 4C ###
 #4C                          => 5T-5C albo 6P
 #4C-pas                      => do koloru, nie nie mówi o kierach
-#4C-2P                       => do koloru
-#4C-2P-2BA                   => 5T-6C
-#4C-2P-3T                    => 5T-5C
 #4C-2BA                      => pytanie, FG
-#4C-2BA-3T                   => 5T-5C, dół
-#4C-2BA-3K                   => 6P, góra
-#4C-2BA-3C                   => 5T-5C, góra
-#4C-2BA-3P                   => 6P, dół
-#4C-2BA-3BA                  => 6P, dobry kolor
 #4C-3T                       => do koloru
 #4C-3K                       => naturalne (lub wskazanie wistu), F1
 #4C-3C                       => do koloru
@@ -458,14 +488,23 @@
 #4C-4C                       => do gry
 #4C-4P                       => do gry
 
+#4C-2P                       => do koloru
+#4C-2P-2BA                   => 5T-6C
+#4C-2P-3T                    => 5T-5C
+
+#4C-2BA-3T                   => 5T-5C, dół
+#4C-2BA-3K                   => 6P, góra
+#4C-2BA-3C                   => 5T-5C, góra
+#4C-2BA-3P                   => 6P, dół
+#4C-2BA-3BA                  => 6P, dobry kolor
+
+
+
 ### OTWARCIE 4P ###
 #4P                          => 5T-5P albo 5C-5K
+
 #4P-pas                      => do koloru, nie nie mówi o pikach
 #4P-2BA                      => pytanie, FG
-#4P-2BA-3T                   => 5T-5P, dół
-#4P-2BA-3K                   => 5K-5C, dół
-#4P-2BA-3C                   => 5K-5C, góra
-#4P-2BA-3P                   => 5T-5P, góra
 #4P-3T                       => do koloru
 #4P-3K                       => do koloru
 #4P-3C                       => do koloru
@@ -476,17 +515,18 @@
 #4P-4C                       => do gry
 #4P-4P                       => do gry
 
+
+#4P-2BA-3T                   => 5T-5P, dół
+#4P-2BA-3K                   => 5K-5C, dół
+#4P-2BA-3C                   => 5K-5C, góra
+#4P-2BA-3P                   => 5T-5P, góra
+
+
 ### OTWARCIE 4BA ###
 #4BA                         => 5P-5C albo 5T-5K
 #4BA-3T                      => do koloru
-#4BA-3T-3K                   => 5P-5C, góra
-#4BA-3T-3C                   => 5P-5C, dół
 #4BA-3K                      => do koloru
 #4BA-3C                      => pytanie, FG
-#4BA-3C-3P                   => krótkość pik
-#4BA-3C-3BA                  => krótkość kier
-#4BA-3C-4T                   => krótkość trefl
-#4BA-3C-4K                   => krótkość karo
 #4BA-3P                      => do koloru
 #4BA-3BA                     => do gry
 #4BA-4T                      => do koloru
@@ -494,16 +534,31 @@
 #4BA-4C                      => do gry
 #4BA-4P                      => do gry
 
+#4BA-3T-3K                   => 5P-5C, góra
+#4BA-3T-3C                   => 5P-5C, dół
+
+#4BA-3C-3P                   => krótkość pik
+#4BA-3C-3BA                  => krótkość kier
+#4BA-3C-4T                   => krótkość trefl
+#4BA-3C-4K                   => krótkość karo
+
+
+
 ### LICYTACJA PO PASIE ###
 pas              => brak otwarcia
-pas-1C-2T                   => drury
-pas-1P-2T                   => drury
-pas-1C-2T-2C                => minimalne otwarcie, NF
-pas-1C-2T-2K                => otwarcie nieminimalne, nic nie mówi o karach, 1F
+
 pas-1T-2T					=> góra pasa, kolor 5+
 pas-1T-2K					=> góra pasa, kolor 5+
 pas-1T-2C                   => 3-6 PC, kolor 6+
 pas-1T-2P                   => 3-6 PC, kolor 6+
+
+pas-1C-2T                   => drury
+pas-1P-2T                   => drury
+
+pas-1C-2T-2C                => minimalne otwarcie, NF
+pas-1C-2T-2K                => otwarcie nieminimalne, nic nie mówi o karach
+
+
 
 ### PO INTERWENCJI ###
 
