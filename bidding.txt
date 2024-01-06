@@ -562,20 +562,36 @@ pas-1C-2T-2K                => otwarcie nieminimalne, nic nie mówi o karach
 
 ### PO INTERWENCJI ###
 
-* Po kontrze na otwarcie 1 w mlodszy
-1K-X-2C                 => 3-6 PC, kolor 6+
-1K-X-2P                 => 3-6 PC, kolor 6+
+* Po interwencji na otwarcie 1 trefl
 1T-X-2C                 => 3-6 PC, kolor 6+
 1T-X-2P                 => 3-6 PC, kolor 6+
 
-* Po kontrze na otwarcie 1 w starszy
+1T-2C-X                 => kontra wywoławcza
+1T-2C-2P                => 5+ pików, NF
+1T-2C-2BA               => 5+ trefli, INV+
+1T-2C-3T                => 5+kar, INV+
+1T-2C-3K                => pytanie o trzymanie, FG
+1T-2C-3C                => 5+ pików, INV+
+1T-2C-3P                => 5-5 młode, FG
+1T-2C-3BA               => do gry
+1T-2C-4T                => 5-5 piki i trefle, FG
+1T-2C-4K                => 5-5 piki i kara, FG
+
+
+
+* Po interwencji na otwarcie 1 karo
+1K-X-2C                 => 3-6 PC, kolor 6+
+1K-X-2P                 => 3-6 PC, kolor 6+
+
+
+* Po interwencji na otwarcie 1 w starszy
 1C-X-XX					=> 10+ PC, bez fitu
 1C-X-1BA                => 7-9 PC, fit
 1C-X-2BA                => 10-12 PC, fit
 1C-X-3BA                => 13-15 PC, fit
 1C-X-2C					=> 2-6 PC, fit
 
-* Po wejsciu kolorem na otwarcie 1 w starszy
+
 1C-2K-2P				=> naturalne, nieforsujące (inne sekwencje analogicznie)
 1C-2K-2BA				=> słabe na niższym kolorze lub forsing z fitem
 1C-2K-3T				=> naturalne, FG
@@ -589,14 +605,19 @@ pas-1C-2T-2K                => otwarcie nieminimalne, nic nie mówi o karach
 
 * Po otwarciu 1BA
 1BA-X-XX                => punkty, pozostale odzywki zgodnie jak bez kontry
-1BA-2C-2BA              => lebensohl (tak samo po innych odzywkach 2 w kolor)
+
 1BA-2C-X                => negatywna (tak samo po innych odzywkach 2 w kolor)
-1BA-pas-2K-X-pas        => brak fitu (tak samo po innych transferach)
-1BA-pas-2K-X-XX         => karna (tak samo po innych transferach)
-1BA-pas-2K-X-2C         => z fitem (tak samo po innych transferach)
+1BA-2C-2P               => naturalne 5+ pików, NF
+1BA-2C-2BA              => lebensohl (tak samo po innych odzywkach 2 w kolor)
+
 1BA-pas-2T-X-XX         => karna
 1BA-pas-2T-X-2K         => brak starszych czwórek, trzymanie trefl (analogicznie inne odpowiedzi)
 1BA-pas-2T-X-pas        => forsuje do XX, brak trzymania trefl (po XX odpowiadamy jak bez kontry)
+
+1BA-pas-2K-X-pas        => brak fitu (tak samo po innych transferach)
+1BA-pas-2K-X-XX         => karna (tak samo po innych transferach)
+1BA-pas-2K-X-2C         => z fitem (tak samo po innych transferach)
+
 
 * Po interwencji na multi
 2K-X-pas				=> z karami, nf
