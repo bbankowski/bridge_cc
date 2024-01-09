@@ -4,6 +4,7 @@ import Club from "../club.svg";
 import Heart from "../heart.svg";
 import Spade from "../spade.svg";
 import Diamond from "../diamond.svg";
+import { HashLink } from 'react-router-hash-link';
 
 function ConvenctionCard() {
     const path = "https://raw.githubusercontent.com/bbankowski/bridge_cc/master/bidding.txt"
@@ -100,8 +101,8 @@ function ConvenctionCard() {
     }
 
     function renderOpening(index, opening, description) {
-        return <div key={"bid" + index}><a href={"#opening-" + opening}><b>{renderSingleBid(opening)}</b> <span
-            className="App-description">{description}</span></a></div>
+        return <div key={"bid" + index}><HashLink to={"#opening-" + opening}><b>{renderSingleBid(opening)}</b> <span
+            className="App-description">{description}</span></HashLink></div>
     }
 
     function chunkMaxLength(arr, chunkSize, maxLength) {
@@ -153,8 +154,8 @@ function ConvenctionCard() {
                 </table>
             </div>
             <div style={{paddingLeft: "14px"}}>
-                <a href={"#bid-" + bid}><b>{renderSingleBid(mainBid)}</b> <span
-                    className="App-description">{description}</span></a>
+                <HashLink to={"#bid-" + bid}><b>{renderSingleBid(mainBid)}</b> <span
+                    className="App-description">{description}</span></HashLink>
             </div>
         </div>
     }
@@ -178,8 +179,8 @@ function ConvenctionCard() {
                     return renderBid(index, bid, description, originalBid)
                 }
                 return <div key={"bid" + index} style={{paddingLeft: "14px"}}>
-                    <a href={"#bid-" + originalBid}><b>{renderSingleBid(bid)}</b> <span
-                        className="App-description">{description}</span></a>
+                    <HashLink to={"#bid-" + originalBid}><b>{renderSingleBid(bid)}</b> <span
+                        className="App-description">{description}</span></HashLink>
                 </div>
             }
         }
