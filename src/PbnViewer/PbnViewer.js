@@ -36,6 +36,16 @@ function PbnViewer() {
             }
 
             let bids = []
+            if (deal['Dealer'] === 'E') {
+                bids.push([])
+            } else if (deal['Dealer'] === 'S') {
+                bids.push([])
+                bids.push([])
+            } else if (deal['Dealer'] === 'W') {
+                bids.push([])
+                bids.push([])
+                bids.push([])
+            }
             let previousBid = null
             if (deal && deal['auction'] && deal['auction'].length > 0) {
                 for (let bid of deal['auction'].trim().split(' ')) {
@@ -158,7 +168,7 @@ function PbnViewer() {
                 setCurrentDeal(0)
             })
         })
-    }, [])
+    }, [query])
 
     function chunkMaxLength(arr, chunkSize, maxLength) {
         return Array.from({length: maxLength}, () => arr.splice(0, chunkSize));
@@ -186,6 +196,7 @@ function PbnViewer() {
                 <div className="App-deal">
                     <div className="App-deal-header">
                         <h1 className="title">{deal['Event']}</h1>
+                        Contract: <Bid bid={deal['Contract']}/><br/>
                         Result (tricks): {deal['Result']}<br/>
                         Score: {deal['Score']}<br/>
                     </div>

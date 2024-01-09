@@ -29,6 +29,7 @@
 .App-deal-details {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .App-deal-details > div {
@@ -47,7 +48,7 @@
 
 .DealDiagram .DealNumber {
     position: absolute;
-    left: 55px;
+    left: 45px;
     right: 5px;
     font-size: 30px;
     font-weight: bold;

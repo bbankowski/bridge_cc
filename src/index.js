@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'bulma/css/bulma.min.css';
-import {createHashRouter,  Route, RouterProvider,} from "react-router-dom";
+import {createHashRouter,  RouterProvider,} from "react-router-dom";
 import PbnViewer from "./PbnViewer/PbnViewer";
 import ConvenctionCard from "./ConvenctionCard/ConvenctionCard";
 import HomePage from "./HomePage";
