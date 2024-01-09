@@ -1,12 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import 'bulma/css/bulma.min.css';
+import {createBrowserRouter, RouterProvider,} from "react-router-dom";
+import PbnViewer from "./PbnViewer/PbnViewer";
+import ConvenctionCard from "./ConvenctionCard/ConvenctionCard";
+import HomePage from "./HomePage";
+
+const router = createBrowserRouter([
+    {
+        path: "*",
+        element: <HomePage/>,
+    },
+    {
+        path: "/cc",
+        element: <ConvenctionCard/>,
+    },
+    {
+        path: "/pbn",
+        element: <PbnViewer/>,
+    },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <App/>
+        <RouterProvider router={router}/>
     </React.StrictMode>
 );

@@ -1,0 +1,116 @@
+.App {
+}
+
+.App-card-img {
+    width: 13px;
+}
+
+.Suite img {
+    margin-left: 5px;
+    margin-right: 1px;
+}
+
+.App-bidTable td, .App-bidTable th {
+    padding: 5px 10px;
+    border: 1px solid #dedede;
+    width: 55px;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.App-deal {
+    display: flex;
+    flex-direction: column;
+}
+
+.App-deal > div {
+    margin-bottom: 10px;
+}
+
+.App-deal-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.App-deal-details > div {
+    margin-right: 10px;
+}
+
+.DealDiagram {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 295px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.DealDiagram .DealNumber {
+    position: absolute;
+    left: 55px;
+    right: 5px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.DealDiagram .Hand {
+    width: 100px;
+}
+
+.DealDiagram .WestEast, .DealDiagram .Middle .WestEast {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.DealDiagram .Middle {
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.DealDiagram .Middle .Letter {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 45px;
+}
+
+.Vulnerable {
+    background-color: red;
+}
+
+.NonVulnerable {
+    background-color: green;
+}
+
+.NonDealer {
+    border: 0;
+}
+
+.Dealer {
+    background-color: #9f9f00;
+}
+
+.Comment {
+    white-space: pre-line;
+}
+
+.App-bidTable .BidNote {
+    position: relative;
+    top: -0.5em;
+    left: 2px;
+    font-size: 60%;
+}
+
+.BidNotes {
+    font-size: 12px;
+}

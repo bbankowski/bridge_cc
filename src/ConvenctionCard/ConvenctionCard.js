@@ -1,11 +1,11 @@
-import './App.css';
+import './ConvenctionCard.css';
 import {useEffect, useState} from "react";
-import Club from "./club.svg";
-import Heart from "./heart.svg";
-import Spade from "./spade.svg";
-import Diamond from "./diamond.svg";
+import Club from "../club.svg";
+import Heart from "../heart.svg";
+import Spade from "../spade.svg";
+import Diamond from "../diamond.svg";
 
-function App() {
+function ConvenctionCard() {
     const path = "https://raw.githubusercontent.com/bbankowski/bridge_cc/master/bidding.txt"
 
     const [openings, setOpenings] = useState([])
@@ -224,4 +224,4 @@ function App() {
     );
 }
 
-export default App;
+export default ConvenctionCard;
