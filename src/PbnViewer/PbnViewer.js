@@ -7,61 +7,61 @@ function PbnViewer() {
     const [deals, setDeals] = useState([])
     const [currentDeal, setCurrentDeal] = useState(0)
 
-    function updateDeal(deal) {
-        let hands = deal['Deal'].split(' ')
-        let players = {
-            'N': ['N', 'E', 'S', 'W'],
-            'E': ['E', 'S', 'W', 'N'],
-            'S': ['S', 'W', 'N', 'E'],
-            'W': ['W', 'N', 'E', 'S'],
-        }
-        let firstHand = hands[0].charAt(0)
-        hands[0] = hands[0].substring(2)
-        deal['hands'] = []
-        for (let i = 0; i < 4; i++) {
-            deal['hands'][players[firstHand][i]] = hands[i].split('.')
-        }
-
-        let bids = []
-        let previousBid = null
-        if (deal && deal['auction'] && deal['auction'].length > 0) {
-            for (let bid of deal['auction'].trim().split(' ')) {
-                bid = bid.trim()
-                if (bid === 'Pass') {
-                    bid = 'pas'
-                } else if (bid === 'AP') {
-                    break
-                } else if (bid.startsWith('=')) {
-                    previousBid[1] = bid.replaceAll('=', '')
-                    continue
-                }
-                previousBid = [bid]
-                bids.push(previousBid)
-            }
-        }
-        while (bids.length % 4 !== 0) {
-            bids.push([])
-        }
-        console.log(bids.flat())
-        deal['chunkedAuction'] = chunkMaxLength(bids, 4, bids.length / 4)
-
-        if (deal['Vulnerable'] === 'Love' || deal['Vulnerable'] === 'None' || deal['Vulnerable'] === '-') {
-            deal['Vulnerable'] = []
-        }
-        if (deal['Vulnerable'] === 'Both' || deal['Vulnerable'] === 'All') {
-            deal['Vulnerable'] = ['N', 'S', 'E', 'W']
-        }
-        if (deal['Vulnerable'] === 'NS') {
-            deal['Vulnerable'] = ['N', 'S']
-        }
-        if (deal['Vulnerable'] === 'EW') {
-            deal['Vulnerable'] = ['E', 'W']
-        }
-
-        return deal
-    }
-
     useEffect(() => {
+        function updateDeal(deal) {
+            let hands = deal['Deal'].split(' ')
+            let players = {
+                'N': ['N', 'E', 'S', 'W'],
+                'E': ['E', 'S', 'W', 'N'],
+                'S': ['S', 'W', 'N', 'E'],
+                'W': ['W', 'N', 'E', 'S'],
+            }
+            let firstHand = hands[0].charAt(0)
+            hands[0] = hands[0].substring(2)
+            deal['hands'] = []
+            for (let i = 0; i < 4; i++) {
+                deal['hands'][players[firstHand][i]] = hands[i].split('.')
+            }
+
+            let bids = []
+            let previousBid = null
+            if (deal && deal['auction'] && deal['auction'].length > 0) {
+                for (let bid of deal['auction'].trim().split(' ')) {
+                    bid = bid.trim()
+                    if (bid === 'Pass') {
+                        bid = 'pas'
+                    } else if (bid === 'AP') {
+                        break
+                    } else if (bid.startsWith('=')) {
+                        previousBid[1] = bid.replaceAll('=', '')
+                        continue
+                    }
+                    previousBid = [bid]
+                    bids.push(previousBid)
+                }
+            }
+            while (bids.length % 4 !== 0) {
+                bids.push([])
+            }
+            console.log(bids.flat())
+            deal['chunkedAuction'] = chunkMaxLength(bids, 4, bids.length / 4)
+
+            if (deal['Vulnerable'] === 'Love' || deal['Vulnerable'] === 'None' || deal['Vulnerable'] === '-') {
+                deal['Vulnerable'] = []
+            }
+            if (deal['Vulnerable'] === 'Both' || deal['Vulnerable'] === 'All') {
+                deal['Vulnerable'] = ['N', 'S', 'E', 'W']
+            }
+            if (deal['Vulnerable'] === 'NS') {
+                deal['Vulnerable'] = ['N', 'S']
+            }
+            if (deal['Vulnerable'] === 'EW') {
+                deal['Vulnerable'] = ['E', 'W']
+            }
+
+            return deal
+        }
+
         const queryParameters = new URLSearchParams(window.location.search)
         const filename = queryParameters.get("filename")
 

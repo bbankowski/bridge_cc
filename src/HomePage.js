@@ -7,10 +7,10 @@ function HomePage() {
             <nav>
                 <ul>
                     <li>
-                        <a href={'/bridge_cc/cc'}>Karta konwencyjna</a>
+                        <a href={'/bridge_cc/#/cc'}>Karta konwencyjna</a>
                     </li>
                     <li>
-                        <a href={'/bridge_cc/pbn?filename=4kroli.pbn'}>PBN Viewer</a>
+                        <a href={'/bridge_cc/#/pbn?filename=4kroli.pbn'}>PBN Viewer</a>
                     </li>
                 </ul>
             </nav>
