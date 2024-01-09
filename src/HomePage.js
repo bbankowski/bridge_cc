@@ -5,7 +5,12 @@ function HomePage() {
     return (
         <div className="HomePage container">
             <div className="box">
-                <div className="content"><a href={'/bridge_cc/#/cc'}>Karta konwencyjna</a></div>
+                <div className="content">
+                    <p>Convention Card Viewer:</p>
+                    <ul>
+                        <li><a href={'/bridge_cc/#/cc'}>BB i MJ</a></li>
+                    </ul>
+                </div>
                 <div className="content">
                     <p>PBN Viewer:</p>
                     <ul>
