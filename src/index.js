@@ -9,15 +9,15 @@ import HomePage from "./HomePage";
 
 const router = createBrowserRouter([
     {
-        path: "/bridge_cc",
+        path: "/",
         element: <HomePage/>,
     },
     {
-        path: "/bridge_cc/cc",
+        path: "cc",
         element: <ConvenctionCard/>,
     },
     {
-        path: "/bridge_cc/pbn",
+        path: "pbn",
         element: <PbnViewer/>,
     },
 ])
