@@ -57,6 +57,22 @@
     width: 100px;
 }
 
+.DealDiagram .North {
+    margin-bottom: 10px;
+}
+
+.DealDiagram .South {
+    margin-top: 10px;
+}
+
+.DealDiagram .East {
+    margin-left: 10px;
+}
+
+.DealDiagram .West {
+    width: 90px;
+}
+
 .DealDiagram .WestEast, .DealDiagram .Middle .WestEast {
     display: flex;
     flex-direction: row;
