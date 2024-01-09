@@ -1,11 +1,20 @@
 import './PbnViewer.css';
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import Auction from "./Auction";
 import DealDiagram from "./DealDiagram";
+import {useLocation} from "react-router-dom";
 
 function PbnViewer() {
     const [deals, setDeals] = useState([])
     const [currentDeal, setCurrentDeal] = useState(0)
+
+    function useQuery() {
+        const {search} = useLocation()
+
+        return React.useMemo(() => new URLSearchParams(search), [search])
+    }
+
+    let query = useQuery()
 
     useEffect(() => {
         function updateDeal(deal) {
@@ -62,8 +71,7 @@ function PbnViewer() {
             return deal
         }
 
-        const queryParameters = new URLSearchParams(window.location.search)
-        const filename = queryParameters.get("filename")
+        const filename = query.get("filename")
 
         fetch(filename).then((r) => {
             r.text().then(pbn => {
