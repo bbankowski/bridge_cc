@@ -25,7 +25,9 @@ const Auction = (props) => {
             })}
             </tbody>
         </table>
-        {props.notes && <div className="BidNotes">{props.notes}</div>}
+        {props.notes && <div className="BidNotes">{props.notes.map((note) => {
+            return <div>{note}</div>
+        })}</div>}
     </div>
 }
 

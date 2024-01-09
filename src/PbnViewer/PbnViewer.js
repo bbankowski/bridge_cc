@@ -108,6 +108,7 @@ function PbnViewer() {
 
                 let deal = []
                 deal['Vulnerable'] = '-'
+                deal['notes'] = []
                 let commentStarted = false
                 let comment = ''
                 let auctionStarted = false
@@ -117,10 +118,11 @@ function PbnViewer() {
                         continue
                     }
 
-                    if (line.startsWith('[Event') && Object.keys(deal).length > 1) {
+                    if (line.startsWith('[Event') && Object.keys(deal).length > 2) {
                         loadedDeals.push(updateDeal(deal))
                         deal = []
                         deal['Vulnerable'] = '-'
+                        deal['notes'] = []
                     }
                     if (auctionStarted) {
                         if (line.startsWith('[')) {
@@ -151,6 +153,8 @@ function PbnViewer() {
                             deal[tag] = param
                             if (tag === 'Auction') {
                                 auctionStarted = true
+                            } else if (tag === 'Note') {
+                                deal['notes'].push(param)
                             }
                         }
                     } else if (line.startsWith('{')) {
@@ -163,7 +167,7 @@ function PbnViewer() {
                     }
                 }
 
-                if (Object.keys(deal).length > 1) {
+                if (Object.keys(deal).length > 2) {
                     loadedDeals.push(updateDeal(deal))
                 }
 
@@ -206,7 +210,7 @@ function PbnViewer() {
                     <div className="App-deal-details">
                         <DealDiagram deal={deal['hands']} dealer={deal['Auction']} vulnerable={deal['Vulnerable']}
                                      dealNumber={deal['Board']}/>
-                        <Auction auction={deal['chunkedAuction']} notes={deal['Note']}/>
+                        <Auction auction={deal['chunkedAuction']} notes={deal['notes']}/>
                     </div>
                     <div className="App-deal-comment">
                         <p><strong>Comment:</strong></p>
