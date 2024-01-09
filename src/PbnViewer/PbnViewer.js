@@ -62,6 +62,9 @@ function PbnViewer() {
                     bids.push(previousBid)
                 }
             }
+            bids.push(['pas'])
+            bids.push(['pas'])
+            bids.push(['pas'])
             while (bids.length % 4 !== 0) {
                 bids.push([])
             }
