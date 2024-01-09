@@ -9,22 +9,22 @@ import HomePage from "./HomePage";
 
 const router = createBrowserRouter([
     {
-        path: "*",
+        path: "/bridge_cc",
         element: <HomePage/>,
     },
     {
-        path: "cc",
+        path: "/bridge_cc/cc",
         element: <ConvenctionCard/>,
     },
     {
-        path: "pbn",
+        path: "/bridge_cc/pbn",
         element: <PbnViewer/>,
     },
-]);
+])
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
     <React.StrictMode>
         <RouterProvider router={router}/>
     </React.StrictMode>
-);
+)
