@@ -123,6 +123,16 @@
 1T-1C-2K-2C-3C              => pytanie o krótkość (analogicznie po innych odpowiedziach na odwrotkę)
 
 1T-1C-3C-3P					=> pytanie o krótkość
+1T-1C-3C-3BA		    => krótkość pik
+1T-1C-3C-4T					=> krótkość trefl
+1T-1C-3C-4K					=> krótkość karo
+1T-1C-3C-4C          => do gry
+
+1T-1C-3C-3P-3BA			=> bez krótkości, lepsza ręka
+1T-1C-3C-3P-4T      => krótkość pik
+1T-1C-3C-3P-4K      => krótkość karo
+1T-1C-3C-3P-4C      => bez krótkośći, przeciętna ręka
+
 
 1T-1P-1BA-2T				=> magister (później 3T = sign-off, 3K = inwit 6-4)
 
@@ -134,6 +144,15 @@
 1T-1P-2T-3C					=> 5-5, FG
 
 1T-1P-3P-3BA				=> pytanie o krótkość
+1T-1P-3P-4T          => krótkość trefl
+1T-1P-3P-4K          => krótkość karo
+1T-1P-3P-4C          => krótkość kier
+1T-1P-3P-4P          => do gry
+
+1T-1P-3P-3BA-4T				=> bez krótkości, lepsza ręka
+1T-1P-3P-3BA-4K				=> krótkość karo
+1T-1P-3P-3BA-4C				=> krótkość kier
+1T-1P-3P-3BA-4P				=> bez krótkości, gorsza ręka
 
 1T-3BA-4T                   => 16+ naturalne, F1
 1T-3BA-4K                   => 18+ naturalne, F1
@@ -158,15 +177,29 @@
 1K-4T                       => 10-12 PC, fit 4+, krótkość trefl
 
 
+1K-1C-2P                    => rewers z 4 pikami
 1K-1C-2BA                   => 15-17 PC, 6+ kar, brak 3-kartowego fitu
 1K-1C-3K                    => 15-17 PC, 6+ kar, 3-kartowy fit
-1K-1C-3C-3P                 => pytanie o krótkość
+1K-1C-3C                    => 15-17 PC, 5+ kar - 4 kiery
+1K-1C-3P                    => 4 kiery, splinter pik
 
 1K-1C-1P-2T				    => czwarty kolor
 1K-1C-1P-2BA				=> inwit
 1K-1C-1P-3T				    => 5-5 FG
 
 1K-1C-2T-2C					=> pozytywna ręka, delikatny inwit
+
+1K-1C-3C-3P                 => pytanie o krótkość
+1K-1C-3C-3BA		    => krótkość pik
+1K-1C-3C-4T					=> krótkość trefl
+1K-1C-3C-4K					=> krótkość karo
+1K-1C-3C-4C          => do gry
+
+1K-1C-3C-3P-3BA			=> bez krótkości, lepsza ręka
+1K-1C-3C-3P-4T      => krótkość trefl
+1K-1C-3C-3P-4K      => krótkość pik
+1K-1C-3C-3P-4C      => bez krótkośći, przeciętna ręka
+
 
 1K-1P-1BA                   => może być singiel pik przy 1444 albo 1453
 1K-1P-2BA                   => 15-17 PC, 6+ kar, brak 3-kartowego fitu
@@ -187,7 +220,16 @@
 1K-1P-2T-2C-3P              => fit 3-kartowy, nadwyżka
 
 
-1K-1P-3P-3BA                => pytanie o krótkość
+1K-1P-3P-3BA				=> pytanie o krótkość
+1K-1P-3P-4T          => krótkość trefl
+1K-1P-3P-4K          => krótkość karo
+1K-1P-3P-4C          => krótkość kier
+1K-1P-3P-4P          => do gry
+
+1K-1P-3P-3BA-4T				=> krótkość trefl
+1K-1P-3P-3BA-4K				=> krótkość bez krótkości, lepsza ręka
+1K-1P-3P-3BA-4C				=> krótkość kier
+1K-1P-3P-3BA-4P				=> bez krótkości, gorsza ręka
 
 1K-2T-2K					=> słaba ręka
 1K-2T-2C					=> rewers
