@@ -3,6 +3,9 @@ import React, {useEffect, useState} from "react";
 import Auction from "./Auction";
 import DealDiagram from "./DealDiagram";
 import {useLocation} from "react-router-dom";
+import Bid from "./Bid";
+import reactStringReplace from 'react-string-replace'
+import Suite from "./Suite";
 
 function PbnViewer() {
     const [deals, setDeals] = useState([])
@@ -52,7 +55,6 @@ function PbnViewer() {
             while (bids.length % 4 !== 0) {
                 bids.push([])
             }
-            console.log(bids.flat())
             deal['chunkedAuction'] = chunkMaxLength(bids, 4, bids.length / 4)
 
             if (deal['Vulnerable'] === 'Love' || deal['Vulnerable'] === 'None' || deal['Vulnerable'] === '-') {
@@ -67,6 +69,19 @@ function PbnViewer() {
             if (deal['Vulnerable'] === 'EW') {
                 deal['Vulnerable'] = ['E', 'W']
             }
+
+            let comment = deal['comment'] || ''
+            comment = comment.replaceAll('\\n', '')
+            let foundBids = comment.matchAll(/(\\[SCDH])/g)
+            if (foundBids) {
+                for (const foundBid of foundBids) {
+                    let bid = foundBid[0].replace('\\','')
+                    comment = reactStringReplace(comment, foundBid[0], (foundBid, i) => (
+                        <Suite suite={bid} cards=''/>
+                    ));
+                }
+            }
+            deal['comment'] = comment
 
             return deal
         }
