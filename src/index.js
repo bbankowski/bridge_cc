@@ -13,11 +13,11 @@ const router = createBrowserRouter([
         element: <HomePage/>,
     },
     {
-        path: "/cc",
+        path: "cc",
         element: <ConvenctionCard/>,
     },
     {
-        path: "/pbn",
+        path: "pbn",
         element: <PbnViewer/>,
     },
 ]);
