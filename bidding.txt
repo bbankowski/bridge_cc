@@ -271,15 +271,30 @@
 1C-1P-2K-3BA                => do gry
 
 1C-1P-2C-2BA				=> FG
+
+1C-1P-2P          => 12-14, 4 piki
 1C-1P-2BA					=> 15-17, 6 kierów, bez 3 pików
+1C-1P-3T          => 15-17, 5-5 z treflami
+1C-1P-3K          => 15-17, 5-5 z karami
 1C-1P-3C					=> 15-17, 6 kierów, 3 piki
+1C-1P-3P          => 15-17, 4 piki
+
+1C-1P-3P-3BA      => pytanie o krótkość
+1C-1P-3P-4T       => krótkość trefl
+1C-1P-3P-4K       => krótkość karo
+1C-1P-3P-4C        => krótkość kier
+1C-1P-3P-4P        => do gry
+
+1C-1P-3P-3BA-4T    => krótkość trefl
+1C-1P-3P-3BA-4K    => krótkość karo
+1C-1P-3P-3BA-4C    => bez krótkości, lepsza ręka
+1C-1P-3P-3BA-4P    => bez krótkości, przeciętna ręka
 
 1C-2T-3C-4T                 => samouzgodnienie trefli
 
 1C-2C-3C                    => blokujące
 
 1C-2P-2BA                   => pytanie o krótkość (3C = pikowa)
-
 
 
 ### OTWARCIE 1P ###
