@@ -191,19 +191,19 @@ T1T-3BA
 1K-4T                       => 10-12 PC, fit 4+, krótkość trefl
 
 
-T1K-1C-2P                    => rewers z 4 pikami
+1K-1C-2P                    => rewers z 4 pikami
 1K-1C-2BA                   => 15-17 PC, 6+ kar, brak 3-kartowego fitu
 1K-1C-3K                    => 15-17 PC, 6+ kar, 3-kartowy fit
 1K-1C-3C                    => 15-17 PC, 5+ kar - 4 kiery
 1K-1C-3P                    => 4 kiery, splinter pik
 
-T1K-1C-1P-2T				    => czwarty kolor
+1K-1C-1P-2T				    => czwarty kolor
 1K-1C-1P-2BA				=> inwit
 1K-1C-1P-3T				    => 5-5 FG
 
-T1K-1C-2T-2C					=> pozytywna ręka, delikatny inwit
+1K-1C-2T-2C					=> pozytywna ręka, delikatny inwit
 
-T1K-1C-3C-3P                 => pytanie o krótkość
+1K-1C-3C-3P                 => pytanie o krótkość
 1K-1C-3C-3BA		    => krótkość pik
 1K-1C-3C-4T					=> krótkość trefl
 1K-1C-3C-4K					=> krótkość karo
@@ -215,11 +215,11 @@ T1K-1C-3C-3P                 => pytanie o krótkość
 1K-1C-3C-3P-4C      => bez krótkośći, przeciętna ręka
 
 
-T1K-1P-1BA                   => może być singiel pik przy 1444 albo 1453
+1K-1P-1BA                   => może być singiel pik przy 1444 albo 1453
 1K-1P-2BA                   => 15-17 PC, 6+ kar, brak 3-kartowego fitu
 1K-1P-3K                    => 15-17 PC, 6+ kar, 3-kartowy fit
 
-T1K-1P-2T-2K					=> negatywny wybór koloru
+1K-1P-2T-2K					=> negatywny wybór koloru
 1K-1P-2T-2C                 => czwarty kolor, FG
 1K-1P-2T-2P					=> pozytywna ręka, delikatny inwit
 1K-1P-2T-2BA				=> inwit
@@ -234,7 +234,7 @@ T1K-1P-2T-2K					=> negatywny wybór koloru
 1K-1P-2T-2C-3P              => fit 3-kartowy, nadwyżka
 
 
-T1K-1P-3P-3BA				=> pytanie o krótkość
+1K-1P-3P-3BA				=> pytanie o krótkość
 1K-1P-3P-4T          => krótkość trefl
 1K-1P-3P-4K          => krótkość karo
 1K-1P-3P-4C          => krótkość kier
@@ -245,7 +245,7 @@ T1K-1P-3P-3BA				=> pytanie o krótkość
 1K-1P-3P-3BA-4C				=> krótkość kier
 1K-1P-3P-3BA-4P				=> bez krótkości, gorsza ręka
 
-T1K-2T-2K					=> słaba ręka
+1K-2T-2K					=> słaba ręka
 1K-2T-2C					=> rewers
 1K-2T-2P					=> rewers
 1K-2T-2BA					=> 4=4=4=1
@@ -254,7 +254,7 @@ T1K-2T-2K					=> słaba ręka
 1K-2T-3C					=> nadwyżka, splinter z fitem trefl
 1K-2T-3P					=> nadwyżka, splinter z fitem trefl
 
-T1K-3T-3K-3BA                => krótkość trefl
+1K-3T-3K-3BA                => krótkość trefl
 
 
 
