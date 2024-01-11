@@ -4,7 +4,7 @@ import Club from "../club.svg";
 import Heart from "../heart.svg";
 import Spade from "../spade.svg";
 import Diamond from "../diamond.svg";
-import { HashLink } from 'react-router-hash-link';
+import {HashLink} from 'react-router-hash-link';
 
 function ConvenctionCard() {
     const path = "https://raw.githubusercontent.com/bbankowski/bridge_cc/master/bidding.txt"
@@ -70,6 +70,7 @@ function ConvenctionCard() {
 
     let previousBids = []
     let currentBidType = null
+    let tableBidLevel = null
 
     function getColor(bid) {
         switch (bid) {
@@ -113,7 +114,6 @@ function ConvenctionCard() {
         const weStartBidding = currentBidType === "*" || currentBidType === null
 
         let currentBidParts = bid.split("-")
-        let mainBid = currentBidParts.pop()
         currentBidParts.push('?')
 
         if (currentBidType === null) {
@@ -130,12 +130,11 @@ function ConvenctionCard() {
         }
         currentBidParts = chunkMaxLength(currentBidParts, 4, currentBidParts.length)
 
-        let rootBid = bid.substring(0, bid.lastIndexOf('-'))
         let foundRootBid = currentBidType === null ? bids[bids[index][3]] : null
         return <div>
-            <div className="App-bidTable" id={"bid-" + rootBid}>
+            <div className="App-bidTable" id={"bid-" + bid}>
                 <div className="App-bidTableHeader">Licytacja
-                    po {renderSingleBid(rootBid)}{foundRootBid && (': ' + foundRootBid[1])} </div>
+                    po {renderSingleBid(bid)}{foundRootBid && (': ' + foundRootBid[1])} </div>
                 <table>
                     <tbody>
                     {currentBidParts.map((currentBidFours, index) => {
@@ -153,10 +152,6 @@ function ConvenctionCard() {
                     </tbody>
                 </table>
             </div>
-            <div style={{paddingLeft: "14px"}}>
-                <HashLink to={"#bid-" + bid}><b>{renderSingleBid(mainBid)}</b> <span
-                    className="App-description">{description}</span></HashLink>
-            </div>
         </div>
     }
 
@@ -170,26 +165,16 @@ function ConvenctionCard() {
             return <h4 className="title is-4 App-bid">{bid.slice(1).trim()}</h4>
         }
 
-        while (previousBids.length > 0) {
-            let previousBid = previousBids.pop()
-            if (bid.startsWith(previousBid)) {
-                previousBids.push(previousBid)
-                bid = bid.slice(previousBid.length + 1).trim()
-                if (bid.includes('-')) {
-                    return renderBid(index, bid, description, originalBid)
-                }
-                return <div key={"bid" + index} style={{paddingLeft: "14px"}}>
-                    <HashLink to={"#bid-" + originalBid}><b>{renderSingleBid(bid)}</b> <span
-                        className="App-description">{description}</span></HashLink>
-                </div>
-            }
+        if (bid.startsWith('T')) {
+            return renderBidTable(index, originalBid.substring(1), description)
         }
 
-        if (bid.includes('-')) {
-            return renderBidTable(index, originalBid, description)
-        }
-
-        return <div key={"bid" + index}><b>{bid}</b> {description}</div>
+        let bidLevel = (bid.match(/-/g) || []).length - tableBidLevel
+        let currentBid = bid.substring(bid.lastIndexOf('-') + 1)
+        return <div key={"bid" + index} style={{paddingLeft: (20 * bidLevel) + "px"}}>
+            <HashLink to={"#bid-" + originalBid}><b>{renderSingleBid(currentBid)}</b> <span
+                className="App-description">{description}</span></HashLink>
+        </div>
     }
 
     return (
@@ -207,6 +192,10 @@ function ConvenctionCard() {
                     if (bid[0].startsWith("^") || bid[0].startsWith("&") || bid[0].startsWith("*")) {
                         previousBids = []
                         currentBidType = bid[0][0]
+                    }
+                    if (bid[0].startsWith("T")) {
+                        previousBids = []
+                        tableBidLevel = (bid[0].match(/-/g) || []).length
                     }
 
                     const renderedLine = renderBid(index, bid[0], bid[1], bid[0])
