@@ -43,9 +43,9 @@ const Minimax = (props) => {
     }
 
     return <div className="Minimax">
-        <div>Minimax: <Bid bid={minimaxContract}/> {minimaxDeclarer} {minimaxScore}</div>
         {renderTable('N', 'S')}
         {renderTable('W', 'E')}
+        <div className="MinimaxValue">Minimax: <Bid bid={minimaxContract}/> {minimaxDeclarer} {minimaxScore}</div>
     </div>
 }
 

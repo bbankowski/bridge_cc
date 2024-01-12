@@ -21,6 +21,20 @@ function PbnViewer() {
     let query = useQuery()
 
     useEffect(() => {
+        function replaceBidsInText(comment) {
+            comment = comment.replaceAll('\\n', '')
+            let foundBids = comment.matchAll(/(\\[SCDH])/g)
+            if (foundBids) {
+                for (const foundBid of foundBids) {
+                    let bid = foundBid[0].replace('\\', '')
+                    comment = reactStringReplace(comment, foundBid[0], (foundBid, i) => (
+                        <Suite suite={bid} cards=''/>
+                    ));
+                }
+            }
+            return comment;
+        }
+
         function updateDeal(deal) {
             let hands = deal['Deal'].split(' ')
             let players = {
@@ -84,18 +98,7 @@ function PbnViewer() {
                 deal['Vulnerable'] = ['E', 'W']
             }
 
-            let comment = deal['comment'] || ''
-            comment = comment.replaceAll('\\n', '')
-            let foundBids = comment.matchAll(/(\\[SCDH])/g)
-            if (foundBids) {
-                for (const foundBid of foundBids) {
-                    let bid = foundBid[0].replace('\\', '')
-                    comment = reactStringReplace(comment, foundBid[0], (foundBid, i) => (
-                        <Suite suite={bid} cards=''/>
-                    ));
-                }
-            }
-            deal['comment'] = comment
+            deal['comment'] = replaceBidsInText(deal['comment'] || '')
 
             return deal
         }
@@ -175,7 +178,7 @@ function PbnViewer() {
                             if (tag === 'Auction') {
                                 auctionStarted = true
                             } else if (tag === 'Note') {
-                                deal['notes'].push(param)
+                                deal['notes'].push(replaceBidsInText(param))
                             } else if (tag === 'OptimumResultTable') {
                                 optimumResultTableStarted = true
                             }
@@ -204,8 +207,8 @@ function PbnViewer() {
         })
     }, [query])
 
-    function chunkMaxLength(arr, chunkSize, maxLength) {
-        return Array.from({length: maxLength}, () => arr.splice(0, chunkSize));
+    function chunkMaxLength(array, chunkSize, maxLength) {
+        return Array.from({length: maxLength}, () => array.splice(0, chunkSize));
     }
 
     let deal = deals.length > currentDeal ? deals[currentDeal] : null
@@ -229,10 +232,10 @@ function PbnViewer() {
             {deal && <div className="box">
                 <div className="App-deal">
                     <div className="App-deal-header">
-                        <h1 className="title">{deal['Event']}</h1>
-                        Contract: <Bid bid={deal['Contract']}/><br/>
+                        {deal['Event'] && <h1 className="title">{deal['Event']}</h1>}
+                        Contract: <Bid bid={deal['Contract']}/> {deal['Declarer']}<br/>
                         Result (tricks): {deal['Result']}<br/>
-                        Score: {deal['Score']}<br/>
+                        Score: {deal['Score'] || '?'}<br/>
                     </div>
                     <div className="App-deal-details">
                         <Auction auction={deal['chunkedAuction']} notes={deal['notes']}/>
