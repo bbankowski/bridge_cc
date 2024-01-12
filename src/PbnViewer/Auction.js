@@ -3,6 +3,7 @@ import Bid from "./Bid";
 
 const Auction = (props) => {
     return <div className="App-bidTable">
+        Licytacja:
         <table>
             <thead>
             <tr>

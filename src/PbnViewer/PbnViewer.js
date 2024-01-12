@@ -235,9 +235,9 @@ function PbnViewer() {
                         Score: {deal['Score']}<br/>
                     </div>
                     <div className="App-deal-details">
+                        <Auction auction={deal['chunkedAuction']} notes={deal['notes']}/>
                         <DealDiagram deal={deal['hands']} dealer={deal['Auction']} vulnerable={deal['Vulnerable']}
                                      dealNumber={deal['Board']}/>
-                        <Auction auction={deal['chunkedAuction']} notes={deal['notes']}/>
                         <Minimax minimax={deal['Minimax']} optimumResults={deal['optimumResultTable']}/>
                     </div>
                     <div className="App-deal-comment">
