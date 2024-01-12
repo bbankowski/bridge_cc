@@ -14,7 +14,8 @@ function HomePage() {
                 <div className="content">
                     <p>PBN Viewer:</p>
                     <ul>
-                        <li><a href={'/bridge_cc/#/pbn?filename=4kroli.pbn'}>Czterech Króli 07.01.2024</a></li>
+                        <li><a href={'/bridge_cc/#/pbn?filename=4kroli.pbn'}>2024.01.07 Czterech Króli</a></li>
+                        <li><a href={'/bridge_cc/#/pbn?filename=2024.01.01-TreningCKiS.pbn'}>2024.01.11 Trening CKiS Skawina BBO</a></li>
                     </ul>
                 </div>
             </div>
