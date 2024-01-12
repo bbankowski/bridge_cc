@@ -22,13 +22,14 @@ function chunkMaxLength(array, chunkSize, maxLength) {
 }
 
 function updateDeal(deal) {
-    let hands = deal['Deal'].split(' ')
-    let players = {
+    const players = {
         'N': ['N', 'E', 'S', 'W'],
         'E': ['E', 'S', 'W', 'N'],
         'S': ['S', 'W', 'N', 'E'],
         'W': ['W', 'N', 'E', 'S'],
     }
+
+    let hands = deal['Deal'].split(' ')
     let firstHand = hands[0].charAt(0)
     hands[0] = hands[0].substring(2)
     deal['hands'] = []
