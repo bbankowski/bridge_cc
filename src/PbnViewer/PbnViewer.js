@@ -6,6 +6,7 @@ import {useLocation} from "react-router-dom";
 import Bid from "./Bid";
 import reactStringReplace from 'react-string-replace'
 import Suite from "./Suite";
+import Minimax from "./Minimax";
 
 function PbnViewer() {
     const [deals, setDeals] = useState([])
@@ -88,7 +89,7 @@ function PbnViewer() {
             let foundBids = comment.matchAll(/(\\[SCDH])/g)
             if (foundBids) {
                 for (const foundBid of foundBids) {
-                    let bid = foundBid[0].replace('\\','')
+                    let bid = foundBid[0].replace('\\', '')
                     comment = reactStringReplace(comment, foundBid[0], (foundBid, i) => (
                         <Suite suite={bid} cards=''/>
                     ));
@@ -113,9 +114,17 @@ function PbnViewer() {
                 let comment = ''
                 let auctionStarted = false
                 let auction = ''
+                let optimumResultTableStarted = false
+                let optimumResultTable = {'N': {}, 'S': {}, 'E': {}, 'W': {}}
                 for (const line of lines) {
                     if (line.startsWith('%')) {
                         continue
+                    }
+
+                    if (line.startsWith('[') && optimumResultTableStarted) {
+                        optimumResultTableStarted = false
+                        deal['optimumResultTable'] = optimumResultTable
+                        optimumResultTable = {'N': {}, 'S': {}, 'E': {}, 'W': {}}
                     }
 
                     if (line.startsWith('[Event') && Object.keys(deal).length > 2) {
@@ -132,6 +141,18 @@ function PbnViewer() {
                         } else {
                             auction += " " + line
                             continue
+                        }
+                    }
+                    if (optimumResultTableStarted) {
+                        let resultParts = line.replaceAll('  ', ' ').split(' ')
+                        if (resultParts.length === 3) {
+                            console.log(resultParts)
+                            optimumResultTable[resultParts[0]][resultParts[1]] = resultParts[2]
+                            continue
+                        } else {
+                            optimumResultTableStarted = false
+                            deal['optimumResultTable'] = optimumResultTable
+                            optimumResultTable = {'N': {}, 'S': {}, 'E': {}, 'W': {}}
                         }
                     }
                     if (commentStarted) {
@@ -155,6 +176,8 @@ function PbnViewer() {
                                 auctionStarted = true
                             } else if (tag === 'Note') {
                                 deal['notes'].push(param)
+                            } else if (tag === 'OptimumResultTable') {
+                                optimumResultTableStarted = true
                             }
                         }
                     } else if (line.startsWith('{')) {
@@ -165,6 +188,10 @@ function PbnViewer() {
                             comment = line.substring(1)
                         }
                     }
+                }
+
+                if (optimumResultTableStarted) {
+                    deal['optimumResultTable'] = optimumResultTable
                 }
 
                 if (Object.keys(deal).length > 2) {
@@ -211,6 +238,7 @@ function PbnViewer() {
                         <DealDiagram deal={deal['hands']} dealer={deal['Auction']} vulnerable={deal['Vulnerable']}
                                      dealNumber={deal['Board']}/>
                         <Auction auction={deal['chunkedAuction']} notes={deal['notes']}/>
+                        <Minimax minimax={deal['Minimax']} optimumResults={deal['optimumResultTable']}/>
                     </div>
                     <div className="App-deal-comment">
                         <p><strong>Comment:</strong></p>

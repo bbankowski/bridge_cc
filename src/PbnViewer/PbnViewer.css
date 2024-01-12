@@ -131,3 +131,9 @@
 .BidNotes {
     font-size: 12px;
 }
+
+.Minimax table.table {
+    font-size: 0.8em;
+    text-align: center;
+    margin-bottom: 0;
+}
