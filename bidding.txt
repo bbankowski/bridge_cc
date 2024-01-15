@@ -807,6 +807,7 @@ pas-1P-2T                   => drury
 ### PO INTERWENCJI ###
 
 * Po interwencji na otwarcie 1 trefl
+T1T-X
 1T-X-2C                 => 3-6 PC, kolor 6+
 1T-X-2P                 => 3-6 PC, kolor 6+
 
@@ -872,9 +873,11 @@ T1T-2BA
 
 
 * Po interwencji na otwarcie 1 karo
+T1K-X
 1K-X-2C                 => 3-6 PC, kolor 6+
 1K-X-2P                 => 3-6 PC, kolor 6+
 
+T1K-2C
 1K-2C-X                 => kontra wywoławcza
 1K-2C-2P                => 5+ pików, NF
 1K-2C-2BA               => 5+trefli, INV+
@@ -886,6 +889,7 @@ T1T-2BA
 1K-2C-4T                => 5-5 piki i trefle, FG
 1K-2C-4K                => blokujące
 
+T1K-2P
 1K-2P-X                 => kontra wywoławcza
 1K-2P-2BA               => 5+trefli, INV+
 1K-2P-3T                => z fitem, INV+
@@ -899,13 +903,14 @@ T1T-2BA
 
 
 * Po interwencji na otwarcie 1 w starszy
+T1C-X
 1C-X-XX					=> 10+ PC, bez fitu
 1C-X-1BA                => 7-9 PC, fit
 1C-X-2BA                => 10-12 PC, fit
 1C-X-3BA                => 13-15 PC, fit
 1C-X-2C					=> 2-6 PC, fit
 
-
+T1C-2K
 1C-2K-2P				=> naturalne, nieforsujące (inne sekwencje analogicznie)
 1C-2K-2BA				=> słabe na niższym kolorze lub forsing z fitem
 1C-2K-3T				=> naturalne, FG
@@ -918,22 +923,27 @@ T1T-2BA
 1C-2K-4C				=> do gry, taktyczne
 
 * Po otwarciu 1BA
+T1BA-X
 1BA-X-XX                => punkty, pozostale odzywki zgodnie jak bez kontry
 
+T1BA-2C
 1BA-2C-X                => negatywna (tak samo po innych odzywkach 2 w kolor)
 1BA-2C-2P               => naturalne 5+ pików, NF
 1BA-2C-2BA              => lebensohl (tak samo po innych odzywkach 2 w kolor)
 
+T1BA-pas-2T
 1BA-pas-2T-X-XX         => karna
 1BA-pas-2T-X-2K         => brak starszych czwórek, trzymanie trefl (analogicznie inne odpowiedzi)
 1BA-pas-2T-X-pas        => forsuje do XX, brak trzymania trefl (po XX odpowiadamy jak bez kontry)
 
+T1BA-pas-2K
 1BA-pas-2K-X-pas        => brak fitu (tak samo po innych transferach)
 1BA-pas-2K-X-XX         => karna (tak samo po innych transferach)
 1BA-pas-2K-X-2C         => z fitem (tak samo po innych transferach)
 
 
 * Po interwencji na multi
+T2K-X
 2K-X-pas				=> z karami, nf
 2K-X-XX                 => pokaż kolor
 2K-X-2C                 => do pasa
@@ -943,17 +953,24 @@ T1T-2BA
 2K-X-3C					=> blok z fitami
 2K-X-4T					=> pokaż kolor transferem
 2K-X-4K					=> pokaż kolor naturalnie
+
+T2K-2C
 2K-2C-X					=> konta na wysokości dwóch jest do koloru
-2K-3T-X					=> kontra na wysokości trzech jest karna
 2K-2C-3T				=> natrulane, nieforsujące (i inne analogicznie)
 
+T2K-3T
+2K-3T-X					=> kontra na wysokości trzech jest karna
+
+
 * Po blackwoodzie
+T4BA-X
 4BA-X-XX                => karna, reszta szczebelkami (pas też jest szczebelkiem)
 4BA-5T-X                => karna, reszta szczebelkami (tak samo po innych wejsciach)
 
 ### W OBRONIE ###
 
 ^ Po polskim treflu
+T1T
 1T-1BA                  => klasyczne, 15-17 PC (po kontrze uciekamy naturalnie, reszta jak po otwarciu)
 1T-X                    => wywolawcza
 1T-2T                   => 54 kolory stare
