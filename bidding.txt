@@ -190,7 +190,7 @@ T1T-3BA
 1K-3BA                      => do gry
 1K-4T                       => 10-12 PC, fit 4+, krótkość trefl
 
-
+T1K-1C
 1K-1C-2P                    => rewers z 4 pikami
 1K-1C-2BA                   => 15-17 PC, 6+ kar, brak 3-kartowego fitu
 1K-1C-3K                    => 15-17 PC, 6+ kar, 3-kartowy fit
