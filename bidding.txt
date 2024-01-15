@@ -810,6 +810,7 @@ pas-1P-2T                   => drury
 1T-X-2C                 => 3-6 PC, kolor 6+
 1T-X-2P                 => 3-6 PC, kolor 6+
 
+T1T-2K
 1T-2K-X                 => (jesli 2K naturalne) wywoławcza
 1T-2K-2C                => 5+ kierów, NF
 1T-2K-2P                => 5+ pików, NF
@@ -822,6 +823,7 @@ pas-1P-2T                   => drury
 1T-2K-4T                => 5 trefli - 5 stary, FG
 1T-2K-4K                => 5-5 na starych (może być słabsza ręka)
 
+T1T-2K
 1T-2K-pas               => (jesli 2K stare/multi) słaby lub 4 piki
 1T-2K-X                 => wywoławcza 3-4 kiery
 1T-2K-2C                => 5+ kierów, NF
@@ -835,6 +837,7 @@ pas-1P-2T                   => drury
 1T-2K-4T                => 5 trefli - 5 kierów, FG
 1T-2K-4K                => 5 kar - 5 kierów, FG
 
+T1T-2C
 1T-2C-X                 => (jeśli 2C blok lub dwukolorówka) kontra wywoławcza
 1T-2C-2P                => 5+ pików, NF
 1T-2C-2BA               => 5+ trefli, INV+
@@ -846,6 +849,7 @@ pas-1P-2T                   => drury
 1T-2C-4T                => 5-5 piki i trefle, FG
 1T-2C-4K                => 5-5 piki i kara, FG
 
+T1T-2P
 1T-2P-X                 => (jeśli 2P blok lub dwukolorówka) kontra wywoławcza
 1T-2P-2BA               => 5+ trefli, INV+
 1T-2P-3T                => 5+ kar, INV+
@@ -856,6 +860,7 @@ pas-1P-2T                   => drury
 1T-2P-4T                => 5-5 kiery i trefle, FG
 1T-2P-4K                => 5-5 kiery i kara, FG
 
+T1T-2BA
 1T-2BA-pas              => brak punktów lub trapping pas (dalej X karne)
 1T-2BA-X                => kontra wywoławcza (dalej X wywoławcze)
 1T-2BA-3T               => kiery dłuższe od pików
