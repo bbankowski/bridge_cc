@@ -931,12 +931,12 @@ T1BA-2C
 1BA-2C-2P               => naturalne 5+ pików, NF
 1BA-2C-2BA              => lebensohl (tak samo po innych odzywkach 2 w kolor)
 
-T1BA-pas-2T
+T1BA-pas-2T-X
 1BA-pas-2T-X-XX         => karna
 1BA-pas-2T-X-2K         => brak starszych czwórek, trzymanie trefl (analogicznie inne odpowiedzi)
 1BA-pas-2T-X-pas        => forsuje do XX, brak trzymania trefl (po XX odpowiadamy jak bez kontry)
 
-T1BA-pas-2K
+T1BA-pas-2K-X
 1BA-pas-2K-X-pas        => brak fitu (tak samo po innych transferach)
 1BA-pas-2K-X-XX         => karna (tak samo po innych transferach)
 1BA-pas-2K-X-2C         => z fitem (tak samo po innych transferach)
