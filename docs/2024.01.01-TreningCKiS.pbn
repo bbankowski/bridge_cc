@@ -1,14 +1,14 @@
 % PBN 2.1
 % EXPORT
 %Content-type: text/x-pbn; charset=UTF-8
-%Creator: BridgeComposer Version 5.105
-%Created: Fri Jan 12 08:48:00 2024 +0100
+%Creator: BridgeComposer Version 5.97
+%Created: Mon Jan 15 00:32:47 2024 +0100
 %BCOptions Center STBorder STShade
 %BidAndCardSpacing Thin
 %BoardsPerPage 1
 %CardTableColors #008000,#ffffff,#aaaaaa
-%DDAFormat 0
 %DefaultPagination 0
+%EventSpacing 0
 %Font:CardTable "Arial",11,400,0
 %Font:Commentary "Times New Roman",12,400,0
 %Font:Diagram "Times New Roman",12,400,0
@@ -27,12 +27,11 @@
 %HtmlNavBar 0.75,#cfe2f3
 %HtmlSpades entity,"https://bridgecomposer.com/suitimg/s.gif"
 %Margins 1000,1000,1000,1000
-%PaperSize 1,0,0,2
+%PaperSize 1,2159,2794,14
 %ParaIndent 0
 %PipColors #000000,#ff0000,#ff0000,#000000
 %PipFont "Symbol","Symbol",2,0xAA,0xA9,0xA8,0xA7
 %ScoreTableColors #e6e6e6,#000000
-%SectionSpacing 0,0,0
 %SelectedBoard 23
 %ShowBoardLabels 2
 %ShowCardTable 2
@@ -40,6 +39,8 @@
 %TSTReport List
 %TSTReportOrder ByNumber
 %TSTReportShade Yes
+%DDAFormat 0
+%SectionSpacing 0,0,0
 [Event ""]
 [Site ""]
 [Date ""]
@@ -60,7 +61,28 @@ kontrakt
 
 WYNIK = 0 (na drugim stole 6\C po otwarciu 1\S i braku interwencji)
 
-}
+[MK] Zupełnym standardem jest granie transferami w tej pozycji. Przecież lepiej
+żeby wistował człowiek z ADWxxx w kolorze starszym na dowolny nasz kontrakt.
+Transfery w dodatku łączą odzywki INV i GF. 2BA = INV+ \C, 3\C = INV+ \D, 3\D =
+\H, 3\H = \S.
+
+Wtedy odzywka 3\S po 2\D oznacza oba młode i nieokreśloną krótkość. 
+
+Co mamy tutaj? 6\C wygląda OK, nie widać za bardzo jak tutaj zainwitować mądrze
+szlema. Można dać pas i potem 6\C po kontrze, ale to sugeruje renons kierowy i
+inwit do szlema w ten sposób.
+
+Co znaczy 4BA z pozycji S? To trudny problem.
+
+My zwykle przyjmujemy, że pas --> 5\D oznacza inwit do szlemika, ale bez
+zatrzymania kier. Natomiast pas --> 4BA inwit, ale z cue-bidem kier (4BA
+zabrany cue-bid). 
+
+W bezpośredniej licytacji nie uznałbym że to inwit z pikami, bo wtedy mamy dużo
+innych dróg dostępnych. Być może to po prostu Blackwood? Nie widzę sensu w
+pokazywaniu 6-4 na młodszych, nie widzę sensu w znaczeniach inwitu na karach
+ani na pikach. Tylko na czym ten Blackwood? Chyba na solo karach? Co dalej? Nie
+wiem. Możemy zgubić grę treflową. Wniosek = chyba musimy dać 6\C.}
 [Ability "N:7C6CC E:00700 S:7C6CC W:00700"]
 [BCFlags "1f"]
 [DoubleDummyTricks "7c6cc7c6cc0070000700"]
@@ -112,7 +134,12 @@ W NT  0
 [Result "8"]
 {[MJ] Tutaj tylko przy okazji przypomnienie, że na 4=4=0=5 otwieramy 1\C
 
-WYNIK: 0 (na drugim stole 1BA)}
+WYNIK: 0 (na drugim stole 1BA)
+
+[MK] Jak gracie po 2BA? 3\C jest zwykłym Staymanem czy Puppetem? Jeśli Puppetem
+to S może to dać, żeby grać 3\D.
+
+Należy coś tutaj ustalić, żeby wiedzieć.}
 [Ability "N:76594 E:57849 S:76594 W:57849"]
 [BCFlags "1f"]
 [DoubleDummyTricks "76594765945784957849"]
@@ -162,7 +189,17 @@ W NT 5
 {[MJ] W miarę normalnie, słaby = siła poniżej otwarcia. Odwrotka nowszej
 generacji niż 445566 w backlogu.
 
-WYNIK = 0 (płaskie rozdanie)}
+WYNIK = 0 (płaskie rozdanie)
+
+[MK] Słaby jako 7-11 to moim zdaniem nonsens. Ręce 12+ po Odwrotce przychodzą
+niezmiernie rzadko i ustawienie systemu w ten sposób, że 90% czasu mamy
+odpowiedź "słaby" z punktu widzenia ekonomii licytacji jest bez sensu. To
+zdecydowanie powinno być 7-9 i 10+.
+
+Czym się różni 2\D i potem 4\C od 4\C od razu?
+
+Uważam, że 4\C od razu wskazuje minimalną rękę. Z silniejszą zwykle chcemy
+wydobyć więcej informacji.}
 [Ability "N:A6B95 E:37247 S:95B85 W:37247"]
 [BCFlags "1f"]
 [DoubleDummyTricks "a6b9595b853724737247"]
@@ -216,7 +253,9 @@ W NT  3
 musi mieć jakiś duży układ, ale nie wiem jak to licytować. Po wiście królem nie
 widziałem szans obkładki, wyjście damą pik bardzo słabe.
 
-WYNIK: -17 (na drugim stole 3BAN+2 po wiście pikowym)}
+WYNIK: -17 (na drugim stole 3BAN+2 po wiście pikowym)
+
+[MK] Licytacja wygląda OK, trudno się przyczepić. Problem był na drugim stole.}
 [Ability "N:7227A E:1BB41 S:7227A W:1BB41"]
 [BCFlags "1f"]
 [DoubleDummyTricks "7227a7227a1bb411bb41"]
@@ -372,7 +411,32 @@ W NT 6
 wiście treflowym nie umiem liczyć do 13 i oddaję jedną lewę.
 
 
-WYNIK: +9 (na drugim stole stop kontra 5\SX+1)}
+WYNIK: +9 (na drugim stole stop kontra 5\SX+1)
+
+[MK] Co znaczą nasze odzywki?
+
+4BA = oba młodsze lub próba szlemikowa z pikami\n
+5\H = krótkość, szlemikowe z pikami\n
+5\S = dołóż 6, jeśli trzymasz kiery
+
+Proponuję rozpocząć od 5\H. 
+
+S daje 5BA = RKCB, odpowiadasz 6\H i S ma tough problem. Może też powiedzieć
+6\H = mam asa kier, nie mam asów w kolorach młodszych, ręka spoko. Dołożenie
+jest teraz w zasadzie normalne, ale gwarancji nie ma po tak wysokim bloku.
+Problem jest taki, że nie znamy dopasowania w kolorach młodszych i wszystkich
+szczegółów - nie jesteśmy w stanie tego sprawdzić.
+
+Jak wygląda życie po 4BA? Partner mówi 5\D. Teraz co będzie znaczyć nasze 5\H?
+Czy to próba szlemikowa na pikach? Czy może próba szlema z oboma młodymi? 
+
+Przyznam szczerze, że nie znam odpowiedzi. Wygląda na to, że 5\H przy młodych
+jest konieczne, bo inaczej nie mamy jak sprawdzić zatrzymania I klasy w kierach
+przy obu młodych. Czyli N musiałby dać 6\S. 
+
+Szczerze mówiąc - wolę odzywkę 5\H. Mniej problemów, jaśniejsza licytacja.
+
+}
 [Ability "N:DB5D5 E:00806 S:DB5C5 W:00806"]
 [BCFlags "1f"]
 [DoubleDummyTricks "db5d5db5c50080600806"]
@@ -472,7 +536,19 @@ W NT  9
 [Result "9"]
 {[MJ] Wist w małego pika, nie widzę nic ciekawego.
 
-WYNIK: -3 (na drugim stole zbiega słabe 1BA)}
+WYNIK: -3 (na drugim stole zbiega słabe 1BA)
+
+[MK] Z mojego doświadczenia wynika, że dużo lepszym ustaleniem jest granie 1\H
+2+ po negacie. Unikamy wtedy siedmioatutówek, 1\S obiecuje kartę 15+ i odpada
+połowa problemów. Druga rzecz: z inwitem na obu młodszych zawsze mamy wtedy 1\C
+- 1\D - 1\H - 2\S, a po rebidzie 1\S mamy zgryz. S musi wtedy po 1\H z czwórką
+kierów mówić 1BA - to jest koszt. Zalet jest jeszcze kilka pomniejszych, ale to
+można się przekonać dopiero jak się spróbuje.
+
+Ten mały pik to bardzo skuteczny, ale czy taki dobry? Radziłbym oszczędzić
+sobie takich pomysłów w takich rozdaniach. Raczej wybrałbym karo, gdyż oceniam,
+że szanse na obkład mamy dopiero gdy oni grają na 7 atutach i chcę wtedy
+wykorzystać nasz potencjał przebitkowy.}
 [Ability "N:53657 E:7A786 S:53546 W:8A786"]
 [BCFlags "1f"]
 [DoubleDummyTricks "53657535467a7868a786"]
@@ -523,7 +599,19 @@ W NT  8
 [Result "9"]
 {[MJ] Dla mnie X w meczu ani przez moment nie przyszłaby do głowy.
 
-WYNIK: +13 (na drugim stole 4\S=)}
+WYNIK: +13 (na drugim stole 4\S=)
+
+[MK] N musi podnieść do 3\H z tą kartą. Czasem nie wyjdzie, ale jeśli się udaje
+to zysk jest bardzo duży (oni po). Czy nam się to wydaje głupie czy mądre.
+Odradzam 4\H, ale 3\H jest obowiązkowe.
+
+Mamy 3 blotki pik - oni mogą mieć tutaj końcówkę, a mamy w miarę ofensywną
+kartę - tyle zresztą szło, raz na ruski rok partner ma w ogóle kara. Druga
+kwestia to... partner może mieć piki...
+
+Kontra większego sensu nie ma, bo to jest na bez jednej, mogą sobie wpisać
+nadróbkę - dla mnie to jest chyba objaw źle wykonanej roboty wcześniej i próba
+powetowania.}
 [Ability "N:53967 E:8A476 S:53957 W:8A476"]
 [BCFlags "1f"]
 [DoubleDummyTricks "53967539578a4768a476"]
@@ -577,7 +665,17 @@ W NT  8
 {[MJ] Nie wiem czy pas N byłby teraz forsujący, zrozumiałem że kontra jest
 zniechęcająca (ale wtedy to 4\S zaraz wygrają)
 
-WYNIK: -5 (na drugim stole taki sam kontrakt, ale puszczona lewa)}
+WYNIK: -5 (na drugim stole taki sam kontrakt, ale puszczona lewa)
+
+[MK] W przepychankach piki na kiery pasy nie są forsujące. Nie ma żadnego
+powodu, dla którego mieliby nie wziąć 11 lew patrząc w kartę S, a to jest
+normalne 4\H przecież. Natomiast braka pasa na kontrę to amatorszczyzna i brak
+zaufania. Na miejscu N powiedziałbym, że jeśli partner woli grać z krzesłem to
+fajne są w IKEI.
+
+Pszczoła ma inną zasadę: na takie kontry pasuję i nie patrzę w karty. Miałem 9
+lew, może 10 na 4\H. Mam dwie lewy defensywne, może nieco więcej, partner
+kontruje 4\S, po prostu mu ufamy.}
 [Ability "N:94965 E:48367 S:94965 W:48467"]
 [BCFlags "1f"]
 [DoubleDummyTricks "94965949654836748467"]
@@ -629,7 +727,28 @@ W NT 4
 [Result "8"]
 {[MJ] Wydaje mi się, że do wymyślenia jest przebitka trefl.
 
-WYNIK: 0 (to samo)}
+WYNIK: 0 (to samo)
+
+[MK] Trudno powiedzieć czy pas z N był prawidłowy czy nie. Ja raczej nie lubię
+odpuszczać 2\D na równowadze siły gdy mamy starsze kolory. Myślę, że bym
+wznowił, ale rozumiem pasujących.
+
+Zagranie kara to biała flaga. Partner ma 5+\H i ich nie wyrzuca tylko gra z
+pięciokartu wroga w stole. Gra w kolejności - mała-duża. Musi mieć dubla trefl.
+To brak współpracy. Druga rzecz to sygnalizacja z N.
+
+\SW nie oznacza sekwensu. Tę rolę spełnia \SK. \SW oznacza \SW98xx. W dalszej
+kolejności N wskazał ogromną dysproporcję na rzecz trefli, a przecież jeśli
+partner nie ma dubla trefl, to N potrzebuje zagrania w kiery. Należy grać
+środkowymi kartami z lekką sugestią na kiery, jeśli to będzie możliwe. \D6 może
+być nieczytelna dla partnera, równie dobrze możemy mieć \D86 czy coś. Sugestie
+lavinthalowe muszą być przekazane wyraźnie w pikach.
+
+Pierwsza zrzutka powinna funkcjonować w schemacie lavinthala. Dlaczego?
+
+Mamy przypadek wistu z krótkiego honoru, potencjalnie singla. Musimy wskazać
+dojście do przebitek. Karta środkowa pełni funkcję marki / neutralnego
+lavinthala = miałem tylko w pikach.}
 [Ability "N:66833 E:75489 S:66833 W:75489"]
 [BCFlags "1f"]
 [DoubleDummyTricks "66833668337548975489"]
@@ -686,7 +805,10 @@ W NT 7
 [Result "11"]
 {[MJ] Licytacja normalna. Przeciwnicy puszczają kontrakt
 
-WYNIK: -1 (na drugim stole 3BAS i po dwójce pik odwrót pika przepuszczony)}
+WYNIK: -1 (na drugim stole 3BAS i po dwójce pik odwrót pika przepuszczony)
+
+[MK] To kłopoty z liczeniem do 12. N musiałby mieć 10 punktów na otwarcie bez
+\HA. Zmiana na trefle jest oczywista.}
 [Ability "N:86897 E:27226 S:86897 W:27226"]
 [BCFlags "1f"]
 [DoubleDummyTricks "86897868972722627226"]
@@ -787,7 +909,9 @@ W NT  6
 [Result "11"]
 {[MJ] Przeciwnicy się nie dogadali
 
-WYNIK: +12 (4BAW=)}
+WYNIK: +12 (4BAW=)
+
+[MK] Mało brakło, a by wygrali.}
 [Ability "N:12112 E:CBCCB S:12112 W:CBCCB"]
 [BCFlags "1f"]
 [DoubleDummyTricks "1211212112cbccbcbccb"]
@@ -839,7 +963,28 @@ W NT 12
 [Result "9"]
 {[MJ] 2\S to powinien być pod-acol na pikach, może z ręką S wystarczy 3\S?
 
-WYNIK: -6 (na drugim stole 3\S)}
+WYNIK: -6 (na drugim stole 3\S)
+
+[MK] N nie ma bilansu na 2\S. 2\S licytujemy wtedy kiedy boimy się pasa na 1\S.
+Czy tutaj do 3 PC u partnera możemy mieć dobrą końcówkę? No, niech będzie do 4
+PC. Niech to będzie \HA - najlepiej co się da. Potrzeba dwóch impasów. 2\S jest
+grubo poza statystyką. 3\S też już jest poważnie zagrożone - to N dał ciała w
+licytacji.
+
+Co zrobić z S? Partner ma około 8 lew:
+
+\SAKDxxx\n
+\Hx\n
+\DKWx\n
+\CKDx
+
+To coś koło minimum, jak wygląda końcówka? Cienko, ale jakieś szanse ma. Myślę,
+że można by dać tylko 3\S. W końcu może mieć i gorzej. Może też mieć coś
+przydatnego w kierach, ale z drugiej strony dubel karo też może się okazać
+niegrający. Trudno to zważyć. Prawdopodobnie 2BA powinno pełnić rolę pytania o
+krótkość, zachęcającej odzywki z fitem. Naturalne i nieforsujące to przecież
+zupełny nonsens. A może jakiegoś lebensohla? Też bez sensu. Ale ludzie mają
+niechęć do tworzenia ustaleń i zarabiania tam gdzie by się dało.}
 [Ability "N:69944 E:74499 S:69944 W:74499"]
 [BCFlags "1f"]
 [DoubleDummyTricks "69944699447449974499"]
@@ -891,7 +1036,9 @@ W NT 7
 {[MJ] Wejśćie 4\H świr. Nie popatrzyłem na blotki pikowe chociaż nie
 spodziewałem się \CA w ręce rozgrywającego.
 
-WYNIK: 0 (na drugim stole 3\C=)}
+WYNIK: 0 (na drugim stole 3\C=)
+
+[MK] Nie było jak skontrować.}
 [Ability "N:56549 E:76884 S:66549 W:76884"]
 [BCFlags "1f"]
 [DoubleDummyTricks "56549665497688476884"]
@@ -945,7 +1092,9 @@ W NT 7
 [Result "9"]
 {[MJ] Strata impa bo za szybki claim.
 
-WYNIK: -1 (3BA+1)}
+WYNIK: -1 (3BA+1)
+
+[MK] Gdyby S miał \HKWx to z której ręki wolelibyśmy grać ewentualne 4\S?}
 [Ability "N:97777 E:45565 S:98877 W:44566"]
 [BCFlags "1f"]
 [DoubleDummyTricks "97777988774556544566"]
@@ -1000,7 +1149,11 @@ W NT 4
 {[MJ] Z tej konfiguracji wistuje się damą, a nie królem. Po odejściu treflem
 spod króla już mógł wygrać.
 
-WYNIK: +5 (na drugim stole dali grać 2\CS)}
+WYNIK: +5 (na drugim stole dali grać 2\CS)
+
+[MK] Po wiście \SD wszystko byłoby dużo łatwiejsze. Na co zmienić potem wist?
+Cholera wie, trefl wygląda dosyć groźnie. Myślę, że zagrałbym pasywne karo.
+Mamy \D98, więc to raczej nie zepsuje koloru jeśli już.}
 [Ability "N:55567 E:87766 S:55566 W:87876"]
 [BCFlags "1f"]
 [DoubleDummyTricks "55567555668776687876"]
@@ -1052,7 +1205,9 @@ W NT 8
 {[MJ] Rozgrywka wygląda na ksiażkową tylko trzeba było najpierw ściągnąć kiery
 przed karami
 
-WYNIK: 0}
+WYNIK: 0
+
+[MK] Nie ma się co zajmować takimi rozdaniami w meczu.}
 [Ability "N:A9A9A E:24342 S:A9A9A W:24342"]
 [BCFlags "1f"]
 [DoubleDummyTricks "a9a9aa9a9a2434224342"]
@@ -1114,7 +1269,16 @@ W NT  2
 otwierającego chyba trzeba powiedzieć 4\C i N może sobie wybrać czy iść w
 obronę?
 
-WYNIK: +4 (Przeciwnicy rolują dwie lewy na 5\CX)}
+WYNIK: +4 (Przeciwnicy rolują dwie lewy na 5\CX)
+
+[MK] Spoko otwarcie. S ma normalne 4\C. Korzystne to inna gra. Jeśli partner ma
+dubla pik i singla karo to często mamy 3 lewy na 4\S sami i partner jedną może
+dostawić. Ale to partner będzie umiał ocenić po 4\C czy ma dubla pik (dobrze do
+bronienia) czy singla (dobrze do pójścia w obronę. W dodatku może mieć 6-5.
+
+Po pasie P na 4\S proponuję wtedy wist \DA na singla u naszego.
+
+}
 [Ability "N:52668 E:7B665 S:52668 W:7B664"]
 [BCFlags "1f"]
 [DoubleDummyTricks "52668526687b6657b664"]
@@ -1165,7 +1329,24 @@ W NT  7
 [Result "9"]
 {[MJ] Wist \HJ, przeciwnik nie trafia rozgrywki
 
-WYNIK: +12 (4\S= bo N wychodzi w trefla po dojściu karem)}
+WYNIK: +12 (4\S= bo N wychodzi w trefla po dojściu karem)
+
+[MK] Bardzo nie lubię takich wistów do silniejszej ręki. Oni często mają trochę
+kierów. A szansa na przebitkę gdy mamy tak dosyć silną rękę i wistujemy jedynie
+z dubla jest minimalna. Moim zdaniem \HW to jeden z najgorszych wistów w tę
+rękę. Tak pokaże symulacja. To zbyt często rozpierdziela trudny kolor. 
+
+Rozgrywka rzeczywiście sprowadza się do trafienia kto ma \C10. 
+
+Przestańmy oddawać genialne wisty po licytacjach:
+
+1\S 2\S 4\S
+
+1BA 3BA
+
+1\H 2\H 
+
+i podobnych. To pozycje losowe. }
 [Ability "N:437A8 E:6A634 S:437A8 W:6A634"]
 [BCFlags "1f"]
 [DoubleDummyTricks "437a8437a86a6346a634"]
@@ -1215,7 +1396,16 @@ W NT  6
 [Result "8"]
 {[MJ] 4\S może być bardzo słabe, ale chyba kontra się należy?
 
-WYNIK: -8 (Na drugim stole po identycznej licytacji S daje X)}
+WYNIK: -8 (Na drugim stole po identycznej licytacji S daje X)
+
+[MK] Na 5\H to tak. Statystyka. Szczególnie w meczu - częściej są bez dwóch niż
+wygrywają, a 4\S mogło nam iść i dajemy się zrobić jak dzieci. W takich
+decyzjach pomaga też znajomość przeciwnika. 
+
+Ogólny schemat jest taki: nie kontrujemy na bez jednej, nawet jeśli jest to
+dosyć prawdopodobne. 
+
+Kontrujemy gdy częściej są bez dwóch niż wygrywają. }
 [Ability "N:8A484 E:53957 S:8A484 W:53957"]
 [BCFlags "1f"]
 [DoubleDummyTricks "8a4848a4845395753957"]
@@ -1265,7 +1455,12 @@ W NT  5
 [Result "4"]
 {[MJ] Nie wiedziałem w co zawistować i wybrałem \H7
 
-WYNIK: +2 (1BA -2)}
+WYNIK: +2 (1BA -2)
+
+[MK] Wolałbym \H10 - podcinamy drugą figurę w stole, a to praktycznie nie może
+kosztować lewy przy takim rozkładzie ilościowym kierów (wiemy, że partner ma
+2-3, w stole 2-3), a mamy cenną \H7 no i jeszcze ułatwiamy naszemu rozczytanie
+koloru.}
 [Ability "N:67566 E:65667 S:77566 W:66767"]
 [BCFlags "1f"]
 [DoubleDummyTricks "67566775666566766767"]
