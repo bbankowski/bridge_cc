@@ -322,10 +322,10 @@ T1C-2T
 1C-2T-2K                    => naturalne
 1C-2T-2C                    => 12-14, nic do pokazania, może być 6 kierów
 1C-2T-2P                    => rewers, 4 piki
-1C-2T-2BA                   => ?
+1C-2T-2BA                   => nadwyżka z 6 przeciętnymi kierami
 1C-2T-3T                    => nadwyżka, 4+ trefle
 1C-2T-3K                    => nadwyżka, 5-5
-1C-2T-3C                    => nadwyżka, 6 kierow
+1C-2T-3C                    => nadwyżka, 6 dobrych kierów
 1C-2T-3C-4T                 => samouzgodnienie trefli
 
 T1C-2C
@@ -369,11 +369,21 @@ T1P-1BA
 1P-1BA-4C                   => 65 na starych
 
 T1P-2T
+1P-2T-2C              => 4 +kiery
 1P-2T-2C-3C-3P				=> słabe 5422 (3BA dalej wywołanie cue-bidu)
 1P-2T-2C-3C-3BA				=> nadwyżka 5422
 1P-2T-2C-3C-4T				=> krótkość
 1P-2T-2C-3C-4K				=> krótkość
-1P-2T-3P-4T                 => samouzgodnienie trefli
+1P-2T-2P              => słaba ręka, może być 6 pików
+1P-2T-2BA            => nadwyżka z szescioma przeciętnymi pikami
+1P-2T-3T              => nawdyżka, 4+ trefle
+1P-2T-3K              => nadwyżka, 5-5 z karami
+1P-2T-3C              => nadwyżka, 5-5 z kierami
+1P-2T-3P              => nadwyżka z 6 dobrymi pikami
+1P-2T-3P-4T           => samouzgodnienie trefli
+1P-2T-3P-4K            => cue bid na pikach
+1P-2T-3P-4C            => cue bid na pikach
+1P-2T-3P-4P            => do gry, ręka bez aspiracji
 
 T1P-2P
 1P-2P-3P                    => blokujące
@@ -407,7 +417,9 @@ T1BA-2T
 1BA-2T-2K-2P                => 4 piki i 5 trefli, słabe
 1BA-2T-2K-3C                => 5-6 pików i 4 kiery, FG
 1BA-2T-2K-3P                => 5-6 kierów i 4 piki, FG
+1BA-2T-2C                  => 4 kiery, mogą być 4 piki
 1BA-2T-2C-2P                => 4 piki i 5 młodsza, słabe
+1BA-2T-2P                    => 4 piki, bez 4 kierow
 
 T1BA-2K
 1BA-2K-2C                   => przyjęcie transferu
