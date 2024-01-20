@@ -847,7 +847,7 @@ T1T-2C
 1T-2C-3T                => 5+ kar, INV+
 1T-2C-3K                => pytanie o trzymanie, FG
 1T-2C-3C                => 5+ pików, INV+
-1T-2C-3P                => 5-5 młode, FG
+1T-2C-3P                => transfer na 3BA
 1T-2C-3BA               => do gry
 1T-2C-4T                => 5-5 piki i trefle, FG
 1T-2C-4K                => 5-5 piki i kara, FG
@@ -858,7 +858,7 @@ T1T-2P
 1T-2P-3T                => 5+ kar, INV+
 1T-2P-3K                => 5+ kierów, INV+
 1T-2P-3C                => pytanie o trzymanie, FG
-1T-2P-3P                => 5-5 młode, FG
+1T-2P-3P                => transfer na 3BA
 1T-2P-3BA               => do gry
 1T-2P-4T                => 5-5 kiery i trefle, FG
 1T-2P-4K                => 5-5 kiery i kara, FG
