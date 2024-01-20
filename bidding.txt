@@ -109,7 +109,7 @@ T1T-1C
 
 T1T-1C-1P
 1T-1C-1P-2T					=> magister
-1T-1C-1P-2K				    => 6K-4P NF
+1T-1C-1P-2K				    => 6K-4C NF
 1T-1C-1P-3T                 => 5-5 FG
 1T-1C-1P-3K                 => 5-5 FG
 
@@ -131,7 +131,7 @@ T1T-1C-2T
 1T-1C-2T-2K                 => sztuczny GF
 1T-1C-2T-3K					=> 5-5, FG
 
-T1T-1C-2K
+T1T-1C-2K-2C
 1T-1C-2K-2C-3C              => pytanie o krótkość (analogicznie po innych odpowiedziach na odwrotkę)
 
 T1T-1C-3C
@@ -370,6 +370,8 @@ T1P-1BA
 
 T1P-2T
 1P-2T-2C              => 4 +kiery
+1P-2T-2C-2P           => fit pik, zachęcające
+1P-2T-2C-3C           => fit kier, zachęcajace
 1P-2T-2C-3C-3P				=> słabe 5422 (3BA dalej wywołanie cue-bidu)
 1P-2T-2C-3C-3BA				=> nadwyżka 5422
 1P-2T-2C-3C-4T				=> krótkość
@@ -456,7 +458,7 @@ T1BA-2BA
 T1BA-3C
 1BA-3C-3P          => brak zatrzymania w kierach, 4-5 pikow
 1BA-3C-3BA          => zatrzymanie kier, bez aspiracji
-1BA-3C-4T          => 4 trefle, zaintersowanie szlemikiem
+1BA-3C-4T          => 4 trefle, zainteresowanie szlemikiem
 1BA-3C-4K          => 4 kara, zainteresowanie szlemikiem
 1BA-3C-4C          => pełne wyłączenie kier, fity w młodych
 1BA-3C-4P          => A kier, fity w młodych
@@ -466,7 +468,7 @@ T1BA-3C
 
 T1BA-3P
 1BA-3P-3BA        => zatrzymanie pik, bez aspiracji
-1BA-3P-4T          => 4 trefle, zaintersowanie szlemikiem
+1BA-3P-4T          => 4 trefle, zainteresowanie szlemikiem
 1BA-3P-4K          => 4 kara, zainteresowanie szlemikiem
 1BA-3P-4C          => brak zatrzymania pik, 4-5 kierów - propozycja gry
 1BA-3P-4P          => pełne wyłączenie pik, fity w młodych
