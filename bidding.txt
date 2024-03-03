@@ -246,7 +246,7 @@ T1K-1P-2T
 T1K-1P-3P
 1K-1P-3P-3BA				=> pytanie o krótkość
 1K-1P-3P-3BA-4T				=> krótkość trefl
-1K-1P-3P-3BA-4K				=> krótkość bez krótkości, lepsza ręka
+1K-1P-3P-3BA-4K				=> bez krótkości, lepsza ręka
 1K-1P-3P-3BA-4C				=> krótkość kier
 1K-1P-3P-3BA-4P				=> bez krótkości, gorsza ręka
 1K-1P-3P-4T          => krótkość trefl
