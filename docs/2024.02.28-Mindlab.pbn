@@ -1,0 +1,1351 @@
+% PBN 2.1
+% EXPORT
+%Content-type: text/x-pbn; charset=UTF-8
+%Creator: BridgeComposer Version 5.97
+%Created: Sun Mar  3 17:45:33 2024 +0100
+%BCOptions Center STBorder STShade
+%BidAndCardSpacing Thin
+%BoardsPerPage 1
+%CardTableColors #008000,#ffffff,#aaaaaa
+%DefaultPagination 0
+%EventSpacing 0
+%Font:CardTable "Arial",11,400,0
+%Font:Commentary "Times New Roman",12,400,0
+%Font:Diagram "Times New Roman",12,400,0
+%Font:Event "Times New Roman",12,400,0
+%Font:FixedPitch "Courier New",10,400,0
+%Font:HandRecord "Arial",11,400,0
+%GutterSize 500,500
+%HRTitleDate 0
+%HRTitleEvent ""
+%HRTitleSetID ""
+%HRTitleSetIDPrefix ""
+%HRTitleSite ""
+%HtmlClubs entity,"https://bridgecomposer.com/suitimg/c.gif"
+%HtmlDiamonds entity,"https://bridgecomposer.com/suitimg/d.gif"
+%HtmlHearts entity,"https://bridgecomposer.com/suitimg/h.gif"
+%HtmlNavBar 0.75,#cfe2f3
+%HtmlSpades entity,"https://bridgecomposer.com/suitimg/s.gif"
+%Margins 1000,1000,1000,1000
+%PaperSize 1,2159,2794,14
+%ParaIndent 0
+%PipColors #000000,#ff0000,#ff0000,#000000
+%PipFont "Symbol","Symbol",2,0xAA,0xA9,0xA8,0xA7
+%ScoreTableColors #e6e6e6,#000000
+%SelectedBoard 0
+%ShowBoardLabels 2
+%ShowCardTable 2
+%TSTCustomSortOrder Default
+%TSTReport List
+%TSTReportOrder ByNumber
+%TSTReportShade Yes
+%DDAFormat 0
+%SectionSpacing 0,0,0
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "1"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:75.Q98754.T97.J7 JT983.6.J864.K62 A62.AT2.AQ.Q9543 KQ4.KJ3.K532.AT8"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "3HX"]
+[Result "7"]
+{[MJ] Gram na \CAK u kontrującego w międzyczasie ściągając \HA żeby E nie
+nadbił singlowym waletem, ale okazuje się to jedyną drogą do przegarnia bez
+dwóch.
+
+[MK] Gdyby ta szansa zachodziła W przejąłby pierwszego pika i próbowałby podać
+przebitkę partnerowi. Ta sekwencja zagrań jest niekonsekwentna z pierwszą lewą. }
+[Ability "N:43836 E:9A597 S:43846 W:9A597"]
+[BCFlags "1f"]
+[DoubleDummyTricks "43836438469a5979a597"]
+[Minimax "4SW-420"]
+[OptimumScore "EW 420"]
+[ParContract "EW 4S="]
+[Score "NS -300"]
+[Auction "N"]
+Pass 2S =1= 2NT X
+3H Pass Pass X
+AP
+[Note "1: 5\S-4"]
+[Play "E"]
+SJ S2 S4 S5
+S3 SA SQ S7
+H6 HA H3 H4
+CK C3 C8 CJ
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  6
+N  D  3
+N  H  8
+N  S  3
+N NT  4
+E  C  7
+E  D  9
+E  H  5
+E  S 10
+E NT  9
+S  C  6
+S  D  4
+S  H  8
+S  S  3
+S NT  4
+W  C  7
+W  D  9
+W  H  5
+W  S 10
+W NT  9
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "2"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:AQT954.8762.QJ3. J87.A.T9852.KJ84 632.KQT9543.7.Q3 K.J.AK64.AT97652"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "6HX"]
+[Result "11"]
+{[MJ] Dynamiczna licytacja, dopłacenie 6\C ostre.Wistuję \DAK więc -1
+
+[MK] Normalnie, na mały obrót, nie wiadomo kto w ataku, kto w obronie. Taktyka
+na IMP-y jest taka, żeby unikać katastrof typu -650, gdy my mamy między 11 a 12
+lew. WE zastosowali to samo.
+
+Na szlemiki koniecznie należy wistować z AK królem, a as powinien oznaczać
+pustego asa. Teraz S jest zobowiązany dołożyć ilościówkę. Zauważ, że grając w
+ten sposób mogłeś wypuścić cały kontrakt gdyby W miał \HA, a partner na
+przykład renons i 5 trefli, czyli sprawa była najwyższej wagi.}
+[Ability "N:A33BB E:3AA22 S:A33BB W:3AA22"]
+[BCFlags "1f"]
+[DoubleDummyTricks "a33bba33bb3aa223aa22"]
+[Minimax "5HDE100"]
+[OptimumScore "EW -100"]
+[ParContract "EW 5HX-1; EW 5SX-1"]
+[Score "EW -100"]
+[Auction "E"]
+2D =1= Pass 4H 5C
+5H 6C Pass Pass
+X Pass 6H X
+AP
+[Note "1:multi"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 11
+N  D 11
+N  H  3
+N  S  3
+N NT 10
+E  C  2
+E  D  2
+E  H 10
+E  S 10
+E NT  3
+S  C 11
+S  D 11
+S  H  3
+S  S  3
+S NT 10
+W  C  2
+W  D  2
+W  H 10
+W  S 10
+W NT  3
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "3"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:J873.Q.AQ93.KQ43 QT96.JT7.KJ5.J76 A5.A6432.T64.852 K42.K985.872.AT9"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "2D"]
+[Result "8"]
+{[MJ] Wydaje się normalnie, nie wiem czy prawilnie 2\D czy 1BA się licytuje z
+taką ręką.
+
+[MK] 2\D jest w porządku z uwagi na osobliwy charakter karty, bardzo
+predysponowany do gry w kolor.}
+[Ability "N:56677 E:77756 S:66687 W:77756"]
+[BCFlags "1f"]
+[DoubleDummyTricks "56677666877775677756"]
+[Minimax "2DS90"]
+[OptimumScore "NS 90"]
+[ParContract "S 2D="]
+[Score "NS +90"]
+[Auction "S"]
+1D Pass 1H Pass
+1S Pass 2D AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 7
+N  D 7
+N  H 6
+N  S 6
+N NT 5
+E  C 6
+E  D 5
+E  H 7
+E  S 7
+E NT 7
+S  C 7
+S  D 8
+S  H 6
+S  S 6
+S NT 6
+W  C 6
+W  D 5
+W  H 7
+W  S 7
+W NT 7
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "4"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:4.AQ965.854.T763 QJ5.J83.AQ973.K4 T763.K4.KJ62.AQ2 AK982.T72.T.J985"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "2S"]
+[Result "7"]
+{[MJ] Przeciwnicy ściągają trzy kiery i dwa trefle i grają w pika. Bartek
+bierze asem w ręce i zaczyna od przebicia trefla a nie kara, więc -1.
+
+[MK] Czy 1BA może paść z układami 1=4=4=4 lub 1=4=5=3? Wtedy S nie może
+powtarzać pików.
+
+Trudno ocenić co jest większym zagrożeniem dla kontraktu - czy podział pików
+4-1 czy nadbitką krótką \S10 od krótkich kar u W. Być może zachowanie
+wistującego jest jakąś przesłanką}
+[Ability "N:68345 E:75878 S:68345 W:75878"]
+[BCFlags "1f"]
+[DoubleDummyTricks "68345683457587875878"]
+[Minimax "2SS110"]
+[OptimumScore "NS 110"]
+[ParContract "NS 2S="]
+[Score "NS -100"]
+[Auction "W"]
+Pass 1D Pass 1S
+Pass 1NT Pass 2S
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 4
+N  H 3
+N  S 8
+N NT 6
+E  C 8
+E  D 7
+E  H 8
+E  S 5
+E NT 7
+S  C 5
+S  D 4
+S  H 3
+S  S 8
+S NT 6
+W  C 8
+W  D 7
+W  H 8
+W  S 5
+W NT 7
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "5"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:AQJ8.J.A532.KQ52 K2.QT6.KQ97.J973 T964.AK874.T6.A4 753.9532.J84.T86"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "4S"]
+[Result "11"]
+{[MJ] 40 minut spóźnienia Tomka powoduje że szybko gramy rozdania i karo
+wchodzi mi do kierów, to nie było otwarcie z premedytacją.}
+[Ability "N:9C999 E:41343 S:9C999 W:41343"]
+[BCFlags "1f"]
+[DoubleDummyTricks "9c9999c9994134341343"]
+[Minimax "6SS1430"]
+[OptimumScore "NS 1430"]
+[ParContract "NS 6S="]
+[Score "NS +650"]
+[Auction "N"]
+1NT Pass 2C Pass
+2S Pass 4S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  9
+N  D  9
+N  H  9
+N  S 12
+N NT  9
+E  C  3
+E  D  4
+E  H  3
+E  S  1
+E NT  4
+S  C  9
+S  D  9
+S  H  9
+S  S 12
+S NT  9
+W  C  3
+W  D  4
+W  H  3
+W  S  1
+W NT  4
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "6"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:T75.KJT5.K6.QJ74 KQJ9.A.AT5.AK863 A83.Q73.Q943.T52 642.98642.J872.9"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "2C"]
+[Result "8"]
+{[MJ] Ciężko sprzedać rękę w WJ, w tym rozdaniu szczęśliwie. 1\S może być
+5\C-4\S w sile 15-17, alternatywnie może jakieś 2BA.
+
+[MK] 2\C to odzywka patologiczna. N z pięcioma blotkami pik też by spasował. W
+grę wchodzą tylko 2BA i 1\S. Mój wybór padłby raczej na 2BA. Teraz powstaje
+pytanie, czy z N można dać transfer - jeśli jest on "forsujący do końcówki" to
+trzeba spasować.
+
+Ustalenie, że 1\S może być w układzie 5\C i 4\S do 17 jest bezmyślnym
+przeszczepem z sekwencji:
+
+1\C - 1\H, gdzie ma to oczywiście sens.
+
+Tu są jednak zupełnie inne priorytety. Uważam, że nawet więcej sensu miałoby
+licytowanie z 18+ starszej czwórki, a z siłą 15-17 jej ukrywanie. Pomijając, że
+żadne z tych podejść sensu nie ma.}
+[Ability "N:79898 E:63535 S:79898 W:53535"]
+[BCFlags "1f"]
+[DoubleDummyTricks "79898798986353553535"]
+[Minimax "1SS140"]
+[OptimumScore "NS 140"]
+[ParContract "NS 1S+2"]
+[Score "NS +90"]
+[Auction "E"]
+Pass 1C Pass 1D
+Pass 2C AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 8
+N  D 9
+N  H 8
+N  S 9
+N NT 7
+E  C 5
+E  D 3
+E  H 5
+E  S 3
+E NT 6
+S  C 8
+S  D 9
+S  H 8
+S  S 9
+S NT 7
+W  C 5
+W  D 3
+W  H 5
+W  S 3
+W NT 5
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "7"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:Q74.K76.QT984.75 AKJ93.QT5..AQJ98 T2.J9432.J753.T4 865.A8.AK62.K632"]
+[Scoring ""]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+{[MJ] Tego rozdania nie graliśmy.}
+[Ability "N:00440 E:DD98D S:00450 W:DD98D"]
+[BCFlags "1f"]
+[DoubleDummyTricks "0044000450dd98ddd98d"]
+[Minimax "7NW-2220"]
+[OptimumScore "EW 2220"]
+[ParContract "EW 7N="]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  0
+N  D  4
+N  H  4
+N  S  0
+N NT  0
+E  C 13
+E  D  8
+E  H  9
+E  S 13
+E NT 13
+S  C  0
+S  D  5
+S  H  4
+S  S  0
+S NT  0
+W  C 13
+W  D  8
+W  H  9
+W  S 13
+W NT 13
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "8"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:AKQT632..82.AJ42 987.KT8653.76.KT J54.J942.QJ3.753 .AQ7.AKT954.Q986"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "4S"]
+[Result "9"]
+{[MJ] Na praktykę 5\D się po prostu wygrywa, może ręka S zasługuje na inną
+licytację?
+
+[MK] Ja bym dał kontrę na 4\S. Najwyżej raz nadrobią, a pewnie i to nie. A mogą
+dziać się wielkie rzeczy lub możemy mieć payout. Tak się gra w meczu, że
+unikamy dużych katastrof. Ale ja tak często robię z różnymi skutkami, czasem za
+często. Tutaj jednak wydaje mi się, że jest to rozsądne zachowanie.}
+[Ability "N:54AA6 E:89226 S:54AB6 W:49226"]
+[BCFlags "1f"]
+[DoubleDummyTricks "54aa654ab68922649226"]
+[Minimax "5SDW300"]
+[OptimumScore "EW -300"]
+[ParContract "EW 5SX-2"]
+[Score "EW -50"]
+[Auction "W"]
+1S Pass 1NT 2D
+4S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  6
+N  D 10
+N  H 10
+N  S  4
+N NT  5
+E  C  6
+E  D  2
+E  H  2
+E  S  9
+E NT  8
+S  C  6
+S  D 11
+S  H 10
+S  S  4
+S NT  5
+W  C  6
+W  D  2
+W  H  2
+W  S  9
+W NT  4
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "9"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:AQ532.AK75.4.A43 KT98.6.AKT9652.2 J7.QJT832.Q.JT75 64.94.J873.KQ986"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "4H"]
+[Result "10"]
+{[MJ]Przeciwnicy nie idą wyżej po partii.
+
+[MK] Strategia E jest dla mnie niezrozumiała. 
+
+Co do otwarcia z ręką N - w WJ silne ręce na obu starszych kolorach licytuje
+się całkiem dobrze, co jest wskazaniem do otwarcia 1\C.
+
+Tragedią systemu jest danie z tą kartą:
+
+1\S 1BA\n
+2\H
+
+Bardzo bym się tego bał i uważam, że 1\C nie ma alternatywy. Tak przynajmniej
+Kluk kiedyś skomentował tę pozycję, że trzeba w 17 a często i 16 dawać 1\C.}
+[Ability "N:68B37 E:542A6 S:68B37 W:542A6"]
+[BCFlags "1f"]
+[DoubleDummyTricks "68b3768b37542a6542a6"]
+[Minimax "5HS450"]
+[OptimumScore "NS 450"]
+[ParContract "NS 5H="]
+[Score "NS +420"]
+[Auction "N"]
+1S 2D 2H 3D
+4D X 4H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  7
+N  D  3
+N  H 11
+N  S  8
+N NT  6
+E  C  6
+E  D 10
+E  H  2
+E  S  4
+E NT  5
+S  C  7
+S  D  3
+S  H 11
+S  S  8
+S NT  6
+W  C  6
+W  D 10
+W  H  2
+W  S  4
+W NT  5
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "10"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "E"]
+[Vulnerable "All"]
+[Deal "E:86.AKJT94.973.T9 KQT952.Q.T85.J74 A743.76.AK6.KQ32 J.8532.QJ42.A865"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "4H"]
+[Result "11"]
+{[MJ] Po wiście pikowym przeciwnik bije asem, gra giera do asa i \C10 wkoło
+
+[MK] Dosyć bezpieczna rozgrywka.}
+[Ability "N:26242 E:B6B87 S:26245 W:B6B87"]
+[BCFlags "1f"]
+[DoubleDummyTricks "2624226245b6b87b6b87"]
+[Minimax "3NW-660"]
+[OptimumScore "EW 660"]
+[ParContract "EW 3N+2"]
+[Score "EW +650"]
+[Auction "E"]
+2D Pass 2NT Pass
+3D Pass 4H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  2
+N  D  4
+N  H  2
+N  S  6
+N NT  2
+E  C  7
+E  D  8
+E  H 11
+E  S  6
+E NT 11
+S  C  5
+S  D  4
+S  H  2
+S  S  6
+S NT  2
+W  C  7
+W  D  8
+W  H 11
+W  S  6
+W NT 11
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "11"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "S:A74.A75.KT8.9653 865.KJ96.42.AKT2 KQJT9.Q3.953.J84 32.T842.AQJ76.Q7"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "3H"]
+[Result "8"]
+{[MJ] Po pasie partnera z ręką N chyba po prostu 2\S się licytuje. Z ręki S
+niby wiadomo że partner nie ma za dużo, ale jak nie sprzedamy silniejszej ręki
+to się partner nie przepchnie wyżej z układową ręką.
+
+[MK] Blok jest oczywisty.
+
+Co do licytacji z ręką S.
+
+System powinien przewidywać różne rodzaje podniesienia. W tej sekwencji możliwe
+jest kilka podejść:
+
+a) wskazywanie figury w kolorze wejścia, by partner wiedział czy może w to
+zawistować\n
+b) wskazywanie ciekawej ręki dopuszczającej walkę\n
+c) mieszane
+
+W sekwencjach po otwarciach trzecioręcznych / otwarciu 1\D gdzie kontra może
+być lewa jest też sens wskazywania dużej karty z fitem na zasadzie siłowego
+inwitu. Tutaj nie ma.
+
+Jakie odzywki nie są potrzebne w znaczeniu naturalnym?
+
+1BA oraz 2\H. Rekontrę zwykle się gra, że to druga figura w kolorze wejścia i
+OK karta. Jeśli ktoś ma antytreflową psychozę i lubi Drury, to można jeszcze
+kombinować z 2\C. Możliwości jest wiele. 3 wolne odzywki: 1BA 2\H i 2\S dają
+możliwość stosowania podejścia mieszanego. Pary profesjonalne mają to
+zoptymalizowane w strukturę transferową.}
+[Ability "N:77346 E:65887 S:77346 W:66887"]
+[BCFlags "1f"]
+[DoubleDummyTricks "77346773466588766887"]
+[Minimax "2SDS-100"]
+[OptimumScore "NS -100"]
+[ParContract "NS 2SX-1; NS 2NX-1"]
+[Score "EW -50"]
+[Auction "S"]
+Pass 1C 1S X
+2S Pass Pass 3D
+Pass 3H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 6
+N  D 4
+N  H 3
+N  S 7
+N NT 7
+E  C 7
+E  D 8
+E  H 8
+E  S 5
+E NT 6
+S  C 6
+S  D 4
+S  H 3
+S  S 7
+S NT 7
+W  C 7
+W  D 8
+W  H 8
+W  S 6
+W NT 6
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "12"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "W:9854.52.J653.J76 J63.AT94.AQT.T82 T7.K763.K872.Q93 AKQ2.QJ8.94.AK54"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "3NT"]
+[Result "11"]
+{[MJ] Tutaj nie za bardzo widać perspektyw na szlemika.
+
+[MK] A nie mogliście mieć pików 4-4? Czy naprawdę dobrze zająć BA z ręki S?
+}
+[Ability "N:BBB9B E:22242 S:BBB8A W:22242"]
+[BCFlags "1f"]
+[DoubleDummyTricks "bbb9bbbb8a2224222242"]
+[Minimax "3NS660"]
+[OptimumScore "NS 660"]
+[ParContract "NS 3N+2"]
+[Score "NS +660"]
+[Auction "W"]
+Pass Pass Pass 1C
+Pass 1H Pass 2D
+Pass 2S =1= Pass 3NT
+AP
+[Note "1: silny na 4"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 11
+N  D  9
+N  H 11
+N  S 11
+N NT 11
+E  C  2
+E  D  4
+E  H  2
+E  S  2
+E NT  2
+S  C 10
+S  D  8
+S  H 11
+S  S 11
+S NT 11
+W  C  2
+W  D  4
+W  H  2
+W  S  2
+W NT  2
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "13"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "N"]
+[Vulnerable "All"]
+[Deal "N:K95.7632.KJ43.96 8643.KT.982.AT74 A72.Q.Q765.KQJ82 QJT.AJ9854.AT.53"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "2H"]
+[Result "9"]
+{[MJ] Wydaje się okej, z ręką N alternatywna może być X = bez 4 pików, ale
+chyba lepiej pokazać fit karo.
+
+[MK] Dla mnie oczywiste jest 3\D. Dlaczego?
+
+To jest rekurencyjny motyw - karami nie walczy się na poziomie 2. To nic nie
+daje. Albo walczymy na poziomie 3 albo wcale. Walka na poziomie 2 ma sens tylko
+ja wskazanie wistu.
+
+Tutaj nie mamy raczej bilansowej końcówki, a tworzymy realne problemy z
+kolorami starszymi naszym przeciwnikom.}
+[Ability "N:54498 E:87934 S:54498 W:86934"]
+[BCFlags "1f"]
+[DoubleDummyTricks "54498544988793486934"]
+[Minimax "3HW-140"]
+[OptimumScore "EW 140"]
+[ParContract "EW 3H="]
+[Score "EW +140"]
+[Auction "N"]
+Pass Pass 1D 1H
+2D Pass Pass 2H
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 8
+N  D 9
+N  H 4
+N  S 4
+N NT 5
+E  C 4
+E  D 3
+E  H 9
+E  S 7
+E NT 8
+S  C 8
+S  D 9
+S  H 4
+S  S 4
+S NT 5
+W  C 4
+W  D 3
+W  H 9
+W  S 6
+W NT 8
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "14"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "E"]
+[Vulnerable "None"]
+[Deal "E:KT43.AT63.6.AQ82 Q9752.87.AQT43.T 86.Q4.K92.J97543 AJ.KJ952.J875.K6"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "3D"]
+[Result "10"]
+{[MJ] Kontrakt ok, ale nie wiem jak powinna wyglądać prawidłowa licytacja.
+
+[MK] Dokładnie tak jak u Was.}
+[Ability "N:58793 E:8564A S:47693 W:8564A"]
+[BCFlags "1f"]
+[DoubleDummyTricks "58793476938564a8564a"]
+[Minimax "4DDN-100"]
+[OptimumScore "NS -100"]
+[ParContract "NS 4DX-1"]
+[Auction "E"]
+1C 1S 2C X
+3C 3D AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  3
+N  D  9
+N  H  7
+N  S  8
+N NT  5
+E  C 10
+E  D  4
+E  H  6
+E  S  5
+E NT  8
+S  C  3
+S  D  9
+S  H  6
+S  S  7
+S NT  4
+W  C 10
+W  D  4
+W  H  6
+W  S  5
+W NT  8
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "15"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "S"]
+[Vulnerable "NS"]
+[Deal "S:QT7.AT6.A52.Q652 AK9432.9732.97.7 J5.K54.KQT6.AT93 86.QJ8.J843.KJ84"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "3NT"]
+[Result "8"]
+{[MJ] normalne
+
+[MK] W powinien zablokować. Ja bym raczej wybrał 3\S. Założenia oraz fakt, że
+wróg w 8/10 przypadków ma przewagę siły. + dysproporcja w naszym 6-4.}
+[Ability "N:86799 E:57644 S:86789 W:57644"]
+[BCFlags "1f"]
+[DoubleDummyTricks "86799867895764457644"]
+[Minimax "2NN120"]
+[OptimumScore "NS 120"]
+[ParContract "NS 2N="]
+[Score "NS -100"]
+[Auction "S"]
+1C 1S 2S Pass
+2NT Pass 3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 9
+N  D 9
+N  H 7
+N  S 6
+N NT 8
+E  C 4
+E  D 4
+E  H 6
+E  S 7
+E NT 5
+S  C 9
+S  D 8
+S  H 7
+S  S 6
+S NT 8
+W  C 4
+W  D 4
+W  H 6
+W  S 7
+W NT 5
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "16"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "W"]
+[Vulnerable "EW"]
+[Deal "W:AQ972.932.AK7.KT J5.K5.Q93.Q87543 K43.Q84.J8652.96 T86.AJT76.T4.AJ2"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "1NT"]
+[Result "11"]
+{[MJ] Po wiście treflowym odwrót w trefla i odrzucam się od kar. 
+
+[MK] Do pierwszego koloru granego przez rozgrywającego jeśli nie zachodzi
+potrzeba przepuszczenia powinniśmy zrzucać LAV. S wyrzuca \S10 i potem \S8. N
+nie powinien mieć problemu z odrzucaniem się od kierów / trefli i zachowaniem
+obstawy w karze.
+}
+[Ability "N:65758 E:78684 S:65758 W:78684"]
+[BCFlags "1f"]
+[DoubleDummyTricks "65758657587868478684"]
+[Minimax "3CDN-100"]
+[OptimumScore "NS -100"]
+[ParContract "NS 3CX-1"]
+[Score "EW +210"]
+[Auction "W"]
+1NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 8
+N  D 5
+N  H 7
+N  S 5
+N NT 6
+E  C 4
+E  D 8
+E  H 6
+E  S 8
+E NT 7
+S  C 8
+S  D 5
+S  H 7
+S  S 5
+S NT 6
+W  C 4
+W  D 8
+W  H 6
+W  S 8
+W NT 7
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "17"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:QJ.A9532.AK.AKQ4 K4.K87.J953.9653 T632.J6.QT874.72 A9875.QT4.62.JT8"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "1H"]
+[Result "9"]
+{[MJ] Otawrcia przeciwników do nieba, wznówki nie rozważałem (nawet po 1\H z
+WJ).
+
+[MK] Normalnie.}
+[Ability "N:78898 E:54534 S:78898 W:54534"]
+[BCFlags "1f"]
+[DoubleDummyTricks "78898788985453454534"]
+[Minimax "1DS110"]
+[OptimumScore "NS 110"]
+[ParContract "NS 1D+2; NS 1H+1; NS 1S+1"]
+[Score "NS +140"]
+[Auction "N"]
+1H Pass Pass Pass
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 8
+N  D 9
+N  H 8
+N  S 8
+N NT 7
+E  C 4
+E  D 3
+E  H 5
+E  S 4
+E NT 5
+S  C 8
+S  D 9
+S  H 8
+S  S 8
+S NT 7
+W  C 4
+W  D 3
+W  H 5
+W  S 4
+W NT 5
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "18"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:KQJ62.A986.KJ2.A A43.J7.T986.QT87 875.KT42.73.KJ95 T9.Q53.AQ54.6432"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "4S"]
+[Result "10"]
+{[MJ] Wist w waleta kier nie utrudnia, ale otwarcie jest w WJ 1\C.}
+[Ability "N:33355 E:AAA88 S:33354 W:AAA88"]
+[BCFlags "1f"]
+[DoubleDummyTricks "3335533354aaa88aaa88"]
+[Minimax "3NW-430"]
+[OptimumScore "EW 430"]
+[ParContract "EW 3N+1"]
+[Score "EW +420"]
+[Auction "E"]
+1S Pass 2S Pass
+4S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  5
+N  D  5
+N  H  3
+N  S  3
+N NT  3
+E  C  8
+E  D  8
+E  H 10
+E  S 10
+E NT 10
+S  C  4
+S  D  5
+S  H  3
+S  S  3
+S NT  3
+W  C  8
+W  D  8
+W  H 10
+W  S 10
+W NT 10
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "19"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:Q73.97542.KJ86.T 9864.JT.Q543.K94 AKJT.AQ86.T97.75 52.K3.A2.AQJ8632"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "2H"]
+[Result "9"]
+{
+
+[MJ] Interwencja z ręką E jest obowiązkowa z mojego punktu widzenia.
+
+[MK] O ile pas na 1BA ma jakiś sens, o tyle potem pas jest po prostu słaby.
+Mamy zwykle 8 lew na ręku i impas trefl będzie stał. Wiele nie trzeba.}
+[Ability "N:59984 E:74459 S:59984 W:74459"]
+[BCFlags "1f"]
+[DoubleDummyTricks "59984599847445974459"]
+[Minimax "3HS140"]
+[OptimumScore "NS 140"]
+[ParContract "NS 3H=; NS 3S="]
+[Score "NS +140"]
+[Auction "S"]
+Pass Pass 1NT Pass
+2D Pass 2H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 4
+N  D 8
+N  H 9
+N  S 9
+N NT 5
+E  C 9
+E  D 5
+E  H 4
+E  S 4
+E NT 7
+S  C 4
+S  D 8
+S  H 9
+S  S 9
+S NT 5
+W  C 9
+W  D 5
+W  H 4
+W  S 4
+W NT 7
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "20"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:K53.J.J8532.K643 AQJ864.K654.KQ.J 9.AT9.T97.AT9752 T72.Q8732.A64.Q8"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "4S"]
+[Result "10"]
+{[MJ] Po karowym przeciwnik bierze w stole i impasuje pika.
+
+[MK] Można wejść 2\C po pasie partnera. Wiele to nie nabroi.}
+[Ability "N:69A44 E:52299 S:69A44 W:53299"]
+[BCFlags "1f"]
+[DoubleDummyTricks "69a4469a445229953299"]
+[Minimax "5CDE500"]
+[OptimumScore "EW -500"]
+[ParContract "EW 5CX-2; EW 5DX-2"]
+[Score "NS +620"]
+[Auction "W"]
+Pass 1S Pass 2S
+Pass 4S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  4
+N  D  4
+N  H 10
+N  S  9
+N NT  6
+E  C  9
+E  D  9
+E  H  2
+E  S  2
+E NT  5
+S  C  4
+S  D  4
+S  H 10
+S  S  9
+S NT  6
+W  C  9
+W  D  9
+W  H  2
+W  S  3
+W NT  5
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "21"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:KQ.AKT843.AT52.K 9.QJ5.K96.AT9765 A876.972.J84.843 JT5432.6.Q73.QJ2"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "4H"]
+[Result "8"]
+{[MJ] Po wiście pikowym, przeciwnik ściąga dwa kiery i gra pika, Bartek
+przebija dając dojście do stołu, na szczęście przeciwnik nie miał 6-5
+
+[MK] Raczej warto wejść 2\C w tych założeniach. Zabierze im to cenną odzywkę
+1\S.
+
+Co do wskoku kierem - w takiej sytuacji brak aktywności z pozycji W byłby
+niezrozumiały. Natomiast co do samej techniki - wskok nie ma żadnego powodu -
+zawsze możemy czekać i odchodzić spokojnie treflami.}
+[Ability "N:55974 E:77459 S:55974 W:77459"]
+[BCFlags "1f"]
+[DoubleDummyTricks "55974559747745977459"]
+[Minimax "4CDW100"]
+[OptimumScore "EW -100"]
+[ParContract "EW 4CX-1"]
+[Score "NS -200"]
+[Auction "N"]
+1H Pass 1NT Pass
+3D Pass 4H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 4
+N  D 7
+N  H 9
+N  S 5
+N NT 5
+E  C 9
+E  D 5
+E  H 4
+E  S 7
+E NT 7
+S  C 4
+S  D 7
+S  H 9
+S  S 5
+S NT 5
+W  C 9
+W  D 5
+W  H 4
+W  S 7
+W NT 7
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "22"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:9653..Q53.AT9753 74.AT6.KJ98.KJ84 AQJ82.987.AT764. KT.KQJ5432.2.Q62"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "4SX"]
+[Result "10"]
+{[MJ] Niby EW po partii, ale z ręką E nic innego niż 4\S nie przychodzi mi do
+głowy.
+
+[MK] 4\S jest obowiązkowe. Również z przyczyn taktycznych. Nie musi być tak, że
+zawsze to wygramy. Po prostu tak się licytuje, by zrobić wrogom problem.}
+[Ability "N:82935 E:3A397 S:82A46 W:3B397"]
+[BCFlags "1f"]
+[DoubleDummyTricks "8293582a463a3973b397"]
+[Minimax "6HDS-300"]
+[OptimumScore "NS -300"]
+[ParContract "S 6HX-2"]
+[Score "EW +790"]
+[Auction "E"]
+Pass 1C 1S 3H
+3S 4H 4S Pass
+Pass X AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  5
+N  D  3
+N  H  9
+N  S  2
+N NT  8
+E  C  7
+E  D  9
+E  H  3
+E  S 10
+E NT  3
+S  C  6
+S  D  4
+S  H 10
+S  S  2
+S NT  8
+W  C  7
+W  D  9
+W  H  3
+W  S 11
+W NT  3
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "23"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:Q76.98.AK9543.82 AKJT.AQ63.QJ7.QT 92.KJ42.82.J7653 8543.T75.T6.AK94"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "4S"]
+[Result "9"]
+{[MJ] Pomyłka w odpowiedzi na odwrotkę, po wiście trzy razy w karo przeciwnik
+przebija \S9.
+
+[MK] S ma czyste wejście 2\D w sytuacji po pasie.
+
+Brak wejścia zwykle oznacza sekwencję:
+
+1\C 1\S \n
+1BA 3BA lub podobną i dupson. 
+
+W sytuacjach jak ta tutaj wejście okazuje się nie mieć znaczenia.}
+[Ability "N:43465 E:99878 S:43465 W:99878"]
+[BCFlags "1f"]
+[DoubleDummyTricks "43465434659987899878"]
+[Minimax "3NW-600"]
+[OptimumScore "EW 600"]
+[ParContract "EW 3N="]
+[Score "EW -100"]
+[Auction "S"]
+Pass 1C Pass 1S
+Pass 2D Pass 2S
+Pass 3S Pass 4S
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 6
+N  H 4
+N  S 3
+N NT 4
+E  C 8
+E  D 7
+E  H 8
+E  S 9
+E NT 9
+S  C 5
+S  D 6
+S  H 4
+S  S 3
+S NT 4
+W  C 8
+W  D 7
+W  H 8
+W  S 9
+W NT 9
+
+[Event "Mindlab 29.02.2024"]
+[Site ""]
+[Date ""]
+[Board "24"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:AKT65.J8.43.K532 QJ92.AK63.KQ9.Q8 3.QT97.A8765.AT7 874.542.JT2.J964"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "1NTX"]
+[Result "5"]
+{[MJ] Po wiście karowym przeciwnik gra ze stolu w pika, więc wyrabiamy kara i
+-2.}
+[Ability "N:55445 E:78888 S:55445 W:78888"]
+[BCFlags "1f"]
+[DoubleDummyTricks "55445554457888878888"]
+[Minimax "1HW-110"]
+[OptimumScore "EW 110"]
+[ParContract "EW 1H+1; EW 1S+1"]
+[Score "NS -300"]
+[Auction "W"]
+1S 1NT X AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 4
+N  H 4
+N  S 5
+N NT 5
+E  C 8
+E  D 8
+E  H 8
+E  S 8
+E NT 7
+S  C 5
+S  D 4
+S  H 4
+S  S 5
+S NT 5
+W  C 8
+W  D 8
+W  H 8
+W  S 8
+W NT 7

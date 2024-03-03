@@ -3,7 +3,7 @@ import React from "react";
 import reactStringReplace from 'react-string-replace'
 import Suite from "./Suite";
 
-function replaceBidsInText(comment) {
+export const replaceBidsInText = comment => {
     comment = comment.replaceAll('\\n', '')
     let foundBids = comment.matchAll(/(\\[SCDH])/g)
     if (foundBids) {
@@ -85,6 +85,7 @@ function updateDeal(deal) {
         deal['Vulnerable'] = ['E', 'W']
     }
 
+    deal['commentText'] = deal['comment'] || ''
     deal['comment'] = replaceBidsInText(deal['comment'] || '')
 
     return deal
@@ -98,6 +99,7 @@ export const loadPbn = (filename) => {
     return Promise.any([fetch(filename).then((r) => {
         return r.text().then(pbn => {
             let loadedDeals = []
+            let headers = []
             const lines = pbn.split(/\r?\n/)
 
             let deal = []
@@ -111,6 +113,7 @@ export const loadPbn = (filename) => {
             let optimumResultTable = getInitialOptimumResultTable()
             for (const line of lines) {
                 if (line.startsWith('%')) {
+                    headers.push(line)
                     continue
                 }
 
@@ -190,7 +193,7 @@ export const loadPbn = (filename) => {
                 loadedDeals.push(updateDeal(deal))
             }
 
-            return loadedDeals
+            return [headers, loadedDeals]
         })
     })])
 }

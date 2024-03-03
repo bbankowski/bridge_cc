@@ -1,0 +1,4857 @@
+% PBN 2.1
+% EXPORT
+%Content-type: text/x-pbn; charset=UTF-8
+%Creator: BridgeComposer Version 5.97
+%Created: Mon Jan 22 12:57:03 2024 +0100
+%BCOptions Center STBorder STShade
+%BidAndCardSpacing Thin
+%BoardsPerPage 1
+%CardTableColors #008000,#ffffff,#aaaaaa
+%DefaultPagination 0
+%EventSpacing 0
+%Font:CardTable "Arial",11,400,0
+%Font:Commentary "Times New Roman",12,400,0
+%Font:Diagram "Times New Roman",12,400,0
+%Font:Event "Times New Roman",12,400,0
+%Font:FixedPitch "Courier New",10,400,0
+%Font:HandRecord "Arial",11,400,0
+%GutterSize 500,500
+%HRTitleDate 0
+%HRTitleEvent "R11 vs Gonzo Concert"
+%HRTitleSetID ""
+%HRTitleSetIDPrefix ""
+%HRTitleSite ""
+%HtmlClubs entity,"https://bridgecomposer.com/suitimg/c.gif"
+%HtmlDiamonds entity,"https://bridgecomposer.com/suitimg/d.gif"
+%HtmlHearts entity,"https://bridgecomposer.com/suitimg/h.gif"
+%HtmlNavBar 0.75,#cfe2f3
+%HtmlSpades entity,"https://bridgecomposer.com/suitimg/s.gif"
+%Margins 1000,1000,1000,1000
+%PaperSize 1,2159,2794,14
+%ParaIndent 0
+%PipColors #000000,#ff0000,#ff0000,#000000
+%PipFont "Symbol","Symbol",2,0xAA,0xA9,0xA8,0xA7
+%ScoreTableColors #e6e6e6,#000000
+%SelectedBoard 83
+%ShowBoardLabels 2
+%ShowCardTable 2
+%TSTCustomSortOrder Default
+%TSTReport List
+%TSTReportOrder ByNumber
+%TSTReportShade Yes
+%DDAFormat 0
+%SectionSpacing 0,0,0
+[Event "R11 vs Gonzo Concert"]
+[Site ""]
+[Date ""]
+[Board "13"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "N"]
+[Vulnerable "All"]
+[Deal "N:KQJT3.K53.84.QT6 A82.Q9642.K62.75 64.AJT7.QJT73.K9 975.8.A95.AJ8432"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "2S"]
+[Result "10"]
+{[MJ] Raczej nie otwieramy 1\S z taką kartą, po wiście treflowym zabitym asem i
+odwrocie w trefla przeciwniczka po dojściu \SA odchodzi w kiera.
+
+WYNIK: +7 (na drugim stole 2\S-1)}
+[Ability "N:97886 E:44557 S:97886 W:44557"]
+[BCFlags "1f"]
+[DoubleDummyTricks "97886978864455744557"]
+[Minimax "3NS600"]
+[OptimumScore "NS 600"]
+[ParContract "NS 3N="]
+[Score "NS +170"]
+[Auction "N"]
+Pass Pass 1D Pass
+1S Pass 1NT Pass
+2C Pass 2D Pass
+2S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 6
+N  D 8
+N  H 8
+N  S 7
+N NT 9
+E  C 7
+E  D 5
+E  H 5
+E  S 4
+E NT 4
+S  C 6
+S  D 8
+S  H 8
+S  S 7
+S NT 9
+W  C 7
+W  D 5
+W  H 5
+W  S 4
+W NT 4
+
+[Event "R11 vs Gonzo Concert"]
+[Site ""]
+[Date ""]
+[Board "14"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "E"]
+[Vulnerable "None"]
+[Deal "E:5.AK97.T753.A542 QT9.QJ4.KJ42.KJ8 AKJ862.T632..963 743.85.AQ986.QT7"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "4S"]
+[Result "10"]
+{[MJ] Wist w kiera, nic nie mogliśmy zrobić.
+
+WYNIK: -6 (na drugim stole Grześ licytuje 2\S)}
+[Ability "N:43174 E:8AC69 S:43174 W:8AC69"]
+[BCFlags "1f"]
+[DoubleDummyTricks "43174431748ac698ac69"]
+[Minimax "6HW-980"]
+[OptimumScore "EW 980"]
+[ParContract "EW 6H="]
+[Score "EW +420"]
+[Auction "E"]
+1D Pass 1S Pass
+1NT Pass 4S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  4
+N  D  7
+N  H  1
+N  S  3
+N NT  4
+E  C  9
+E  D  6
+E  H 12
+E  S 10
+E NT  8
+S  C  4
+S  D  7
+S  H  1
+S  S  3
+S NT  4
+W  C  9
+W  D  6
+W  H 12
+W  S 10
+W NT  8
+
+[Event "R11 vs Gonzo Concert"]
+[Site ""]
+[Date ""]
+[Board "15"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "S"]
+[Vulnerable "NS"]
+[Deal "S:KJT87.K6.3.98765 A43.QT5.JT64.AT3 Q9.AJ432.A875.KJ 652.987.KQ92.Q42"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "2S"]
+[Result "10"]
+{[MJ] Niby otwarcie po partii, ale nie wiem czy czegoś jeszcze powinno się
+szukać, wszystko wskauzje na to że partner ma czarne więc pas.
+
+WYNIK: -10 (na drugim stole 4\S po sztucznej licytacji gdzie przeciwnicy się
+pomylili)
+
+[MK] Można po partii zaimprowizować inwit z fitem pikowym.}
+[Ability "N:8B97A E:32453 S:8B97A W:32463"]
+[BCFlags "1f"]
+[DoubleDummyTricks "8b97a8b97a3245332463"]
+[Minimax "4SS650"]
+[OptimumScore "NS 650"]
+[ParContract "NS 4S+1"]
+[Score "NS +170"]
+[Auction "S"]
+2S =1= Pass Pass Pass
+[Note "1:5\S-5\C / 5\H-5\D"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 10
+N  D  7
+N  H  9
+N  S 11
+N NT  8
+E  C  3
+E  D  5
+E  H  4
+E  S  2
+E NT  3
+S  C 10
+S  D  7
+S  H  9
+S  S 11
+S NT  8
+W  C  3
+W  D  6
+W  H  4
+W  S  2
+W NT  3
+
+[Event "R11 vs Gonzo Concert"]
+[Site ""]
+[Date ""]
+[Board "16"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "W"]
+[Vulnerable "EW"]
+[Deal "W:932.K73.54.AQ953 K65.J842.A98.KT6 AJ874.A.QJT2.J84 QT.QT965.K763.72"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "2S"]
+[Result "8"]
+{[MJ] wist \H10, nic ciekawego
+
+WYNIK: 0.0 (na drugim stole to samo)}
+[Ability "N:65874 E:78568 S:65874 W:78568"]
+[BCFlags "1f"]
+[DoubleDummyTricks "65874658747856878568"]
+[Minimax "3HDN-100"]
+[OptimumScore "NS -100"]
+[ParContract "NS 3HX-1"]
+[Score "EW +110"]
+[Auction "W"]
+Pass Pass 1S Pass
+2C Pass 2D Pass
+2S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 4
+N  D 7
+N  H 8
+N  S 5
+N NT 6
+E  C 8
+E  D 6
+E  H 5
+E  S 8
+E NT 7
+S  C 4
+S  D 7
+S  H 8
+S  S 5
+S NT 6
+W  C 8
+W  D 6
+W  H 5
+W  S 8
+W NT 7
+
+[Event "R11 vs Gonzo Concert"]
+[Site ""]
+[Date ""]
+[Board "17"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:K864.A92.AT3.Q98 QT7.QT863.J7.A64 J932.7.K9.JT7532 A5.KJ54.Q86542.K"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "4H"]
+[Result "8"]
+{[MJ] Po wiście w waleta trefl przeciwniczka gra kiera do damy, na asa wyrzuca
+pika, ale ostatecznie przegrywa bez dwóch.
+
+WYNIK: +5 (na drugim stole 2\D bo E ani razu nie wspomina o kierach)}
+[Ability "N:59359 E:74984 S:59359 W:74984"]
+[BCFlags "1f"]
+[DoubleDummyTricks "59359593597498474984"]
+[Minimax "4HDW100"]
+[OptimumScore "EW -100"]
+[ParContract "EW 4HX-1"]
+[Score "EW -100"]
+[Auction "N"]
+1C 1H Pass 4H
+Pass Pass Pass
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 9
+N  D 5
+N  H 3
+N  S 9
+N NT 5
+E  C 4
+E  D 8
+E  H 9
+E  S 4
+E NT 7
+S  C 9
+S  D 5
+S  H 3
+S  S 9
+S NT 5
+W  C 4
+W  D 8
+W  H 9
+W  S 4
+W NT 7
+
+[Event "R11 vs Gonzo Concert"]
+[Site ""]
+[Date ""]
+[Board "18"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:AJ97.96543.K.K54 T532.2.AQ5.98763 864.7.J87432.AJ2 KQ.AKQJT8.T96.QT"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "1NT"]
+[Result "5"]
+{[MJ] Po ściągnięciu sześciu kierów puszczamy lewę (nie otwieram pików)
+
+WYNIK: 0 (to samo)
+
+[MK] Przykre rozdanie - Ciechomka po otwarciu 1\H pas pas powiedział 3BA :). }
+[Ability "N:96957 E:47486 S:96957 W:47486"]
+[BCFlags "1f"]
+[DoubleDummyTricks "96957969574748647486"]
+[Minimax "4DDE300"]
+[OptimumScore "EW -300"]
+[ParContract "EW 4DX-2"]
+[Score "EW -100"]
+[Auction "E"]
+1H Pass 1NT Pass
+Pass Pass
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 7
+N  D 5
+N  H 9
+N  S 6
+N NT 9
+E  C 6
+E  D 8
+E  H 4
+E  S 7
+E NT 4
+S  C 7
+S  D 5
+S  H 9
+S  S 6
+S NT 9
+W  C 6
+W  D 8
+W  H 4
+W  S 7
+W NT 4
+
+[Event "R11 vs Gonzo Concert"]
+[Site ""]
+[Date ""]
+[Board "19"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:K864.8765.953.75 J52.A32.T8.AQ984 QT3.JT.AKJ4.KJ63 A97.KQ94.Q762.T2"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "1NTX"]
+[Result "5"]
+{[MJ] Wist król kier, kier do asa i mały trefl. Po wzięciu na waleta (zrzucona
+10-ka) nie znam lokalizacji damy karo, Nie wymyśliłem szansy na wygranie,
+zdecydowałem się na przejście K\S do stołu impas karo.
+
+WYNIK -9 (na drugim stole 2BA na drugiej linii
+
+[MK] Brak rekontry / ucieczki na stare z ręką S to duży błąd. Ogólnie 4-4 na
+starszych to traci średnio 1.5 IMP na rozdanie brak Staymana - tutaj niby
+partner nie ma fitu i stoi tyle samo, ale znowu względy taktyczne: Nie ma kto
+skontrować! 
+
+Po prostu - pasując na 1BA z 4-4 w starszych w dystansie przegrywamy rozdania.
+Kropka. W ogóle z kartami 4-4 statystycznie poprawna jest ucieczka w tej
+sekwencji. 
+
+W rozgrywce lepiej było wyrobić sobie kolejnego trefla - wiemy wszystko na
+temat trefli i kierów. W pikach i w karach nie znamy lokalizacji odpowiednio
+waleta i damy. Zagranie trefla wyrabia nam lewę. To trochę rozdanie z gatunku
+behawioralnych - szybka kontra, wątpliwe otwarcie, szybkie odejście w trefla.
+Na 9 PC człowiek mógłby skontrować wolno, na 11 PC człowiek mógłby rozważyć
+wyniesienie w 2\C. Trzeba takie rzeczy czujnie łapać. Ogólnie widać, że walka
+toczy się o bycie bez jednej. W 11 na 4-4 stare E mógłby dać otwarcie 1\C. Moim
+zdaniem aktualny rozkład jest najbardziej prawdopodobny.}
+[Ability "N:56566 E:76767 S:56566 W:87877"]
+[BCFlags "1f"]
+[DoubleDummyTricks "56566565667676787877"]
+[Minimax "1NW-120"]
+[OptimumScore "EW 120"]
+[ParContract "W 1N+1"]
+[Score "NS -300"]
+[Auction "S"]
+Pass 1C 1NT X
+Pass Pass Pass
+[Play "E"]
+HK H5 H2 HT
+H4 H6 HA HJ
+C2 C5 C8 CJ
+D2 D3 D8 DA
+S7 SK S2 S3
+CT C7 CA C3
+H9 H7 H3 C6
+HQ H8
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 6
+N  D 6
+N  H 5
+N  S 6
+N NT 5
+E  C 7
+E  D 6
+E  H 7
+E  S 6
+E NT 7
+S  C 6
+S  D 6
+S  H 5
+S  S 6
+S NT 5
+W  C 7
+W  D 7
+W  H 8
+W  S 7
+W NT 8
+
+[Event "R11 vs Gonzo Concert"]
+[Site ""]
+[Date ""]
+[Board "20"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:K6.AK864.KJ43.A9 7..AT987652.QT86 A9532.Q75.Q.KJ72 QJT84.JT932..543"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "4DX"]
+[Result "7"]
+{[MJ] Pewnie lepiej byłoby mieć AD w karach ale cóż innego z tym licytować?
+Przeciwnicy puszczają jedną lewę.
+
+WYNIK: +12 (na drugim stole po otwarciu 1\H ops skacze w 5\D)
+
+[MK] Prawidłowe wejście. Kilka WJ kończyło rozdanie w 4\S, 6\H i innych
+bzdurach. Akurat padła elastyczna kontra, z którą w pełni się zgadzam i
+asekurancki zdroworozsądkowy pas. WJ należy blokować w miarę wysoko, ale nie za
+wysoko, bo 5\D to się kontruje, leży i koniec rozdania. A z 4\D może być różnie.}
+[Ability "N:23262 E:B8B7A S:23262 W:B8A7A"]
+[BCFlags "1f"]
+[DoubleDummyTricks "2326223262b8b7ab8a7a"]
+[Minimax "3NW-660"]
+[OptimumScore "EW 660"]
+[ParContract "EW 3N+2"]
+[Score "NS -800"]
+[Auction "W"]
+1C 4D X Pass
+Pass Pass
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  2
+N  D  6
+N  H  2
+N  S  3
+N NT  2
+E  C 10
+E  D  7
+E  H 11
+E  S  8
+E NT 11
+S  C  2
+S  D  6
+S  H  2
+S  S  3
+S NT  2
+W  C 10
+W  D  7
+W  H 10
+W  S  8
+W NT 11
+
+[Event "R11 vs Gonzo Concert"]
+[Site ""]
+[Date ""]
+[Board "21"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:Q8.T97.JT82.JT53 A96.Q.KQ7643.A84 K42.J53.A95.KQ96 JT753.AK8642..72"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "4S"]
+[Result "12"]
+{[MJ] Po wiście w \CJ ops bierze asem, ściąga damę kier i po długim namyśle gra
+\S9. Bartek wskakuje królem i ponawia pika, więc 12 lew
+
+WYNIK: -1 (na drugim stole 11 lew)}
+[Ability "N:71154 E:6CC88 S:61154 W:6CC88"]
+[BCFlags "1f"]
+[DoubleDummyTricks "71154611546cc886cc88"]
+[Minimax "6HW-980"]
+[OptimumScore "EW 980"]
+[ParContract "EW 6H=; EW 6S="]
+[Score "EW +480"]
+[Auction "N"]
+Pass 1D Pass 1S
+Pass 2D Pass 2H
+Pass 4S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  4
+N  D  5
+N  H  1
+N  S  1
+N NT  7
+E  C  8
+E  D  8
+E  H 12
+E  S 12
+E NT  6
+S  C  4
+S  D  5
+S  H  1
+S  S  1
+S NT  6
+W  C  8
+W  D  8
+W  H 12
+W  S 12
+W NT  6
+
+[Event "R11 vs Gonzo Concert"]
+[Site ""]
+[Date ""]
+[Board "22"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:K8.KT986.A64.975 AJ752.Q54.T987.8 Q63.A.KQJ3.QJT63 T94.J732.52.AK42"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "3NT"]
+[Result "8"]
+{[MJ] Nie wiem czy w tej pozycji 2\S nie powinno być z figurą
+
+WYNIK: +6 (na drugim stole 4\C)
+
+[MK] Jeśli już to 2\H może być z figurą. Końcówki w końcu nie gramy. Celem
+podniesienia 2\S może być walka o zapis częściowy / znalezienie obrony.}
+[Ability "N:47543 E:8689A S:47543 W:8689A"]
+[BCFlags "1f"]
+[DoubleDummyTricks "47543475438689a8689a"]
+[Minimax "3CW-130"]
+[OptimumScore "EW 130"]
+[ParContract "EW 3C+1"]
+[Score "EW -100"]
+[Auction "E"]
+Pass Pass 1C Pass
+1H 1S 2C =1= 2S
+3NT AP
+[Note "1:15+"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  3
+N  D  4
+N  H  5
+N  S  7
+N NT  4
+E  C 10
+E  D  9
+E  H  8
+E  S  6
+E NT  8
+S  C  3
+S  D  4
+S  H  5
+S  S  7
+S NT  4
+W  C 10
+W  D  9
+W  H  8
+W  S  6
+W NT  8
+
+[Event "R11 vs Gonzo Concert"]
+[Site ""]
+[Date ""]
+[Board "23"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:AQ653.T72.JT95.8 8.9843.K76.QJT43 KJT42.J.Q2.AK752 97.AKQ65.A843.96"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "4S"]
+[Result "10"]
+{[MJ] Wygląda normalnie
+
+WYNIK: -5 (nasi kontrują 4\S)
+
+[MK] 3\H to bardzo zła odzywka z taktycznego punktu widzenia. Należy się 4\S =
+maksymalizuje presję i problemy przeciwnika. Nie pomylą się jeśli nie damy im
+szansy. Również w Strefie.}
+[Ability "N:6A356 E:63976 S:6A356 W:63976"]
+[BCFlags "1f"]
+[DoubleDummyTricks "6a3566a3566397663976"]
+[Minimax "5HDW500"]
+[OptimumScore "EW -500"]
+[ParContract "EW 5HX-2"]
+[Score "NS +620"]
+[Auction "S"]
+Pass Pass 1S 2H
+3H 4H 4S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  6
+N  D  5
+N  H  3
+N  S 10
+N NT  6
+E  C  6
+E  D  7
+E  H  9
+E  S  3
+E NT  6
+S  C  6
+S  D  5
+S  H  3
+S  S 10
+S NT  6
+W  C  6
+W  D  7
+W  H  9
+W  S  3
+W NT  6
+
+[Event "R11 vs Gonzo Concert"]
+[Site ""]
+[Date ""]
+[Board "24"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:KT85.KQ82.K53.KJ J4.5.AT984.98752 62.T97.QJ76.AQ63 AQ973.AJ643.2.T4"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "3NT"]
+[Result "7"]
+{[MJ] Po wiście w \D10 ops bierze w ręce, ściąga dwa trefle, dochodzi karem do
+stołu i pomimo informacji że mam 5-5 na młodych nie decyduje się na zagranie na
+impas waleta kier.
+
+WYNIK: +2 (na drugim stole 2BA-1)
+
+[MK] II liga.}
+[Ability "N:46555 E:96886 S:46555 W:96886"]
+[BCFlags "1f"]
+[DoubleDummyTricks "46555465559688696886"]
+[Minimax "3NW-400"]
+[OptimumScore "EW 400"]
+[ParContract "EW 3N="]
+[Score "EW -100"]
+[Auction "W"]
+1NT Pass 3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 5
+N  H 5
+N  S 6
+N NT 4
+E  C 6
+E  D 8
+E  H 8
+E  S 6
+E NT 9
+S  C 5
+S  D 5
+S  H 5
+S  S 6
+S NT 4
+W  C 6
+W  D 8
+W  H 8
+W  S 6
+W NT 9
+
+[Event "R12 vs O-Rety Mikołów"]
+[Site ""]
+[Date ""]
+[Board "1"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:J965.KJ86.J75.A2 T3.AT.AKQ8642.J3 Q87.Q543.9.T9865 AK42.972.T3.KQ74"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "3NT"]
+[Result "10"]
+{[MJ] Wist kierowy, przeciwnicy biorą swoje 10 lew
+
+WYNIK: 0 (to samo)}
+[Ability "N:15715 E:A86B7 S:15715 W:A86B7"]
+[BCFlags "1f"]
+[DoubleDummyTricks "1571515715a86b7a86b7"]
+[Minimax "3NW-430"]
+[OptimumScore "EW 430"]
+[Score "EW +430"]
+[Auction "N"]
+Pass 1D Pass 1S
+Pass 3D Pass 3NT
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  5
+N  D  1
+N  H  7
+N  S  5
+N NT  1
+E  C  7
+E  D 11
+E  H  6
+E  S  8
+E NT 10
+S  C  5
+S  D  1
+S  H  7
+S  S  5
+S NT  1
+W  C  7
+W  D 11
+W  H  6
+W  S  8
+W NT 10
+
+[Event "R12 vs O-Rety Mikołów"]
+[Site ""]
+[Date ""]
+[Board "2"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:KT63.K9.T73.A742 Q94.AQT8.5.QT653 .J5432.K8642.KJ9 AJ8752.76.AQJ9.8"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "4S"]
+[Result "9"]
+{[MJ] Po wiście w króla kier nie wiem który młodszy ma przeciwnik na otwarcie,
+zagrałem trefla żeby zobaczyć co się dzieje. Przeciwnik po lewie na 9-kę gra w
+karo. Biję asem, ściągam asa pik i bez sensu przebijam karo, później trefla i
+damę karo wkoło przegrywając bez dwóch jako jeden z niewielu na sali.
+
+WYNIK: -12 (na drugim stole wygrywają po takim samym wiście)
+
+[MK] 3\S to poważne niedolicytowanie. Ja wybrałem 4\S, ale był w tym pewien
+aspekt taktyczny. Należy się conajmniej 3\H.
+
+Jak zabrać się za to rozdanie? Zagranie trefla jest OK. Przed ściągnięciem \SA
+polecam przebić karo i zagrać trefla. Wyskoczenie waleta a także zrzutka wroga
+do kara może nam powiedzieć co się dzieje. Następna rzecz - brak połączenia
+atuta z W! Bardzo sugeruje to podział pików 4-0.}
+[Ability "N:8B768 E:52665 S:8B768 W:42675"]
+[BCFlags "1f"]
+[DoubleDummyTricks "8b7688b7685266542675"]
+[Minimax "4SS650"]
+[OptimumScore "NS 650"]
+[Score "NS -100"]
+[Auction "E"]
+Pass Pass 2H =1= 2S
+Pass 3S Pass 4S
+AP
+[Note "1:5-5"]
+[Play "E"]
+HK HA H2 H6
+C2 C3 C9 C8
+D3 D5 D4 DA
+D7 S4 D2 D9
+C4 C5 CJ S2
+H9 HQ H3 H7
+C7 C6 CK S5
+DT - - DQ
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  8
+N  D  6
+N  H  7
+N  S 11
+N NT  8
+E  C  5
+E  D  6
+E  H  6
+E  S  2
+E NT  5
+S  C  8
+S  D  6
+S  H  7
+S  S 11
+S NT  8
+W  C  5
+W  D  7
+W  H  6
+W  S  2
+W NT  4
+
+[Event "R12 vs O-Rety Mikołów"]
+[Site ""]
+[Date ""]
+[Board "3"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:QT9432.52.75.853 AK.9.AKQJT83.J92 J5.AKQJ83.92.T64 876.T764.64.AKQ7"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "5D"]
+[Result "12"]
+{[MJ] 3\H chyba normalne
+
+WYNIK: 0 (taki sam kontrakt)
+
+[MK] Prawidłowo. Ja otworzyłem 3\S, W wszedł 3BA.}
+[Ability "N:06500 E:777CC S:06500 W:777CC"]
+[BCFlags "1f"]
+[DoubleDummyTricks "0650006500777cc777cc"]
+[Minimax "6CW-1370"]
+[OptimumScore "EW 1370"]
+[Score "EW +620"]
+[Auction "S"]
+Pass 1D 3H Pass
+Pass 4D Pass 5D
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  0
+N  D  0
+N  H  5
+N  S  6
+N NT  0
+E  C 12
+E  D 12
+E  H  7
+E  S  7
+E NT  7
+S  C  0
+S  D  0
+S  H  5
+S  S  6
+S NT  0
+W  C 12
+W  D 12
+W  H  7
+W  S  7
+W NT  7
+
+[Event "R12 vs O-Rety Mikołów"]
+[Site ""]
+[Date ""]
+[Board "4"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:J9863.QT7.J.J753 AT75.AJ4.64.8642 KQ.863.AKQ853.AQ 42.K952.T972.KT9"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "3NT"]
+[Result "8"]
+{[MJ] Po wiście kierowym zbyt nerwowo ściągam asa pik, więc przeciwnik
+przegrywa tylko bez jednej
+
+WYNIK: 0 (na drugim stole 2\S)
+
+[MK] 3 czy 5 IMP piechotą nie chodzi.}
+[Ability "N:55757 E:77686 S:55757 W:77686"]
+[BCFlags "1f"]
+[DoubleDummyTricks "55757557577768677686"]
+[Minimax "1NW-90"]
+[OptimumScore "EW 90"]
+[Score "EW -100"]
+[Auction "W"]
+Pass Pass 2NT Pass
+3H Pass 3S Pass
+3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 7
+N  D 5
+N  H 7
+N  S 5
+N NT 5
+E  C 6
+E  D 8
+E  H 6
+E  S 7
+E NT 7
+S  C 7
+S  D 5
+S  H 7
+S  S 5
+S NT 5
+W  C 6
+W  D 8
+W  H 6
+W  S 7
+W NT 7
+
+[Event "R12 vs O-Rety Mikołów"]
+[Site ""]
+[Date ""]
+[Board "5"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:AQT97.3.AQ62.Q43 KJ854.J962.4.T98 2.KQT75.JT983.62 63.A84.K75.AKJ75"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "2D"]
+[Result "9"]
+{[MJ] 2\D paskudne, ale u S może jeszcze 3\D powiedzieć?
+
+WYNIK: 0 (ten sam kontrakt)
+
+[MK] Ja powiedziałem 3\D. Z silniejszą ręką (inwit, więcej niż tylko 5 kar)
+można dać 3\C. W 2\D nie ma nic paskudnego, najzwyklejsza licytacja. Wiadomo
+też, że 2\D jest zwykle do mniej więcej 15 PC, bo nie padła kontra.}
+[Ability "N:658A5 E:57437 S:658A5 W:68437"]
+[BCFlags "1f"]
+[DoubleDummyTricks "658a5658a55743768437"]
+[Minimax "4DS130"]
+[OptimumScore "NS 130"]
+[Score "NS +110"]
+[Auction "N"]
+1S Pass 1NT 2C
+2D AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  5
+N  D 10
+N  H  8
+N  S  5
+N NT  6
+E  C  7
+E  D  3
+E  H  4
+E  S  7
+E NT  5
+S  C  5
+S  D 10
+S  H  8
+S  S  5
+S NT  6
+W  C  7
+W  D  3
+W  H  4
+W  S  8
+W NT  6
+
+[Event "R12 vs O-Rety Mikołów"]
+[Site ""]
+[Date ""]
+[Board "6"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:AJ72.64.53.QJ985 6.AJT75.AJ9862.3 KQT43.Q8.K4.AT42 985.K932.QT7.K76"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "4H"]
+[Result "11"]
+{[MJ] Przeciwnicy nie idą wyżej, zastanawiam się czy 4\D to właśnie taka karta
+i czy po 4S o W teraz N jest w pozycji forsującej.
+
+WYNIK: -6 (nasi kontrują 4\H).
+
+[MK] 4\D to właśnie ta ręka. To jest po to, że jak oni mówią 4\S to partner
+może wiedzieć co zrobić. Oczywiście 4\S może im spokojnie iść. PF jest w tym
+sensie, że odpasowanie 4\S logicznie trochę nie ma sensu. 
+
+Odzywka 2\S z E to objaw rozpaczy. Proponuję cokolwiek innego. My gramy 3\H =
+Mixed Raise, ale karta jest bliska do silniejszego 2BA. Jeśli nie mamy tego
+ustalnia proponuję 3\S = dynamiczna ręka, od bloku do MR. Wszystko tylko nie
+2\S. A kontra na 4\H i pas to samowyjebka.}
+[Ability "N:64AA4 E:69339 S:64AA4 W:69339"]
+[BCFlags "1f"]
+[DoubleDummyTricks "64aa464aa46933969339"]
+[Minimax "4SDW200"]
+[OptimumScore "EW -200"]
+[Score "NS +450"]
+[Auction "E"]
+Pass 1H 1S 2H
+2S 4D Pass 4H
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  4
+N  D 10
+N  H 10
+N  S  4
+N NT  6
+E  C  9
+E  D  3
+E  H  3
+E  S  9
+E NT  6
+S  C  4
+S  D 10
+S  H 10
+S  S  4
+S NT  6
+W  C  9
+W  D  3
+W  H  3
+W  S  9
+W NT  6
+
+[Event "R12 vs O-Rety Mikołów"]
+[Site ""]
+[Date ""]
+[Board "7"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:QJ52.KT53.A3.JT3 87.J87.K98642.K9 T963.Q64.T7.Q542 AK4.A92.QJ5.A876"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "2D"]
+[Result "10"]
+{[MJ] Przeciwnicy nie dochodzą do końcówki
+
+WYNIK: +11 (na drugim stole 3BA)
+
+[MK] Otworzyłem 1\C. Dobre 4-4 na starych. Ale wy chyba otwieracie bardzo
+konserwatywnie.}
+[Ability "N:35524 E:A88A9 S:35524 W:A88A9"]
+[BCFlags "1f"]
+[DoubleDummyTricks "3552435524a88a9a88a9"]
+[Minimax "3NW-630"]
+[OptimumScore "EW 630"]
+[Score "EW +130"]
+[Auction "S"]
+Pass Pass Pass 1C
+X 1D =1= Pass 1NT =2=
+Pass 2D AP
+[Note "1: kara"]
+[Note "2: 18-20"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  4
+N  D  2
+N  H  5
+N  S  5
+N NT  3
+E  C  9
+E  D 10
+E  H  8
+E  S  8
+E NT 10
+S  C  4
+S  D  2
+S  H  5
+S  S  5
+S NT  3
+W  C  9
+W  D 10
+W  H  8
+W  S  8
+W NT 10
+
+[Event "R12 vs O-Rety Mikołów"]
+[Site ""]
+[Date ""]
+[Board "8"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:Q7.AQ763.K5.J953 JT86.82.9632.KT4 A92.JT94.AQT84.Q K543.K5.J7.A8762"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "6H"]
+[Result "12"]
+{[MJ] Wist w waleta pik, przeciwnik nie zauważył piątego kiera na otwarciu. Nic
+nie mogliśmy zrobić.
+
+WYNIK: - 11 (na drugim stole 5\H)}
+[Ability "N:25126 E:A7CB7 S:25126 W:A7CB7"]
+[BCFlags "1f"]
+[DoubleDummyTricks "2512625126a7cb7a7cb7"]
+[Minimax "6HW-980"]
+[OptimumScore "EW 980"]
+[Score "EW +980"]
+[Auction "W"]
+1C Pass 2D Pass
+2H Pass 3H Pass
+4D Pass 4S Pass
+5H Pass 6H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  6
+N  D  2
+N  H  1
+N  S  5
+N NT  2
+E  C  7
+E  D 11
+E  H 12
+E  S  7
+E NT 10
+S  C  6
+S  D  2
+S  H  1
+S  S  5
+S NT  2
+W  C  7
+W  D 11
+W  H 12
+W  S  7
+W NT 10
+
+[Event "R12 vs O-Rety Mikołów"]
+[Site ""]
+[Date ""]
+[Board "9"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:QJ6.K43.K832.AJT T52.T987.7.98432 K843.AQ6.AQJ.K65 A97.J52.T9654.Q7"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "6NT"]
+[Result "12"]
+{[MJ] Nie za bardzo wiem czym się różni taki inwit od bezpośredniego, ale mam
+maksa więc dokladam. Po kierowym gram dwa razy pika ze stołu, ale przeciwnik
+wskakuje asem za drugim razem co kończy walkę.
+
+WYNIK: +11 (na drguim stole 3BA)
+
+[MK] Nie rozumiem odzywki 4BA ani trochę. Informacja o 4 karach wnosi dużo - S
+ma dać 2BA po 2\H. N może też mieć 5 trefli. Do jednego z tych dwóch zdarzeń
+mamy na inwit, ale wydaje mi się, że tutaj zabrakło tutaj ćwiczenia
+intelektualnego - jakiej karty potrzebuję do szlemika i czy mogę zdobyć
+potrzebne informacje. Ja to rozdanie licytowałem dobre 5 minut wyobrażając
+sobie różne ręce i konfiguracje kart partnera. Ono jest bardziej subtelne, a
+truck driver bidding niesie jednak znamiona losowania. 
+
+Tutaj było na inwit dopiero po informacji, że partner ma górę - to też jest już
+jakiś kroczek do przodu, licytacja lepsza niż 4BA po 1BA, bardziej subtelna.}
+[Ability "N:CBBBA E:11223 S:CBBBA W:11223"]
+[BCFlags "1f"]
+[DoubleDummyTricks "cbbbacbbba1122311223"]
+[Minimax "6NS990"]
+[OptimumScore "NS 990"]
+[Score "NS +990"]
+[Auction "N"]
+1C Pass 1S Pass
+1NT Pass 2C Pass
+2H =1= Pass 4NT Pass
+6NT AP
+[Note "1: góra z fitem"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 10
+N  D 11
+N  H 11
+N  S 11
+N NT 12
+E  C  3
+E  D  2
+E  H  2
+E  S  1
+E NT  1
+S  C 10
+S  D 11
+S  H 11
+S  S 11
+S NT 12
+W  C  3
+W  D  2
+W  H  2
+W  S  1
+W NT  1
+
+[Event "R12 vs O-Rety Mikołów"]
+[Site ""]
+[Date ""]
+[Board "10"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "E"]
+[Vulnerable "All"]
+[Deal "E:AT32.AT8.A.AQT65 KQ7.975.T843.J82 J8.KQJ64.KJ652.K 9654.32.Q97.9743"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "6H"]
+[Result "13"]
+{[MJ] Wist w kiera. Rewers 18+, więc szlem wygląda znośnie z ręki W.
+
+WYNIK: -12 (na drugim stole nasi grają 3BA)}
+[Ability "N:02010 E:DBDCD S:02010 W:DBDCD"]
+[BCFlags "1f"]
+[DoubleDummyTricks "0201002010dbdcddbdcd"]
+[Minimax "7NW-2220"]
+[OptimumScore "EW 2220"]
+[Score "EW +1460"]
+[Auction "E"]
+1C Pass 1H Pass
+2S Pass 2NT Pass
+3H Pass 4NT Pass
+5C Pass 6H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  0
+N  D  1
+N  H  0
+N  S  2
+N NT  0
+E  C 13
+E  D 12
+E  H 13
+E  S 11
+E NT 13
+S  C  0
+S  D  1
+S  H  0
+S  S  2
+S NT  0
+W  C 13
+W  D 12
+W  H 13
+W  S 11
+W NT 13
+
+[Event "R12 vs O-Rety Mikołów"]
+[Site ""]
+[Date ""]
+[Board "11"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "S:Q64.Q8.42.QJ8752 J983.AKT965.T97. A72.J32.AJ653.T9 KT5.74.KQ8.AK643"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "3H"]
+[Result "10"]
+{[MJ] Przeciwnicy nie dochodzą do końcówki.
+
+WYNIK: +6 (4\H=)
+}
+[Ability "N:44367 E:99A76 S:44367 W:99A76"]
+[BCFlags "1f"]
+[DoubleDummyTricks "443674436799a7699a76"]
+[Minimax "4HW-420"]
+[OptimumScore "EW 420"]
+[Score "EW +170"]
+[Auction "S"]
+Pass Pass 1D 2C
+Pass 2H Pass 2NT
+Pass 3H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  7
+N  D  6
+N  H  3
+N  S  4
+N NT  4
+E  C  6
+E  D  7
+E  H 10
+E  S  9
+E NT  9
+S  C  7
+S  D  6
+S  H  3
+S  S  4
+S NT  4
+W  C  6
+W  D  7
+W  H 10
+W  S  9
+W NT  9
+
+[Event "R12 vs O-Rety Mikołów"]
+[Site ""]
+[Date ""]
+[Board "12"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "W:AJ92.T5.Q8764.KQ T84.J874.J5.J864 Q5.K32.AT9.A9532 K763.AQ96.K32.T7"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "3NT"]
+[Result "11"]
+{[MJ] Wist pikowy z tak słabego koloru nie wydaje się dobry. Po wiście pikowym
+przeciwnik impasuje pika drugi raz, ściąga trefle, dochodzi karem, a na
+trzeciego trefla wylatuje karo, więc w drugiej lewie karowej kończy się gra.
+
+WYNIK: 0 (3BA+2)
+
+[MK] Pik jest automatyczny. Konfiguracja kierowa to samobójstwo. Problemem w
+rozdaniu było beznadziejne wyrzucenie kara - ja wywaliłem kiera. Znowu zabrakło
+zdyscyplinowanego ćwiczenia - czego potrzebujemy do obkładu. Wasz przeciwnik
+bardzo słabo rozegrał, tak jak i mój. W końcu zagrał karo i "nie trafił".}
+[Ability "N:34624 E:987B9 S:34624 W:876A9"]
+[BCFlags "1f"]
+[DoubleDummyTricks "3462434624987b9876a9"]
+[Minimax "3NE-400"]
+[OptimumScore "EW 400"]
+[Score "EW +460"]
+[Auction "W"]
+1D Pass 2C Pass
+2S =1= Pass 2NT Pass
+3NT AP
+[Note "1: Nie przyrzeka żadnej nadwyżki"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  4
+N  D  2
+N  H  6
+N  S  4
+N NT  3
+E  C  9
+E  D 11
+E  H  7
+E  S  8
+E NT  9
+S  C  4
+S  D  2
+S  H  6
+S  S  4
+S NT  3
+W  C  9
+W  D 10
+W  H  6
+W  S  7
+W NT  8
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "1"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AQ92.QT973..KJ86 KJ75.K64.T72.T54 T43.J2.J543.9732 86.A85.AKQ986.AQ"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "3NT"]
+[Result "9"]
+{[MJ] Po wiście treflowym Bartek bierze na damę, zgrywa raz karo (N dokłada
+czerwoną karte) i gra pika. Przeciwnik wbija sie asem i ponawia trefla. Bartek
+ściąga kara po górze i S dochodzi na waleta bo źle policzył, na szczęście
+trefle 4-4.
+
+WYNIK: -2 (3BA+2 po takim samym wiście)
+
+[MK] Wyspać się przed ligą.}
+[Ability "N:14417 E:A87B6 S:12416 W:C89C6"]
+[BCFlags "1f"]
+[DoubleDummyTricks "1441712416a87b6c89c6"]
+[Minimax "6NW-990"]
+[OptimumScore "EW 990"]
+[Auction "N"]
+1H Pass Pass X
+XX 1S Pass 3NT
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  7
+N  D  1
+N  H  4
+N  S  4
+N NT  1
+E  C  6
+E  D 11
+E  H  7
+E  S  8
+E NT 10
+S  C  6
+S  D  1
+S  H  4
+S  S  2
+S NT  1
+W  C  6
+W  D 12
+W  H  9
+W  S  8
+W NT 12
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "2"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:AQJ74.95.J5.Q963 62.T8.KT9843.K85 KT85.AK76.A2.A74 93.QJ432.Q76.JT2"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "4S"]
+[Result "12"]
+{[MJ] W naszym systemie to ciągle jest słaby na piątce. Po wiście kierowym gram
+po atutach asa i blotkę kier, a N z niewiadomych przyczyn dokłada W i 10, więc
+biorę 12 lew.
+
+WYNIK: +1 (4\S +1)
+
+[MK] Jak słaby na piątce jak jesteśmy po pasie? Wy chyba w ogóle po pasie nie
+macie odpowiedzi "silny". Notabene, system, w którym w korzystnych z kartą E
+nie otwieramy czegokolwiek nie daje nam specjalnie profitów. Multi, dwukolor
+5-4 cokolwiek.}
+[Ability "N:32573 E:9B86A S:32573 W:9B86A"]
+[BCFlags "1f"]
+[DoubleDummyTricks "32573325739b86a9b86a"]
+[Minimax "4SW-450"]
+[OptimumScore "EW 450"]
+[Score "EW +480"]
+[Auction "E"]
+Pass Pass 1C Pass
+1S Pass 2D Pass
+2NT =1= Pass 3S Pass
+3NT =2= Pass 4S AP
+[Note "1:słabe 5"]
+[Note "2:niezła ręka bez krótkości"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  3
+N  D  7
+N  H  5
+N  S  2
+N NT  3
+E  C 10
+E  D  6
+E  H  8
+E  S 11
+E NT  9
+S  C  3
+S  D  7
+S  H  5
+S  S  2
+S NT  3
+W  C 10
+W  D  6
+W  H  8
+W  S 11
+W NT  9
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "3"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:KQT65.T64.42.JT4 A874.J.KJT86.A65 J32.AKQ75.A975.K 9.9832.Q3.Q98732"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "4H"]
+[Result "11"]
+{[MJ] Po wiście w \S9 Bartek bierze asem i odwraca w małego trefla...
+
+WYNIK: -11 (na drugim stole 4\H-1)
+
+[MK] Jaki sens miałby wist w \SW9x po otwarciu 1\D partnera? Czy nasz partner
+jest ślepy? Drugie pytanie - co dał wróg ze stołu? Męczył się? Dał \S10
+sugerując, że partnera w ogóle może mieć \SW9x?
+
+Zabrakło znowu twardej dyscypliny intelektualnej.
+
+Druga rzecz - nie możemy zaniedbywać prostych szans w obronie.}
+[Ability "N:69853 E:3448A S:69853 W:3448A"]
+[BCFlags "1f"]
+[DoubleDummyTricks "69853698533448a3448a"]
+[Minimax "4SDN-100"]
+[OptimumScore "NS -100"]
+[Score "NS +450"]
+[Auction "S"]
+Pass 1D 1H Pass
+2H Pass 4H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  3
+N  D  5
+N  H  8
+N  S  9
+N NT  6
+E  C 10
+E  D  8
+E  H  4
+E  S  4
+E NT  3
+S  C  3
+S  D  5
+S  H  8
+S  S  9
+S NT  6
+W  C 10
+W  D  8
+W  H  4
+W  S  4
+W NT  3
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "4"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:KT87.K74.A642.AQ 942.AQ5.K7.K8654 Q653.9.QJT983.97 AJ.JT8632.5.JT32"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "3D"]
+[Result "10"]
+{[MJ] Z tą ręką to chyba powinno być 3\C jako dobra ręka do kar. Po wiście pika
+ i odwrocie waletem, Bartek ściąga asa karo i gra piki, więc 10 lew.
+
+WYNIK: 0 (na drugim stole 4\D po asie kier)
+
+[MK] Brak odzywki 3\C to rozkojarzenie. Brak wznowienia 3\H to słaby brydż. }
+[Ability "N:64A49 E:29292 S:64A49 W:59393"]
+[BCFlags "1f"]
+[DoubleDummyTricks "64a4964a492929259393"]
+[Minimax "4SDW200"]
+[OptimumScore "EW -200"]
+[Score "EW +130"]
+[Auction "W"]
+1NT Pass 2NT =1= Pass
+3D AP
+[Note "1: zwykły transfer na kara"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  9
+N  D  4
+N  H 10
+N  S  4
+N NT  6
+E  C  2
+E  D  9
+E  H  2
+E  S  9
+E NT  2
+S  C  9
+S  D  4
+S  H 10
+S  S  4
+S NT  6
+W  C  3
+W  D  9
+W  H  3
+W  S  9
+W NT  5
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "5"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:Q743.A7.A93.J963 KJ86.QJ9.75.AKT8 A5.K8653.KJ64.Q7 T92.T42.QT82.542"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "2NT"]
+[Result "8"]
+{[MJ] Nie wiem czy ręka N ma na 2BA po wejściu. Po wiście w \D2 przeciwniczce
+udaje sie zrealizować kontrakt.
+
+WYNIK: +10 (nasi wygrywają 3BA)
+
+[MK] Nie ma na 2BA po wejściu oczywiście.}
+[Ability "N:88998 E:45445 S:88987 W:45445"]
+[BCFlags "1f"]
+[DoubleDummyTricks "88998889874544545445"]
+[Minimax "1HS140"]
+[OptimumScore "NS 140"]
+[Score "NS +120"]
+[Auction "N"]
+Pass 1C 1H Pass
+1S Pass 1NT Pass
+2NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 8
+N  D 9
+N  H 9
+N  S 8
+N NT 8
+E  C 5
+E  D 4
+E  H 4
+E  S 5
+E NT 4
+S  C 7
+S  D 8
+S  H 9
+S  S 8
+S NT 8
+W  C 5
+W  D 4
+W  H 4
+W  S 5
+W NT 4
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "6"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:QT9.AQ753.985.74 63.J.KQT762.AQ83 AKJ75.KT6.J4.T96 842.9842.A3.KJ52"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "2S"]
+[Result "8"]
+{[MJ] Po wiście trzy razy w karo Bartek bije wysoko, ściąga atuty i nie zauważa
+szansy singlowego waleta kier, więc tylko 8 lew.
+
+WYNIK: +6 (na drguim stole nasi 3\C)
+
+[MK] W WJ 2BA z pozycji S może oznaczać:
+
+a) 6\D i 4\C\n
+b) 6\D i ręka typu naturalny inwit (można z tym dać też kontrę)
+
+Ja gram 6-4.
+
+Znowu rozkojarzenie, tym razem na nadróbkę w rozgrywce.}
+[Ability "N:333AA E:39832 S:333AA W:39832"]
+[BCFlags "1f"]
+[DoubleDummyTricks "333aa333aa3983239832"]
+[Minimax "4CS130"]
+[OptimumScore "NS 130"]
+[Score "EW +110"]
+[Auction "E"]
+Pass 1D 1S X
+2S Pass Pass Pass
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 10
+N  D 10
+N  H  3
+N  S  3
+N NT  3
+E  C  2
+E  D  3
+E  H  8
+E  S  9
+E NT  3
+S  C 10
+S  D 10
+S  H  3
+S  S  3
+S NT  3
+W  C  2
+W  D  3
+W  H  8
+W  S  9
+W NT  3
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "7"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:Q9854.542.K94.T4 A.KJ6.AT82.J9753 T73.QT9.Q53.AQ62 KJ62.A873.J76.K8"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "3NT"]
+[Result "9"]
+{[MJ] 3BA może odrobię za ostro, ale otwieramy solidnie. Początek był dobry,
+ale później decyduję się na impas kier zamiast grę przez kara, na szczęście
+przeciwnicy wypuszczają kontrakt.
+
+WYNIK: +12 (na drugim stole bez jednej)
+
+[MK] Sensowna decyzja po partii. 
+
+Rozgrywka po prostu na większą szansę, nie ma o czym gadać. }
+[Ability "N:46333 E:9799A S:46333 W:979AA"]
+[BCFlags "1f"]
+[DoubleDummyTricks "46333463339799a979aa"]
+[Minimax "3NW-600"]
+[OptimumScore "EW 600"]
+[Score "EW +600"]
+[Auction "S"]
+Pass 1D Pass 1H
+Pass 2C Pass 3NT
+AP
+[Play "S"]
+S5 SA S7 S2
+C4 C3 CA C8
+S4 D2 ST S6
+S8 D8 S3 SK
+CT C5 C2 CK
+H5 HJ HQ H3
+H2 HK HT H7
+H4 CJ CQ SJ
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  3
+N  D  3
+N  H  3
+N  S  6
+N NT  4
+E  C 10
+E  D  9
+E  H  9
+E  S  7
+E NT  9
+S  C  3
+S  D  3
+S  H  3
+S  S  6
+S NT  4
+W  C 10
+W  D 10
+W  H  9
+W  S  7
+W NT  9
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "8"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:T63.T8642.T83.64 J5.3.AJ9.AKJ9752 AK984.K75.KQ54.3 Q72.AQJ9.762.QT8"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "3NT"]
+[Result "9"]
+{[MJ] Z mojej perspektywy ręka E nie nadaje się na zabranie głosu w drugim
+okrążeniu, ale wiele osób tak robiło na lidze i NS mieli problemy z
+potwierdzeniem zatrzymań. Po wiście w szóstkę pik zastnawiam się jaka jest
+szansa obłożenia kontraktu i chyba tylko dwie damy u Bartka, więc wziąłem
+królem pik i zagrałem króla karo.
+
+WYNIK: -7 (nasi grają 4\C)
+
+[MK] Nie ma na kolejny ruch z E. \HK w impasie to śmieć. Powinna pójść pała na
+3\D czy tam repała na kontrę i stawianie. Pała na 3\D jest oczywiście
+wywoławcza, ale N ma relatywnie dużo w karach jak na 3\C i powinien spasować +
+singiel kier. W jednak pójdzie w 3\S. Czy N to skontruje? Dobre pytanie, ma do
+tego pewne podstawy. Chyba większe niż S.
+
+Obora z drugiego stołu nie jest u nas żadnym arugmentem.}
+[Ability "N:A777B E:26662 S:A777B W:26662"]
+[BCFlags "1f"]
+[DoubleDummyTricks "a777ba777b2666226662"]
+[Minimax "3NS430"]
+[OptimumScore "NS 430"]
+[Score "NS +400"]
+[Auction "W"]
+Pass 1C 1S X
+Pass 3C Pass 3NT
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 11
+N  D  7
+N  H  7
+N  S  7
+N NT 10
+E  C  2
+E  D  6
+E  H  6
+E  S  6
+E NT  2
+S  C 11
+S  D  7
+S  H  7
+S  S  7
+S NT 10
+W  C  2
+W  D  6
+W  H  6
+W  S  6
+W NT  2
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "9"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:KJ8753.J.K9.AJT9 2.Q652.87654.K52 A96.KT9743.T2.76 QT4.A8.AQJ3.Q843"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "2S"]
+[Result "9"]
+{[MJ] U nas nic ciekawego
+
+WYNIK: +7 (nasi wygrywają 4\S)}
+[Ability "N:8A857 E:43586 S:8A857 W:43586"]
+[BCFlags "1f"]
+[DoubleDummyTricks "8a8578a8574358643586"]
+[Minimax "4SS420"]
+[OptimumScore "NS 420"]
+[Score "NS +140"]
+[Auction "N"]
+1S Pass 2S Pass
+Pass Pass
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  7
+N  D  5
+N  H  8
+N  S 10
+N NT  8
+E  C  6
+E  D  8
+E  H  5
+E  S  3
+E NT  4
+S  C  7
+S  D  5
+S  H  8
+S  S 10
+S NT  8
+W  C  6
+W  D  8
+W  H  5
+W  S  3
+W NT  4
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "10"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "E"]
+[Vulnerable "All"]
+[Deal "E:QJ.QJ876542.5.K8 K2.T.AKJ84.Q9654 AT6543.3.T762.J3 987.AK9.Q93.AT72"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "3NT"]
+[Result "10"]
+{[MJ] Po partii gramy konserwatywnie i 3\H przyrzeka dwie starsze figury, myślę
+że nikt już tak nie gra i tylko na naszym stole nie było otwarcia
+(alternatywnie było 2\D = 5\S-5\D / 6\H, może nie takie złe).  Po wiście w damę
+pik nie da się położyć kontraktu.
+
+WYNIK: -13 (nasti grają 6\D -2)
+
+[MK] Pas z ośmioma kierami to jest statystycznie -8 IMP czy ileś, więc słusznie
+się stało jak się stało. 
+
+Na cholerę wymóg dwóch figur na otwarcie 3M? Wymóg dwóch figur ma sens na 3\C i
+3\D, bo wtedy partner wie kiedy grać 3BA. Czy po otwarciu 3M naszym celem jest
+3BA??? Oczywiście ósmy kier rekompensuje wszystkie ewentualne niedostatki
+naszej karty.}
+[Ability "N:965AA E:37823 S:964BA W:37823"]
+[BCFlags "1f"]
+[DoubleDummyTricks "965aa964ba3782337823"]
+[Minimax "5DS600"]
+[OptimumScore "NS 600"]
+[Score "NS +630"]
+[Auction "E"]
+Pass 1D Pass 3NT
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 10
+N  D 10
+N  H  5
+N  S  6
+N NT  9
+E  C  3
+E  D  2
+E  H  8
+E  S  7
+E NT  3
+S  C 10
+S  D 11
+S  H  4
+S  S  6
+S NT  9
+W  C  3
+W  D  2
+W  H  8
+W  S  7
+W NT  3
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "11"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "S:86.52.9742.A9876 AKT.AT6.AQ85.Q52 Q942.KQJ98.6.KJ4 J753.743.KJT3.T3"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "1NT"]
+[Result "7"]
+{[MJ] Nie wiem czy ręka E zasluguje na jakąś licytację, przed partią, kończy
+się dobre.
+
+
+WYNIK: +7 (na drugim stole 3BA-2)
+
+[MK] Brak inwitu z ręką E jest uderzający. Ręka zawiera dużo lew. Ogromny fart.
+
+Potem jeszcze raz nie doceniasz czterokartó z W10 lub z dziesiątkami.
+Powtarzający się błąd, ale po prostu raz było skuteczne i to infekuje mózg na
+kolejne.}
+[Ability "N:55758 E:77485 S:55758 W:77585"]
+[BCFlags "1f"]
+[DoubleDummyTricks "55758557587748577585"]
+[Minimax "2DW-90"]
+[OptimumScore "EW 90"]
+[Score "EW +90"]
+[Auction "S"]
+Pass 1C 1H Pass
+Pass 1NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 8
+N  D 5
+N  H 7
+N  S 5
+N NT 5
+E  C 5
+E  D 8
+E  H 4
+E  S 7
+E NT 7
+S  C 8
+S  D 5
+S  H 7
+S  S 5
+S NT 5
+W  C 5
+W  D 8
+W  H 5
+W  S 7
+W NT 7
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "12"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "W:974.AK65.A8.K964 K53.QJ2.KT9.JT72 QJ862.984.J72.A3 AT.T73.Q6543.Q85"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "4S"]
+[Result "9"]
+{[MJ] Przed wistem myślałem że Bartkowi schował się as na otwarciu, okazało się
+że był inny pomysł. Zastanawiam się czy 3\S się w ogóle mówi z taką kartą.
+
+
+WYNIK: -5 (na drugim stole 1BA+2)
+
+[MK] 3\S jest do rozważenia. 4\S to jednak świr. Notabene, już 2BA z W powinno
+mówić o potworze z fitem i dawać nam przestrzeń na zbadanie dokładne rąk -
+układu 5-4 u E, może krótkości.
+
+}
+[Ability "N:64577 E:79866 S:64577 W:79866"]
+[BCFlags "1f"]
+[DoubleDummyTricks "64577645777986679866"]
+[Minimax "1SW-140"]
+[OptimumScore "EW 140"]
+[Score "EW -50"]
+[Auction "W"]
+1C Pass 1S Pass
+1NT Pass 2S Pass
+4S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 7
+N  D 7
+N  H 5
+N  S 4
+N NT 6
+E  C 6
+E  D 6
+E  H 8
+E  S 9
+E NT 7
+S  C 7
+S  D 7
+S  H 5
+S  S 4
+S NT 6
+W  C 6
+W  D 6
+W  H 8
+W  S 9
+W NT 7
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "13"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "N"]
+[Vulnerable "All"]
+[Deal "N:J9752.Q854.J.Q64 .AKT9632.83.KT87 KQT6.J.KQ74.9532 A843.7.AT9652.AJ"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "3H"]
+[Result "11"]
+{[MJ] Po wiście pikowym przeciwniczka gra kiera do waleta, ale ja oddaję lewę
+wyrzucając trefla w dalszej fazie rozgrywki.
+
+WYNIK: +10 (na drugim stole 3BA+1)
+
+[MK] Do zapomnienia.}
+[Ability "N:37124 E:86BA8 S:36124 W:86BA8"]
+[BCFlags "1f"]
+[DoubleDummyTricks "371243612486ba886ba8"]
+[Minimax "4HW-650"]
+[OptimumScore "EW 650"]
+[Score "EW +200"]
+[Auction "N"]
+Pass 3H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  4
+N  D  2
+N  H  1
+N  S  7
+N NT  3
+E  C  8
+E  D 10
+E  H 11
+E  S  6
+E NT  8
+S  C  4
+S  D  2
+S  H  1
+S  S  6
+S NT  3
+W  C  8
+W  D 10
+W  H 11
+W  S  6
+W NT  8
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "14"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "E"]
+[Vulnerable "None"]
+[Deal "E:7.J4.J743.AKJ965 AKT93.A9.AKQ65.2 Q862.T6.T982.Q43 J54.KQ87532..T87"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "6S"]
+[Result "11"]
+{[MJ] Po wiście treflowym wyglądało dobrze, ale się nie udało. Zastanawialiśmy
+się czy N od razu 4\H powinno przyrzekać podobną kartę biorąc pod uwagę że 1\H
+jest forsujące. Czy może też byś jakieś 5332 z kierami i bilansem na końcówkę.
+
+WYNIK: -14 (na drugim stole 6\H - E nie było w licytacji)
+
+[MK] Negat po kontrze wywoławczej jest na liście konwencji, których nie
+rozumiem. Chyba, że kontra nie jest wywoławcza tylko 12-14 z równym i może być
+starszy dubel (tzw. kontra jak otwarcie 1\C). Czy z S po 2\C byłaby kontra fit?
+Bo to chyba bez sensu jeśli nasza kontra przyrzekała 3 kiery. Ale to taka
+konwencja, której nikt w sumie nie zna i nie wie o co chodzi i ja też i nie
+umiem na to odpowiedzieć.
+
+4\S to kompletna obora. 6\S też, bo po tej licytacji partner ma:
+
+\Sxxx\n
+\HDxxxx\n
+\DWxx\n
+\CKW
+
+}
+[Ability "N:7BC96 E:11026 S:7BC96 W:11026"]
+[BCFlags "1f"]
+[DoubleDummyTricks "7bc967bc961102611026"]
+[Minimax "6HS980"]
+[OptimumScore "NS 980"]
+[Score "NS -50"]
+[Auction "E"]
+1C X Pass 1H
+2C 2S Pass 4S
+Pass 6S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  6
+N  D  9
+N  H 12
+N  S 11
+N NT  7
+E  C  6
+E  D  2
+E  H  0
+E  S  1
+E NT  1
+S  C  6
+S  D  9
+S  H 12
+S  S 11
+S NT  7
+W  C  6
+W  D  2
+W  H  0
+W  S  1
+W NT  1
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "15"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "S"]
+[Vulnerable "NS"]
+[Deal "S:Q.JT82.KQ73.AQT3 9862.A6.AT82.987 JT73.Q753.95.K65 AK54.K94.J64.J42"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "2S"]
+[Result "7"]
+{[MJ] Z mojego punktu widzenie nie ma takiej licytacji jak N. Jak już raz
+spasowaliśmy, a partner nic więcej nie powiedział to nie chcemy się wystawiać.
+
+WYNIK: +4 (na drugim stole 3\H -1)
+
+[MK] Pas na 1\D?????? 1BA po 1\S?????? Chyba spasowaliśmy po to, żeby nie grać
+tylko bronić ich kontraktu w starszy??? 
+
+}
+[Ability "N:66967 E:77475 S:66967 W:77475"]
+[BCFlags "1f"]
+[DoubleDummyTricks "66967669677747577475"]
+[Minimax "3HS140"]
+[OptimumScore "NS 140"]
+[Score "EW -50"]
+[Auction "S"]
+1D Pass Pass X
+Pass 1S 1NT 2S
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 7
+N  D 6
+N  H 9
+N  S 6
+N NT 6
+E  C 5
+E  D 7
+E  H 4
+E  S 7
+E NT 7
+S  C 7
+S  D 6
+S  H 9
+S  S 6
+S NT 6
+W  C 5
+W  D 7
+W  H 4
+W  S 7
+W NT 7
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "16"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "W"]
+[Vulnerable "EW"]
+[Deal "W:K.KJ42.K82.T7642 J953.653.A75.J83 AQ864.T87.T643.A T72.AQ9.QJ9.KQ95"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "2CX"]
+[Result "7"]
+{[MJ] Kontra chyba normalna pomimo okropnego składu. Przeciwniczki bardzo nie
+utrudniają i przegrywam bez jednej.
+
+WYNIK: 0 (na drugim stole po takim samym początku W dał 1BA natutralne)
+
+[MK] Wszystko w porządku, świr na drugim stole.}
+[Ability "N:75446 E:68886 S:75447 W:68896"]
+[BCFlags "1f"]
+[DoubleDummyTricks "75446754476888668896"]
+[Minimax "3DW-110"]
+[OptimumScore "EW 110"]
+[Score "NS -100"]
+[Auction "W"]
+Pass Pass 1S X
+XX Pass Pass 2C
+X AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 6
+N  D 4
+N  H 4
+N  S 5
+N NT 7
+E  C 6
+E  D 8
+E  H 8
+E  S 8
+E NT 6
+S  C 7
+S  D 4
+S  H 4
+S  S 5
+S NT 7
+W  C 6
+W  D 9
+W  H 8
+W  S 8
+W NT 6
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "17"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:5.KT65.KQ94.KQ84 KQJT842.Q.T652.6 .A9873.873.JT532 A9763.J42.AJ.A97"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "5S"]
+[Result "11"]
+{[MJ] Wymyśliłem że 4BA powinno być właśnie coś tego typu i wywoławcze. 6\C
+wspaniała obrona, ale nie bardzo wiadom kto miałby zalicytować
+
+WYNIK: 0 (na drugim stole 4\S)
+
+[MK] Rozdanie w porządku. N może rozważyć, że ręka partnera to coś koło tego.
+Pytanie tylko czy na pewno idzie im 5\S?
+
+W najgorszym razie będziemy mieć remis, a przepchnięcie ich w 5\S to dobra
+robota. Zgadzam się z pasem N na zasadzie "my job here is done".}
+[Ability "N:42A8B E:8B242 S:42A8B W:8B242"]
+[BCFlags "1f"]
+[DoubleDummyTricks "42a8b42a8b8b2428b242"]
+[Minimax "6CDS-100"]
+[OptimumScore "NS -100"]
+[Score "EW +450"]
+[Auction "N"]
+1D 3S Pass 4S
+Pass Pass 4NT Pass
+5C Pass Pass 5S
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 11
+N  D  8
+N  H 10
+N  S  2
+N NT  4
+E  C  2
+E  D  4
+E  H  2
+E  S 11
+E NT  8
+S  C 11
+S  D  8
+S  H 10
+S  S  2
+S NT  4
+W  C  2
+W  D  4
+W  H  2
+W  S 11
+W NT  8
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "18"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:AKJ97.J6.A.AT643 T32.A2.QT985.K95 Q854.T97.642.Q87 6.KQ8543.KJ73.J2"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "4S"]
+[Result "9"]
+{[MJ] Na szczęście po wiście trzy razy w kiera przeciwniczka przebija nisko.
+
+WYNIK: +6 (na drugim stole 5\DX)
+
+[MK] Pas na 3\C zamiast kontry jest uderzający.}
+[Ability "N:639A3 E:7A33A S:639A3 W:7A33A"]
+[BCFlags "1f"]
+[DoubleDummyTricks "639a3639a37a33a7a33a"]
+[Minimax "5DDN-200"]
+[OptimumScore "NS -200"]
+[Auction "E"]
+1S Pass 1NT =1= 2H
+3C Pass 3S Pass
+4S AP
+[Note "1:może być minipodniesienie"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  3
+N  D 10
+N  H  9
+N  S  3
+N NT  6
+E  C 10
+E  D  3
+E  H  3
+E  S 10
+E NT  7
+S  C  3
+S  D 10
+S  H  9
+S  S  3
+S NT  6
+W  C 10
+W  D  3
+W  H  3
+W  S 10
+W NT  7
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "19"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:A82.KT6.AT82.T75 KJT3.QJ54.974.86 964.973.KQ53.AQ2 Q75.A82.J6.KJ943"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "1H"]
+[Result "7"]
+{[MJ] Nie wiem jak powinna wyglądać poprawna licytacja, czy jest sens z S
+licytować X z 3-3 na starych i czy później N ma jescze cokolwiek walczyć.
+
+WYNIK: -2 (na drugim stole 4 pasy)
+
+[MK] Pasuję z S - nie mam układu, oni mają starsze i nas ograją.
+
+Pas z N po 1\H to inna gra.}
+[Ability "N:75575 E:67768 S:75575 W:67768"]
+[BCFlags "1f"]
+[DoubleDummyTricks "75575755756776867768"]
+[Minimax "2CW-90"]
+[OptimumScore "EW 90"]
+[Score "EW +80"]
+[Auction "S"]
+Pass Pass Pass 1C
+X 1H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 7
+N  H 5
+N  S 5
+N NT 7
+E  C 8
+E  D 6
+E  H 7
+E  S 7
+E NT 6
+S  C 5
+S  D 7
+S  H 5
+S  S 5
+S NT 7
+W  C 8
+W  D 6
+W  H 7
+W  S 7
+W NT 6
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "20"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:QT764..K63.QT843 2.KQJ876.AQT98.J KJ9.AT5.J75.A952 A853.9432.42.K76"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "4H"]
+[Result "10"]
+{[MJ] Przeciwniczki nie idą w obronę.
+
+WYNIK: +9 (na drugim stole 4\SX-1)
+
+[MK] N ma statystyczne wejście 4\H, 3\H to proste niedolicytowanie. Mamy 4
+przegrywające, partner jedną statystycznie obsługuje. Zrozumiałbym jeszcze
+odzywkę 4\D, chociaż raczej się z nią nie zgadzam. WE zachowali się bardzo
+pasywnie. Taktycznie rozsądne jest 4\S z E. To lekkie przelicytowanie i czasem
+się kończy 4\S bez jednej gdy 4\H jest bez jednej. Ale często komuś coś idzie -
+powiemy od razu, może dostaniemy pałę, gdy oni mieli iść w 5\H, może nie
+dostaniemy pały gdy im szło, może powiedzą 5\H i się wydupcą? }
+[Ability "N:75B84 E:58237 S:75B94 W:58237"]
+[BCFlags "1f"]
+[DoubleDummyTricks "75b8475b945823758237"]
+[Minimax "5HS650"]
+[OptimumScore "NS 650"]
+[Score "NS +620"]
+[Auction "W"]
+2S 3H 3S 4H
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  4
+N  D  8
+N  H 11
+N  S  5
+N NT  7
+E  C  7
+E  D  3
+E  H  2
+E  S  8
+E NT  5
+S  C  4
+S  D  9
+S  H 11
+S  S  5
+S NT  7
+W  C  7
+W  D  3
+W  H  2
+W  S  8
+W NT  5
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "21"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:A7.KJ8.AT6542.AT KQT842.A3.QJ9.Q6 J63.Q9762.8.K943 95.T54.K73.J8752"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "3H"]
+[Result "10"]
+{[MJ] Odrobinkę kusiło mnie dołożenie, ale to już chyba byłaby przesada?
+
+WYNIK: +1 (na drugim stole 2\D+2)
+
+[MK] Z singlem i 3 małymi pikami w meczu po partii dokład jest czysty - partner
+statystycznie ma dubla pik, my mamy boczny czterokart. Jeśli tylko ma on 4
+kiery to...
+
+Po cholerę partner mówił 3\H? Kiedy mamy dołożyć jeśli nie teraz? Pas jest
+wbrew statystyce - to nie maksy. 
+
+\Sxx\n
+\HA10xx\n
+\DADxx\n
+\CAW10
+
+Zła końcówka? To dopiero 15 PC i to średnio dopasowanych.
+
+Po raz kolejny zabrakło dyscypliny intelektualnej i wyobrażenia sobie kilku
+przykładowych rąk partnera. Jeśli na szali jest popartyjna końcówka - musimy
+wykonać robotę intelektualną, przecież za chwilę wyłożymy dziadka i pójdziemy
+se po kawę. Ale na razie trzeba zakasać rękawy i wyobrazić sobie 5
+przykładowych rąk. Obstawiam, że do 3/5 końcówka pójdzie, 1/5 będzie cienka,
+ale grywalna, 1/5 może bardzo słaba.
+
+Ach, to nie był transfer i przyjęcie 3\H... To nie, to N ma na 2\S = kolor
+przeciwnika, super karta z fitem.}
+[Ability "N:97B88 E:46245 S:77A88 W:46245"]
+[BCFlags "1f"]
+[DoubleDummyTricks "97b8877a884624546245"]
+[Minimax "4HN650"]
+[OptimumScore "NS 650"]
+[Score "NS +170"]
+[Auction "N"]
+1NT 2D 2H Pass
+3H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  8
+N  D  8
+N  H 11
+N  S  7
+N NT  9
+E  C  5
+E  D  4
+E  H  2
+E  S  6
+E NT  4
+S  C  8
+S  D  8
+S  H 10
+S  S  7
+S NT  7
+W  C  5
+W  D  4
+W  H  2
+W  S  6
+W NT  4
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "22"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:T3.K85.AQJ983.76 985.A76.KT42.AKJ AJ.QT432.765.932 KQ7642.J9..QT854"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "4S"]
+[Result "12"]
+{[MJ] Licytacja S dramat, zupełnie nie miałem pomysłu na rozdanie, partner może
+mieć \SA i niedogrywamy szlemika.
+
+WYNIK: +1 (Na drugim stole 4\S)
+
+[MK] 3BA nie jest takie oczywiste - W może nas łatwo poczęstować wistem
+kierowym, bo widzi co ma w karcie. Ja bym raczej dał 4\D, też z uwagi na to, że
+możemy mieć niezłą grę w piki.
+
+Co jest potrzebne? Wyobraźnia, malowanie rąk partnera, dyscyplina
+intelektualna. Tutaj też trzeba sobie wyobrazić kartę wistującej na 3BA i różne
+potencjalne wybory.}
+[Ability "N:7B65B E:21771 S:7B65B W:21772"]
+[BCFlags "1f"]
+[DoubleDummyTricks "7b65b7b65b2177121772"]
+[Minimax "4SS450"]
+[OptimumScore "NS 450"]
+[Auction "E"]
+3D Pass Pass 3S
+Pass 3NT Pass 4C
+Pass 4S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 11
+N  D  5
+N  H  6
+N  S 11
+N NT  7
+E  C  1
+E  D  7
+E  H  7
+E  S  1
+E NT  2
+S  C 11
+S  D  5
+S  H  6
+S  S 11
+S NT  7
+W  C  2
+W  D  7
+W  H  7
+W  S  1
+W NT  2
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "23"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:KJ8764.AQ854.72. T92.J973.QJ8.T64 AQ.KT.AKT5.AK875 53.62.9643.QJ932"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "6NT"]
+[Result "13"]
+{[MJ] Ja odpowiadałem na asy na kierach (bo z fitem pik wcześniej 2\S zamiast
+2BA), a Bartek myślał że na pikach. Ale nawet zakładając że byłoby lepiej, to
+ciągle KWxxx ADxxx xx x nie daje chyba takiego dobrego  7, ale to chyba jest
+minimalna karta i praktyce coś jeszcze będzie na otwarciu lub sie uda?
+
+WYNIK: -13 (na drugim stole 7BA)
+
+[MK] Transferowe wydłużenia +++
+
+Po co? Bo ułatwiają życie, a nie komplikują!
+
+Informacja o dwóch asach jest dla N wystarczająca po tym początku by dać
+sieben.
+
+}
+[Ability "N:DDDCA E:00013 S:DDDCA W:00013"]
+[BCFlags "1f"]
+[DoubleDummyTricks "dddcadddca0001300013"]
+[Minimax "7NS2220"]
+[OptimumScore "NS 2220"]
+[Score "NS +1470"]
+[Auction "S"]
+1S Pass 2C Pass
+2H Pass 2NT Pass
+3H Pass 3S Pass
+4C Pass 4NT Pass
+5C Pass 6NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 10
+N  D 12
+N  H 13
+N  S 13
+N NT 13
+E  C  3
+E  D  1
+E  H  0
+E  S  0
+E NT  0
+S  C 10
+S  D 12
+S  H 13
+S  S 13
+S NT 13
+W  C  3
+W  D  1
+W  H  0
+W  S  0
+W NT  0
+
+[Event "R13 vs BSBS Bielsko-Biała"]
+[Site ""]
+[Date ""]
+[Board "24"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:4.965.8642.KT762 7.JT83.AK73.J854 AT932.AK7.Q95.AQ KQJ865.Q42.JT.93"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "3S"]
+[Result "6"]
+{[MJ] Po wiście w kórla pik i zmianie na karo do króla i małe karo
+przecziwniczka ostecznie przegrywa -3.
+
+WYNIK: -9 (na drugim stole 2\SXN+1)
+
+[MK] Karo do \DK i małe karo?}
+[Ability "N:67765 E:76678 S:67755 W:76678"]
+[BCFlags "1f"]
+[DoubleDummyTricks "67765677557667876678"]
+[Minimax "1NW-90"]
+[OptimumScore "EW 90"]
+[Score "EW -150"]
+[Auction "W"]
+Pass Pass 2NT Pass
+3C Pass 3S =1= Pass
+Pass Pass
+[Note "1: 5 pików"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 6
+N  H 7
+N  S 7
+N NT 6
+E  C 8
+E  D 7
+E  H 6
+E  S 6
+E NT 7
+S  C 5
+S  D 5
+S  H 7
+S  S 7
+S NT 6
+W  C 8
+W  D 7
+W  H 6
+W  S 6
+W NT 7
+
+[Event "R14 vs Rewers Joker"]
+[Site ""]
+[Date ""]
+[Board "1"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AK982.97.52.Q863 T7.JT64.986.KJ42 54.82.AQT7.AT975 QJ63.AKQ53.KJ43."]
+[Scoring ""]
+[Declarer "W"]
+[Contract "4H"]
+[Result "10"]
+{[MJ] Wist \SK i 5 karo (z pustego dubla lub trzech). Ciągle nie wiadomo kto ma
+\SA, odwrót karowy puszczał lewę, ale przeciwnik nie puścił do dziewiątki.
+
+WYNIK: -3 (na drugim stole znajdują obronę 5\CX)
+
+[MK] Eeee? Ale czemu nie wiadomo kto ma \SA? 
+
+To po co to tak wistować z \SAK? 
+
+Nie wiem kto i kiedy to wymyślił, ale to też jest na szczycie konwencji,
+których nie rozumiem razem z tą całą bzdurą do A/D marka, do króla ilość -
+zazwyczaj obrońca nie wie co mu jest potrzebne, a nie trzeba być geniuszem,
+żeby do wistu w asa dać markę z dublem. 
+
+Tego typu ustalenie ma sens w subtelnych sytuacjach w środkowej fazie oraz na
+szlemiki. Rozciąganie go bylegdzie powoduje właśnie takie rzeczy. Ostatnio jak
+to widziałem to efekt był taki, że Pan wyszedł z AK królem, a partner mu
+przebił z renonsu.}
+[Ability "N:57359 E:66A84 S:57359 W:66A74"]
+[BCFlags "1f"]
+[DoubleDummyTricks "573595735966a8466a74"]
+[Minimax "5CDN-300"]
+[OptimumScore "NS -300"]
+[Score "EW +420"]
+[Auction "N"]
+Pass Pass 1D 1H
+1S 3H Pass 4H
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  9
+N  D  5
+N  H  3
+N  S  7
+N NT  5
+E  C  4
+E  D  8
+E  H 10
+E  S  6
+E NT  6
+S  C  9
+S  D  5
+S  H  3
+S  S  7
+S NT  5
+W  C  4
+W  D  7
+W  H 10
+W  S  6
+W NT  6
+
+[Event "R14 vs Rewers Joker"]
+[Site ""]
+[Date ""]
+[Board "2"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:KJT3.T42.KQ4.A85 984.J83.T982.J63 752.A75.53.KT974 AQ6.KQ96.AJ76.Q2"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "1NT"]
+[Result "7"]
+{[MJ] Kontraktu nie da się położyć, nie wiem czy się wchodzi z ręką N skoro
+wiadomo że partner nie ma nic.
+
+WYNIK: 0 (na drugim stole X i grane było 2\D)
+
+[MK] Ciekawy pas - pytanie - czy częściej wygramy 2M czy obłożymy 1BA? Nie
+jestem pewien odpowiedzi, ale sympatyzuję z pasem z ciekawości.
+
+Partner ma mało - ciężko może być coś wygrać. Mamy kartę zrównoważoną,
+predysponowaną do obrony i do 1BA, przeciwnik może się nie zorientować, że mamy
+tak dużo i poodawać nam lewy na figury, które kontrując wyłożylibyśmy w dziadku.}
+[Ability "N:65665 E:78768 S:65664 W:78768"]
+[BCFlags "1f"]
+[DoubleDummyTricks "65665656647876878768"]
+[Minimax "1SW-110"]
+[OptimumScore "EW 110"]
+[Score "EW +90"]
+[Auction "E"]
+1C Pass 1NT Pass
+Pass Pass
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 6
+N  H 6
+N  S 5
+N NT 6
+E  C 8
+E  D 6
+E  H 7
+E  S 8
+E NT 7
+S  C 4
+S  D 6
+S  H 6
+S  S 5
+S NT 6
+W  C 8
+W  D 6
+W  H 7
+W  S 8
+W NT 7
+
+[Event "R14 vs Rewers Joker"]
+[Site ""]
+[Date ""]
+[Board "3"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:J762.AJ7.K76.AQT T5.KQT52.Q92.K64 AQ84.98.J.J98752 K93.643.AT8543.3"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "4S"]
+[Result "10"]
+{[MJ] Przeciwnicy nie bronią najlepiej, po wiście \HK puszczam, następuje
+ponowienie i wylatuje karo ze stołu. Po zagraniu pika do damy ops bierze i
+odwraca w trefla.
+
+WYNIK: +11 (na drugim stole 4\S-2)
+
+[MK] Pewnie E nie wiedział czy partner ma AK czy KD, dołożył do \HK ilość
+zgodnie z ustaleniem, W po ilościówce nie wiedział czy partner ma figurę i
+zrobił jakieś losowe guwno.}
+[Ability "N:79449 E:54894 S:79549 W:54893"]
+[BCFlags "1f"]
+[DoubleDummyTricks "79449795495489454893"]
+[Minimax "3SS140"]
+[OptimumScore "NS 140"]
+[Score "NS +420"]
+[Auction "S"]
+1NT Pass 2C Pass
+2S Pass 4S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 9
+N  D 4
+N  H 4
+N  S 9
+N NT 7
+E  C 4
+E  D 9
+E  H 8
+E  S 4
+E NT 5
+S  C 9
+S  D 4
+S  H 5
+S  S 9
+S NT 7
+W  C 3
+W  D 9
+W  H 8
+W  S 4
+W NT 5
+
+[Event "R14 vs Rewers Joker"]
+[Site ""]
+[Date ""]
+[Board "4"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:KJT.AKQJ94.A72.5 A954.853.JT5.843 86.T62.643.AQJ96 Q732.7.KQ98.KT72"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "4H"]
+[Result "11"]
+{[MJ] Wist w kiera - po takiej licytacji wydaje mi się, że się od razu
+poddajemy w ten sposób.
+
+WYNIK: -1 (na drugim stole 4\H=)
+
+[MK] Jest taka książka "Opening Lead". Licytacja sugeruje dubla kier w dziadku
+oraz że plan rozgrywającego będzie taki, żeby wydupcyć złe karty na trefle.
+Nasza ręka sugeruje, że konieczny jest wist atakujący. Autor książki (Krzysiu)
+za wist w kiera przyznaje okrągłe 0/10 i przechodzi do kolejnego problemu. }
+[Ability "N:37254 E:96B88 S:37255 W:96B88"]
+[BCFlags "1f"]
+[DoubleDummyTricks "372543725596b8896b88"]
+[Minimax "4HW-650"]
+[OptimumScore "EW 650"]
+[Score "EW +650"]
+[Auction "W"]
+1C Pass 1NT Pass
+2H Pass 3C Pass
+3H Pass 4H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  4
+N  D  5
+N  H  2
+N  S  7
+N NT  3
+E  C  8
+E  D  8
+E  H 11
+E  S  6
+E NT  9
+S  C  5
+S  D  5
+S  H  2
+S  S  7
+S NT  3
+W  C  8
+W  D  8
+W  H 11
+W  S  6
+W NT  9
+
+[Event "R14 vs Rewers Joker"]
+[Site ""]
+[Date ""]
+[Board "5"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:5.AQ852.AT73.J52 QJT.JT.J9864.AQ4 A964.K93.KQ5.K87 K8732.764.2.T963"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "6H"]
+[Result "10"]
+{[MJ] Z mojego punktu widzenia na splintera musi być nadwyżka, a nie ledwie
+otwarcie. I szlemik będzie dobry do 6-4 nawet jak nie ma damy trefl w ręce.
+
+WYNIK: -13 (na drugim stole 4\H)
+
+[MK] Dramat. 3\S to bzdura. Przecież układ można pokazać na poziomie 3.
+Zabranie całego okrążenia licytacji nie ma żadnego logicznego sensu. Po 2\H się
+mówi 3\C = KNL Kolory Należy Licytować to jest zasada z U15 i to jest
+elementarz. Co w takim razie znaczy 3\S? Renons.
+
+Kolejna sekwencja do dopracowania to licytacja po 2/1 - na razie nie mamy
+pojęcia co się dzieje. To ma wysoki priorytet.}
+[Ability "N:A7BA8 E:26235 S:A6B98 W:26235"]
+[BCFlags "1f"]
+[DoubleDummyTricks "a7ba8a6b982623526235"]
+[Minimax "4HS650"]
+[OptimumScore "NS 650"]
+[Score "NS -200"]
+[Auction "N"]
+1H Pass 2C Pass
+2D Pass 2H =1= Pass
+3S Pass 4NT Pass
+5S Pass 6H AP
+[Note "1: zachęcające"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  8
+N  D 10
+N  H 11
+N  S  7
+N NT 10
+E  C  5
+E  D  3
+E  H  2
+E  S  6
+E NT  2
+S  C  8
+S  D  9
+S  H 11
+S  S  6
+S NT 10
+W  C  5
+W  D  3
+W  H  2
+W  S  6
+W NT  2
+
+[Event "R14 vs Rewers Joker"]
+[Site ""]
+[Date ""]
+[Board "6"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:Q2.Q654.AQ82.T76 A9.T982.JT74.KJ3 T7653.J7.95.AQ42 KJ84.AK3.K63.985"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "3NT"]
+[Result "6"]
+{[MJ] Nie otwieramy na 14. 3\S już się podobno wyciągnęło przez przypadek.
+Normalnie taka sekwencja chyba powinna przyrzekać przyjęcie inwitu i 5 pików
+jako propozycja alternatywnej końcówki.
+
+WYNIK: -3 (na drugim stole 2BA)
+
+[MK] Jeśli otwieramy solidnie to z S daję 3BA, bo mam dwa grube czterokarty z
+dziesiątkami i to nie jest byle 9 PC.
+
+Zgadzam się co do znaczenia 3\S oczywiście.}
+[Ability "N:87787 E:56656 S:87787 W:56656"]
+[BCFlags "1f"]
+[DoubleDummyTricks "87787877875665656656"]
+[Minimax "1NS120"]
+[OptimumScore "NS 120"]
+[Score "NS -150"]
+[Auction "E"]
+Pass Pass Pass 1NT
+Pass 2C Pass 2S
+Pass 2NT Pass 3S
+Pass 3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 7
+N  D 8
+N  H 7
+N  S 7
+N NT 8
+E  C 6
+E  D 5
+E  H 6
+E  S 6
+E NT 5
+S  C 7
+S  D 8
+S  H 7
+S  S 7
+S NT 8
+W  C 6
+W  D 5
+W  H 6
+W  S 6
+W NT 5
+
+[Event "R14 vs Rewers Joker"]
+[Site ""]
+[Date ""]
+[Board "7"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:K872.8.T432.K987 QJ4.KJ96542..QJ3 T953.Q.AK9876.T4 A6.AT73.QJ5.A652"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "4H"]
+[Result "11"]
+{[MJ] Wejście po partii przed pasem partnera dla mnie za ostre. Nie wiedziałem
+w jaki sposób po kontrze zablkować, czy tutaj proponować piki czy po prostu
+sprawdzony 5-6 kart młodszy.
+
+WYNIK: 0 (na drugim stole taki sam kontrakt)
+
+[MK] Wejście automatyczne. Partner był po pasie. Przed pasem dopuszczalne. Co
+zrobiłbym z S? Wygląda na to, że nic nie ma znaczenia, bo oni mają 9+ kierów.
+Mogę poważnie zaprosić partnera do obrony. Pikami czy młodszym? Jakie odzywki
+mam w boxie?
+
+2\H 2\S 2BA 3\H 3\S 3BA 4\C
+
+Która z nich jest najlepsza? Rekontra nie prowadzi do niczego, nie spełnia
+żadnego celu. Oni mają 9+ kierów, przypominam! Co proponuję? Pas = pytanie,
+rktr = pytanie, ale zachęcające do przepychu!
+
+Kiedy obrona jest opłacalna? Kwestia dyscypliny intelektualnej. Ile czasu
+poświęcić na ten problem? Zależy od doświadczenia. Dla mnie ta pozycja jest
+nowa. Sobie daję 2-3 minuty. Wyobrażam sobie ręce i dopasowuję swoją odzywkę do
+moich ocen.}
+[Ability "N:37284 E:A5B58 S:38284 W:A5B59"]
+[BCFlags "1f"]
+[DoubleDummyTricks "3728438284a5b58a5b59"]
+[Minimax "5HW-650"]
+[OptimumScore "EW 650"]
+[Auction "S"]
+Pass 1H 1NT =1= X
+XX =2= 2H Pass 2S
+4C 4H AP
+[Note "1:5-4"]
+[Note "2: pokaż kolor"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  4
+N  D  8
+N  H  2
+N  S  7
+N NT  3
+E  C  8
+E  D  5
+E  H 11
+E  S  5
+E NT 10
+S  C  4
+S  D  8
+S  H  2
+S  S  8
+S NT  3
+W  C  9
+W  D  5
+W  H 11
+W  S  5
+W NT 10
+
+[Event "R14 vs Rewers Joker"]
+[Site ""]
+[Date ""]
+[Board "8"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:T97.Q9654.2.T854 J6532.8732.T3.A3 84.KJT.KJ876.KJ9 AKQ.A.AQ954.Q762"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "3NT"]
+[Result "11"]
+{[MJ] Nie wiem jak to się powinno licytować. 3BA wygląda na propozycje
+kontraktu, chyba ciężko będzie dojśc do tych pików więc pas S słaby
+
+WYNIK: 0 (na drugim stole 4\S)
+
+[MK] Moje ustalenia: Po 2BA 3\D jest transferem na kiery, 3\H na piki, dzięki
+temu mam możliwość pokazania i rąk słabych i takich z przyjęciem inwitu.
+Odzywki 3BA nie rozumiem, bo mamy piątego pika.
+
+Z 4-4 na starych wielu po kontrze daje 1\S. Dlaczego? 
+
+1\D ktr pas 1\S\n
+2\D pas pas 2\H
+
+Na odwrót nie dałoby się zalicytować. Licytowanie czwórek od dołu po kontrze
+obiecującej fity starsze nie ma sensu, to zasada tylko licytacji jednostronnej.
+
+My nie wiedzieliśmy czy partner może mieć 4-4 co fatalnie świadczy o poziomie
+dyskusji i zgrania w parze.
+
+Co do odzywki 2BA - bardzo mi się nie podoba. Albo mamy 8 pików na linii albo
+oni mają 9 kierów, a często jedno i drugie. Co proponuję? 2\D. To nie jest GF,
+bo to nonsens, to tylko karta zwykle z conajmniej trójką pików niedobra do
+zalicytowania BA - zwykle z powodu braku zatrzymania karo, ale może też chodzić
+o coś innego.}
+[Ability "N:8B798 E:32635 S:8B798 W:22635"]
+[BCFlags "1f"]
+[DoubleDummyTricks "8b7988b7983263522635"]
+[Minimax "4SS450"]
+[OptimumScore "NS 450"]
+[Score "NS +460"]
+[Auction "W"]
+Pass Pass 1D X
+Pass 1S Pass 2NT
+Pass 3H Pass 3S
+Pass 3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  8
+N  D  9
+N  H  7
+N  S 11
+N NT  8
+E  C  5
+E  D  3
+E  H  6
+E  S  2
+E NT  3
+S  C  8
+S  D  9
+S  H  7
+S  S 11
+S NT  8
+W  C  5
+W  D  3
+W  H  6
+W  S  2
+W NT  2
+
+[Event "R14 vs Rewers Joker"]
+[Site ""]
+[Date ""]
+[Board "9"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:.JT74.KT9743.QT2 KT753.AK983.65.4 AQJ984.5.2.AK873 62.Q62.AQJ8.J965"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "4H"]
+[Result "7"]
+{[MJ] Widać że są niepodziały i będzie im ciężko wygrać, ale kto to tak
+naprawdę powinien (czy powinien) skontrować?
+
+WYNIK: +13 (na drugim stole 4\DNX)
+
+[MK] Obaj mogli. Wiadomo, że postawią. Ja na pewno dałbym pałę z S, bo jest
+payout. Z N pewnie też.}
+[Ability "N:68668 E:65764 S:68668 W:75764"]
+[BCFlags "1f"]
+[DoubleDummyTricks "68668686686576475764"]
+[Minimax "2SS110"]
+[OptimumScore "NS 110"]
+[Score "EW -300"]
+[Auction "N"]
+Pass 1S Pass 1NT
+Pass 2H Pass 2NT
+Pass 3H Pass 4H
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 8
+N  D 6
+N  H 6
+N  S 8
+N NT 6
+E  C 4
+E  D 6
+E  H 7
+E  S 5
+E NT 6
+S  C 8
+S  D 6
+S  H 6
+S  S 8
+S NT 6
+W  C 4
+W  D 6
+W  H 7
+W  S 5
+W NT 7
+
+[Event "R14 vs Rewers Joker"]
+[Site ""]
+[Date ""]
+[Board "10"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "E"]
+[Vulnerable "All"]
+[Deal "E:AQ9872.KT.A4.T93 KT64.J3.T962.K72 53.AQ9876.853.QJ J.542.KQJ7.A8654"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "2S"]
+[Result "8"]
+{[MJ] Nic się nie dało zrobić, przeciwnik trafnie rozegrał kontrakt
+
+
+WYNIK: -8 (na drugim stole nasi próbowali 4\S-2)
+
+[MK] N może rozważyć wznowienie, ale sympatyzuję z pasem.}
+[Ability "N:55487 E:88955 S:55487 W:88955"]
+[BCFlags "1f"]
+[DoubleDummyTricks "55487554878895588955"]
+[Minimax "2HW-140"]
+[OptimumScore "EW 140"]
+[Score "EW +110"]
+[Auction "E"]
+1S Pass 1NT Pass
+2S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 7
+N  D 8
+N  H 4
+N  S 5
+N NT 5
+E  C 5
+E  D 5
+E  H 9
+E  S 8
+E NT 8
+S  C 7
+S  D 8
+S  H 4
+S  S 5
+S NT 5
+W  C 5
+W  D 5
+W  H 9
+W  S 8
+W NT 8
+
+[Event "R14 vs Rewers Joker"]
+[Site ""]
+[Date ""]
+[Board "11"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "S:KT9863.K.A53.T92 A5.T854.QJ7.8743 QJ72.Q9763.K.K65 4.AJ2.T98642.AQJ"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "2S"]
+[Result "10"]
+{[MJ] Na otwarcie 1\S to chyba za słabo. Z ręką N natomiast mając pewny 10-kart
+starszy na linii 3\H (a może nawet więcej biorąc pod uwagę że otwarcie może być
+bardzo słabe) się należy?
+
+WYNIK: +6 (na drugim stole 4\S-1)
+
+[MK] 2\S to abstrakcja. }
+[Ability "N:79635 E:54797 S:78535 W:54797"]
+[BCFlags "1f"]
+[DoubleDummyTricks "79635785355479754797"]
+[Minimax "4DDE100"]
+[OptimumScore "EW -100"]
+[Score "NS +170"]
+[Auction "S"]
+2H =1= Pass 2S Pass
+Pass Pass
+[Note "1:5\H-5\C / 6\S"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 3
+N  H 6
+N  S 9
+N NT 7
+E  C 7
+E  D 9
+E  H 7
+E  S 4
+E NT 5
+S  C 5
+S  D 3
+S  H 5
+S  S 8
+S NT 7
+W  C 7
+W  D 9
+W  H 7
+W  S 4
+W NT 5
+
+[Event "R14 vs Rewers Joker"]
+[Site ""]
+[Date ""]
+[Board "12"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "W:J5.J752.8732.963 732.Q8.QT96.AQ74 A984.K94.J.KJT82 KQT6.AT63.AK54.5"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "3NT"]
+[Result "8"]
+{[MJ] Przeciwnik ładnie wstawił \S9 w drugiej lewie pikowej. Natomiast po
+otwarciu i wiście gra się już w widne i nawet jeśli oddaliśmy na waleta pik to
+trzeba drugiego trefla zabić i zagrać w pika, a przeciwnicy nic nam nie mogą
+zrobić.
+
+WYNIK: -12 (na drugim stole 3BA+2)
+
+[MK] E, no tak. Brak koncentracji. Poza tym można zagrać pika do figury. Jak
+nie trafimy to oddajemy typowi dwa piki i najeżdża z lewą.}
+[Ability "N:A98A7 E:33436 S:A98A7 W:33436"]
+[BCFlags "1f"]
+[DoubleDummyTricks "a98a7a98a73343633436"]
+[Minimax "3NS630"]
+[OptimumScore "NS 630"]
+[Score "NS -100"]
+[Auction "W"]
+Pass Pass 2C X
+Pass 2NT Pass 3NT
+AP
+[Play "E"]
+S4 SK S5 S2
+DJ DA D2 D6
+C2 D4 D3 DQ
+S9 ST SJ S3
+C8 C5 C9 C4
+CT H3 C3 C7
+SA S6 D7 S7
+S8 SQ H2 CQ
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  7
+N  D 10
+N  H  8
+N  S  9
+N NT 10
+E  C  6
+E  D  3
+E  H  4
+E  S  3
+E NT  3
+S  C  7
+S  D 10
+S  H  8
+S  S  9
+S NT 10
+W  C  6
+W  D  3
+W  H  4
+W  S  3
+W NT  3
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "1"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:QT853.JT8.J42.84 AJ9.K763.Q965.KT 742.A954.T8.AJ76 K6.Q2.AK73.Q9532"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "3NT"]
+[Result "10"]
+{[MJ] Nie wiem jaka tutaj jest prawilna rozgrywka. Po wiście pikowym biorę
+waltem, przechodzę karem i gram trefla do króla, a po odwrocie w pika trefla do
+dziesiątki.
+
+
+
+WYNIK: 0 (to samo)
+
+[MK] Tak na oko to wszystko jedno. U mnie człowiek zagrał \CK ze stołu i to
+jest chyba nieco lepsze. Generalnie te wszystkie szanse są porównywalne o
+jakieś mikro-procenty. Rozdanie do zapomnienia.}
+[Ability "N:35423 E:A89BA S:35423 W:A89BA"]
+[BCFlags "1f"]
+[DoubleDummyTricks "3542335423a89baa89ba"]
+[Minimax "3NW-430"]
+[OptimumScore "EW 430"]
+[Score "EW +430"]
+[Auction "N"]
+Pass 1C Pass 2C
+Pass 2H Pass 2NT
+Pass 3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  3
+N  D  2
+N  H  4
+N  S  5
+N NT  3
+E  C 10
+E  D 11
+E  H  9
+E  S  8
+E NT 10
+S  C  3
+S  D  2
+S  H  4
+S  S  5
+S NT  3
+W  C 10
+W  D 11
+W  H  9
+W  S  8
+W NT 10
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "2"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:9.Q97.J62.KQJ843 AT65.K85.AQT95.7 Q72.AJ64.3.AT652 KJ843.T32.K874.9"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "5S"]
+[Result "11"]
+{[MJ] Pozwalam przeciwnikom grać 5\S, liczenie na obkład bardzo życzeniowe.
+Bartek gra dwa razy w trefle co wypuszcza kontrak.
+
+
+WYNIK: -8 (na drugim stole po identycznej licytacji idą w 6\CX)
+
+[MK] Jak dwa razy w trefle? \n
+ \n
+Jak po \C10 można nie wyjść w kiera? 
+
+Pas jest normalny, "my job here is done", jeśli 3\C to może być kompletna
+szmata. Inaczej niby po co mówiliśmy 5\C? Mogliśmy coś innego, a wybraliśmy to.
+Chyba w tym celu właśnie? }
+[Ability "N:5A3A3 E:3393A S:5A3A3 W:3393A"]
+[BCFlags "1f"]
+[DoubleDummyTricks "5a3a35a3a33393a3393a"]
+[Minimax "5CDE100"]
+[OptimumScore "EW -100"]
+[Score "NS +650"]
+[Auction "E"]
+3C =1= X 5C 5S
+Pass Pass Pass
+[Note "1:W tej pozycji może być bardzo słabe"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  3
+N  D 10
+N  H  3
+N  S 10
+N NT  5
+E  C 10
+E  D  3
+E  H  9
+E  S  3
+E NT  3
+S  C  3
+S  D 10
+S  H  3
+S  S 10
+S NT  5
+W  C 10
+W  D  3
+W  H  9
+W  S  3
+W NT  3
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "3"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:43.QT543.AK32.KJ JT7652.K9.Q6.Q92 K.A6.J874.T87653 AQ98.J872.T95.A4"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "2D"]
+[Result "8"]
+{[MJ] Grześ próbował mnie namówić na 2\S w drugim okrążeniu co jest skuteczne w
+tym rozdaniu, ale przeciwnicy licytują strefą i nie jestem przekonany czy
+chcemy walczyć.
+
+WYNIK: -4 (na drugim stole 4\C-1)
+
+[MK] Jak wejść to od razu. 2\S w drugim kółku wygląda dość bez sensu. Ja
+podążam za zasadą Narkotyka, że z pikami się nie pasuje i jak mam wątpliwości
+to wchodzę. Dałbym to 1\S z głupią miną. To bezpieczniejsze chyba.
+
+}
+[Ability "N:64899 E:79434 S:64899 W:78434"]
+[BCFlags "1f"]
+[DoubleDummyTricks "64899648997943478434"]
+[Minimax "4CDN-100"]
+[OptimumScore "NS -100"]
+[Score "NS +90"]
+[Auction "S"]
+1H Pass 1NT =1= Pass
+2D AP
+[Note "1: forsujące"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 9
+N  D 9
+N  H 8
+N  S 4
+N NT 6
+E  C 4
+E  D 3
+E  H 4
+E  S 9
+E NT 7
+S  C 9
+S  D 9
+S  H 8
+S  S 4
+S NT 6
+W  C 4
+W  D 3
+W  H 4
+W  S 8
+W NT 7
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "4"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:AQJ74.T82.AQT2.K 3.KQ976.K873.874 T852.J3.J964.J32 K96.A54.5.AQT965"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "3C"]
+[Result "9"]
+{[MJ] Nie za bardzo wiem jaką wartość niesie zalicytowanie 2\S z taką ręką.
+
+WYNIK: +5 (na drugim stole 4\S-3)
+
+[MK] E to powinien dać 1BA. W końcu po coś gramy otwarcia do 18 PC? Po co tak
+dokładnie? Żeby móc ich bezpiecznie zajeżdżać z taką szmatą. Pas to brak
+wykorzystania dobrodziejstw systemu. 
+
+Dlatego tak nie lubię WJ - ma kilka zalet, chociaż niedużo, ale ludzie ich
+nagminnie nie wykorzystują. Ogólnie to NS powinni już być w 4\H, ale są
+gamoniami.}
+[Ability "N:74B5B E:27172 S:B5B5B W:27172"]
+[BCFlags "1f"]
+[DoubleDummyTricks "74b5bb5b5b2717227172"]
+[Minimax "3NS660"]
+[OptimumScore "NS 660"]
+[Score "NS +110"]
+[Auction "W"]
+1S Pass Pass 2C
+Pass 2H 2S 3C
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 11
+N  D  5
+N  H 11
+N  S  4
+N NT  7
+E  C  2
+E  D  7
+E  H  1
+E  S  7
+E NT  2
+S  C 11
+S  D  5
+S  H 11
+S  S  5
+S NT 11
+W  C  2
+W  D  7
+W  H  1
+W  S  7
+W NT  2
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "5"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:QT94.642.AJ.KT42 J832.T9.Q9764.98 K65.QJ53.K2.AQJ7 A7.AK87.T853.653"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "3NT"]
+[Result "7"]
+{[MJ] Wist karowy (trójką), przeciwnik gra pika do dziesiątki, ale po odwrocie
+karowym i ściągniciu trefli Bartek wyrzuca kara więc kończy się -2.
+
+WYNIK: +1 (na drugim stole 3BA-1)
+
+[MK] 2 IMP w błoto?}
+[Ability "N:88859 E:55584 S:88859 W:55584"]
+[BCFlags "1f"]
+[DoubleDummyTricks "88859888595558455584"]
+[Minimax "3DDW100"]
+[OptimumScore "EW -100"]
+[Score "NS -200"]
+[Auction "N"]
+Pass Pass 1NT Pass
+2C Pass 2H Pass
+3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 9
+N  D 5
+N  H 8
+N  S 8
+N NT 8
+E  C 4
+E  D 8
+E  H 5
+E  S 5
+E NT 5
+S  C 9
+S  D 5
+S  H 8
+S  S 8
+S NT 8
+W  C 4
+W  D 8
+W  H 5
+W  S 5
+W NT 5
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "6"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:K2.9.AQ874.KJT53 AQ854.KJ52.6.Q96 3.QT643.K532.742 JT976.A87.JT9.A8"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "4S"]
+[Result "10"]
+{[MJ] Po wiście karowym przeciwnik bierze 10 lew
+
+WYNIK: +2 (Na drugim stole 12 lew)}
+[Ability "N:8B844 E:52598 S:8B844 W:52598"]
+[BCFlags "1f"]
+[DoubleDummyTricks "8b8448b8445259852598"]
+[Minimax "4SS450"]
+[OptimumScore "NS 450"]
+[Score "NS +420"]
+[Auction "E"]
+1D 1S 3D 4S
+Pass Pass Pass
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  4
+N  D  4
+N  H  8
+N  S 11
+N NT  8
+E  C  8
+E  D  9
+E  H  5
+E  S  2
+E NT  5
+S  C  4
+S  D  4
+S  H  8
+S  S 11
+S NT  8
+W  C  8
+W  D  9
+W  H  5
+W  S  2
+W NT  5
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "7"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:J.62.AKQ98754.Q8 Q9763.Q94.T6.942 K82.A875.J2.AJT3 AT54.KJT3.3.K765"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "3NT"]
+[Result "10"]
+{[MJ] Po takiej licytacji chyba wistuje się w damę, ale pikowa nie wyglądała
+bardzo przyszłościowo, więc ostatecznie \HD i 10 lew.
+
+
+WYNIK: 0 (na drugim stole 5\D=)
+
+[MK] Byłem panelowany. I odpowiedziałem, że po pasie partnera idę w \SD, po
+kontrze nie wiem i rozważam \HD. Dlaczego? Pas partnera sugeruje, że jesteśmy
+bardziej zdani na siebie.}
+[Ability "N:A46A7 E:28722 S:846A7 W:28722"]
+[BCFlags "1f"]
+[DoubleDummyTricks "a46a7846a72872228722"]
+[Minimax "4NN630"]
+[OptimumScore "NS 630"]
+[Score "NS +630"]
+[Auction "S"]
+3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  7
+N  D 10
+N  H  6
+N  S  4
+N NT 10
+E  C  2
+E  D  2
+E  H  7
+E  S  8
+E NT  2
+S  C  7
+S  D 10
+S  H  6
+S  S  4
+S NT  8
+W  C  2
+W  D  2
+W  H  7
+W  S  8
+W NT  2
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "8"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:A5.AJ2.AKQ975.A7 KQJ74.KQT9853.8. 9632.64.3.KT9854 T8.7.JT642.QJ632"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "6CX"]
+[Result "10"]
+{[MJ] Na dopchnięcie chyba mam trefla za mało, po wiście w króla pik gram Asa i
+karo przebite, a następnie trefla do siódemki ale jak przeciwnik nie dokłada
+kończy się na 10 lewach.
+
+
+WYNIK: -15 (na drugim stole 5\HX)
+
+[MK] U mnie E skontrował - partner ma zatrzymanie kier, ja mam dubla, mam
+singla w jego karach i mam coś punkty bokiem - kontra wygląda rozsądnie. 5\C to
+dziwadło, bo partner to w tych treflach może mieć singla. Jego licytacja
+sugeruje solo kara.
+
+Natomiast dokład w niepewnej sytuacji, gdzie po 4\H wiemy, że wszystko się
+tragicznie dzieli to po prostu słaba strategia. Czego znowu zabrakło?
+Dyscypliny intelektualnej, wyobrażenia sobie rąk partnera, wyobraźni co do
+wszystkich 52 kart. 
+
+Lew było 11, ale nie zagłębiałem się w to szczególnie.}
+[Ability "N:46A42 E:9538B S:46A42 W:9639B"]
+[BCFlags "1f"]
+[DoubleDummyTricks "46a4246a429538b9639b"]
+[Minimax "5HDN-100"]
+[OptimumScore "NS -100"]
+[Score "EW -300"]
+[Auction "W"]
+1C 1H Pass Pass
+3NT 4H 5C Pass
+6C Pass Pass X
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  2
+N  D  4
+N  H 10
+N  S  6
+N NT  4
+E  C 11
+E  D  8
+E  H  3
+E  S  5
+E NT  9
+S  C  2
+S  D  4
+S  H 10
+S  S  6
+S NT  4
+W  C 11
+W  D  9
+W  H  3
+W  S  6
+W NT  9
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "9"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:Q6.9872.KJT8.T74 J972.QJ6.7.KJ653 K3.K43.AQ64.AQ92 AT854.AT5.9532.8"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "3H"]
+[Result ""]
+{[MJ] Po wiście karowym przeciwnik gra \H9 wkoło, daję przebić karo i następuje
+odwrót w waleta pik, nie przeprowadzam odpowiedniej analizy i przepuszczam
+pika, a przeciwnik po ściągnięciu atutów wyimpasowuje trefle i wygrywa
+kontrakt.
+
+WYNIK: +6 (na drugim stole naszym puszczają 3BA)
+
+[MK] 2\S nie trzyma parametrów. Tak jak i pas na 3\H jest dziwny. Co się daje?
+Cokolwiek: 3\C MR, 3\S = od bloku do MR, to co mamy ustalone. Byle nie 2\S.}
+[Ability "N:84887 E:59556 S:84887 W:59556"]
+[BCFlags "1f"]
+[DoubleDummyTricks "84887848875955659556"]
+[Minimax "3NDN-100"]
+[OptimumScore "NS -100"]
+[Auction "N"]
+Pass Pass 1C 1S
+Pass 2S X Pass
+3H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 7
+N  D 8
+N  H 8
+N  S 4
+N NT 8
+E  C 6
+E  D 5
+E  H 5
+E  S 9
+E NT 5
+S  C 7
+S  D 8
+S  H 8
+S  S 4
+S NT 8
+W  C 6
+W  D 5
+W  H 5
+W  S 9
+W NT 5
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "10"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "E"]
+[Vulnerable "All"]
+[Deal "E:J62.743.KQT4.AK5 QT5.KJ5.9765.832 A7.AQT92.J2.QJ74 K9843.86.A83.T96"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "4H"]
+[Result "11"]
+{[MJ] Po wiście treflowym gram karo do waleta, przeciwnik otwiera piki, wracam
+karem i gram kiera do dziesiątki, a następnie asa kier i 11 lew
+
+WYNIK: -1 (na drugim stole 12 lew po kierowym)
+
+[MK] I po co ta strata IMP-a?}
+[Ability "N:15111 E:A8BAB S:15111 W:A8BAB"]
+[BCFlags "1f"]
+[DoubleDummyTricks "1511115111a8baba8bab"]
+[Minimax "4HW-650"]
+[OptimumScore "EW 650"]
+[Score "EW +650"]
+[Auction "E"]
+1C Pass 1H Pass
+1NT Pass 2C =1= Pass
+2H Pass 4H AP
+[Note "1: magister"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  1
+N  D  1
+N  H  1
+N  S  5
+N NT  1
+E  C 11
+E  D 10
+E  H 11
+E  S  8
+E NT 10
+S  C  1
+S  D  1
+S  H  1
+S  S  5
+S NT  1
+W  C 11
+W  D 10
+W  H 11
+W  S  8
+W NT 10
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "11"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "S:KQ5.T9862.32.T72 JT864.AK3.KJT.A8 9.QJ.A754.KQJ543 A732.754.Q986.96"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "1NT"]
+[Result "7"]
+{[MJ] po wiście treflowym bardzo źle przepuszczam pierwszą lewę, ale przeciwnik
+nie zmienia na pika, więc już biorę 7 lew.
+
+WYNIK: +5 (na drugim stole 1BAW-2)
+
+[MK] Karta W jest dobra do gry kolorowej, ja wybieram otwarcie 1\S. Nie bardzo
+rozumiem po co w WJ 1BA, w końcu to jest ręka żeby dać 1\S - 1BA - 2BA, chyba,
+że to znaczy coś innego. 
+
+Z ręką 4=3=4=2 jeśli otwieramy 1BA z 5M to Stayman jest decyzją borderline. Z
+odpowiednią liczbą punktów chyba bezpieczniej spasować i liczyć, że się wygra
+1BA, ale ze szmatą lepiej dać 2\C.}
+[Ability "N:64858 E:79575 S:64858 W:69575"]
+[BCFlags "1f"]
+[DoubleDummyTricks "64858648587957569575"]
+[Minimax "3SW-140"]
+[OptimumScore "EW 140"]
+[Score "EW +90"]
+[Auction "S"]
+Pass 1NT Pass Pass
+Pass
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 8
+N  D 5
+N  H 8
+N  S 4
+N NT 6
+E  C 5
+E  D 7
+E  H 5
+E  S 9
+E NT 7
+S  C 8
+S  D 5
+S  H 8
+S  S 4
+S NT 6
+W  C 5
+W  D 7
+W  H 5
+W  S 9
+W NT 6
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "12"]
+[West "Marek"]
+[North ""]
+[East "Bartek"]
+[South ""]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "W:JT973.K43.J8.KT8 42.87.AQT7432.J4 A8.AQT652.K.9732 KQ65.J9.965.AQ65"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "3H"]
+[Result "9"]
+{[MJ] Licytacja wygląda okej, wist w karo i odwrót pikowy, Bartek bije asem,
+ściąga dwa kiery i gra trefla do ósemki.
+
+WYNIK: +5 (na drugim stole 4\H-1)
+
+[MK] Co znaczy pas E po 2\D? Próba kontrowania? Szmata / trzecioręczne
+otwarcie? Może bardziej zachęcający, a 2\H = nie chcę walczyć po 3\D? Lub na
+odwrót?}
+[Ability "N:65495 E:57937 S:65495 W:57937"]
+[BCFlags "1f"]
+[DoubleDummyTricks "65495654955793757937"]
+[Minimax "3HW-140"]
+[OptimumScore "EW 140"]
+[Score "EW +140"]
+[Auction "W"]
+Pass Pass 1H X
+1NT =1= 2D 2H Pass
+Pass 3D 3H AP
+[Note "1: dobre podniesienie"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 9
+N  H 4
+N  S 5
+N NT 6
+E  C 7
+E  D 3
+E  H 9
+E  S 7
+E NT 5
+S  C 5
+S  D 9
+S  H 4
+S  S 5
+S NT 6
+W  C 7
+W  D 3
+W  H 9
+W  S 7
+W NT 5
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "13"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "N"]
+[Vulnerable "All"]
+[Deal "N:Q532.A9652.65.73 4.J4.AK982.KQJ65 KJ876.T83.Q4.T94 AT9.KQ7.JT73.A82"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "3NT"]
+[Result "12"]
+{[MJ] Po wiście kierowym przeciwnik bierze 12 lew.
+
+WYNIK: +12 (nasi dochodzą do 6\D=)}
+[Ability "N:16511 E:B77CC S:16511 W:B77CC"]
+[BCFlags "1f"]
+[DoubleDummyTricks "1651116511b77ccb77cc"]
+[Minimax "6CW-1370"]
+[OptimumScore "EW 1370"]
+[Score "EW +690"]
+[Auction "N"]
+Pass 1D Pass 3NT
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  1
+N  D  1
+N  H  5
+N  S  6
+N NT  1
+E  C 12
+E  D 12
+E  H  7
+E  S  7
+E NT 11
+S  C  1
+S  D  1
+S  H  5
+S  S  6
+S NT  1
+W  C 12
+W  D 12
+W  H  7
+W  S  7
+W NT 11
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "14"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "E"]
+[Vulnerable "None"]
+[Deal "E:QT65.KQ9.AT987.T AJ843.83.J5.J852 K72.A42.K42.A764 9.JT765.Q63.KQ93"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "3NT"]
+[Result "9"]
+{[MJ] Wistuję w 6 kier (nie wiem czy walet jest lepszy), przeciwnik bierze na
+dziewiątkę w stole i gra króla karo i karo do dziesiątki. Bartek po wzięciu na
+waleta odwraca w kiera. Wydaje mi się, że nie mogę mieć asa kier i jedyna
+szansa to obkład przez trefle.
+
+WYNIK: 0 (na drugim stole wygrane 3BA=)
+
+[MK] Wszedłem 1\S z Zasady Narkotyka. Co się dalej stało? 2\S pas 2BA pas 3BA.
+No to mówię - każdy powiedział to co wiedział na temat wistu w piki,
+poniuchałem temat, więc idę w trefla :).
+
+[MK] \H6 jest OK. W pierwszej lewie S zrzuca markę / demarkę. Dlaczego?
+
+Istnieje motyw:
+
+\H10xx do \HKD9 - owszem wtedy 3BA jest świrem, ale gramy w II lidze. W końcu
+na to zagrał N.
+
+Wtedy człowiek kładzie figurę w pierwszej lewie, ale w drugiej kierowej musi
+trafić kto ma asa, a kto waleta. Czy będzie to wiedział ze zrzutki? 
+
+Nie, S markuje i z asem i z waletem.
+
+Być może lepszą rozgrywką jest próba skradzenia pika przed karami.
+
+Nie może być tak, że "wydaje mi się, że nie możesz mieć \HA". W ten sposób do
+niczego nigdy nie dojdziemy. Zrzutka do kar musi klaryfikować sytuację.
+Przecież ilość to kompletny nonsens - jak zwykle zresztą, zgodnie z zasadą "w
+pierwszym kolorze rozgrywającego, jesli nie zachodzi motyw koniecznego
+przepuszczenia zrzucamy lav / potwierdzenie". To jak 2+2 = 4, te informacje
+muszą być pewne.
+
+}
+[Ability "N:54525 E:897B7 S:54525 W:897A7"]
+[BCFlags "1f"]
+[DoubleDummyTricks "5452554525897b7897a7"]
+[Minimax "5DE-400"]
+[OptimumScore "EW 400"]
+[Score "EW +400"]
+[Auction "E"]
+1D Pass 3NT Pass
+Pass Pass
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  5
+N  D  2
+N  H  5
+N  S  4
+N NT  5
+E  C  7
+E  D 11
+E  H  7
+E  S  9
+E NT  8
+S  C  5
+S  D  2
+S  H  5
+S  S  4
+S NT  5
+W  C  7
+W  D 10
+W  H  7
+W  S  9
+W NT  8
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "15"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "S"]
+[Vulnerable "NS"]
+[Deal "S:AKQ8.985.J654.T5 J74.J.AT932.Q986 96532.Q63.7.AK42 T.AKT742.KQ8.J73"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "2H"]
+[Result "10"]
+{[MJ] Wist AK pik, przeciwnik gra kiera do waleta, ale nie umiem liczyć do 12 i
+nie daję przebić trefla. Otwarcie na trzeciej ręce nie wypada. Wznowienie 2\S
+jest celne w tym rozdaniu, ale z mojego puktu widzenia 2\D to powinna być góra
+pasa i E może spokojnie mieć nawet 4 piki na swoją licytację i zaraz będzie
+smutno.
+
+WYNIK: -7 (na drugim stole po otwarciu 2\H na czwartej ręce N licytuje 2\S)
+
+[MK] Przy stole wszedłem 1\S z S :)}
+[Ability "N:49435 E:64998 S:28235 W:64998"]
+[BCFlags "1f"]
+[DoubleDummyTricks "49435282356499864998"]
+[Minimax "4DDW100"]
+[OptimumScore "EW -100"]
+[Score "EW +170"]
+[Auction "S"]
+Pass Pass Pass 1H
+Pass 2D Pass 2H
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 3
+N  H 4
+N  S 9
+N NT 4
+E  C 8
+E  D 9
+E  H 9
+E  S 4
+E NT 6
+S  C 5
+S  D 3
+S  H 2
+S  S 8
+S NT 2
+W  C 8
+W  D 9
+W  H 9
+W  S 4
+W NT 6
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "16"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "W"]
+[Vulnerable "EW"]
+[Deal "W:AK3.72.KQ9543.K2 75.KQ865.AT8.Q86 QT9864.T.J2.JT97 J2.AJ943.76.A543"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "3S"]
+[Result "10"]
+{[MJ] Przeciwnicy chyba nie mają ustalone czy 2\S jest z fitem. Po wiście
+królem kier wydaje się że realna szansa na obkładkę to zabicie asem i zagranie
+małego trefla. Natomiast król bierze pierwszą lewę i teraz ja i tak chyba
+powinienm zagrać w trefla.
+
+WYNIK: +10 (na drugim stole 4\S=)
+
+[MK] Regardless licytacja E to złamanie bilansu, podobny case jak u Was z \SWxx
+\HDxxxx \Dx \CK9xx. 
+
+Oczywiście, nie zagraliście na obkład w obronie. Znowu brak dyscypliny
+intelektualnej.}
+[Ability "N:73937 E:6A495 S:73937 W:6A495"]
+[BCFlags "1f"]
+[DoubleDummyTricks "73937739376a4956a495"]
+[Minimax "5HDS-300"]
+[OptimumScore "NS -300"]
+[Score "EW +170"]
+[Auction "W"]
+1NT Pass 2H X
+2S 3H Pass Pass
+3S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  7
+N  D  3
+N  H  9
+N  S  3
+N NT  7
+E  C  5
+E  D  9
+E  H  4
+E  S 10
+E NT  6
+S  C  7
+S  D  3
+S  H  9
+S  S  3
+S NT  7
+W  C  5
+W  D  9
+W  H  4
+W  S 10
+W NT  6
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "17"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:9.AJ765.J.AQJ987 J8543.Q98.AQ3.62 KT.K4.K8765.T543 AQ762.T32.T942.K"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "5C"]
+[Result "11"]
+{[MJ] Przeciwnicy sami wpychają nas w końcówkę.
+
+WYNIK: +6 (na drugim stole 4\C+1)
+
+[MK] Czysta kontra z S - oba młode i to 5-4, a także mocny dubel kier. 1BA
+sugeruje rękę typu 4=2=4=3, nasz obraz karty jest daleko daleko bliżej kontry.
+Poważny błąd.}
+[Ability "N:74A7B E:58361 S:74A7B W:58361"]
+[BCFlags "1f"]
+[DoubleDummyTricks "74a7b74a7b5836158361"]
+[Minimax "5CS400"]
+[OptimumScore "NS 400"]
+[Score "NS +400"]
+[Auction "N"]
+1H 1S 1NT 4S
+5C AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 11
+N  D  7
+N  H 10
+N  S  4
+N NT  7
+E  C  1
+E  D  6
+E  H  3
+E  S  8
+E NT  5
+S  C 11
+S  D  7
+S  H 10
+S  S  4
+S NT  7
+W  C  1
+W  D  6
+W  H  3
+W  S  8
+W NT  5
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "18"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:AK73.9642.Q962.K .A853.T873.AJ873 Q8654.KQJ.AJ5.62 JT92.T7.K4.QT954"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "4S"]
+[Result "10"]
+{[MJ] To jest chyba moje najgorsze rozdanie z całego zjazdu.Po dramatycznym
+wiście i dojściu królem karo - po \C8 w pierwszej lewie umieszczam asa trefl w
+ręce rozgrywającego i wypuszczam kontrakt.
+
+WYNIK: -10 (na wszystkich pozostałych stolach ligi 4\S-1)
+
+[MK] Można by dać kontrę z S na 2\S, ale pas jest poprawny.
+
+Wist w atu po tej licytacji to nonsens z drugim królem karo "w impasie".
+Pomijając, że konfiguracja idealna, żeby stracić pewną lewę.
+
+A co ta \C8 znaczyła? 
+
+Nie mogą nam się takie rzeczy przytrafiać, że po 5 zrzutkach nie wiemy kto może
+mieć lub nie jakiegoś asa.}
+[Ability "N:6465A E:69782 S:6465A W:69682"]
+[BCFlags "1f"]
+[DoubleDummyTricks "6465a6465a6978269682"]
+[Minimax "4SDW100"]
+[OptimumScore "EW -100"]
+[Score "EW +420"]
+[Auction "E"]
+1D Pass 1S Pass
+2S Pass 4S AP
+[Play "N"]
+SJ S3 C8 SQ
+H7 H2 HA HJ
+HT H4 H3 HK
+S9 SK C3 S4
+DK D2 D3 DJ
+D4 D6 D7 DA
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 10
+N  D  5
+N  H  6
+N  S  4
+N NT  6
+E  C  2
+E  D  8
+E  H  7
+E  S  9
+E NT  6
+S  C 10
+S  D  5
+S  H  6
+S  S  4
+S NT  6
+W  C  2
+W  D  8
+W  H  6
+W  S  9
+W NT  6
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "19"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:J76.AQ976.AQ7.94 K92.J5.9654.KJT8 AQT.KT32.J83.A53 8543.84.KT2.Q762"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "4H"]
+[Result "11"]
+{[MJ] Płaskie 11 lew
+
+
+WYNIK: 0 (na drugim stole to samo)}
+[Ability "N:BAB98 E:23245 S:BAB98 W:23245"]
+[BCFlags "1f"]
+[DoubleDummyTricks "bab98bab982324523245"]
+[Minimax "3NS460"]
+[OptimumScore "NS 460"]
+[Score "NS +450"]
+[Auction "S"]
+1H Pass 2C Pass
+2H Pass 4H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  8
+N  D  9
+N  H 11
+N  S 10
+N NT 11
+E  C  5
+E  D  4
+E  H  2
+E  S  3
+E NT  2
+S  C  8
+S  D  9
+S  H 11
+S  S 10
+S NT 11
+W  C  5
+W  D  4
+W  H  2
+W  S  3
+W NT  2
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "20"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:654.KQ862.K72.Q8 AT7.J3.JT4.JT732 KQ983.754.83.654 J2.AT9.AQ965.AK9"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "3NT"]
+[Result "10"]
+{[MJ] Po wiście w małego kiera walet w stole bierze lewę, karo na impas, ale
+ściagając kara Bartek wyrzuca trefla więc 10 lew. Zanastaniwam się czy po
+identycznej licytacji i wiście pikowym, a następnie odwrocie w kiera można
+realnie wymślić jak wygrać ten kontrakt.
+
+WYNIK: -1 (na drugim stole na ten sam kontrakt wist \HD)
+
+[MK] Można. Ja miałem inną licytację i nie miałem szans. Widziałem dwa warianty
+przymusu zwykłego i wpustkowego, ale E otworzył Multi i zagrałem na rozcięcie i
+piki 6-2 i już było za późno.}
+[Ability "N:966BB E:27722 S:966BB W:27722"]
+[BCFlags "1f"]
+[DoubleDummyTricks "966bb966bb2772227722"]
+[Minimax "3NS600"]
+[OptimumScore "NS 600"]
+[Score "NS +630"]
+[Auction "W"]
+Pass Pass Pass 1C
+1H Pass Pass 1NT
+Pass 3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 11
+N  D 11
+N  H  6
+N  S  6
+N NT  9
+E  C  2
+E  D  2
+E  H  7
+E  S  7
+E NT  2
+S  C 11
+S  D 11
+S  H  6
+S  S  6
+S NT  9
+W  C  2
+W  D  2
+W  H  7
+W  S  7
+W NT  2
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "21"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:J9.AQJ83.JT5.642 Q32.K976.974.T97 A6.T2.KQ862.K853 KT8754.54.A3.AQJ"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "4S"]
+[Result "9"]
+{[MJ] Po wiście w waleta karo przeciwnik bije asem i gra pika z ręki rolując
+kontrakt. Ja "chytrze" wyrzucam waleta, ale na szczęście nie robiło.
+
+WYNIK: -2 (na drugim stole nasi dają grać 3\D+1)
+
+[MK] \SW? Po to, żeby nie wziąć jak rozgrywający ma piąty \SK10xxx lub
+\SA10xxx? To nie jest motyw, że oni teraz zaimpasują \S9 jak mają 6 pików - ten
+motyw w rozdaniu nie istnieje.}
+[Ability "N:43776 E:7A556 S:53786 W:7A556"]
+[BCFlags "1f"]
+[DoubleDummyTricks "43776537867a5567a556"]
+[Minimax "4SW-420"]
+[OptimumScore "EW 420"]
+[Score "EW -50"]
+[Auction "N"]
+Pass Pass 1D 1S
+2H 2S Pass 4S
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  6
+N  D  7
+N  H  7
+N  S  3
+N NT  4
+E  C  6
+E  D  5
+E  H  5
+E  S 10
+E NT  7
+S  C  6
+S  D  8
+S  H  7
+S  S  3
+S NT  5
+W  C  6
+W  D  5
+W  H  5
+W  S 10
+W NT  7
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "22"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:KJ854.KQT75.4.92 A92.6.T8532.AK87 QT3.982.J76.T653 76.AJ43.AKQ9.QJ4"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "3NT"]
+[Result "11"]
+{[MJ] Nie wiem czy z ręką S licytuje się 3BA czy próbuje 3\S jako 5-4+ na
+młodych. Ewentualnie dostępna jeszcze byłaby odzywka 3\C jako transfer na kara.
+
+WYNIK: +1 (na drugim stole 5\D+1)
+
+[MK] W porządku.}
+[Ability "N:B77CB E:26512 S:B77CB W:26512"]
+[BCFlags "1f"]
+[DoubleDummyTricks "b77cbb77cb2651226512"]
+[Minimax "6DS920"]
+[OptimumScore "NS 920"]
+[Score "NS +460"]
+[Auction "E"]
+2H =1= Pass Pass 2NT
+Pass 3NT AP
+[Note "1: kiery i inny"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 11
+N  D 12
+N  H  7
+N  S  7
+N NT 11
+E  C  2
+E  D  1
+E  H  5
+E  S  6
+E NT  2
+S  C 11
+S  D 12
+S  H  7
+S  S  7
+S NT 11
+W  C  2
+W  D  1
+W  H  5
+W  S  6
+W NT  2
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "23"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:3.932.Q653.A9854 KQJ62.A8.K.QT763 T54.KT76.JT9874. A987.QJ54.A2.KJ2"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "6S"]
+[Result "12"]
+{[MJ] Wist \DW. W obronie nic nie mogliśmy zrobić, w 1-szej lidze widziałem
+jakieś kontrakty 5\DX, ciekawe jak się znajduje ten kolor.
+
+WYNIK: -13 (nasi grają 5\S+1)
+
+[MK] Blok 3\D. To było ciekawe rozdanie.
+
+1\S 3\D 4\D 5\C = \CA
+
+Dlaczego? Musimy wiedzieć czy iść w obronę czy nie przy singlu trefl u
+partnera. W tej szlemikowej sekwencji boczny kolor wskazuje asa. Nawet przy
+okazji sobie ustaliliśmy, że 4BA to \HA. Oni skontrowali, bo sczaili się mamy
+asa do krótkości :)
+}
+[Ability "N:21382 E:BB85A S:21382 W:BC95B"]
+[BCFlags "1f"]
+[DoubleDummyTricks "2138221382bb85abc95b"]
+[Minimax "7DDN-1400"]
+[OptimumScore "NS -1400"]
+[Score "EW +1430"]
+[Auction "S"]
+Pass 1S Pass 2C
+Pass 3C Pass 3S
+Pass 4D Pass 4NT
+Pass 5NT Pass 6S
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  2
+N  D  8
+N  H  3
+N  S  1
+N NT  2
+E  C 10
+E  D  5
+E  H  8
+E  S 11
+E NT 11
+S  C  2
+S  D  8
+S  H  3
+S  S  1
+S NT  2
+W  C 11
+W  D  5
+W  H  9
+W  S 12
+W NT 11
+
+[Event "R15 vs Przyjaciele Rzeszów"]
+[Site ""]
+[Date ""]
+[Board "24"]
+[West ""]
+[North "Marek"]
+[East ""]
+[South "Bartek"]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:K987653.865.T75. 4.K732.QJ84.AQT4 AT2.A94.962.K972 QJ.QJT.AK3.J8653"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "4S"]
+[Result "8"]
+{[MJ] Zastnawiam się czy przy obecnych słabych otwarciach przed partią z ręką N
+się kontruje 3 piki.
+
+WYNIK: -1 (na drugim stole 3\CS+1)
+
+[MK] Gracz z krótkością po bloku powinien podejmować aktywność. 10/10 ekspertów
+daje kontrę. Drugi gracz bez krótkości nie ma szans. 
+
+Odzywka 4\S świadczy o tym, że WE wykorzystują swoje namysły i rozumiem, że od
+razu przy stole był sędzia? Albo o tym, że nie potrafią grać w karty. A pewnie
+jedno i drugie.
+}
+[Ability "N:5588A E:88543 S:5588A W:88543"]
+[BCFlags "1f"]
+[DoubleDummyTricks "5588a5588a8854388543"]
+[Minimax "4CS130"]
+[OptimumScore "NS 130"]
+[Score "EW -100"]
+[Auction "W"]
+3S Pass 3NT Pass
+4S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 10
+N  D  8
+N  H  8
+N  S  5
+N NT  5
+E  C  3
+E  D  4
+E  H  5
+E  S  8
+E NT  8
+S  C 10
+S  D  8
+S  H  8
+S  S  5
+S NT  5
+W  C  3
+W  D  4
+W  H  5
+W  S  8
+W NT  8

@@ -152,3 +152,8 @@
 .Minimax table.table .App-card-img, .MinimaxValue .App-card-img {
     width: 10px;
 }
+
+.App-deal-comment textarea {
+    width: 100%;
+    height: 300px;
+}
