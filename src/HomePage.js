@@ -18,6 +18,7 @@ function HomePage() {
                         <li><a href={'/bridge_cc/#/pbn?filename=2024.01.01-TreningCKiS.pbn'}>2024.01.11 Trening CKiS Skawina BBO</a></li>
                         <li><a href={'/bridge_cc/#/pbn?filename=2liga_3zjazd.pbn'}>2024.01.20-21 Trzeci zjazd II ligi</a></li>
                         <li><a href={'/bridge_cc/#/pbn?filename=2024.02.28-Mindlab.pbn'}>2024.02.28 Mindlab</a></li>
+                        <li><a href={'/bridge_cc/#/pbn?filename=2024.03.27-Mindlab.pbn'}>2024.03.27 Mindlab</a></li>
                     </ul>
                 </div>
             </div>
