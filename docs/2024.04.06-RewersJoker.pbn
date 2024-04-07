@@ -1,0 +1,1266 @@
+% PBN 2.1
+% EXPORT
+%Content-type: text/x-pbn; charset=UTF-8
+%Creator: BridgeComposer Version 5.105
+%Created: Sat Apr  6 21:35:17 2024 +0200
+%BCOptions Center STBorder STShade
+%BidAndCardSpacing Thin
+%BoardsPerPage 1
+%CardTableColors #008000,#ffffff,#aaaaaa
+%DDAFormat 0
+%DefaultPagination 0
+%Font:CardTable "Arial",11,400,0
+%Font:Commentary "Times New Roman",12,400,0
+%Font:Diagram "Times New Roman",12,400,0
+%Font:Event "Times New Roman",12,400,0
+%Font:FixedPitch "Courier New",10,400,0
+%Font:HandRecord "Arial",11,400,0
+%GutterSize 500,500
+%HRTitleDate 0
+%HRTitleEvent ""
+%HRTitleSetID ""
+%HRTitleSetIDPrefix ""
+%HRTitleSite ""
+%HtmlClubs entity,"https://bridgecomposer.com/suitimg/c.gif"
+%HtmlDiamonds entity,"https://bridgecomposer.com/suitimg/d.gif"
+%HtmlHearts entity,"https://bridgecomposer.com/suitimg/h.gif"
+%HtmlNavBar 0.75,#cfe2f3
+%HtmlSpades entity,"https://bridgecomposer.com/suitimg/s.gif"
+%Margins 1000,1000,1000,1000
+%PaperSize 1,0,0,2
+%ParaIndent 0
+%PipColors #000000,#ff0000,#ff0000,#000000
+%PipFont "Symbol","Symbol",2,0xAA,0xA9,0xA8,0xA7
+%ScoreTableColors #e6e6e6,#000000
+%SectionSpacing 0,0,0
+%SelectedBoard 23
+%ShowBoardLabels 2
+%ShowCardTable 2
+%TSTCustomSortOrder Default
+%TSTReport List
+%TSTReportOrder ByNumber
+%TSTReportShade Yes
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "13"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "N"]
+[Vulnerable "All"]
+[Deal "N:83.AK84.7643.KQ3 A5.J93.K2.AJ9872 KJT6.Q52.QJT5.T4 Q9742.T76.A98.65"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "2C"]
+[Result "7"]
+{[MJ] 2\C gramy wejście na starych bezpośrednio po 1\C, po wiście karowym nie
+trafiam trefli i przgrywam -1.}
+[Ability "N:56785 E:77548 S:56785 W:77548"]
+[BCFlags "1f"]
+[DoubleDummyTricks "56785567857754877548"]
+[Minimax "2DN90"]
+[OptimumScore "NS 90"]
+[ParContract "NS 2D="]
+[Score "EW -100"]
+[Auction "N"]
+1C Pass 1S Pass
+1NT 2C AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 8
+N  H 7
+N  S 6
+N NT 5
+E  C 8
+E  D 4
+E  H 5
+E  S 7
+E NT 7
+S  C 5
+S  D 8
+S  H 7
+S  S 6
+S NT 5
+W  C 8
+W  D 4
+W  H 5
+W  S 7
+W NT 7
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "14"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "E"]
+[Vulnerable "None"]
+[Deal "E:KT9.AKQ3.J.KQT64 A62.JT64.QT96.J7 QJ54.95.A432.A82 873.872.K875.953"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "6C"]
+[Result "12"]
+{[MJ] Po wiście karowym gram \CK i \CA, a następnie pika do króla zabitego
+asem, więc rozdanie się kończy. Jakby wziął, to planowałem następnie przebić
+kiera. Nie wiem czy jakoś lepiej to się powinno grać.}
+[Ability "N:11251 E:9C98C S:11251 W:9C98C"]
+[BCFlags "1f"]
+[DoubleDummyTricks "11251112519c98c9c98c"]
+[Minimax "6SW-980"]
+[OptimumScore "EW 980"]
+[ParContract "EW 6S="]
+[Score "EW +920"]
+[Auction "E"]
+1C Pass 1S Pass
+2C Pass 2D Pass
+2H Pass 3C Pass
+3S Pass 3NT Pass
+4C Pass 4D Pass
+4NT Pass 5H Pass
+6C AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  1
+N  D  5
+N  H  2
+N  S  1
+N NT  1
+E  C 12
+E  D  8
+E  H  9
+E  S 12
+E NT  9
+S  C  1
+S  D  5
+S  H  2
+S  S  1
+S NT  1
+W  C 12
+W  D  8
+W  H  9
+W  S 12
+W NT  9
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "15"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "S"]
+[Vulnerable "NS"]
+[Deal "S:AT64.J.Q5.AKQ874 98.9873.JT73.JT6 QJ2.AQ642.K96.93 K753.KT5.A842.52"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "3NT"]
+[Result "12"]
+{[MJ] Po wiście karowym przeciwnik bierze królem w ręce, ściąga trzy trefle i
+gra \HJ w kółko. Odwracam \H10, a po ściągnięciu dwóch dodatkowych kierów
+idiotycznie kładę \SK na zagraną damę.}
+[Ability "N:CB98C E:12351 S:BB98C W:11351"]
+[BCFlags "1f"]
+[DoubleDummyTricks "cb98cbb98c1235111351"]
+[Minimax "6NN1440"]
+[OptimumScore "NS 1440"]
+[ParContract "N 6N="]
+[Score "NS +690"]
+[Auction "S"]
+1C Pass 1H Pass
+2C Pass 2D Pass
+2S Pass 3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 12
+N  D  8
+N  H  9
+N  S 11
+N NT 12
+E  C  1
+E  D  5
+E  H  3
+E  S  2
+E NT  1
+S  C 12
+S  D  8
+S  H  9
+S  S 11
+S NT 11
+W  C  1
+W  D  5
+W  H  3
+W  S  1
+W NT  1
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "16"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "W"]
+[Vulnerable "EW"]
+[Deal "W:A74.KQJ95.Q643.8 52.8732.752.K432 KQJ3.AT6.KJT98.7 T986.4.A.AQJT965"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "5D"]
+[Result "11"]
+{[MJ] Kontrakt niby dobry, ale z ręką E chciałbym jakoś zanęcić szlemika.}
+[Ability "N:4212A E:5AAB3 S:4212A W:5AAB3"]
+[BCFlags "1f"]
+[DoubleDummyTricks "4212a4212a5aab35aab3"]
+[Minimax "6CDS-300"]
+[OptimumScore "NS -300"]
+[ParContract "NS 6CX-2"]
+[Score "EW +600"]
+[Auction "W"]
+1H Pass 2D 3C
+3D 4C 4H 4S
+5D AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 10
+N  D  2
+N  H  1
+N  S  2
+N NT  4
+E  C  3
+E  D 11
+E  H 10
+E  S 10
+E NT  5
+S  C 10
+S  D  2
+S  H  1
+S  S  2
+S NT  4
+W  C  3
+W  D 11
+W  H 10
+W  S 10
+W NT  5
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "17"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:Q9543.J842.K9.K9 KT7.AQ753.J.JT84 AJ2.KT.QT6543.A5 86.96.A872.Q7632"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "4S"]
+[Result "10"]
+{[MJ] Wejście 1BA byłoby z dłuższymi treflami, nie wymyśliłem wistu małym
+kierem. Po treflowym przeciwnik bierze w ręce, gra pika do waleta i karo. Wskok
+asem nie utrudnia, ale chyba i tak by sobie poradził.}
+[Ability "N:997A5 E:33638 S:997A5 W:33638"]
+[BCFlags "1f"]
+[DoubleDummyTricks "997a5997a53363833638"]
+[Minimax "4CDW300"]
+[OptimumScore "EW -300"]
+[ParContract "EW 4CX-2"]
+[Score "NS +420"]
+[Auction "N"]
+Pass Pass 1D Pass
+1S X =1= Pass 3C
+3H X 4S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  5
+N  D 10
+N  H  7
+N  S  9
+N NT  9
+E  C  8
+E  D  3
+E  H  6
+E  S  3
+E NT  3
+S  C  5
+S  D 10
+S  H  7
+S  S  9
+S NT  9
+W  C  8
+W  D  3
+W  H  6
+W  S  3
+W NT  3
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "18"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:K6.Q842.QJ9874.K J98742.A7.2.9542 QT3.KJT5.K6.AQ86 A5.963.AT53.JT73"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "4H"]
+[Result "9"]
+{[MJ] Przeciwnik wistuje w \SA, a następnie daje partnerowi przebitkę karo.}
+[Ability "N:37436 E:A69A6 S:37436 W:A69A6"]
+[BCFlags "1f"]
+[DoubleDummyTricks "3743637436a69a6a69a6"]
+[Minimax "3NW-430"]
+[OptimumScore "EW 430"]
+[ParContract "EW 3N+1"]
+[Score "EW -50"]
+[Auction "E"]
+Pass Pass 1NT Pass
+2C Pass 2H Pass
+4H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  6
+N  D  3
+N  H  4
+N  S  7
+N NT  3
+E  C  6
+E  D 10
+E  H  9
+E  S  6
+E NT 10
+S  C  6
+S  D  3
+S  H  4
+S  S  7
+S NT  3
+W  C  6
+W  D 10
+W  H  9
+W  S  6
+W NT 10
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "19"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:K4.AJT2.QT74.AT4 AJ5..J962.QJ9765 T986.Q987.AK8.32 Q732.K6543.53.K8"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "4H"]
+[Result "8"]
+{[MJ] Wist w \CD, nie robimy nic głupiego i przeciwnik przegrywa bez dwóch.}
+[Ability "N:97885 E:46557 S:97886 W:46557"]
+[BCFlags "1f"]
+[DoubleDummyTricks "97885978864655746557"]
+[Minimax "3NN400"]
+[OptimumScore "NS 400"]
+[ParContract "NS 3N="]
+[Score "NS -100"]
+[Auction "S"]
+1NT Pass 2C Pass
+2H Pass 4H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 8
+N  H 8
+N  S 7
+N NT 9
+E  C 7
+E  D 5
+E  H 5
+E  S 6
+E NT 4
+S  C 6
+S  D 8
+S  H 8
+S  S 7
+S NT 9
+W  C 7
+W  D 5
+W  H 5
+W  S 6
+W NT 4
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "20"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:JT54.QJ9.K.A9873 Q3.T7542.Q43.T62 A96.3.AJT8652.K5 K872.AK86.97.QJ4"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "3NT"]
+[Result "8"]
+{[MJ] Po wiście kierowym bez szans, z mojego punktu widzenia 2BA z singlowym
+królem po trzecioręcznym otwarciu partnera to nie jest najlepsza odzywka, może
+lepiej zacząć od XX i zagralibyśmy 2/3\D.}
+[Ability "N:44533 E:896A9 S:43533 W:896A9"]
+[BCFlags "1f"]
+[DoubleDummyTricks "4453343533896a9896a9"]
+[Minimax "1SW-140"]
+[OptimumScore "EW 140"]
+[ParContract "EW 1S+2"]
+[Score "EW -100"]
+[Auction "W"]
+Pass Pass 1D X
+1S Pass 2D Pass
+2NT Pass 3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  3
+N  D  3
+N  H  5
+N  S  4
+N NT  4
+E  C  9
+E  D 10
+E  H  6
+E  S  9
+E NT  8
+S  C  3
+S  D  3
+S  H  5
+S  S  3
+S NT  4
+W  C  9
+W  D 10
+W  H  6
+W  S  9
+W NT  8
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "21"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:KQ975.K8642.J5.3 J.AQJ975.K932.T5 AT62.3.7.AQJ8764 843.T.AQT864.K92"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "5D"]
+[Result "10"]
+{[MJ] Przeciwnik S trochę się zastanawiał, z ręką W może lepiej odpuścić
+rozdanie? Z kolei z ręką E miałem cieżko. Co się dzieje w rozdaniu, że S
+pasuje, a partner wznawia 3\D. 3BA jest bardzo słabe, bo przy \CA u W wychodzi
+nam szlemik, a przeciwnicy ściągają 5 pików. Po kontrze nie wiem dlaczego od
+razu nie zalicytowałem 5\D.}
+[Ability "N:5B429 E:718A4 S:5B429 W:718A4"]
+[BCFlags "1f"]
+[DoubleDummyTricks "5b4295b429718a4718a4"]
+[Minimax "6DDW300"]
+[OptimumScore "EW -300"]
+[ParContract "EW 6DX-2"]
+[Score "EW -50"]
+[Auction "N"]
+2H Pass Pass 3D
+Pass 3NT X Pass
+Pass 4D 4S Pass
+Pass 5D AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  9
+N  D  2
+N  H  4
+N  S 11
+N NT  5
+E  C  4
+E  D 10
+E  H  8
+E  S  1
+E NT  7
+S  C  9
+S  D  2
+S  H  4
+S  S 11
+S NT  5
+W  C  4
+W  D 10
+W  H  8
+W  S  1
+W NT  7
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "22"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:7532.AK2.J8642.3 J964.J7.T9.AQJ94 T8.Q985.K75.T752 AKQ.T643.AQ3.K86"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "3NT"]
+[Result "11"]
+{[MJ] Po wiście karowym przeciwnik po chwili deklaruje 11 lew.}
+[Ability "N:AA87B E:22462 S:AA87B W:22462"]
+[BCFlags "1f"]
+[DoubleDummyTricks "aa87baa87b2246222462"]
+[Minimax "3NN430"]
+[OptimumScore "NS 430"]
+[ParContract "NS 3N+1"]
+[Score "NS +460"]
+[Auction "E"]
+Pass Pass Pass 1NT
+Pass 2C Pass 2H
+Pass 3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 11
+N  D  7
+N  H  8
+N  S 10
+N NT 10
+E  C  2
+E  D  6
+E  H  4
+E  S  2
+E NT  2
+S  C 11
+S  D  7
+S  H  8
+S  S 10
+S NT 10
+W  C  2
+W  D  6
+W  H  4
+W  S  2
+W NT  2
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "23"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:KJ2.64.KJT972.K5 AQ.K97532.865.84 T9754.J8..QJ7632 863.AQT.AQ43.AT9"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "3NT"]
+[Result "10"]
+{[MJ] 3BA to propozycja kontraktu, wist waletem pik i 10 lew.}
+[Ability "N:27256 E:A5A86 S:27256 W:A5B86"]
+[BCFlags "1f"]
+[DoubleDummyTricks "2725627256a5a86a5b86"]
+[Minimax "4HW-650"]
+[OptimumScore "EW 650"]
+[ParContract "W 4H+1"]
+[Score "EW +630"]
+[Auction "S"]
+1D 1H Pass 2C =1=
+Pass 2H Pass 3NT
+AP
+[Note "1: Drury z fitem"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  6
+N  D  5
+N  H  2
+N  S  7
+N NT  2
+E  C  6
+E  D  8
+E  H 10
+E  S  5
+E NT 10
+S  C  6
+S  D  5
+S  H  2
+S  S  7
+S NT  2
+W  C  6
+W  D  8
+W  H 11
+W  S  5
+W NT 10
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "24"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:T92.AT65.QT7.AQ8 Q76.7.A983.T7652 AKJ3.832.K652.K4 854.KQJ94.J4.J93"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "3NT"]
+[Result "10"]
+{[MJ] Po wiście treflowym 10 lew}
+[Ability "N:32434 E:AA9A9 S:32434 W:AA9A9"]
+[BCFlags "1f"]
+[DoubleDummyTricks "3243432434aa9a9aa9a9"]
+[Minimax "3NE-430"]
+[OptimumScore "EW 430"]
+[ParContract "EW 3N+1"]
+[Score "EW +430"]
+[Auction "W"]
+1C Pass 1S Pass
+1NT Pass 3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  4
+N  D  3
+N  H  4
+N  S  2
+N NT  3
+E  C  9
+E  D 10
+E  H  9
+E  S 10
+E NT 10
+S  C  4
+S  D  3
+S  H  4
+S  S  2
+S NT  3
+W  C  9
+W  D 10
+W  H  9
+W  S 10
+W NT 10
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "1"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:Q6.72.753.K98632 AK754.954.K2.AQ4 JT3.AKJ6.JT94.T5 982.QT83.AQ86.J7"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "3NT"]
+[Result "9"]
+{[MJ] Gramy tak że po kontrze na Staymana odzywki otwierającego przyrzekają
+trzymanie trefl. Gramy lepszą końcówkę.}
+[Ability "N:33346 E:A9A97 S:33346 W:A9A97"]
+[BCFlags "1f"]
+[DoubleDummyTricks "3334633346a9a97a9a97"]
+[Minimax "3NW-430"]
+[OptimumScore "EW 430"]
+[ParContract "EW 3N+1"]
+[Score "EW +400"]
+[Auction "N"]
+Pass 1NT Pass 2C
+X 2S =1= Pass 3NT
+AP
+[Note "1: z trzymaniem trefl"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  6
+N  D  4
+N  H  3
+N  S  3
+N NT  3
+E  C  7
+E  D  9
+E  H 10
+E  S  9
+E NT 10
+S  C  6
+S  D  4
+S  H  3
+S  S  3
+S NT  3
+W  C  7
+W  D  9
+W  H 10
+W  S  9
+W NT 10
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "2"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:J.AT6.AT432.J543 AQ6.J98743.Q97.T K853.52.5.K98762 T9742.KQ.KJ86.AQ"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "5S"]
+[Result "8"]
+{[MJ] W tych założeniach i pozycji licytacyjnej 3\C nie przyrzeka nic. Wistuję
+w \DA i po ciężkich bojach w głowie wychodzi mi że kontynuacja kara wypuszcza
+tylko jak partner na trzy kara bez króla lub singla kier bez asa trefl, więc w
+drugiej lewie wychodzę w karo i -3. Jestem ciekawy jak tutaj powinno się
+wistować i licytować (pomijam że w skrrajnym przypadku jak partner ma siódmego
+asa i czerwonego króla to wychodzi nam szlemik).}
+[Ability "N:88984 E:24349 S:88984 W:24349"]
+[BCFlags "1f"]
+[DoubleDummyTricks "88984889842434924349"]
+[Minimax "4CDW100"]
+[OptimumScore "EW -100"]
+[ParContract "EW 4CX-1"]
+[Score "NS -300"]
+[Auction "E"]
+Pass Pass 3C 3S
+5C 5S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 4
+N  D 8
+N  H 9
+N  S 8
+N NT 8
+E  C 9
+E  D 4
+E  H 3
+E  S 4
+E NT 2
+S  C 4
+S  D 8
+S  H 9
+S  S 8
+S NT 8
+W  C 9
+W  D 4
+W  H 3
+W  S 4
+W NT 2
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "3"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:AK4.A84.853.T962 63.T2.AKT72.K754 Q87.J97.QJ64.Q83 JT952.KQ653.9.AJ"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "3H"]
+[Result "8"]
+{[MJ] Czy z taką ręką się licytuje 2BA i czy wynosi się z E w 3\H?}
+[Ability "N:65556 E:68887 S:65556 W:68887"]
+[BCFlags "1f"]
+[DoubleDummyTricks "65556655566888768887"]
+[Minimax "2HE-110"]
+[OptimumScore "EW 110"]
+[ParContract "EW 2H=; EW 2S="]
+[Score "EW -100"]
+[Auction "S"]
+Pass Pass Pass 1S
+Pass 1NT Pass 2H
+Pass 2NT Pass 3H
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 6
+N  D 5
+N  H 5
+N  S 5
+N NT 6
+E  C 7
+E  D 8
+E  H 8
+E  S 8
+E NT 6
+S  C 6
+S  D 5
+S  H 5
+S  S 5
+S NT 6
+W  C 7
+W  D 8
+W  H 8
+W  S 8
+W NT 6
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "4"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:KT.QJ8752.Q63.J4 3.KT64.82.AK9832 AJ987.93.T54.T65 Q6542.A.AKJ97.Q7"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "3NT"]
+[Result "12"]
+{[MJ] Otwarcie jest dwuznaczne, więc może z ręką E po prostu spasować żeby
+przeciwnicy się pogubili.}
+[Ability "N:B88AB E:24521 S:B88AB W:24521"]
+[BCFlags "1f"]
+[DoubleDummyTricks "b88abb88ab2452124521"]
+[Minimax "3NS660"]
+[OptimumScore "NS 660"]
+[ParContract "NS 3N+2"]
+[Score "NS +690"]
+[Auction "W"]
+2D =1= Pass 2H 2S
+Pass 3C Pass 3D
+Pass 3NT AP
+[Note "1: 6\H / 5\S-5\D"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 11
+N  D 10
+N  H  8
+N  S  8
+N NT 11
+E  C  1
+E  D  2
+E  H  5
+E  S  4
+E NT  2
+S  C 11
+S  D 10
+S  H  8
+S  S  8
+S NT 11
+W  C  1
+W  D  2
+W  H  5
+W  S  4
+W NT  2
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "5"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:AJ3.AQ65432.K.J7 K6.JT.J94.AQ8642 T854..AQ8762.KT3 Q972.K987.T53.95"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "3NT"]
+[Result "9"]
+{[MJ] N się chwilę zastanawia, ale celnie pozostawia 3BA. Po wiście karowym nic
+się nie da zrobić, ale przecwinik w drugie lewie gra waleta trefl i ciekawe jak
+by dalej rozgrywał, gdybym nie nabił się asem.}
+[Ability "N:9A8B7 E:33425 S:9A8B7 W:33425"]
+[BCFlags "1f"]
+[DoubleDummyTricks "9a8b79a8b73342533425"]
+[Minimax "4SS620"]
+[OptimumScore "NS 620"]
+[ParContract "NS 4S="]
+[Score "NS +600"]
+[Auction "N"]
+1H Pass 1S Pass
+3H Pass 3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  7
+N  D 11
+N  H  8
+N  S 10
+N NT  9
+E  C  5
+E  D  2
+E  H  4
+E  S  3
+E NT  3
+S  C  7
+S  D 11
+S  H  8
+S  S 10
+S NT  9
+W  C  5
+W  D  2
+W  H  4
+W  S  3
+W NT  3
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "6"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:K987.AJ2.J542.K3 T65.T84.AQ.T6542 AJ2.965.863.AJ87 Q43.KQ73.KT97.Q9"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "1NT"]
+[Result "5"]
+{[MJ] W widne karty 9 lew, ale zaczyna się od wistu małym kierem i przeciwnik
+bierze na 10-kę, następnie rozgrywaka przez trefle, przeciwnicy na szczęście w
+końcówce puszczają lewę i -2.}
+[Ability "N:45544 E:98788 S:44544 W:98788"]
+[BCFlags "1f"]
+[DoubleDummyTricks "45544445449878898788"]
+[Minimax "3NW-600"]
+[OptimumScore "EW 600"]
+[ParContract "EW 3N="]
+[Score "EW -200"]
+[Auction "E"]
+1C Pass 1NT AP
+[Play "N"]
+H3 H2 HT H5
+HQ HJ H8 H6
+HK HA H4 H9
+C9 CK C4 C7
+CQ C3 C2 CJ
+H7 S7 C5 D3
+D7 D2 DQ D6
+D9 S8 C6 CA
+S3 SK S5 S2
+SQ S9 S6 SJ
+S4 D4 ST SA
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 4
+N  D 4
+N  H 5
+N  S 5
+N NT 4
+E  C 8
+E  D 8
+E  H 7
+E  S 8
+E NT 9
+S  C 4
+S  D 4
+S  H 5
+S  S 4
+S NT 4
+W  C 8
+W  D 8
+W  H 7
+W  S 8
+W NT 9
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "7"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:52.K94.KJT53.J85 AK64.J87.742.643 JT7.T65.A96.KQT2 Q983.AQ32.Q8.A97"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "2S"]
+[Result "8"]
+{[MJ] Nic ciekawego.}
+[Ability "N:64587 E:68845 S:64587 W:68845"]
+[BCFlags "1f"]
+[DoubleDummyTricks "64587645876884568845"]
+[Minimax "2HE-110"]
+[OptimumScore "EW 110"]
+[ParContract "EW 2H=; EW 2S="]
+[Score "EW +110"]
+[Auction "S"]
+Pass Pass Pass 1C
+1D 1S 2D 2S
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 7
+N  D 8
+N  H 5
+N  S 4
+N NT 6
+E  C 5
+E  D 4
+E  H 8
+E  S 8
+E NT 6
+S  C 7
+S  D 8
+S  H 5
+S  S 4
+S NT 6
+W  C 5
+W  D 4
+W  H 8
+W  S 8
+W NT 6
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "8"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:AK3.74.QJ62.T853 Q762.AT32.K5.K42 98.QJ95.A43.A976 JT54.K86.T987.QJ"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "2S"]
+[Result "8"]
+{[MJ] Po wiście kierowym przeciwnik bierze na króla w ręce i gra waleta trefl.
+Idiotycznie nie odchodzę w kiera/pika tylko w trefla co wypuszcza kontrakt.}
+[Ability "N:67654 E:75788 S:67654 W:75789"]
+[BCFlags "1f"]
+[DoubleDummyTricks "67654676547578875789"]
+[Minimax "3CW-110"]
+[OptimumScore "EW 110"]
+[ParContract "W 3C="]
+[Score "NS +110"]
+[Auction "W"]
+Pass 1C Pass 1S
+Pass 2S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 4
+N  D 5
+N  H 6
+N  S 7
+N NT 6
+E  C 8
+E  D 8
+E  H 7
+E  S 5
+E NT 7
+S  C 4
+S  D 5
+S  H 6
+S  S 7
+S NT 6
+W  C 9
+W  D 8
+W  H 7
+W  S 5
+W NT 7
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "9"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:QJ5.K74.AK8.QJ83 AK74.952.954.652 T96.T83.Q732.AT9 832.AQJ6.JT6.K74"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "1NT"]
+[Result "8"]
+{[MJ] Po wiście \SA i mały pik przeciwnik bierze w ręce i gra trefla na impas.
+Teoretycznie mozna spróbować \HD na to że rozgrywający nie ma dziewiątki, ale
+nawet jak weźmiemy lewę, to i tak nie kładziemy kontraktu.}
+[Ability "N:77788 E:55644 S:77788 W:55644"]
+[BCFlags "1f"]
+[DoubleDummyTricks "77788777885564455644"]
+[Minimax "1CN90"]
+[OptimumScore "NS 90"]
+[ParContract "NS 1C+1; NS 1D+1; NS 1N="]
+[Score "NS +120"]
+[Auction "N"]
+1NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 8
+N  D 8
+N  H 7
+N  S 7
+N NT 7
+E  C 4
+E  D 4
+E  H 6
+E  S 5
+E NT 5
+S  C 8
+S  D 8
+S  H 7
+S  S 7
+S NT 7
+W  C 4
+W  D 4
+W  H 6
+W  S 5
+W NT 5
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "10"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "E"]
+[Vulnerable "All"]
+[Deal "E:T8742.Q643.Q.AKQ K96.T92.KT754.64 A3.KJ8.J862.J987 QJ5.A75.A93.T532"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "2H"]
+[Result "8"]
+{[MJ] Mnie uczyli, że z taką ręką mówi się 2\S, bo partner ciągle może mieć
+silniejszą rękę na 5-4 i nie dogramy końcówki.}
+[Ability "N:64475 E:78868 S:64475 W:78868"]
+[BCFlags "1f"]
+[DoubleDummyTricks "64475644757886878868"]
+[Minimax "1HE-110"]
+[OptimumScore "EW 110"]
+[ParContract "EW 1H+1; EW 1S+1"]
+[Score "EW +110"]
+[Auction "E"]
+1S Pass 1NT Pass
+2H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 7
+N  H 4
+N  S 4
+N NT 6
+E  C 8
+E  D 6
+E  H 8
+E  S 8
+E NT 7
+S  C 5
+S  D 7
+S  H 4
+S  S 4
+S NT 6
+W  C 8
+W  D 6
+W  H 8
+W  S 8
+W NT 7
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "11"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "S:JT4.43.J7.AK9764 AK.JT.A965.QJT53 Q7653.Q862.KT42. 982.AK975.Q83.82"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "3C"]
+[Result "5"]
+{[MJ] Nie wiem czy po otwarciu preckiem wchodzi się z ręką W. Tak na szybko
+zastanawialiśmy się czy w drugim okrążeniu kontra W powinna być karna, ale
+przecież przeciwnik N może mieć resztę punktów.}
+[Ability "N:46445 E:97998 S:46445 W:97998"]
+[BCFlags "1f"]
+[DoubleDummyTricks "46445464459799897998"]
+[Minimax "3NE-400"]
+[OptimumScore "EW 400"]
+[ParContract "EW 3N="]
+[Score "NS -200"]
+[Auction "S"]
+2C Pass 2D Pass
+3C AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 4
+N  H 4
+N  S 6
+N NT 4
+E  C 8
+E  D 9
+E  H 9
+E  S 7
+E NT 9
+S  C 5
+S  D 4
+S  H 4
+S  S 6
+S NT 4
+W  C 8
+W  D 9
+W  H 9
+W  S 7
+W NT 9
+
+[Event "Rewers Joker 06.04.2024"]
+[Site ""]
+[Date ""]
+[Board "12"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "W:AKT.JT8.A.AQJT97 Q8543.5432.Q74.2 976.AQ7.K8632.K5 J2.K96.JT95.8643"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "7C"]
+[Result "12"]
+{[MJ] Katastrofa w rozdaniu. 1\D zalicytowane w intencji zagrania 3BA z ręki
+partnera (mamy w następnym okrążeniu taką opcję). 5\H pytało o króle, a 5NT
+powinno oznaczać \H lub \D+\S (Bartek bał się przekraczać wysokość 6\C żeby
+sprzedać pikowego). Kontra alarmująca, ale uwierzyłem partnerowi, a nie
+przeciwnikowi. Bałem się że 6\D może być odczytane jako propozycja kontraktu,
+więc wymyśliłem inwit przez 6\H (partner może mieć 7 trefli lub damę karo),
+była jeszcze szansa ale Bartek znalazł nadwyżki.}
+[Ability "N:13221 E:CABAC S:13221 W:CABAC"]
+[BCFlags "1f"]
+[DoubleDummyTricks "1322113221cabaccabac"]
+[Minimax "6NE-990"]
+[Minimax "6NE-990"]
+[OptimumScore "EW 990"]
+[ParContract "EW 6N="]
+[Auction "W"]
+1C Pass 1D Pass
+3C Pass 3D Pass
+3NT Pass 4C Pass
+4D Pass 4NT Pass
+5D Pass 5H X
+5NT Pass 6H Pass
+7C AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  1
+N  D  2
+N  H  2
+N  S  3
+N NT  1
+E  C 12
+E  D 10
+E  H 11
+E  S 10
+E NT 12
+S  C  1
+S  D  2
+S  H  2
+S  S  3
+S NT  1
+W  C 12
+W  D 10
+W  H 11
+W  S 10
+W NT 12

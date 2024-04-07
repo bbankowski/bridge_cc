@@ -1,0 +1,1224 @@
+% PBN 2.1
+% EXPORT
+%Content-type: text/x-pbn; charset=UTF-8
+%Creator: BridgeComposer Version 5.105
+%Created: Fri Apr  5 13:13:49 2024 +0200
+%BCOptions Center STBorder STShade
+%BidAndCardSpacing Thin
+%BoardsPerPage 1
+%CardTableColors #008000,#ffffff,#aaaaaa
+%DDAFormat 0
+%DefaultPagination 0
+%Font:CardTable "Arial",11,400,0
+%Font:Commentary "Times New Roman",12,400,0
+%Font:Diagram "Times New Roman",12,400,0
+%Font:Event "Times New Roman",12,400,0
+%Font:FixedPitch "Courier New",10,400,0
+%Font:HandRecord "Arial",11,400,0
+%GutterSize 500,500
+%HRTitleDate 0
+%HRTitleEvent "Mindlab 03.04.2024"
+%HRTitleSetID ""
+%HRTitleSetIDPrefix ""
+%HRTitleSite ""
+%HtmlClubs entity,"https://bridgecomposer.com/suitimg/c.gif"
+%HtmlDiamonds entity,"https://bridgecomposer.com/suitimg/d.gif"
+%HtmlHearts entity,"https://bridgecomposer.com/suitimg/h.gif"
+%HtmlNavBar 0.75,#cfe2f3
+%HtmlSpades entity,"https://bridgecomposer.com/suitimg/s.gif"
+%Margins 1000,1000,1000,1000
+%PaperSize 1,0,0,2
+%ParaIndent 0
+%PipColors #000000,#ff0000,#ff0000,#000000
+%PipFont "Symbol","Symbol",2,0xAA,0xA9,0xA8,0xA7
+%ScoreTableColors #e6e6e6,#000000
+%SectionSpacing 0,0,0
+%SelectedBoard 23
+%ShowBoardLabels 2
+%ShowCardTable 2
+%TSTCustomSortOrder Default
+%TSTReport List
+%TSTReportOrder ByNumber
+%TSTReportShade Yes
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "1"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:92.AK98764.T86.A QT75.QJ2.QJ.QT42 AKJ8.T53.753.K76 643..AK942.J9853"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "4H"]
+[Result "10"]
+{[MJ] Po wiście w \DD przeciwnik próbuje podegrać trefla, więc swoje.}
+[Ability "N:87955 E:56168 S:87955 W:55178"]
+[BCFlags "1f"]
+[DoubleDummyTricks "87955879555616855178"]
+[Minimax "3HS140"]
+[OptimumScore "NS 140"]
+[ParContract "NS 3H="]
+[Score "NS +420"]
+[Auction "N"]
+1H Pass 2NT =1= 3NT
+4H AP
+[Note "1:inwit bez krótkości"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 5
+N  H 9
+N  S 7
+N NT 8
+E  C 8
+E  D 6
+E  H 1
+E  S 6
+E NT 5
+S  C 5
+S  D 5
+S  H 9
+S  S 7
+S NT 8
+W  C 8
+W  D 7
+W  H 1
+W  S 5
+W NT 5
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "2"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:KJ6.AT.AJ76.T854 A4.KQ98.K953.A63 Q853.J743.Q.KQ72 T972.652.T842.J9"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "2DX"]
+[Result "7"]
+{[MJ] Po wiście \CK i kontynuacji małym treflem bez jednej.}
+[Ability "N:55664 E:88779 S:55664 W:88769"]
+[BCFlags "1f"]
+[DoubleDummyTricks "55664556648877988769"]
+[Minimax "1NW-120"]
+[OptimumScore "EW 120"]
+[ParContract "EW 1N+1"]
+[Score "NS -200"]
+[Auction "E"]
+1C 1NT X XX
+Pass 2D Pass Pass
+X AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 4
+N  D 6
+N  H 6
+N  S 5
+N NT 5
+E  C 9
+E  D 7
+E  H 7
+E  S 8
+E NT 8
+S  C 4
+S  D 6
+S  H 6
+S  S 5
+S NT 5
+W  C 9
+W  D 6
+W  H 7
+W  S 8
+W NT 8
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "3"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:T52.JT73.A54.965 QJ73.K942.T76.A7 AK64.A.Q8.KQJ842 98.Q865.KJ932.T3"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "3NT"]
+[Result "10"]
+{[MJ] Ręka chyba za silna na nieforsujące 2\C, bo niewiele potrzeba do końcówki.}
+[Ability "N:9865A E:44773 S:8865A W:44773"]
+[BCFlags "1f"]
+[DoubleDummyTricks "9865a8865a4477344773"]
+[Minimax "3NN400"]
+[OptimumScore "NS 400"]
+[ParContract "N 3N="]
+[Score "NS +430"]
+[Auction "S"]
+Pass Pass 1C Pass
+1D X 2C Pass
+3C Pass 3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 10
+N  D  5
+N  H  6
+N  S  8
+N NT  9
+E  C  3
+E  D  7
+E  H  7
+E  S  4
+E NT  4
+S  C 10
+S  D  5
+S  H  6
+S  S  8
+S NT  8
+W  C  3
+W  D  7
+W  H  7
+W  S  4
+W NT  4
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "4"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:KT2.KT7.KJ42.J97 98543.A643.A.864 AQJ7.95.QT873.K5 6.QJ82.965.AQT32"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "2S"]
+[Result "8"]
+{[MJ] Przeciwnikom coś się pomyliło w licytacji i po wiście karowym i odwrocie
+w trefla nie orientuję się że partner przebija karo}
+[Ability "N:56959 E:66373 S:56959 W:66363"]
+[BCFlags "1f"]
+[DoubleDummyTricks "56959569596637366363"]
+[Minimax "1HS140"]
+[OptimumScore "NS 140"]
+[ParContract "NS 1H+2"]
+[Score "EW +110"]
+[Auction "W"]
+1C Pass 1S Pass
+1NT Pass 2H Pass
+2S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 9
+N  D 5
+N  H 9
+N  S 6
+N NT 5
+E  C 3
+E  D 7
+E  H 3
+E  S 6
+E NT 6
+S  C 9
+S  D 5
+S  H 9
+S  S 6
+S NT 5
+W  C 3
+W  D 6
+W  H 3
+W  S 6
+W NT 6
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "5"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:AK53.J8532.7.K94 Q97.A7.J84.AT865 J6.T4.AKQ3.QJ732 T842.KQ96.T9652."]
+[Scoring ""]
+[Declarer "N"]
+[Contract "3NT"]
+[Result "9"]
+{[MJ] Swoje po wiście w małego trefla. Po kontynuacji królem, a następnie
+odwrocie w karo na \H10 zagraną ze stołu przeciwnik kładzie damę i blokuje
+kolor, a następnie odrzuca się od pika.}
+[Ability "N:87769 E:56574 S:87769 W:56574"]
+[BCFlags "1f"]
+[DoubleDummyTricks "87769877695657456574"]
+[Minimax "2NS120"]
+[OptimumScore "NS 120"]
+[ParContract "NS 2N="]
+[Score "NS +600"]
+[Auction "N"]
+1H Pass 2C Pass
+2H Pass 3D Pass
+3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 9
+N  D 6
+N  H 7
+N  S 7
+N NT 8
+E  C 4
+E  D 7
+E  H 5
+E  S 6
+E NT 5
+S  C 9
+S  D 6
+S  H 7
+S  S 7
+S NT 8
+W  C 4
+W  D 7
+W  H 5
+W  S 6
+W NT 5
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "6"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:KQ94.T2.A4.AJT75 A6.A964.J762.Q93 J8732.KQJ75.53.4 T5.83.KQT98.K862"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "2S"]
+[Result "10"]
+{[MJ] Przeciwnicy nie dochodzą do końcówki.}
+[Ability "N:63386 E:6A957 S:63386 W:6A957"]
+[BCFlags "1f"]
+[DoubleDummyTricks "63386633866a9576a957"]
+[Minimax "5DDN-500"]
+[OptimumScore "NS -500"]
+[ParContract "NS 5DX-3"]
+[Score "EW +170"]
+[Auction "E"]
+1C Pass 2H Pass
+2S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  6
+N  D  8
+N  H  3
+N  S  3
+N NT  6
+E  C  7
+E  D  5
+E  H  9
+E  S 10
+E NT  6
+S  C  6
+S  D  8
+S  H  3
+S  S  3
+S NT  6
+W  C  7
+W  D  5
+W  H  9
+W  S 10
+W NT  6
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "7"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:AT.K87.A6432.KJ9 Q76532.T9.8.8764 J9.Q653.JT97.AT5 K84.AJ42.KQ5.Q32"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "3NT"]
+[Result "6"]
+{[MJ] Po wiście \H10 gram \DA i przeciwnik otwiera piki.}
+[Ability "N:65897 E:57546 S:65897 W:57546"]
+[BCFlags "1f"]
+[DoubleDummyTricks "65897658975754657546"]
+[Minimax "2DS110"]
+[OptimumScore "NS 110"]
+[ParContract "NS 2D+1; NS 2H="]
+[Score "NS -300"]
+[Auction "S"]
+1NT Pass 2C Pass
+2D Pass 2NT Pass
+3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 7
+N  D 9
+N  H 8
+N  S 5
+N NT 6
+E  C 6
+E  D 4
+E  H 5
+E  S 7
+E NT 5
+S  C 7
+S  D 9
+S  H 8
+S  S 5
+S NT 6
+W  C 6
+W  D 4
+W  H 5
+W  S 7
+W NT 5
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "8"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:Q3.JT5.QJ42.A642 KT96.KQ76.53.K73 AJ8.A842.A6.JT98 7542.93.KT987.Q5"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "3NT"]
+[Result "8"]
+{[MJ] Po wiście w \D10 przeciwnik nie znajduje drogi do wygrania.}
+[Ability "N:46453 E:8697A S:46453 W:9798A"]
+[BCFlags "1f"]
+[DoubleDummyTricks "46453464538697a9798a"]
+[Minimax "3NW-400"]
+[OptimumScore "EW 400"]
+[ParContract "W 3N="]
+[Score "EW -50"]
+[Auction "W"]
+Pass Pass 1NT =1= Pass
+3NT AP
+[Note "1: 14-16"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  3
+N  D  5
+N  H  4
+N  S  6
+N NT  4
+E  C 10
+E  D  7
+E  H  9
+E  S  6
+E NT  8
+S  C  3
+S  D  5
+S  H  4
+S  S  6
+S NT  4
+W  C 10
+W  D  8
+W  H  9
+W  S  7
+W NT  9
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "9"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:654.54.T984.KQ94 QJT973.Q72.J65.7 AK2.KJ983.A72.AJ 8.AT6.KQ3.T86532"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "3NT"]
+[Result "8"]
+{[MJ] Po wiście treflem biorę asem i gram \HK z ręki, a po dojściu pikiem \HJ.}
+[Ability "N:86787 E:57546 S:86787 W:47445"]
+[BCFlags "1f"]
+[DoubleDummyTricks "86787867875754647445"]
+[Minimax "1NS120"]
+[OptimumScore "NS 120"]
+[ParContract "NS 1N+1"]
+[Score "NS -50"]
+[Auction "N"]
+Pass 2D X 2H
+Pass Pass 2NT Pass
+3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 7
+N  D 8
+N  H 7
+N  S 6
+N NT 8
+E  C 6
+E  D 4
+E  H 5
+E  S 7
+E NT 5
+S  C 7
+S  D 8
+S  H 7
+S  S 6
+S NT 8
+W  C 5
+W  D 4
+W  H 4
+W  S 7
+W NT 4
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "10"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "E"]
+[Vulnerable "All"]
+[Deal "E:Q5.J975.Q982.JT4 A64.82.KT743.Q98 KJT3.KQ.A5.A6532 9872.AT643.J6.K7"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "1NTX"]
+[Result "5"]
+{[MJ] Po wiście treflowym biorę królem i gram \DW-D-K i małe. Nie orientuję się
+że przeciwnik puszcza z drugim asem, ale po zagraniu \D10 przeciwnik
+ostatecznie musi dać jeszcze lewę na damę trefl.}
+[Ability "N:55565 E:77778 S:55565 W:77778"]
+[BCFlags "1f"]
+[DoubleDummyTricks "55565555657777877778"]
+[Minimax "1CW-90"]
+[OptimumScore "EW 90"]
+[ParContract "EW 1C+1; EW 1N="]
+[Score "NS -500"]
+[Auction "E"]
+Pass Pass 1C 1H
+Pass 1NT X AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 6
+N  H 5
+N  S 5
+N NT 5
+E  C 8
+E  D 7
+E  H 7
+E  S 7
+E NT 7
+S  C 5
+S  D 6
+S  H 5
+S  S 5
+S NT 5
+W  C 8
+W  D 7
+W  H 7
+W  S 7
+W NT 7
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "11"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "S:A2.QJ42.J6.87632 QJ98.K7.AK3.QT94 63.A9.QT97542.J5 KT754.T8653.8.AK"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "4S"]
+[Result "11"]
+{[MJ] Po wiście \HA 11 lew, nie wiem czy po pasie partnera z ręką N się wchodzi
+3\D.}
+[Ability "N:33485 E:9A958 S:33485 W:9A958"]
+[BCFlags "1f"]
+[DoubleDummyTricks "33485334859a9589a958"]
+[Minimax "4SW-420"]
+[OptimumScore "EW 420"]
+[ParContract "EW 4S="]
+[Score "EW +450"]
+[Auction "S"]
+Pass 1NT Pass 2C
+Pass 2S Pass 4D
+Pass 4S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  5
+N  D  8
+N  H  4
+N  S  3
+N NT  3
+E  C  8
+E  D  5
+E  H  9
+E  S 10
+E NT  9
+S  C  5
+S  D  8
+S  H  4
+S  S  3
+S NT  3
+W  C  8
+W  D  5
+W  H  9
+W  S 10
+W NT  9
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "12"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "W:T864.T7.QJ976.Q8 QJ952.KJ64.2.J62 AK.Q852.A83.T543 73.A93.KT54.AK97"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "2NT"]
+[Result "8"]
+{[MJ] Nie wiem co powinno się licytować z ręką S, partner wchodzi po partii
+(może nawet lepiej X?) i może nam ciągle wychodzić końcówka (jak widać nawet
+szła), ale 2NT to już wysoka gra.}
+[Ability "N:99969 E:43474 S:98969 W:43474"]
+[BCFlags "1f"]
+[DoubleDummyTricks "99969989694347443474"]
+[Minimax "4DDW500"]
+[OptimumScore "EW -500"]
+[ParContract "EW 4DX-3"]
+[Score "NS +120"]
+[Auction "W"]
+Pass Pass 1C Pass
+1D 1S Pass 1NT
+Pass 2H Pass 2NT
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 9
+N  D 6
+N  H 9
+N  S 9
+N NT 9
+E  C 4
+E  D 7
+E  H 4
+E  S 3
+E NT 4
+S  C 9
+S  D 6
+S  H 9
+S  S 8
+S NT 9
+W  C 4
+W  D 7
+W  H 4
+W  S 3
+W NT 4
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "13"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "N"]
+[Vulnerable "All"]
+[Deal "N:J9842.6.T.QT9874 7.Q8752.KQ65432. AQ63.A94.A9.A632 KT5.KJT3.J87.KJ5"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "5S"]
+[Result "11"]
+{[MJ] Otwarcie po partii bardzo ostre, z punktu widzenia S niewiele potrzeba.
+Nie mamy ustaleń co po takim szlemikowym 3\S znaczą odzywki 3BA..4\S :(}
+[Ability "N:6B33B E:52992 S:6A33B W:52992"]
+[BCFlags "1f"]
+[DoubleDummyTricks "6b33b6a33b5299252992"]
+[Minimax "5SN650"]
+[OptimumScore "NS 650"]
+[ParContract "N 5S="]
+[Score "NS +650"]
+[Auction "N"]
+2S Pass 2NT Pass
+3C 3D 3S Pass
+4S 5D 5H Pass
+5S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 11
+N  D  3
+N  H  3
+N  S 11
+N NT  6
+E  C  2
+E  D  9
+E  H  9
+E  S  2
+E NT  5
+S  C 11
+S  D  3
+S  H  3
+S  S 10
+S NT  6
+W  C  2
+W  D  9
+W  H  9
+W  S  2
+W NT  5
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "14"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "E"]
+[Vulnerable "None"]
+[Deal "E:AT643.QJ.T5.KT65 K.A965.K862.8742 J752.74.J974.QJ9 Q98.KT832.AQ3.A3"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "4H"]
+[Result "10"]
+[Ability "N:96BA8 E:36235 S:96BA8 W:36235"]
+[BCFlags "1f"]
+[DoubleDummyTricks "96ba896ba83623536235"]
+[Minimax "4HS450"]
+[OptimumScore "NS 450"]
+[ParContract "NS 4H+1"]
+[Score "NS +420"]
+[Auction "E"]
+Pass Pass Pass 1NT
+Pass 2C Pass 2H
+Pass 4H AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  8
+N  D 10
+N  H 11
+N  S  6
+N NT  9
+E  C  5
+E  D  3
+E  H  2
+E  S  6
+E NT  3
+S  C  8
+S  D 10
+S  H 11
+S  S  6
+S NT  9
+W  C  5
+W  D  3
+W  H  2
+W  S  6
+W NT  3
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "15"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "S"]
+[Vulnerable "NS"]
+[Deal "S:JT872.3.KQ976.J5 4.Q852.AJ52.QT82 AK9.A964.T84.AK4 Q653.KJT7.3.9763"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "4S"]
+[Result "9"]
+{[MJ] Po wiście w \C2 zabiłem asem i zagrałem karo do króla. Po kontynuacji
+treflowej zagrałem \SAK i już nie mogłem wygrać. Chyba było przyzwoicie tylko
+wstrzymać się z pikami.}
+[Ability "N:7A696 E:53647 S:8A696 W:53647"]
+[BCFlags "1f"]
+[DoubleDummyTricks "7a6968a6965364753647"]
+[Minimax "4SS620"]
+[OptimumScore "NS 620"]
+[ParContract "NS 4S="]
+[Score "NS -100"]
+[Auction "S"]
+2S Pass 2NT Pass
+3D Pass 3S Pass
+4H Pass 4S AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  6
+N  D  9
+N  H  6
+N  S 10
+N NT  7
+E  C  7
+E  D  4
+E  H  6
+E  S  3
+E NT  5
+S  C  6
+S  D  9
+S  H  6
+S  S 10
+S NT  8
+W  C  7
+W  D  4
+W  H  6
+W  S  3
+W NT  5
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "16"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "W"]
+[Vulnerable "EW"]
+[Deal "W:.AQ652.J976.QT94 Q862.KJ93.T5.632 A53.T4.AQ32.A875 KJT974.87.K84.KJ"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "3C"]
+[Result "11"]
+{[MJ] 2\H= 5-4 i przeciwnik zdecydował się sprzedać trefle. Po wiście w króla
+trefl nie było problemów.}
+[Ability "N:79533 E:648A9 S:79533 W:648A9"]
+[BCFlags "1f"]
+[DoubleDummyTricks "7953379533648a9648a9"]
+[Minimax "4SDN-100"]
+[OptimumScore "NS -100"]
+[ParContract "NS 4SX-1"]
+[Score "EW +150"]
+[Auction "W"]
+2H Pass 3C AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  3
+N  D  3
+N  H  5
+N  S  9
+N NT  7
+E  C  9
+E  D 10
+E  H  8
+E  S  4
+E NT  6
+S  C  3
+S  D  3
+S  H  5
+S  S  9
+S NT  7
+W  C  9
+W  D 10
+W  H  8
+W  S  4
+W NT  6
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "17"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:5.T82.J75.KT9432 KT87.A5.K842.Q85 QJ632.KQJ94.T6.A A94.763.AQ93.J76"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "3NT"]
+[Result "7"]
+{[MJ] Po wiście w \HK bez dwóch.}
+[Ability "N:55646 E:87596 S:55646 W:87596"]
+[BCFlags "1f"]
+[DoubleDummyTricks "55646556468759687596"]
+[Minimax "1NW-120"]
+[OptimumScore "EW 120"]
+[ParContract "EW 1N+1"]
+[Score "EW -100"]
+[Auction "N"]
+Pass 1C 1S 2S
+Pass 2NT Pass 3NT
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 6
+N  D 4
+N  H 6
+N  S 5
+N NT 5
+E  C 6
+E  D 9
+E  H 5
+E  S 7
+E NT 8
+S  C 6
+S  D 4
+S  H 6
+S  S 5
+S NT 5
+W  C 6
+W  D 9
+W  H 5
+W  S 7
+W NT 8
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "18"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:72.9.K753.QJ9872 Q98.AQ84.T4.KT54 A543.K653.J96.A6 KJT6.JT72.AQ82.3"]
+[Scoring ""]
+[Declarer "S"]
+[Contract "2NT"]
+[Result "9"]
+{[MJ] Osobiście podoba mi się licytacja, altneratywne 3\H z ręką S to chyba
+trochę za ostro.}
+[Ability "N:88965 E:55468 S:88975 W:55468"]
+[BCFlags "1f"]
+[DoubleDummyTricks "88965889755546855468"]
+[Minimax "3HS140"]
+[OptimumScore "NS 140"]
+[ParContract "NS 3H="]
+[Score "NS +150"]
+[Auction "E"]
+Pass Pass 1C X
+2C 2NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 6
+N  H 9
+N  S 8
+N NT 8
+E  C 8
+E  D 6
+E  H 4
+E  S 5
+E NT 5
+S  C 5
+S  D 7
+S  H 9
+S  S 8
+S NT 8
+W  C 8
+W  D 6
+W  H 4
+W  S 5
+W NT 5
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "19"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:K52.Q432.KT84.KT A63.AT76.AJ.A863 QT4.KJ5.97653.42 J987.98.Q2.QJ975"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "1NT"]
+[Result "8"]
+{[MJ] Po wiście karowym płaskie 8 lew.}
+[Ability "N:33563 E:8A76A S:53663 W:8A76A"]
+[BCFlags "1f"]
+[DoubleDummyTricks "33563536638a76a8a76a"]
+[Minimax "4SW-620"]
+[OptimumScore "EW 620"]
+[ParContract "EW 4S="]
+[Score "EW +120"]
+[Auction "S"]
+Pass 1NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  3
+N  D  6
+N  H  5
+N  S  3
+N NT  3
+E  C 10
+E  D  6
+E  H  7
+E  S 10
+E NT  8
+S  C  3
+S  D  6
+S  H  6
+S  S  3
+S NT  5
+W  C 10
+W  D  6
+W  H  7
+W  S 10
+W NT  8
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "20"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:KQ865.KT874..T63 32.Q2.KJ653.A542 4.A653.A942.J987 AJT97.J9.QT87.KQ"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "2H"]
+[Result "10"]
+{[MJ] Wist w \HJ, puszczamy lewę.}
+[Ability "N:66395 E:67948 S:66395 W:67948"]
+[BCFlags "1f"]
+[DoubleDummyTricks "66395663956794867948"]
+[Minimax "3HW-140"]
+[OptimumScore "EW 140"]
+[ParContract "EW 3H="]
+[Score "EW +170"]
+[Auction "W"]
+2C =1= Pass 2H AP
+[Note "1: stare"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 5
+N  D 9
+N  H 3
+N  S 6
+N NT 6
+E  C 8
+E  D 4
+E  H 9
+E  S 7
+E NT 6
+S  C 5
+S  D 9
+S  H 3
+S  S 6
+S NT 6
+W  C 8
+W  D 4
+W  H 9
+W  S 7
+W NT 6
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "21"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:AT.3.T7643.AKJ72 Q763.8752.A9.Q95 KJ9854.AQJ.2.864 2.KT964.KQJ85.T3"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "3C"]
+[Result "10"]
+{[MJ] Kiepska licytacja z ręką S. Nie mamy żadnych wyrafinowanych narzędzi,
+trzeba po prostu powiedzieć 2\S (które nie jest bardzo słabe, bo z kiepską ręką
+gramy 1\D-2\S bezpośrednio.)}
+[Ability "N:7A57A E:52762 S:7A67A W:52762"]
+[BCFlags "1f"]
+[DoubleDummyTricks "7a57a7a67a5276252762"]
+[Minimax "4SS620"]
+[OptimumScore "NS 620"]
+[ParContract "NS 4S="]
+[Score "NS +130"]
+[Auction "N"]
+1D Pass 1S Pass
+2C Pass 2NT Pass
+3C AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C 10
+N  D  7
+N  H  5
+N  S 10
+N NT  7
+E  C  2
+E  D  6
+E  H  7
+E  S  2
+E NT  5
+S  C 10
+S  D  7
+S  H  6
+S  S 10
+S NT  7
+W  C  2
+W  D  6
+W  H  7
+W  S  2
+W NT  5
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "22"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:853.873.AT92.J98 K97.KJ65.K8.K642 QJ2.92.J7543.AQ5 AT64.AQT4.Q6.T73"]
+[Scoring ""]
+[Declarer "N"]
+[Contract "4H"]
+[Result "9"]
+[Ability "N:78968 E:55475 S:78968 W:55475"]
+[BCFlags "1f"]
+[DoubleDummyTricks "78968789685547555475"]
+[Minimax "1HS140"]
+[OptimumScore "NS 140"]
+[ParContract "NS 1H+2"]
+[Score "NS -50"]
+[Auction "E"]
+Pass 1C Pass 1H
+Pass 2H Pass 4H
+AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N  C 8
+N  D 6
+N  H 9
+N  S 8
+N NT 7
+E  C 5
+E  D 7
+E  H 4
+E  S 5
+E NT 5
+S  C 8
+S  D 6
+S  H 9
+S  S 8
+S NT 7
+W  C 5
+W  D 7
+W  H 4
+W  S 5
+W NT 5
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "23"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:T832.962.J8.Q873 J74.7543.AK7.JT9 KQ96.JT8.Q63.K52 A5.AKQ.T9542.A64"]
+[Scoring ""]
+[Declarer "E"]
+[Contract "3NT"]
+[Result "9"]
+{[MJ] Wist \S2 - trochę odstępstwo.}
+[Ability "N:35225 E:98AA8 S:35225 W:98AA8"]
+[BCFlags "1f"]
+[DoubleDummyTricks "352253522598aa898aa8"]
+[Minimax "4HW-620"]
+[OptimumScore "EW 620"]
+[ParContract "EW 4H="]
+[Score "EW +600"]
+[Auction "S"]
+Pass Pass Pass 1NT
+Pass 2C Pass 2D
+Pass 3NT AP
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  5
+N  D  2
+N  H  2
+N  S  5
+N NT  3
+E  C  8
+E  D 10
+E  H 10
+E  S  8
+E NT  9
+S  C  5
+S  D  2
+S  H  2
+S  S  5
+S NT  3
+W  C  8
+W  D 10
+W  H 10
+W  S  8
+W NT  9
+
+[Event "Mindlab 03.04.2024"]
+[Site ""]
+[Date ""]
+[Board "24"]
+[West ""]
+[North "Bartek"]
+[East ""]
+[South "Marek"]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:AQ875.AK6.QT962. 6.Q843.K75.KJ642 JT942.J97.83.AT3 K3.T52.AJ4.Q9875"]
+[Scoring ""]
+[Declarer "W"]
+[Contract "4S"]
+[Result "11"]
+{[MJ] Dla mnie graniczne wejście 1NT przed pasem partnera.}
+[Ability "N:52548 E:8A684 S:52759 W:8B784"]
+[BCFlags "1f"]
+[DoubleDummyTricks "52548527598a6848b784"]
+[Minimax "5SW-450"]
+[OptimumScore "EW 450"]
+[ParContract "W 5S="]
+[Score "EW +450"]
+[Auction "W"]
+1S 1NT =1= 2S 3C
+4S AP
+[Note "1: 5-4"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  C  8
+N  D  4
+N  H  5
+N  S  2
+N NT  5
+E  C  4
+E  D  8
+E  H  6
+E  S 10
+E NT  8
+S  C  9
+S  D  5
+S  H  7
+S  S  2
+S NT  5
+W  C  4
+W  D  8
+W  H  7
+W  S 11
+W NT  8
