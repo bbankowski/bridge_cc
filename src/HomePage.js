@@ -20,9 +20,7 @@ function HomePage() {
                         <li><a href={'/bridge_cc/#/pbn?filename=2024.02.28-Mindlab.pbn'}>2024.02.28 Mindlab</a></li>
                         <li><a href={'/bridge_cc/#/pbn?filename=2024.03.27-Mindlab.pbn'}>2024.03.27 Mindlab</a></li>
                         <li><a href={'/bridge_cc/#/pbn?filename=2024.04.03-Mindlab.pbn'}>2024.04.03 Mindlab</a></li>
-                        <li><a href={'/bridge_cc/#/pbn?filename=2024.04.06-2.pbn'}>2024.04.06 II liga play-off vs Rewers Joker (2 składka)</a></li>
-                        <li><a href={'/bridge_cc/#/pbn?filename=2024.04.06-3.pbn'}>2024.04.06 II liga play-off vs Rewers Joker (3 składka)</a></li>
-                        <li><a href={'/bridge_cc/#/pbn?filename=2024.04.06-RewersJoker.pbn'}>2024.04.06 II liga play-off vs Rewers Joker (cały mecz)</a></li>
+                        <li><a href={'/bridge_cc/#/pbn?filename=2024.04.06-RewersJoker.pbn'}>2024.04.06 II liga play-off vs Rewers Joker (2 i 3 składka)</a></li>
                     </ul>
                 </div>
             </div>
