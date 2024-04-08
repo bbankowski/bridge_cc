@@ -1,14 +1,14 @@
 % PBN 2.1
 % EXPORT
 %Content-type: text/x-pbn; charset=UTF-8
-%Creator: BridgeComposer Version 5.105
-%Created: Sat Apr  6 21:35:17 2024 +0200
+%Creator: BridgeComposer Version 5.97
+%Created: Mon Apr  8 15:50:53 2024 +0200
 %BCOptions Center STBorder STShade
 %BidAndCardSpacing Thin
 %BoardsPerPage 1
 %CardTableColors #008000,#ffffff,#aaaaaa
-%DDAFormat 0
 %DefaultPagination 0
+%EventSpacing 0
 %Font:CardTable "Arial",11,400,0
 %Font:Commentary "Times New Roman",12,400,0
 %Font:Diagram "Times New Roman",12,400,0
@@ -27,12 +27,11 @@
 %HtmlNavBar 0.75,#cfe2f3
 %HtmlSpades entity,"https://bridgecomposer.com/suitimg/s.gif"
 %Margins 1000,1000,1000,1000
-%PaperSize 1,0,0,2
+%PaperSize 1,2159,2794,14
 %ParaIndent 0
 %PipColors #000000,#ff0000,#ff0000,#000000
 %PipFont "Symbol","Symbol",2,0xAA,0xA9,0xA8,0xA7
 %ScoreTableColors #e6e6e6,#000000
-%SectionSpacing 0,0,0
 %SelectedBoard 23
 %ShowBoardLabels 2
 %ShowCardTable 2
@@ -40,6 +39,8 @@
 %TSTReport List
 %TSTReportOrder ByNumber
 %TSTReportShade Yes
+%DDAFormat 0
+%SectionSpacing 0,0,0
 [Event "Rewers Joker 06.04.2024"]
 [Site ""]
 [Date ""]
@@ -56,7 +57,30 @@
 [Contract "2C"]
 [Result "7"]
 {[MJ] 2\C gramy wejście na starych bezpośrednio po 1\C, po wiście karowym nie
-trafiam trefli i przgrywam -1.}
+trafiam trefli i przgrywam -1.
+
+WYNIK: -5 (na drugim stole nasi 2\H-1)
+
+[MK] Ja myślę, że analiza rozdania jest niepełna. Bijemy karo w ręku i na razie
+robimy rozpoznanie w pikach. A\S i pik. 
+
+Oni zmienili na kiera? Fatalna sprawa - jeśli S ma \CFx to jak chcemy drugi raz
+zaimpasować \CF10x u N? Nie mamy dojść. 
+
+Tak ogólnie to chyba zagranie na \CKDx u N to zagranie na jedyną szansę, a po
+policzeniu punktów też chyba na większą. Natomiast impas \C10 to zagranie
+no-win - nawet jak wyjdzie - i tak oddamy 2 trefle.
+
+There is more to think than meets an eye. 
+
+Po drugie akurat typ ręki mieliśmy taki, że łatwiej chyba położyć 1BA gdy mamy
+przewagę wistu. Jest to ten sam powód, dla którego nie walczy się z taką ręką
+po otwarciu 1BA przeciwnika - możemy im łatwo poprawić kontrakt.
+
+Tu na przykład dobry zawodnik S powiedziałby kontrę i NS zagraliby sobie 2\D,
+które chyba trudniej położyć. 
+
+Nie walczy się treflami przeciwko 1BA, bo to zbyt często poprawia im kontrakt.}
 [Ability "N:56785 E:77548 S:56785 W:77548"]
 [BCFlags "1f"]
 [DoubleDummyTricks "56785567857754877548"]
@@ -106,7 +130,30 @@ W NT 7
 [Result "12"]
 {[MJ] Po wiście karowym gram \CK i \CA, a następnie pika do króla zabitego
 asem, więc rozdanie się kończy. Jakby wziął, to planowałem następnie przebić
-kiera. Nie wiem czy jakoś lepiej to się powinno grać.}
+kiera. Nie wiem czy jakoś lepiej to się powinno grać.
+
+WYNIK: 0 (to samo)
+
+[MK] Ale czekajcie? 2\H? Przecież 2\D chyba wyklucza 4 kiery?
+
+Poza tym z punktu widzenia licytacji naturalnej posiadanie 3 pików jest dużo
+ważniejszą informacją w ramach odzywki 2\C niż pokazywanie 4 kierów. To chyba
+nieudany przeszczep logiczny z sekwencji:
+
+1\C 1\S\n
+1BA 2\D (double checkback)\n
+?                       Tutaj najpierw pokazuje się 4 kiery, a nie 3 piki, ale
+to inna sekwencja!
+
+W chyba mógł mieć: \SWxxx \Hxx \DADxx \CAxx, E kontrakt wylosował - to nie on
+powinien pytać o asy, skoro nie wie nic o kartach środkowych partnera, a sam
+pokazał swój skład co do karty. Jak na razie ma minimum w ramach swojej
+licytacji, a 4BA to po prostu przesądzenie szlemika do dwóch asów u partnera.
+Odzywka 4\C była już wątpliwa, a później straszny ciąg na bramkę bez hamulców.
+Natomiast 3BA W moim zdaniem się absolutnie nie broni, wiedząc o 3=4=1=5 i
+silnej karcie u partnera.
+
+Rozgrywka prawidłowa. }
 [Ability "N:11251 E:9C98C S:11251 W:9C98C"]
 [BCFlags "1f"]
 [DoubleDummyTricks "11251112519c98c9c98c"]
@@ -161,7 +208,11 @@ W NT  9
 [Result "12"]
 {[MJ] Po wiście karowym przeciwnik bierze królem w ręce, ściąga trzy trefle i
 gra \HJ w kółko. Odwracam \H10, a po ściągnięciu dwóch dodatkowych kierów
-idiotycznie kładę \SK na zagraną damę.}
+idiotycznie kładę \SK na zagraną damę.
+
+WYNIK: 0 (na drugim stole wist pikowy)
+
+[MK] Jak z dziećmi :).}
 [Ability "N:CB98C E:12351 S:BB98C W:11351"]
 [BCFlags "1f"]
 [DoubleDummyTricks "cb98cbb98c1235111351"]
@@ -210,7 +261,11 @@ W NT  1
 [Declarer "E"]
 [Contract "5D"]
 [Result "11"]
-{[MJ] Kontrakt niby dobry, ale z ręką E chciałbym jakoś zanęcić szlemika.}
+{[MJ] Kontrakt niby dobry, ale z ręką E chciałbym jakoś zanęcić szlemika.
+
+WYNIK: +7 (na drugim stole nasi idą w obronę 6\CX-2)
+
+[MK] Może Pas Forsujący po 4\C? }
 [Ability "N:4212A E:5AAB3 S:4212A W:5AAB3"]
 [BCFlags "1f"]
 [DoubleDummyTricks "4212a4212a5aab35aab3"]
@@ -261,7 +316,16 @@ W NT  5
 [Result "10"]
 {[MJ] Wejście 1BA byłoby z dłuższymi treflami, nie wymyśliłem wistu małym
 kierem. Po treflowym przeciwnik bierze w ręce, gra pika do waleta i karo. Wskok
-asem nie utrudnia, ale chyba i tak by sobie poradził.}
+asem nie utrudnia, ale chyba i tak by sobie poradził.
+
+WYNIK: -6 (Na drugim stole 2\S+3)
+
+[MK] Ja tam otwieram w takie ręce i się nie zastanawiam. Obecność singlowego
+\DW niewiele zmienia - i tak jest blisko otwarcia.
+
+Pamiętajcie, że w takiej sytuacji W może dowolnie długo myśleć czy wskoczyć
+\DA. Położenie tej figury nie zmienia nic w kwestii posiadnia \DW, więc nikomu
+ten namysł nie pomoże ani nie zaszkodzi.}
 [Ability "N:997A5 E:33638 S:997A5 W:33638"]
 [BCFlags "1f"]
 [DoubleDummyTricks "997a5997a53363833638"]
@@ -310,7 +374,11 @@ W NT  3
 [Declarer "W"]
 [Contract "4H"]
 [Result "9"]
-{[MJ] Przeciwnik wistuje w \SA, a następnie daje partnerowi przebitkę karo.}
+{[MJ] Przeciwnik wistuje w \SA, a następnie daje partnerowi przebitkę karo.
+
+WYNIK: 0 (na drugim stole to samo)
+
+[MK] Też bym pewnie otworzył w korzystnych :)}
 [Ability "N:37436 E:A69A6 S:37436 W:A69A6"]
 [BCFlags "1f"]
 [DoubleDummyTricks "3743637436a69a6a69a6"]
@@ -359,7 +427,9 @@ W NT 10
 [Declarer "S"]
 [Contract "4H"]
 [Result "8"]
-{[MJ] Wist w \CD, nie robimy nic głupiego i przeciwnik przegrywa bez dwóch.}
+{[MJ] Wist w \CD, nie robimy nic głupiego i przeciwnik przegrywa bez dwóch.
+
+WYNIK: 0 (na drugim stole to samo)}
 [Ability "N:97885 E:46557 S:97886 W:46557"]
 [BCFlags "1f"]
 [DoubleDummyTricks "97885978864655746557"]
@@ -409,7 +479,15 @@ W NT 4
 [Result "8"]
 {[MJ] Po wiście kierowym bez szans, z mojego punktu widzenia 2BA z singlowym
 królem po trzecioręcznym otwarciu partnera to nie jest najlepsza odzywka, może
-lepiej zacząć od XX i zagralibyśmy 2/3\D.}
+lepiej zacząć od XX i zagralibyśmy 2/3\D.
+
+WYNIK: 0 (na drugim stole ten sam kontakt)
+
+[MK] Też bym otworzył - dewaluujecie te singlowe figury strasznie, ale nie
+dostrzegacie pozytywnych feature'ów ręki. DW9, W10xx.
+
+Rekontra jest oczywista. Ręka blisko modelu. Unikamy rekontry ze starszą
+piątką, ale ze starszą czwórką to jest w sam raz.}
 [Ability "N:44533 E:896A9 S:43533 W:896A9"]
 [BCFlags "1f"]
 [DoubleDummyTricks "4453343533896a9896a9"]
@@ -462,7 +540,26 @@ W NT  8
 rozdanie? Z kolei z ręką E miałem cieżko. Co się dzieje w rozdaniu, że S
 pasuje, a partner wznawia 3\D. 3BA jest bardzo słabe, bo przy \CA u W wychodzi
 nam szlemik, a przeciwnicy ściągają 5 pików. Po kontrze nie wiem dlaczego od
-razu nie zalicytowałem 5\D.}
+razu nie zalicytowałem 5\D.
+
+WYNIK: -5 (na drugim stole 2\HE +1)
+
+[MK] Świr na drugim stole.
+
+Karta W sugeruje trapping pas u partnera. Namysł S sugeruje, że nie wiedział,
+który kolor miał jego partner - po widoku swojej ręki mógł pomyśleć, że to
+kara, gdy tak naprawdę są to piki.
+
+Karta W raczej niczego wielkiego nie nagra wobec potencjalnych złych podziałów.
+
+
+Z uwagi na to, że rozdanie częściówkowe jest niewiele warte, a odzywka 3\D
+rzadko zmieni radykalnie zapis na naszą korzyść oraz z uwagi na namysł i
+prawdopodobieństwo faktycznego scenariusza - proponowałbym odpuszczenie.
+
+3\D ma jeszcze jeden problem - jeśli to wychodzi to zwykle przegramy 3BA.
+
+}
 [Ability "N:5B429 E:718A4 S:5B429 W:718A4"]
 [BCFlags "1f"]
 [DoubleDummyTricks "5b4295b429718a4718a4"]
@@ -512,7 +609,9 @@ W NT  7
 [Declarer "N"]
 [Contract "3NT"]
 [Result "11"]
-{[MJ] Po wiście karowym przeciwnik po chwili deklaruje 11 lew.}
+{[MJ] Po wiście karowym przeciwnik po chwili deklaruje 11 lew.
+
+WYNIK: -1 (na drugim stole ściągają trzy kiery)}
 [Ability "N:AA87B E:22462 S:AA87B W:22462"]
 [BCFlags "1f"]
 [DoubleDummyTricks "aa87baa87b2246222462"]
@@ -561,7 +660,11 @@ W NT  2
 [Declarer "E"]
 [Contract "3NT"]
 [Result "10"]
-{[MJ] 3BA to propozycja kontraktu, wist waletem pik i 10 lew.}
+{[MJ] 3BA to propozycja kontraktu, wist waletem pik i 10 lew.
+
+WYNIK: -1 (na drugim stole ten sam kontrakt i wist karowy)
+
+[MK] Ładna licytacja, N nieco zaszalał tym pasem na 1\H.}
 [Ability "N:27256 E:A5A86 S:27256 W:A5B86"]
 [BCFlags "1f"]
 [DoubleDummyTricks "2725627256a5a86a5b86"]
@@ -611,7 +714,9 @@ W NT 10
 [Declarer "W"]
 [Contract "3NT"]
 [Result "10"]
-{[MJ] Po wiście treflowym 10 lew}
+{[MJ] Po wiście treflowym 10 lew
+
+WYNIK: 0 (na drugim stole to samo)}
 [Ability "N:32434 E:AA9A9 S:32434 W:AA9A9"]
 [BCFlags "1f"]
 [DoubleDummyTricks "3243432434aa9a9aa9a9"]
@@ -660,7 +765,11 @@ W NT 10
 [Contract "3NT"]
 [Result "9"]
 {[MJ] Gramy tak że po kontrze na Staymana odzywki otwierającego przyrzekają
-trzymanie trefl. Gramy lepszą końcówkę.}
+trzymanie trefl. Gramy lepszą końcówkę.
+
+WYNIK: -2 (na drguim stole nasi puszczają 4\S)
+
+[MK] Horror.}
 [Ability "N:33346 E:A9A97 S:33346 W:A9A97"]
 [BCFlags "1f"]
 [DoubleDummyTricks "3334633346a9a97a9a97"]
@@ -715,7 +824,16 @@ w \DA i po ciężkich bojach w głowie wychodzi mi że kontynuacja kara wypuszcz
 tylko jak partner na trzy kara bez króla lub singla kier bez asa trefl, więc w
 drugiej lewie wychodzę w karo i -3. Jestem ciekawy jak tutaj powinno się
 wistować i licytować (pomijam że w skrrajnym przypadku jak partner ma siódmego
-asa i czerwonego króla to wychodzi nam szlemik).}
+asa i czerwonego króla to wychodzi nam szlemik).
+
+WYNIK: +12 (na drugim stole 5\Cx-2)
+
+[MK] N to raczej powinien wejść 3BA... Jeśli już.
+
+5\C jest OK - dobra robota waszej pary. Do licytacji nie mam żadnych uwag.
+
+Wist jest OK, ale pytanie czy nie lepiej najpierw kontrolnie ściągnąć \HA?
+Zrzutka partnera i przeciwnika może nam coś wyjaśnić.}
 [Ability "N:88984 E:24349 S:88984 W:24349"]
 [BCFlags "1f"]
 [DoubleDummyTricks "88984889842434924349"]
@@ -763,7 +881,16 @@ W NT 2
 [Declarer "E"]
 [Contract "3H"]
 [Result "8"]
-{[MJ] Czy z taką ręką się licytuje 2BA i czy wynosi się z E w 3\H?}
+{[MJ] Czy z taką ręką się licytuje 2BA i czy wynosi się z E w 3\H?
+
+WYNIK: -6 (na drugim stole 2\SE+1)
+
+[MK] Można dać 2\S z W na zasadzie, że nie ma twarzy w kolorach partnera i jest
+misfit. To chyba prawidłowa odzywka.
+
+Wyniesienie w 3\H = czyste.
+
+Nie czepiam się tego rozdania.}
 [Ability "N:65556 E:68887 S:65556 W:68887"]
 [BCFlags "1f"]
 [DoubleDummyTricks "65556655566888768887"]
@@ -814,7 +941,11 @@ W NT 6
 [Contract "3NT"]
 [Result "12"]
 {[MJ] Otwarcie jest dwuznaczne, więc może z ręką E po prostu spasować żeby
-przeciwnicy się pogubili.}
+przeciwnicy się pogubili.
+
+WYNIK: +3 (na drugim stole 2\Hx-3)
+
+[MK] Chyba po to są to otwarcia, żeby robić młyn? :)}
 [Ability "N:B88AB E:24521 S:B88AB W:24521"]
 [BCFlags "1f"]
 [DoubleDummyTricks "b88abb88ab2452124521"]
@@ -866,7 +997,18 @@ W NT  2
 [Result "9"]
 {[MJ] N się chwilę zastanawia, ale celnie pozostawia 3BA. Po wiście karowym nic
 się nie da zrobić, ale przecwinik w drugie lewie gra waleta trefl i ciekawe jak
-by dalej rozgrywał, gdybym nie nabił się asem.}
+by dalej rozgrywał, gdybym nie nabił się asem.
+
+WYNIK: -13 (na drugim stole 3BA-2 po treflowym)
+
+[MK] Powiem tak. Na Kadrze A było takie rozdanie gdzie było 11 obrzyganych PC
+na AW9xxx karo, bokiem Dxx i Ax - wszyscy wchodzili 2\D po partii i padał
+obkładający wist na 3BA.
+
+Pietraszek stwierdził, że to nieoczywiste, ale skoro wszyscy profi tak robią to
+chyba tak po prostu trzeba.
+
+Brak aktywności bardzo boli. W korzystnych pas jest chyba po prostu świrem.}
 [Ability "N:9A8B7 E:33425 S:9A8B7 W:33425"]
 [BCFlags "1f"]
 [DoubleDummyTricks "9a8b79a8b73342533425"]
@@ -916,7 +1058,11 @@ W NT  3
 [Result "5"]
 {[MJ] W widne karty 9 lew, ale zaczyna się od wistu małym kierem i przeciwnik
 bierze na 10-kę, następnie rozgrywaka przez trefle, przeciwnicy na szczęście w
-końcówce puszczają lewę i -2.}
+końcówce puszczają lewę i -2.
+
+WYNIK: -3 (na drugim stole 1BA-1)
+
+[MK] Klasyczne rozdanie gdzie grę chyba najlepiej zacząć przez kara.}
 [Ability "N:45544 E:98788 S:44544 W:98788"]
 [BCFlags "1f"]
 [DoubleDummyTricks "45544445449878898788"]
@@ -975,7 +1121,9 @@ W NT 9
 [Declarer "W"]
 [Contract "2S"]
 [Result "8"]
-{[MJ] Nic ciekawego.}
+{[MJ] U nas nic ciekawego.
+
+WYNIK: -3 (na drugim stole nasi idą w 3\D-2)}
 [Ability "N:64587 E:68845 S:64587 W:68845"]
 [BCFlags "1f"]
 [DoubleDummyTricks "64587645876884568845"]
@@ -1025,7 +1173,11 @@ W NT 6
 [Contract "2S"]
 [Result "8"]
 {[MJ] Po wiście kierowym przeciwnik bierze na króla w ręce i gra waleta trefl.
-Idiotycznie nie odchodzę w kiera/pika tylko w trefla co wypuszcza kontrakt.}
+Idiotycznie nie odchodzę w kiera/pika tylko w trefla co wypuszcza kontrakt.
+
+WYNIK: -6 (na drugim stole 3\CE+1)
+
+[MK] Jeśli celnie zabiłeś pierwszego to odejście w trefla nie ma sensu.}
 [Ability "N:67654 E:75788 S:67654 W:75789"]
 [BCFlags "1f"]
 [DoubleDummyTricks "67654676547578875789"]
@@ -1075,7 +1227,12 @@ W NT 7
 [Result "8"]
 {[MJ] Po wiście \SA i mały pik przeciwnik bierze w ręce i gra trefla na impas.
 Teoretycznie mozna spróbować \HD na to że rozgrywający nie ma dziewiątki, ale
-nawet jak weźmiemy lewę, to i tak nie kładziemy kontraktu.}
+nawet jak weźmiemy lewę, to i tak nie kładziemy kontraktu.
+
+WYNIK: -1 (na drugim stole 1BA=)
+
+[MK] Co w tym jest teoretycznego? To jedyna szansa na obkład i zagranie po
+prostu narzucone. Automatyczne.}
 [Ability "N:77788 E:55644 S:77788 W:55644"]
 [BCFlags "1f"]
 [DoubleDummyTricks "77788777885564455644"]
@@ -1123,7 +1280,12 @@ W NT 5
 [Contract "2H"]
 [Result "8"]
 {[MJ] Mnie uczyli, że z taką ręką mówi się 2\S, bo partner ciągle może mieć
-silniejszą rękę na 5-4 i nie dogramy końcówki.}
+silniejszą rękę na 5-4 i nie dogramy końcówki.
+
+WYNIK: -2 (na drguim stole 2BAW+2)
+
+[MK] Albo i więcej układu. \SKDxxxx \HADxx \Dxx \Cx - next board please. Pas
+się nie broni żadną miarą.}
 [Ability "N:64475 E:78868 S:64475 W:78868"]
 [BCFlags "1f"]
 [DoubleDummyTricks "64475644757886878868"]
@@ -1173,7 +1335,11 @@ W NT 7
 [Result "5"]
 {[MJ] Nie wiem czy po otwarciu preckiem wchodzi się z ręką W. Tak na szybko
 zastanawialiśmy się czy w drugim okrążeniu kontra W powinna być karna, ale
-przecież przeciwnik N może mieć resztę punktów.}
+przecież przeciwnik N może mieć resztę punktów.
+
+WYNIK: 0 (na drugim stole ten sam kontrakt)
+
+[MK] Wszystko OK.}
 [Ability "N:46445 E:97998 S:46445 W:97998"]
 [BCFlags "1f"]
 [DoubleDummyTricks "46445464459799897998"]
@@ -1227,7 +1393,24 @@ powinno oznaczać \H lub \D+\S (Bartek bał się przekraczać wysokość 6\C że
 sprzedać pikowego). Kontra alarmująca, ale uwierzyłem partnerowi, a nie
 przeciwnikowi. Bałem się że 6\D może być odczytane jako propozycja kontraktu,
 więc wymyśliłem inwit przez 6\H (partner może mieć 7 trefli lub damę karo),
-była jeszcze szansa ale Bartek znalazł nadwyżki.}
+była jeszcze szansa ale Bartek znalazł nadwyżki.
+
+WYNIK: -11 (na drugim stole 4BA+2)
+
+[MK] Ale to nie macie jakiegoś 2\D = GF na karach? Nie macie 2\S = transfer na
+BA? Czegokolwiek? 
+
+Nie znałem jeszcze takiego ustalenia w WJ, w którym się licytuje w ten sposób z
+kartą 12-14, gdzie przestrzeń jest nam najbardziej potrzebna na wypadek 18+ u
+partnera. Dodatkowo, ukrywanie piątki gdy partner może być silny to naprawdę
+niedobra sprawa. Naprawdę gdy po 1\D partner da 1\H to dajemy jakieś 3\S? I
+jesteśmy w dupie gdy on miał 18+?
+
+Dlaczego 5\H pytało o króle, a nie o \CD??
+
+Tego co się stało dalej - nic nie rozumiem.
+
+}
 [Ability "N:13221 E:CABAC S:13221 W:CABAC"]
 [BCFlags "1f"]
 [DoubleDummyTricks "1322113221cabaccabac"]
