@@ -21,6 +21,7 @@ function HomePage() {
                         <li><a href={'/bridge_cc/#/pbn?filename=2024.03.27-Mindlab.pbn'}>2024.03.27 Mindlab</a></li>
                         <li><a href={'/bridge_cc/#/pbn?filename=2024.04.03-Mindlab.pbn'}>2024.04.03 Mindlab</a></li>
                         <li><a href={'/bridge_cc/#/pbn?filename=2024.04.06-RewersJoker.pbn'}>2024.04.06 II liga play-off vs Rewers Joker (2 i 3 składka)</a></li>
+                        <li><a href={'/bridge_cc/#/pbn?filename=2024.06.23-Slawa_GPP.pbn'}>2024.06.23 GPPP w Sławie</a></li>
                     </ul>
                 </div>
             </div>
