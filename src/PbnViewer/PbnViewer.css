@@ -1,20 +1,6 @@
-.App {
-}
-
-.App-card-img {
-    width: 13px;
-}
-
-.Suite img {
+.Suit img {
     margin-left: 1px;
     margin-right: 1px;
-}
-
-.App-bidTable td, .App-bidTable th {
-    padding: 5px 10px;
-    border: 1px solid #dedede;
-    width: 55px;
-    background-color: rgba(0, 0, 0, 0.02);
 }
 
 .App-deal {

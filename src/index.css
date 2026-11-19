@@ -7,7 +7,18 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.App-card-img {
+    width: 13px;
+}
+
+.App-bidTable td, .App-bidTable th {
+    padding: 5px 10px;
+    border: 1px solid #dedede;
+    width: 55px;
+    background-color: rgba(0, 0, 0, 0.02);
 }
