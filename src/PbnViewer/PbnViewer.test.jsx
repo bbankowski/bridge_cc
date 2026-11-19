@@ -165,7 +165,7 @@ describe('PbnViewer filters', () => {
         vi.stubGlobal('fetch', vi.fn(async () => ({ok: true, text: async () => RESULTS_PBN})))
     })
 
-    const boardButtons = () => [...document.querySelectorAll('.buttons.are-small button')].map(b => b.textContent)
+    const boardButtons = () => [...document.querySelectorAll('.App-deal-boards button')].map(b => b.textContent)
 
     test('colours the board buttons by our result', async () => {
         renderViewer()
@@ -219,5 +219,73 @@ describe('PbnViewer filters', () => {
         await screen.findByText('WYNIK: +1')
 
         expect(screen.getByText('Brak rozdań spełniających filtr.')).toBeInTheDocument()
+    })
+})
+
+describe('PbnViewer hidden hands', () => {
+    const NAMED_PBN = ['% PBN 2.1', `[Event "Mecz"]
+[Board "1"]
+[West "Bartek"]
+[North ""]
+[East "Marek"]
+[South ""]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AK.QJ.T9.8765 Q.K.A.J 2.3.4.5 6.7.8.9"]
+[Contract "3NT"]
+[Result "9"]
+{WYNIK: -6}
+[Auction "N"]
+1NT Pass 3NT AP
+[Play "E"]
+SQ
+[Minimax "3NN400"]`, deal(2, 'WYNIK: +3')].join('\n')
+
+    beforeEach(() => {
+        vi.stubGlobal('fetch', vi.fn(async () => ({ok: true, text: async () => NAMED_PBN})))
+    })
+
+    test('shows only the hand of the chosen player and nothing that gives the result away', async () => {
+        const router = renderViewer()
+        await screen.findByText('WYNIK: -6')
+
+        await userEvent.click(screen.getByRole('button', {name: 'widzę rękę: Bartek'}))
+
+        expect(new URLSearchParams(router.state.location.search).get('zakryj')).toBe('BB')
+        expect(screen.getByText(/Widzisz tylko rękę Bartka \(W\)/)).toBeInTheDocument()
+        expect(document.querySelectorAll('.HiddenHand')).toHaveLength(3)
+        expect(document.querySelector('.West .HiddenHand')).toBeNull()
+        expect(screen.queryByText('WYNIK: -6')).toBeNull()
+        expect(screen.queryByText(/Result \(tricks\)/)).toBeNull()
+        expect(document.querySelector('.Minimax')).toBeNull()
+        expect(document.querySelector('.PlayControls')).toBeNull()
+        expect(screen.getByRole('button', {name: '1'})).not.toHaveClass('is-danger')
+        // the auction stays
+        expect(document.querySelector('.App-bidTable')).toBeInTheDocument()
+    })
+
+    test('reveals the current deal and covers the next one again', async () => {
+        renderViewer('/pbn?filename=test.pbn&zakryj=MJ')
+        await screen.findByText(/Widzisz tylko rękę Marka \(E\)/)
+
+        await userEvent.click(screen.getByRole('button', {name: 'Odkryj rozdanie'}))
+        expect(document.querySelectorAll('.HiddenHand')).toHaveLength(0)
+        expect(screen.getByText('WYNIK: -6')).toBeInTheDocument()
+
+        await userEvent.click(screen.getByRole('button', {name: 'Następne'}))
+        // the second deal has no names: all hands are shown with a note
+        expect(screen.getByText(/W tym rozdaniu nie ma Marka/)).toBeInTheDocument()
+        await userEvent.click(screen.getByRole('button', {name: 'Poprzednie'}))
+        expect(document.querySelectorAll('.HiddenHand')).toHaveLength(3)
+    })
+
+    test('turns off', async () => {
+        const router = renderViewer('/pbn?filename=test.pbn&zakryj=BB')
+        await screen.findByText(/Widzisz tylko rękę Bartka/)
+
+        await userEvent.click(screen.getByRole('button', {name: 'wył.'}))
+
+        expect(router.state.location.search).not.toContain('zakryj')
+        expect(screen.getByText('WYNIK: -6')).toBeInTheDocument()
     })
 })
