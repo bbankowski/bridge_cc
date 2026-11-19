@@ -357,7 +357,7 @@ W NT  7
 [Scoring ""]
 [Declarer "N"]
 [Contract "2H"]
-[Result "9"]
+[Result "10"]
 {[MJ] Po wiście w 9 pik,, dziewczynka po dojściu na A karo nie utrudnia
 wistując w kiera.\n
 WYNIK: 67.39%
@@ -369,7 +369,7 @@ WYNIK: 67.39%
 [Minimax "1HS140"]
 [OptimumScore "NS 140"]
 [ParContract "NS 1H+2"]
-[Score "NS +140"]
+[Score "NS +170"]
 [Auction "E"]
 Pass 1C Pass 1H
 Pass 1NT Pass 2H
