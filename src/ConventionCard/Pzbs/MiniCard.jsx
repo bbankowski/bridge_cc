@@ -138,6 +138,7 @@ const MiniCard = ({data, defence}) => {
                     <strong>Wist</strong><br/>
                     {[['odmienny', 'odmienny'], ['naturalny', 'naturalny'], ['odwrotny', 'odwrotny'], ['kombajn', 'kombajn'], ['jakosc', 'jakość']]
                         .map(([value, label]) => <Fragment key={value}><Box checked={data.wist === value} label={label}/><br/></Fragment>)}
+                    {data.wistUwagi && <span className="MiniCard-note"><Text>{data.wistUwagi}</Text></span>}
                 </div>
                 <div>
                     <strong>Zrzutki</strong><br/>
