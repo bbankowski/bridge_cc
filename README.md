@@ -1,6 +1,7 @@
 Bridge utils:
  - convention card viewer (`bidding.txt`)
  - PBN files viewer (`public/*.pbn`)
+ - training: convention card, openings and situations from tournaments (`trening/sytuacje.json`)
 
 https://bbankowski.github.io/bridge_cc/
 
