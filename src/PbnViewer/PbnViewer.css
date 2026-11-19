@@ -206,3 +206,23 @@
     gap: 6px 18px;
     margin-bottom: 10px;
 }
+
+.DealDiagram .Middle .TrickCard {
+    width: auto;
+    min-width: 30px;
+    color: #363636;
+    background-color: white;
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 0 3px;
+}
+
+.DealBoard .PlayControls {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.PlayCard {
+    white-space: nowrap;
+}
