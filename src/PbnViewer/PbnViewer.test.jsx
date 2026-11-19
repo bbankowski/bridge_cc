@@ -156,3 +156,68 @@ describe('PbnViewer', () => {
         expect(unload()).toBe(true)
     })
 })
+
+describe('PbnViewer filters', () => {
+    const RESULTS_PBN = ['% PBN 2.1', deal(1, 'WYNIK: +5'), deal(2, 'WYNIK: -7'), deal(3, ''), deal(4, 'WYNIK: 30%'),
+        deal(5, 'bez wyniku')].join('\n').replace('{}', '')
+
+    beforeEach(() => {
+        vi.stubGlobal('fetch', vi.fn(async () => ({ok: true, text: async () => RESULTS_PBN})))
+    })
+
+    const boardButtons = () => [...document.querySelectorAll('.buttons.are-small button')].map(b => b.textContent)
+
+    test('colours the board buttons by our result', async () => {
+        renderViewer()
+        await screen.findByText('WYNIK: +5')
+
+        expect(screen.getByRole('button', {name: '1'})).toHaveClass('is-success')
+        expect(screen.getByRole('button', {name: '2'})).toHaveClass('is-danger')
+        expect(screen.getByRole('button', {name: '2'})).toHaveAttribute('title', '-7 IMP')
+        expect(screen.getByRole('button', {name: '4'})).toHaveClass('is-danger')
+        expect(screen.getByRole('button', {name: '5'})).not.toHaveClass('is-danger', 'is-success')
+    })
+
+    test('shows only commented deals', async () => {
+        const router = renderViewer()
+        await screen.findByText('WYNIK: +5')
+
+        await userEvent.click(screen.getByRole('checkbox', {name: 'Tylko z komentarzem'}))
+
+        expect(boardButtons()).toEqual(['1', '2', '4', '5'])
+        expect(screen.getByText('4 z 5 rozdań')).toBeInTheDocument()
+        expect(new URLSearchParams(router.state.location.search).get('filter')).toBe('komentarz')
+    })
+
+    test('shows only our losses, jumps to the first one and skips the others when navigating', async () => {
+        const router = renderViewer()
+        await screen.findByText('WYNIK: +5')
+
+        await userEvent.click(screen.getByRole('checkbox', {name: 'Tylko nasze straty'}))
+        expect(boardButtons()).toEqual(['2', '4'])
+        expect(currentBoard()).toBe('2.')
+
+        await userEvent.click(screen.getByRole('button', {name: 'Następne'}))
+        expect(currentBoard()).toBe('4.')
+        expect(screen.getByRole('button', {name: 'Następne'})).toBeDisabled()
+        await userEvent.keyboard('{ArrowLeft}')
+        expect(currentBoard()).toBe('2.')
+        expect(dealParam(router)).toBe('2')
+    })
+
+    test('keeps the filters from the URL', async () => {
+        renderViewer('/pbn?filename=test.pbn&deal=4&filter=straty')
+        await screen.findByText('WYNIK: 30%')
+
+        expect(screen.getByRole('checkbox', {name: 'Tylko nasze straty'})).toBeChecked()
+        expect(boardButtons()).toEqual(['2', '4'])
+    })
+
+    test('says when no deal matches', async () => {
+        fetch.mockResolvedValue({ok: true, text: async () => ['% PBN 2.1', deal(1, 'WYNIK: +1')].join('\n')})
+        renderViewer('/pbn?filename=test.pbn&filter=straty')
+        await screen.findByText('WYNIK: +1')
+
+        expect(screen.getByText('Brak rozdań spełniających filtr.')).toBeInTheDocument()
+    })
+})

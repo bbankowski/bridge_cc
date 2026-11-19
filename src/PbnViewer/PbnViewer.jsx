@@ -6,6 +6,7 @@ import Bid from '../common/Bid'
 import DealDiagram from './DealDiagram'
 import Minimax from './Minimax'
 import CommentEditor from './CommentEditor'
+import {dealResult, FILTERS, formatResult, isGain, isLoss, parseFilters, visibleDeals} from './dealFilters'
 import {loadPbn, serializePbn} from './pbn'
 
 const downloadFile = (filename, content) => {
@@ -53,6 +54,28 @@ const PbnViewer = () => {
         return params
     }, {replace: true})
 
+    // Filters are kept in the URL too (?filter=komentarz,straty); navigation skips the deals they hide.
+    const filters = parseFilters(searchParams.get('filter'))
+    const visible = visibleDeals(deals, filters)
+    const previousDeal = visible.findLast(index => index < currentDeal)
+    const nextDeal = visible.find(index => index > currentDeal)
+
+    const toggleFilter = name => {
+        const newFilters = filters.includes(name) ? filters.filter(f => f !== name) : [...filters, name]
+        const newVisible = visibleDeals(deals, newFilters)
+        setSearchParams(params => {
+            if (newFilters.length > 0) {
+                params.set('filter', newFilters.join(','))
+            } else {
+                params.delete('filter')
+            }
+            if (newVisible.length > 0 && !newVisible.includes(currentDeal)) {
+                params.set('deal', String(newVisible[0] + 1))
+            }
+            return params
+        }, {replace: true})
+    }
+
     useEffect(() => {
         if (!isModified) {
             return
@@ -68,10 +91,10 @@ const PbnViewer = () => {
             if (event.target.closest('textarea, input') || event.altKey || event.ctrlKey || event.metaKey) {
                 return
             }
-            if (event.key === 'ArrowLeft' && currentDeal > 0) {
-                setCurrentDeal(currentDeal - 1)
-            } else if (event.key === 'ArrowRight' && currentDeal < deals.length - 1) {
-                setCurrentDeal(currentDeal + 1)
+            if (event.key === 'ArrowLeft' && previousDeal !== undefined) {
+                setCurrentDeal(previousDeal)
+            } else if (event.key === 'ArrowRight' && nextDeal !== undefined) {
+                setCurrentDeal(nextDeal)
             }
         }
         window.addEventListener('keydown', onKeyDown)
@@ -130,20 +153,34 @@ const PbnViewer = () => {
             </div>
         </div>}
         <div className="buttons are-normal App-deal-navigation">
-            <button className="button is-light" disabled={currentDeal <= 0}
-                    onClick={() => setCurrentDeal(currentDeal - 1)}>Poprzednie
+            <button className="button is-light" disabled={previousDeal === undefined}
+                    onClick={() => setCurrentDeal(previousDeal)}>Poprzednie
             </button>
-            <button className="button is-light" disabled={currentDeal >= deals.length - 1}
-                    onClick={() => setCurrentDeal(currentDeal + 1)}>Następne
+            <button className="button is-light" disabled={nextDeal === undefined}
+                    onClick={() => setCurrentDeal(nextDeal)}>Następne
             </button>
             <button className={'button ' + (isModified ? 'is-primary' : 'is-light')} onClick={download}
                     title={isModified ? 'Są niepobrane zmiany w komentarzach' : undefined}>
                 Pobierz PBN{isModified && ' *'}
             </button>
         </div>
+        <div className="App-deal-filters">
+            {Object.entries(FILTERS).map(([name, {label}]) => <label key={name} className="checkbox">
+                <input type="checkbox" checked={filters.includes(name)} onChange={() => toggleFilter(name)}/> {label}
+            </label>)}
+            <span className="has-text-grey is-size-7">
+                {filters.length > 0 ? `${visible.length} z ${deals.length} rozdań` : `${deals.length} rozdań`}
+            </span>
+        </div>
+        {filters.length > 0 && visible.length === 0 && <p className="has-text-grey mb-3">Brak rozdań spełniających filtr.</p>}
         <div className="buttons are-small">
-            {deals.map((d, index) => <button key={index} className="button is-light" disabled={index === currentDeal}
-                                             onClick={() => setCurrentDeal(index)}>{d.board}</button>)}
+            {visible.map(index => {
+                const result = dealResult(deals[index])
+                const color = isLoss(result) ? 'is-danger' : isGain(result) ? 'is-success' : ''
+                return <button key={index} className={`button is-light ${color}`} disabled={index === currentDeal}
+                               title={formatResult(result) ?? undefined}
+                               onClick={() => setCurrentDeal(index)}>{deals[index].board}</button>
+            })}
         </div>
     </div>
 }
