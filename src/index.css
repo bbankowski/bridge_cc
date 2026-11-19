@@ -38,3 +38,8 @@ body {
         font-size: 1.5rem;
     }
 }
+
+/* a call like "(2♦)" must not break between the suit icon and the parenthesis */
+.Bid, .App-bidTable td {
+    white-space: nowrap;
+}
