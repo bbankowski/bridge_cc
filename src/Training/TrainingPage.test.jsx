@@ -5,6 +5,7 @@ import {beforeEach, describe, expect, test, vi} from 'vitest'
 import BiddingBox from './BiddingBox'
 import {withSeats} from './calls'
 import HandView from './HandView'
+import QuestionView from './QuestionView'
 import TrainingPage from './TrainingPage'
 
 const renderPage = () => {
@@ -64,7 +65,9 @@ describe('TrainingPage', () => {
         await userEvent.click(screen.getByRole('button', {name: /^Z turniejów/}))
         await userEvent.click(screen.getByRole('button', {name: 'Zaczynamy'}))
 
-        expect(screen.getByText(/^My: (po partii|przed partią)$/)).toBeInTheDocument()
+        const header = [...document.querySelectorAll('.Training-auction th')]
+        expect(header.every(th => th.matches('.is-vulnerable, .is-not-vulnerable'))).toBe(true)
+        expect(header.filter(th => th.textContent.includes('(ty)'))).toHaveLength(1)
         expect(screen.getByText('Twoja ręka')).toBeInTheDocument()
         await answerCurrent()
         expect(screen.getByText('Przy stole:')).toBeInTheDocument()
@@ -132,4 +135,21 @@ test('HandView lets choose a lead card', async () => {
     expect(screen.getByText('—')).toBeInTheDocument()
     await userEvent.click(screen.getByRole('button', {name: 'HQ'}))
     expect(onSelectCard).toHaveBeenCalledWith('HQ')
+})
+
+test('marks vulnerability and our seat in the auction header', () => {
+    const question = {
+        id: 'q', kind: 'call', title: 'Jak otworzysz?', hand: 'AKQ2.K32.Q2.J432',
+        context: {vulnerable: ['E', 'W'], dealer: 'E', seat: 'W'},
+        auction: {calls: withSeats(['Pass', 'Pass'], 'E'), firstSeat: 'E', seat: 'W'},
+        answers: [{value: '1C', score: 100, comment: ''}],
+    }
+    render(<RouterProvider router={createMemoryRouter([{path: '/', element: <QuestionView question={question} result={null} onAnswer={vi.fn()}/>}])}/>)
+
+    const header = Object.fromEntries([...document.querySelectorAll('.Training-auction th')].map(th => [th.textContent[0], th]))
+    expect(header.E).toHaveClass('is-vulnerable')
+    expect(header.W).toHaveClass('is-vulnerable', 'is-our-seat')
+    expect(header.N).toHaveClass('is-not-vulnerable')
+    expect(header.W).toHaveTextContent('W (ty)')
+    expect(screen.queryByText(/^My:/)).toBeNull()
 })

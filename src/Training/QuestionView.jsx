@@ -2,7 +2,7 @@ import {Link} from 'react-router'
 import Bid from '../common/Bid'
 import BidGrid from '../ConventionCard/BidGrid'
 import BiddingBox from './BiddingBox'
-import {nextSeat, SEATS} from './calls'
+import {SEATS} from './calls'
 import HandView, {CardLabel} from './HandView'
 import {isCorrect} from './questions'
 
@@ -22,24 +22,20 @@ export const AnswerLabel = ({question, value}) => {
 }
 
 const Context = ({context}) => {
-    if (!context) {
+    if (context?.scoring === undefined) {
         return null
     }
-    const usVulnerable = context.vulnerable.includes(context.seat)
-    const themVulnerable = context.vulnerable.includes(nextSeat(context.seat))
     return <div className="tags Training-context">
-        {context.scoring !== undefined && <span className="tag is-light">
-            {SCORING_LABELS[context.scoring] ?? 'Forma rozgrywek nieznana'}
-        </span>}
-        <span className={`tag ${usVulnerable ? 'is-danger' : 'is-success'} is-light`}>My: {usVulnerable ? 'po partii' : 'przed partią'}</span>
-        <span className={`tag ${themVulnerable ? 'is-danger' : 'is-success'} is-light`}>Oni: {themVulnerable ? 'po partii' : 'przed partią'}</span>
-        <span className="tag is-light">Rozdaje: {context.dealer}</span>
-        <span className="tag is-light">Siedzisz na: {context.seat}</span>
+        <span className="tag is-light">{SCORING_LABELS[context.scoring] ?? 'Forma rozgrywek nieznana'}</span>
     </div>
 }
 
-// A real auction in N/E/S/W columns, with "?" where the player is to call (or the whole auction for a lead).
-const AuctionTable = ({auction, showQuestion}) => {
+/*
+ * A real auction in N/E/S/W columns, with "?" where the player is to call (or the whole auction for a lead).
+ * The header shows vulnerability (red: vulnerable, green: not vulnerable) and the player's seat; the dealer is
+ * the first to call.
+ */
+const AuctionTable = ({auction, context, showQuestion}) => {
     const cells = Array(SEATS.indexOf(auction.firstSeat)).fill(null)
     auction.calls.forEach(({call}) => cells.push(call))
     if (showQuestion) {
@@ -52,18 +48,27 @@ const AuctionTable = ({auction, showQuestion}) => {
     for (let i = 0; i < cells.length; i += 4) {
         rows.push(cells.slice(i, i + 4))
     }
+    const vulnerable = context?.vulnerable ?? []
     return <table className="BidGrid Training-auction">
-        <thead>
-        <tr>{SEATS.map(seat => <th key={seat} className={seat === auction.seat ? 'is-our-seat' : undefined}>
-            {seat}{seat === auction.seat ? ' (ty)' : ''}</th>)}</tr>
-        </thead>
-        <tbody>
-        {rows.map((row, rowIndex) => <tr key={rowIndex}>
-            {row.map((call, index) => <td key={index} className={call === '?' ? 'is-highlighted' : undefined}>
-                {call === null ? '' : call === '?' ? '?' : callLabel(call)}
-            </td>)}
-        </tr>)}
-        </tbody>
+            <thead>
+            <tr>{SEATS.map(seat => {
+                const classes = [vulnerable.includes(seat) ? 'is-vulnerable' : 'is-not-vulnerable']
+                if (seat === auction.seat) {
+                    classes.push('is-our-seat')
+                }
+                return <th key={seat} className={classes.join(' ')}
+                           title={vulnerable.includes(seat) ? 'po partii' : 'przed partią'}>
+                    {seat}{seat === auction.seat ? ' (ty)' : ''}
+                </th>
+            })}</tr>
+            </thead>
+            <tbody>
+            {rows.map((row, rowIndex) => <tr key={rowIndex}>
+                {row.map((call, index) => <td key={index} className={call === '?' ? 'is-highlighted' : undefined}>
+                    {call === null ? '' : call === '?' ? '?' : callLabel(call)}
+                </td>)}
+            </tr>)}
+            </tbody>
     </table>
 }
 
@@ -112,7 +117,7 @@ const QuestionView = ({question, result, onAnswer}) => {
             {question.cardAuction && <BidGrid sequence={question.cardAuction.sequence} section={question.cardAuction.section}
                                               withoutQuestion={question.cardAuction.highlightLast}
                                               highlightLast={question.cardAuction.highlightLast}/>}
-            {!question.cardAuction && question.auction && <AuctionTable auction={question.auction}
+            {!question.cardAuction && question.auction && <AuctionTable auction={question.auction} context={question.context}
                                                                         showQuestion={question.kind === 'call'}/>}
             {question.hand && <div>
                 <p className="has-text-grey is-size-7 mb-1">Twoja ręka</p>
