@@ -4,8 +4,9 @@ import {HAND_SUIT_ORDER} from '../common/suits'
 /*
  * The four hands around the table. During a replay `played` holds the cards already played (e.g. "HQ"), which are
  * not shown, and `trick` the cards of the current trick ({N: "HQ"}), shown in the middle instead of the seat letters.
+ * The hands of hiddenSeats are covered.
  */
-const DealDiagram = ({hands, dealer, vulnerable, board, played = null, trick = {}, renderCard = card => card}) => {
+const DealDiagram = ({hands, dealer, vulnerable, board, played = null, trick = {}, renderCard = card => card, hiddenSeats = []}) => {
     const renderSeat = seat => {
         if (trick?.[seat]) {
             return <div className="Letter TrickCard">{renderCard(trick[seat])}</div>
@@ -15,7 +16,9 @@ const DealDiagram = ({hands, dealer, vulnerable, board, played = null, trick = {
         return <div className={className}>{seat}</div>
     }
 
-    const renderHand = seat => HAND_SUIT_ORDER.map((suit, index) => {
+    const renderHand = seat => hiddenSeats.includes(seat)
+        ? <div className="HiddenHand" aria-label={`ręka ${seat} zakryta`}>?</div>
+        : HAND_SUIT_ORDER.map((suit, index) => {
         const cards = [...(hands?.[seat]?.[index] ?? '')].filter(rank => !played?.has(suit + rank)).join('')
         return <div key={suit}><Suit suit={suit} cards={cards}/></div>
     })

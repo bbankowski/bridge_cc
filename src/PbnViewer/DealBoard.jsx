@@ -10,7 +10,7 @@ const CardLabel = ({card}) => <span className="PlayCard"><Suit suit={card[0]}/>{
  * The deal diagram with a replay of the recorded play, card by card. Played cards leave the hands, the current trick
  * is shown in the middle of the diagram.
  */
-const DealBoard = ({deal}) => {
+const DealBoard = ({deal, hiddenSeats = []}) => {
     const sequence = useMemo(() => playSequence(deal), [deal])
     const [step, setStep] = useState(0)
     const position = sequence ? positionAfter(sequence, step) : null
@@ -25,8 +25,8 @@ const DealBoard = ({deal}) => {
     return <div className="DealBoard">
         <DealDiagram hands={deal.hands} dealer={deal.dealer} vulnerable={deal.vulnerable} board={deal.board}
                      played={position?.played} trick={position?.trick}
-                     renderCard={card => <CardLabel card={card}/>}/>
-        {sequence && <div className="PlayControls">
+                     renderCard={card => <CardLabel card={card}/>} hiddenSeats={hiddenSeats}/>
+        {sequence && hiddenSeats.length === 0 && <div className="PlayControls">
             {total === 1
                 ? <p className="is-size-7">Zapisany tylko wist: <CardLabel card={sequence.plays[0].card}/>
                     <button type="button" className="button is-small is-light ml-2" onClick={() => setStep(step ? 0 : 1)}>

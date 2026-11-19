@@ -7,6 +7,7 @@ import DealBoard from './DealBoard'
 import Minimax from './Minimax'
 import CommentEditor from './CommentEditor'
 import {dealResult, FILTERS, formatResult, isGain, isLoss, parseFilters, visibleDeals} from './dealFilters'
+import {PLAYERS, seatOf} from './hideHands'
 import {loadPbn, serializePbn} from './pbn'
 
 const downloadFile = (filename, content) => {
@@ -27,6 +28,7 @@ const PbnViewer = () => {
     const [pbn, setPbn] = useState({filename: null, headers: [], deals: []})
     const [error, setError] = useState(null)
     const [isModified, setIsModified] = useState(false)
+    const [revealed, setRevealed] = useState(null)
 
     useEffect(() => {
         let cancelled = false
@@ -49,16 +51,34 @@ const PbnViewer = () => {
     const currentDeal = Math.min(Math.max(Number(searchParams.get('deal')) - 1 || 0, 0), Math.max(deals.length - 1, 0))
     const deal = deals[currentDeal]
 
-    const setCurrentDeal = index => setSearchParams(params => {
-        params.set('deal', String(index + 1))
-        return params
-    }, {replace: true})
+    const setCurrentDeal = index => {
+        // a revealed deal is covered again after moving to another one
+        setRevealed(null)
+        setSearchParams(params => {
+            params.set('deal', String(index + 1))
+            return params
+        }, {replace: true})
+    }
 
     // Filters are kept in the URL too (?filter=komentarz,straty); navigation skips the deals they hide.
     const filters = parseFilters(searchParams.get('filter'))
     const visible = visibleDeals(deals, filters)
     const previousDeal = visible.findLast(index => index < currentDeal)
     const nextDeal = visible.find(index => index > currentDeal)
+
+    // "zakryj ręce": only the hand of the chosen player is shown, with nothing that gives the result away (?zakryj=BB)
+    const hideFor = PLAYERS[searchParams.get('zakryj')] ? searchParams.get('zakryj') : null
+    const dealKey = `${pbn.filename}-${currentDeal}`
+    const mySeat = hideFor && deal ? seatOf(deal, hideFor) : null
+    const hidden = hideFor !== null && mySeat !== null && revealed !== dealKey
+    const setHideFor = player => setSearchParams(params => {
+        if (player) {
+            params.set('zakryj', player)
+        } else {
+            params.delete('zakryj')
+        }
+        return params
+    }, {replace: true})
 
     const toggleFilter = name => {
         const newFilters = filters.includes(name) ? filters.filter(f => f !== name) : [...filters, name]
@@ -134,21 +154,42 @@ const PbnViewer = () => {
     }
 
     return <div className="App container">
+        <div className="App-hide-hands">
+            <span className="mr-2">Zakryj ręce:</span>
+            <div className="buttons has-addons are-small">
+                <button type="button" className={`button ${hideFor === null ? 'is-link' : ''}`} aria-pressed={hideFor === null}
+                        onClick={() => setHideFor(null)}>wył.</button>
+                {Object.entries(PLAYERS).map(([player, {name}]) => <button key={player} type="button" aria-pressed={hideFor === player}
+                    className={`button ${hideFor === player ? 'is-link' : ''}`} onClick={() => setHideFor(player)}>
+                    widzę rękę: {name}
+                </button>)}
+            </div>
+        </div>
+        {hideFor && deal && mySeat === null && <p className="has-text-grey is-size-7 mb-2">
+            W tym rozdaniu nie ma {PLAYERS[hideFor].genitive} – pokazuję wszystkie ręce.
+        </p>}
         {deal && <div className="box">
             <div className="App-deal">
                 <div className="App-deal-header">
                     {deal.event && <h1 className="title">{deal.event}</h1>}
-                    Contract: <Bid bid={deal.contract}/> {deal.declarer}<br/>
-                    Result (tricks): {deal.result}<br/>
-                    Score: {deal.score || '?'}<br/>
+                    {hidden ? <p>
+                        Widzisz tylko rękę {PLAYERS[hideFor].genitive} ({mySeat}).
+                        <button type="button" className="button is-small is-primary ml-2" onClick={() => setRevealed(dealKey)}>
+                            Odkryj rozdanie
+                        </button>
+                    </p> : <>
+                        Contract: <Bid bid={deal.contract}/> {deal.declarer}<br/>
+                        Result (tricks): {deal.result}<br/>
+                        Score: {deal.score || '?'}<br/>
+                    </>}
                 </div>
                 <div className="App-deal-details">
                     <Auction auction={deal.auction} notes={deal.notes}/>
-                    <DealBoard key={`${pbn.filename}-${currentDeal}`} deal={deal}/>
-                    <Minimax minimax={deal.minimax} optimumResults={deal.optimumResults}/>
+                    <DealBoard key={dealKey} deal={deal}
+                               hiddenSeats={hidden ? ['N', 'E', 'S', 'W'].filter(seat => seat !== mySeat) : []}/>
+                    {!hidden && <Minimax minimax={deal.minimax} optimumResults={deal.optimumResults}/>}
                 </div>
-                <CommentEditor key={`${pbn.filename}-${currentDeal}`} commentText={deal.commentText}
-                               onSave={updateComment}/>
+                {!hidden && <CommentEditor key={dealKey} commentText={deal.commentText} onSave={updateComment}/>}
             </div>
         </div>}
         <div className="buttons are-normal App-deal-navigation">
@@ -172,12 +213,13 @@ const PbnViewer = () => {
             </span>
         </div>
         {filters.length > 0 && visible.length === 0 && <p className="has-text-grey mb-3">Brak rozdań spełniających filtr.</p>}
-        <div className="buttons are-small">
+        <div className="buttons are-small App-deal-boards">
             {visible.map(index => {
                 const result = dealResult(deals[index])
-                const color = isLoss(result) ? 'is-danger' : isGain(result) ? 'is-success' : ''
+                // with the hands covered the colours would give the result away
+                const color = hideFor ? '' : isLoss(result) ? 'is-danger' : isGain(result) ? 'is-success' : ''
                 return <button key={index} className={`button is-light ${color}`} disabled={index === currentDeal}
-                               title={formatResult(result) ?? undefined}
+                               title={hideFor ? undefined : formatResult(result) ?? undefined}
                                onClick={() => setCurrentDeal(index)}>{deals[index].board}</button>
             })}
         </div>
