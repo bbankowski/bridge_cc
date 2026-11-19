@@ -65,7 +65,7 @@ const ConventionCard = () => {
                 const lastCall = entry.sequence.substring(entry.sequence.lastIndexOf('-') + 1)
                 const content = <><b><Bid bid={polishBidToPbn(lastCall)}/></b>
                     <span className="App-description">{entry.description}</span></>
-                return <div key={index} style={{paddingLeft: `${20 * entry.level}px`}}>
+                return <div key={index} className="App-bidLine" style={{'--level': entry.level}}>
                     {tableSequences.has(entry.sequence)
                         ? <AnchorLink id={`bid-${entry.sequence}`}>{content}</AnchorLink>
                         : content}

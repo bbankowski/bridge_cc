@@ -22,3 +22,19 @@ body {
     width: 55px;
     background-color: rgba(0, 0, 0, 0.02);
 }
+
+@media screen and (max-width: 768px) {
+    /* Bulma containers have no side gutter on mobile */
+    .container.App, .container.HomePage {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .box {
+        padding: 0.75rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}

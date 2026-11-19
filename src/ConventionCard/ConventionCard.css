@@ -31,3 +31,17 @@
     padding: 10px;
     margin-top: 10px;
 }
+
+.App-bidLine {
+    padding-left: calc(var(--level) * 20px);
+}
+
+@media screen and (max-width: 768px) {
+    .App-bidLine {
+        padding-left: calc(var(--level) * 10px);
+    }
+
+    .App-bidTableHeader {
+        padding: 6px 8px;
+    }
+}
