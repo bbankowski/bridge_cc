@@ -1,30 +1,49 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import {describe, expect, test} from 'vitest'
-import {parseBidding, tableRows} from './bidding'
+import {buildChapters, entryMatches, parseBidding, searchItems, slugify, tableRows} from './bidding'
+
+const strip = entries => entries.map(entry => {
+    const copy = {...entry}
+    delete copy.index
+    return copy
+})
+
+const readBiddingTxt = () => fs.readFileSync(path.join(import.meta.dirname, '../../bidding.txt'), 'utf8')
 
 describe('parseBidding', () => {
-    test('parses openings, continuations, tables and sections', () => {
+    test('parses chapters, openings, continuations, tables and sections', () => {
         const entries = parseBidding(`# comment
+@ Nasze otwarcia
 1T          => 12-14 PC
 
 1T-1K       => negat
 T1T-1K
 1T-1K-1BA   => 18-20 PC
+@ W obronie
 ^ Po polskim treflu
 T1T
 1T-X        => wywolawcza
 `)
 
-        expect(entries).toEqual([
-            {type: 'opening', sequence: '1T', description: '12-14 PC'},
-            {type: 'bid', sequence: '1T-1K', description: 'negat', level: 1, sectionIndex: 0, target: 'bid-1T-1K'},
-            {type: 'table', id: 'bid-1T-1K', sequence: '1T-1K', section: null, sectionIndex: 0, description: 'negat'},
-            {type: 'bid', sequence: '1T-1K-1BA', description: '18-20 PC', level: 1, sectionIndex: 0, target: undefined},
-            {type: 'section', title: 'Po polskim treflu'},
-            {type: 'table', id: 'bid-s1-1T', sequence: '1T', section: '^', sectionIndex: 1, description: undefined},
-            {type: 'bid', sequence: '1T-X', description: 'wywolawcza', level: 1, sectionIndex: 1, target: undefined},
+        expect(strip(entries)).toEqual([
+            {type: 'chapter', id: 'chapter-nasze-otwarcia', title: 'Nasze otwarcia'},
+            {type: 'opening', id: 'opening-1T', sequence: '1T', description: '12-14 PC'},
+            {type: 'bid', sequence: '1T-1K', description: 'negat', level: 1, scope: '', target: 'bid-1T-1K'},
+            {type: 'table', id: 'bid-1T-1K', sequence: '1T-1K', section: null, scope: '', description: 'negat'},
+            {type: 'bid', sequence: '1T-1K-1BA', description: '18-20 PC', level: 1, scope: '', target: undefined},
+            {type: 'chapter', id: 'chapter-w-obronie', title: 'W obronie'},
+            {type: 'section', id: 'po-polskim-treflu', title: 'Po polskim treflu'},
+            {
+                type: 'table', id: 'bid-po-polskim-treflu-1T', sequence: '1T', section: '^',
+                scope: 'po-polskim-treflu', description: undefined,
+            },
+            {
+                type: 'bid', sequence: '1T-X', description: 'wywolawcza', level: 1, scope: 'po-polskim-treflu',
+                target: undefined,
+            },
         ])
+        expect(entries.map(entry => entry.index)).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8])
     })
 
     // https://github.com/bbankowski/bridge_cc/issues/12
@@ -42,7 +61,7 @@ T1BA-2C
 
         const tables = entries.filter(entry => entry.type === 'table').map(entry => entry.id)
         const targets = entries.filter(entry => entry.type === 'bid').map(entry => [entry.sequence, entry.target])
-        expect(tables).toEqual(['bid-1BA-2C', 'bid-s1-1BA-2C'])
+        expect(tables).toEqual(['bid-1BA-2C', 'bid-po-otwarciu-1ba-1BA-2C'])
         expect(targets).toEqual([
             ['1BA-2C', 'bid-1BA-2C'],
             ['1BA-2C-2P', undefined],
@@ -61,19 +80,109 @@ T1T-2K
 `)
 
         expect(entries.filter(entry => entry.type === 'table').map(entry => entry.id))
-            .toEqual(['bid-s1-1T-2K', 'bid-s1-1T-2K-2'])
+            .toEqual(['bid-po-interwencji-1T-2K', 'bid-po-interwencji-1T-2K-2'])
         expect(entries.filter(entry => entry.sequence === '1T-2K' && entry.type === 'bid').map(entry => entry.target))
-            .toEqual(['bid-s1-1T-2K', 'bid-s1-1T-2K-2'])
+            .toEqual(['bid-po-interwencji-1T-2K', 'bid-po-interwencji-1T-2K-2'])
+    })
+
+    test('scopes tables outside sections of later chapters to the chapter', () => {
+        const entries = parseBidding(`@ Pierwszy
+T1T-1K
+@ Drugi
+T1T-1K
+1T-1K-1C => x
+`)
+
+        expect(entries.filter(entry => entry.type === 'table').map(entry => entry.id))
+            .toEqual(['bid-1T-1K', 'bid-chapter-drugi-1T-1K'])
     })
 
     test('parses bidding.txt', () => {
-        const entries = parseBidding(fs.readFileSync(path.join(import.meta.dirname, '../../bidding.txt'), 'utf8'))
+        const entries = parseBidding(readBiddingTxt())
 
         const openings = entries.filter(entry => entry.type === 'opening').map(entry => entry.sequence)
         expect(openings).toContain('1T')
         expect(openings.every(opening => !opening.startsWith('T'))).toBe(true)
-        const ids = entries.filter(entry => entry.type === 'table').map(entry => entry.id)
+        const ids = entries.filter(entry => entry.id).map(entry => entry.id)
         expect(new Set(ids).size).toBe(ids.length)
+        expect(entries.filter(entry => entry.type === 'chapter').map(entry => entry.title))
+            .toEqual(['Nasze otwarcia', 'Po interwencji przeciwników', 'W obronie', 'Konwencje'])
+    })
+})
+
+describe('slugify', () => {
+    test.each([
+        ['Po interwencji na otwarcie 1 trefl', 'po-interwencji-na-otwarcie-1-trefl'],
+        ['Blackwood 102 i kolorowe króle/damy', 'blackwood-102-i-kolorowe-krole-damy'],
+        ['Po słabym BA (12-14 PC)', 'po-slabym-ba-12-14-pc'],
+    ])('%s -> %s', (text, slug) => {
+        expect(slugify(text)).toBe(slug)
+    })
+})
+
+describe('buildChapters', () => {
+    test('groups entries into chapters and menu items', () => {
+        const chapters = buildChapters(parseBidding(`1T => before chapters
+@ Nasze otwarcia
+1T          => 12-14 PC
+1T-1K       => negat
+pas         => brak otwarcia
+@ Konwencje
+& Blackwood
+4BA-5T      => 1 lub 4
+`))
+
+        expect(chapters.map(chapter => [chapter.id, chapter.title, chapter.items.map(item => item.id)])).toEqual([
+            ['chapter-start', null, ['opening-1T']],
+            ['chapter-nasze-otwarcia', 'Nasze otwarcia', ['opening-1T-2', 'opening-pas']],
+            ['chapter-konwencje', 'Konwencje', ['blackwood']],
+        ])
+        expect(chapters[1].items[0].entries.map(entry => entry.sequence)).toEqual(['1T', '1T-1K'])
+    })
+
+    test('puts every section of bidding.txt in a chapter', () => {
+        const chapters = buildChapters(parseBidding(readBiddingTxt()))
+
+        expect(chapters.map(chapter => chapter.title)).not.toContain(null)
+        const konwencje = chapters.find(chapter => chapter.title === 'Konwencje')
+        expect(konwencje.items.map(item => item.entry.title)).toContain('Po blackwoodzie')
+    })
+})
+
+describe('search', () => {
+    const chapters = buildChapters(parseBidding(`@ Nasze otwarcia
+1BA         => 15-17 PC
+1BA-2K      => transfer na kiery
+1BA-2C      => transfer na piki
+@ W obronie
+^ Po słabym BA
+1BA-2C      => kolor 5+
+`))
+
+    test.each([
+        ['transfer', true],
+        ['TRANSFER kiery', true],
+        ['1BA-2K', true],
+        ['transfer pik', false],
+        ['', false],
+    ])('entryMatches(1BA-2K transfer na kiery, %j) is %s', (query, expected) => {
+        expect(entryMatches({sequence: '1BA-2K', description: 'transfer na kiery'}, query)).toBe(expected)
+    })
+
+    test('ignores Polish diacritics', () => {
+        expect(entryMatches({title: 'Po słabym BA'}, 'slabym')).toBe(true)
+    })
+
+    test('counts matches per menu item and finds the first one', () => {
+        const results = searchItems(chapters, 'transfer')
+
+        expect([...results.keys()]).toEqual(['opening-1BA'])
+        expect(results.get('opening-1BA').count).toBe(2)
+        expect(results.get('opening-1BA').first.sequence).toBe('1BA-2K')
+    })
+
+    test('finds sequences in several chapters', () => {
+        expect([...searchItems(chapters, '1BA-2C').keys()]).toEqual(['opening-1BA', 'po-slabym-ba'])
     })
 })
 

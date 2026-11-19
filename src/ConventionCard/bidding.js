@@ -1,10 +1,20 @@
 const countDashes = sequence => (sequence.match(/-/g) || []).length
 
 const SECTION_MARKERS = ['^', '&', '*']
+const CHAPTER_MARKER = '@'
+
+// "Po interwencji na otwarcie 1 trefl" -> "po-interwencji-na-otwarcie-1-trefl"
+export const slugify = text => text
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replaceAll('ł', 'l').replaceAll('Ł', 'L')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
 
 /*
  * Parses bidding.txt. Each line is "<sequence> => <description>"; lines starting with "#" are comments.
- * - "^ title", "& title", "* title" start a new section ("*": we open, "^": the opponents open),
+ * - "@ title" starts a chapter of the card (an entry of the menu),
+ * - "^ title", "& title", "* title" start a new section ("*": we open, "^": the opponents open, "&": a convention),
  * - "T<sequence>" draws an auction table for the sequence,
  * - a single call (e.g. "1T", "2BA", "pas") is an opening,
  * - everything else is a continuation, indented relative to the last table.
@@ -15,14 +25,14 @@ const SECTION_MARKERS = ['^', '&', '*']
  */
 export const parseBidding = text => {
     const entries = []
-    let section = null
-    let sectionIndex = 0
-    let tableLevel = 0
     const usedIds = new Set()
+    let chapterCount = 0
+    let chapterId = null
+    let section = null
+    let sectionId = null
+    let tableLevel = 0
 
-    const tableId = sequence => {
-        // tables before the first section keep the plain "bid-<sequence>" ids used by existing links
-        const base = sectionIndex === 0 ? `bid-${sequence}` : `bid-s${sectionIndex}-${sequence}`
+    const uniqueId = base => {
         let id = base
         for (let n = 2; usedIds.has(id); n++) {
             id = `${base}-${n}`
@@ -30,6 +40,9 @@ export const parseBidding = text => {
         usedIds.add(id)
         return id
     }
+
+    // tables of the first chapter outside sections keep the plain "bid-<sequence>" ids used by existing links
+    const scope = () => sectionId ?? (chapterCount > 1 ? chapterId : '')
 
     for (const line of text.split(/\r?\n/)) {
         if (line.trim() === '' || line.startsWith('#')) {
@@ -39,25 +52,34 @@ export const parseBidding = text => {
         const bid = bidPart.trim()
         const description = (descriptionPart ?? '').trim()
 
-        if (SECTION_MARKERS.includes(bid[0])) {
+        if (bid[0] === CHAPTER_MARKER) {
+            const title = bid.slice(1).trim()
+            chapterCount++
+            chapterId = uniqueId(`chapter-${slugify(title)}`)
+            section = null
+            sectionId = null
+            entries.push({type: 'chapter', id: chapterId, title})
+        } else if (SECTION_MARKERS.includes(bid[0])) {
+            const title = bid.slice(1).trim()
             section = bid[0]
-            sectionIndex++
-            entries.push({type: 'section', title: bid.slice(1).trim()})
+            sectionId = uniqueId(slugify(title))
+            entries.push({type: 'section', id: sectionId, title})
         } else if (bid.startsWith('T')) {
             const sequence = bid.substring(1)
             tableLevel = countDashes(sequence)
             const described = section === null
-                ? entries.findLast(entry => entry.type !== 'table' && entry.sequence === sequence)
+                ? entries.findLast(entry => (entry.type === 'bid' || entry.type === 'opening')
+                    && entry.sequence === sequence)
                 : undefined
             entries.push({
-                type: 'table', id: tableId(sequence), sequence, section, sectionIndex,
-                description: described?.description,
+                type: 'table', id: uniqueId(scope() ? `bid-${scope()}-${sequence}` : `bid-${sequence}`),
+                sequence, section, scope: scope(), description: described?.description,
             })
         } else if (!bid.includes('-')) {
-            entries.push({type: 'opening', sequence: bid, description})
+            entries.push({type: 'opening', id: uniqueId(`opening-${bid}`), sequence: bid, description})
         } else {
             entries.push({
-                type: 'bid', sequence: bid, description, sectionIndex,
+                type: 'bid', sequence: bid, description, scope: scope(),
                 level: Math.max(countDashes(bid) - tableLevel, 0),
             })
         }
@@ -65,15 +87,76 @@ export const parseBidding = text => {
 
     // a continuation links to the table of its sequence in the same section: the next one, or else the last before it
     entries.forEach((entry, index) => {
+        entry.index = index
         if (entry.type !== 'bid') {
             return
         }
-        const tables = entries.filter(other => other.type === 'table' && other.sectionIndex === entry.sectionIndex
+        const tables = entries.filter(other => other.type === 'table' && other.scope === entry.scope
             && other.sequence === entry.sequence)
         const target = tables.find(table => entries.indexOf(table) > index) ?? tables.at(-1)
         entry.target = target?.id
     })
     return entries
+}
+
+const isTocItem = entry => entry.type === 'opening' || entry.type === 'section'
+
+/*
+ * Groups entries into chapters for rendering and the menu:
+ * [{id, title, entries, items: [{id, entry, entries}]}], where items are the openings and sections of the chapter
+ * with the entries under each of them. Entries before the first "@" line form a chapter without a title.
+ */
+export const buildChapters = entries => {
+    const chapters = []
+    let chapter = null
+    let item = null
+    for (const entry of entries) {
+        if (entry.type === 'chapter') {
+            chapter = {id: entry.id, title: entry.title, entries: [], items: []}
+            chapters.push(chapter)
+            item = null
+            continue
+        }
+        if (chapter === null) {
+            chapter = {id: 'chapter-start', title: null, entries: [], items: []}
+            chapters.push(chapter)
+        }
+        chapter.entries.push(entry)
+        if (isTocItem(entry)) {
+            item = {id: entry.id, entry, entries: []}
+            chapter.items.push(item)
+        }
+        item?.entries.push(entry)
+    }
+    return chapters
+}
+
+// Normalizes a search query or a text: lowercase, no diacritics; "1BA-2C" matches sequences as written in the file.
+const normalize = text => text.normalize('NFD').replace(/[̀-ͯ]/g, '').replaceAll('ł', 'l')
+    .replaceAll('Ł', 'L').toLowerCase()
+
+export const entryMatches = (entry, query) => {
+    const words = normalize(query).split(/\s+/).filter(Boolean)
+    if (words.length === 0) {
+        return false
+    }
+    const text = normalize(`${entry.sequence ?? ''} ${entry.description ?? ''} ${entry.title ?? ''}`)
+    return words.every(word => text.includes(word))
+}
+
+// Finds the menu items (openings and sections) with entries matching the query:
+// Map of item id -> {count, first}, where first is the first matching entry.
+export const searchItems = (chapters, query) => {
+    const results = new Map()
+    for (const chapter of chapters) {
+        for (const item of chapter.items) {
+            const matches = item.entries.filter(entry => entry.type !== 'table' && entryMatches(entry, query))
+            if (matches.length > 0) {
+                results.set(item.id, {count: matches.length, first: matches[0]})
+            }
+        }
+    }
+    return results
 }
 
 // Lays out the auction of a table in rows of 4, ending with "?". Outside any section the opponents pass.
