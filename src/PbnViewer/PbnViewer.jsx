@@ -3,7 +3,7 @@ import {useBlocker, useSearchParams} from 'react-router'
 import './PbnViewer.css'
 import Auction from './Auction'
 import Bid from '../common/Bid'
-import DealDiagram from './DealDiagram'
+import DealBoard from './DealBoard'
 import Minimax from './Minimax'
 import CommentEditor from './CommentEditor'
 import {dealResult, FILTERS, formatResult, isGain, isLoss, parseFilters, visibleDeals} from './dealFilters'
@@ -144,8 +144,7 @@ const PbnViewer = () => {
                 </div>
                 <div className="App-deal-details">
                     <Auction auction={deal.auction} notes={deal.notes}/>
-                    <DealDiagram hands={deal.hands} dealer={deal.dealer} vulnerable={deal.vulnerable}
-                                 board={deal.board}/>
+                    <DealBoard key={`${pbn.filename}-${currentDeal}`} deal={deal}/>
                     <Minimax minimax={deal.minimax} optimumResults={deal.optimumResults}/>
                 </div>
                 <CommentEditor key={`${pbn.filename}-${currentDeal}`} commentText={deal.commentText}
