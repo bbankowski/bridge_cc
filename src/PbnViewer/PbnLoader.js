@@ -56,6 +56,9 @@ function updateDeal(deal) {
                 bid = 'pas'
             } else if (bid === 'AP') {
                 break
+            } else if (bid.startsWith('$')) {
+                // PBN NAG annotation (e.g. "$6"), not a call
+                continue
             } else if (bid.startsWith('=')) {
                 previousBid[1] = bid.replaceAll('=', '')
                 continue

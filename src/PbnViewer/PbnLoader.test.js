@@ -35,3 +35,11 @@ test('serializePbn writes the edited comment', async () => {
     expect(reloadedDeals[0]['commentText']).toEqual('edited comment')
     expect(reloadedDeals.length).toEqual(deals.length)
 })
+
+test('loadPbn skips NAG annotations in the auction', async () => {
+    const [, deals] = await loadPbn('3liga_2025-2026_3zjazd.pbn')
+
+    const bids = deals.flatMap(deal => deal['chunkedAuction'].flat().flat())
+
+    expect(bids.some(bid => typeof bid === 'string' && bid.startsWith('$'))).toBe(false)
+})
