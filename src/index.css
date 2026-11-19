@@ -7,7 +7,34 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.App-card-img {
+    width: 13px;
+}
+
+.App-bidTable td, .App-bidTable th {
+    padding: 5px 10px;
+    border: 1px solid #dedede;
+    width: 55px;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+@media screen and (max-width: 768px) {
+    /* Bulma containers have no side gutter on mobile */
+    .container.App, .container.HomePage {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .box {
+        padding: 0.75rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
 }
