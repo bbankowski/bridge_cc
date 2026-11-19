@@ -4,9 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-A Vite + React 19 single-page app (react-router 8, Bulma 1) hosted on GitHub Pages at https://bbankowski.github.io/bridge_cc/. It has three bridge tools:
+A Vite + React 19 single-page app (react-router 8, Bulma 1) hosted on GitHub Pages at https://bbankowski.github.io/bridge_cc/. It has these bridge tools:
 - **Convention card** (`/#/cc`) renders the bidding system in `bidding.txt`.
 - **PBN viewer** (`/#/pbn?filename=<file>.pbn&deal=<n>`) shows tournament deals from `public/*.pbn`.
+- **PZBS mini convention card** (`/#/karta-pzbs`) to print: two copies on A4, filled from `karta-pzbs.json` (choices; `null` = to fill in) and the defence after 1NT from `bidding.txt`.
 - **Training** (`/#/trening`) quizzes the convention card, openings of random hands, and real decisions and leads from tournaments (`trening/sytuacje.json`).
 
 The UI text and the bidding notes are in Polish.
