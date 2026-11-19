@@ -76,12 +76,14 @@ export const parseBidding = text => {
     return entries
 }
 
-// Lays out the auction of a table in rows of 4, ending with "?". Outside any section the opponents pass.
+// Lays out the auction of a table in rows of 4, ending with "?" (our turn). Outside any section the opponents pass
+// after each of our calls.
 export const tableRows = (sequence, section) => {
-    let calls = [...sequence.split('-'), '?']
+    let calls = sequence.split('-')
     if (section === null) {
         calls = calls.flatMap(call => [call, 'pas'])
     }
+    calls.push('?')
     while (calls.length % 4 !== 0) {
         calls.push('')
     }

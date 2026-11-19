@@ -79,7 +79,12 @@ T1T-2K
 
 describe('tableRows', () => {
     test('adds opponent passes after our own opening', () => {
-        expect(tableRows('1T-1K', null)).toEqual([['1T', 'pas', '1K', 'pas'], ['?', 'pas', '', '']])
+        expect(tableRows('1T-1K', null)).toEqual([['1T', 'pas', '1K', 'pas'], ['?', '', '', '']])
+    })
+
+    // the reported case: 1♣ (pas) 1♦ (pas) 2BA (pas) ? -- no pass after "?", it is our turn
+    test('ends with our turn, without a pass after it', () => {
+        expect(tableRows('1T-1K-2BA', null)).toEqual([['1T', 'pas', '1K', 'pas'], ['2BA', 'pas', '?', '']])
     })
 
     test('does not add passes in sections', () => {
