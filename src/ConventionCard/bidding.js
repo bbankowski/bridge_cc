@@ -5,7 +5,7 @@ const CHAPTER_MARKER = '@'
 
 // "Po interwencji na otwarcie 1 trefl" -> "po-interwencji-na-otwarcie-1-trefl"
 export const slugify = text => text
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
     .replaceAll('ł', 'l').replaceAll('Ł', 'L')
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
@@ -132,7 +132,7 @@ export const buildChapters = entries => {
 }
 
 // Normalizes a search query or a text: lowercase, no diacritics; "1BA-2C" matches sequences as written in the file.
-const normalize = text => text.normalize('NFD').replace(/[̀-ͯ]/g, '').replaceAll('ł', 'l')
+const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replaceAll('ł', 'l')
     .replaceAll('Ł', 'L').toLowerCase()
 
 export const entryMatches = (entry, query) => {
@@ -159,12 +159,14 @@ export const searchItems = (chapters, query) => {
     return results
 }
 
-// Lays out the auction of a table in rows of 4, ending with "?". Outside any section the opponents pass.
+// Lays out the auction of a table in rows of 4, ending with "?" (our turn). Outside any section the opponents pass
+// after each of our calls.
 export const tableRows = (sequence, section) => {
-    let calls = [...sequence.split('-'), '?']
+    let calls = sequence.split('-')
     if (section === null) {
         calls = calls.flatMap(call => [call, 'pas'])
     }
+    calls.push('?')
     while (calls.length % 4 !== 0) {
         calls.push('')
     }

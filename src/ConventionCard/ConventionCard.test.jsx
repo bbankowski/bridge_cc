@@ -40,7 +40,7 @@ test('shows opponent calls in parentheses', () => {
     renderCard()
 
     const cells = [...document.getElementById('bid-1T-1K').querySelectorAll('td')].map(td => td.textContent)
-    expect(cells).toEqual(['1', '(pas)', '1', '(pas)', '?', '(pas)', '', ''])
+    expect(cells).toEqual(['1', '(pas)', '1', '(pas)', '?', '', '', ''])
 })
 
 // https://github.com/bbankowski/bridge_cc/issues/12
@@ -55,7 +55,7 @@ test('links 1BA-2C after our 1NT opening to the uncontested auction, not the one
     const table = document.getElementById('bid-1BA-2C')
     expect(table.scrollIntoView).toHaveBeenCalled()
     const cells = [...table.querySelectorAll('td')].map(td => td.textContent)
-    expect(cells).toEqual(['1BA', '(pas)', '2', '(pas)', '?', '(pas)', '', ''])
+    expect(cells).toEqual(['1BA', '(pas)', '2', '(pas)', '?', '', '', ''])
 })
 
 test('has unique ids and every link points to an existing table', () => {
