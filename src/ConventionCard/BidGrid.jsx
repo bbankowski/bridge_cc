@@ -9,8 +9,15 @@ import {tableRows} from './bidding'
  */
 const BidGrid = ({sequence, section, withoutQuestion = false, highlightLast = false}) => {
     const weStartBidding = section === '*' || section === null
-    const cells = tableRows(sequence, section).flat()
+    let cells = tableRows(sequence, section).flat()
     const lastIndex = cells.indexOf('?') - (section === null ? 2 : 1)
+    if (withoutQuestion) {
+        // end the table on the last call, without a row left empty by the hidden "?"
+        cells = cells.slice(0, cells.indexOf('?'))
+        while (cells.length % 4 !== 0) {
+            cells.push('')
+        }
+    }
     const rows = []
     for (let i = 0; i < cells.length; i += 4) {
         rows.push(cells.slice(i, i + 4))
@@ -20,9 +27,6 @@ const BidGrid = ({sequence, section, withoutQuestion = false, highlightLast = fa
         {rows.map((row, rowIndex) => <tr key={rowIndex}>
             {row.map((call, index) => {
                 const position = rowIndex * 4 + index
-                if (call === '?' && withoutQuestion) {
-                    return <td key={index}/>
-                }
                 const theirCall = call !== '' && call !== '?' && (index % 2 === 1) === weStartBidding
                 return <td key={index} className={highlightLast && position === lastIndex ? 'is-highlighted' : undefined}>
                     {theirCall && '('}<Bid bid={polishBidToPbn(call)}/>{theirCall && ')'}
