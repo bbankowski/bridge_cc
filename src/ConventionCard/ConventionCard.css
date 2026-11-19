@@ -146,3 +146,11 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.ConventionCard-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+}
