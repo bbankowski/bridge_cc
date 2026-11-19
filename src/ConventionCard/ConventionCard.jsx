@@ -16,10 +16,10 @@ const BidSequence = ({sequence}) => sequence.split('-').map((call, index) => <Fr
     <Bid bid={polishBidToPbn(call)}/>
 </Fragment>)
 
-const BidTable = ({sequence, section, description}) => {
+const BidTable = ({id, sequence, section, description}) => {
     // "*" sections and our own openings: we make the first call; otherwise the opponents do.
     const weStartBidding = section === '*' || section === null
-    return <div className="App-bidTable" id={`bid-${sequence}`}>
+    return <div className="App-bidTable" id={id}>
         <div className="App-bidTableHeader">
             Licytacja po <BidSequence sequence={sequence}/>{description && `: ${description}`}
         </div>
@@ -40,8 +40,6 @@ const BidTable = ({sequence, section, description}) => {
 
 const ConventionCard = () => {
     const entries = useMemo(() => parseBidding(biddingText), [])
-    const tableSequences = useMemo(() => new Set(entries.filter(entry => entry.type === 'table')
-        .map(entry => entry.sequence)), [entries])
     const {hash} = useLocation()
 
     useEffect(() => {
@@ -66,8 +64,8 @@ const ConventionCard = () => {
                 const content = <><b><Bid bid={polishBidToPbn(lastCall)}/></b>
                     <span className="App-description">{entry.description}</span></>
                 return <div key={index} className="App-bidLine" style={{'--level': entry.level}}>
-                    {tableSequences.has(entry.sequence)
-                        ? <AnchorLink id={`bid-${entry.sequence}`}>{content}</AnchorLink>
+                    {entry.target
+                        ? <AnchorLink id={entry.target}>{content}</AnchorLink>
                         : content}
                 </div>
             }
