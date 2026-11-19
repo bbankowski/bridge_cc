@@ -104,6 +104,9 @@ const meaningQuestion = (card, entry, random) => {
     }
 }
 
+const hasUniqueDescription = (card, entry) => siblingsOf(card, entry)
+    .every(other => other.description !== entry.description)
+
 const callQuestion = (card, entry) => {
     const {label, chapter} = cardLocation(card.chapters, entry)
     const call = polishCallToPbn(callsOf(entry.sequence).at(-1))
@@ -116,7 +119,7 @@ const callQuestion = (card, entry) => {
         {value: call, score: 100, comment: entry.description},
         ...siblings.map(other => ({
             value: polishCallToPbn(callsOf(other.sequence).at(-1)),
-            score: other.description === entry.description ? 100 : 0,
+            score: 0,
             comment: other.description,
         })),
     ].filter((answer, index, all) => all.findIndex(a => a.value === answer.value) === index)
@@ -142,7 +145,10 @@ export const conventionQuestion = (card, random = Math.random, {chapterId} = {})
         : card.playable
     for (let attempt = 0; attempt < 50 && pool.length > 0; attempt++) {
         const entry = pool[Math.floor(random() * pool.length)]
-        const question = random() < 0.5 ? meaningQuestion(card, entry, random) : callQuestion(card, entry)
+        // "what do you bid" needs a description that points at one call: "3-6, kolor 6+" fits both 1♦-2♥ and 1♦-2♠
+        const question = random() < 0.5 || !hasUniqueDescription(card, entry)
+            ? meaningQuestion(card, entry, random)
+            : callQuestion(card, entry)
         if (question) {
             return question
         }

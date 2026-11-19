@@ -45,11 +45,31 @@ describe('convention card questions', () => {
         }
     })
 
-    test('accepts other calls with the same meaning', () => {
+    test('grades the call of the card as right and other calls as wrong', () => {
         const question = conventionQuestion(card, seeded(3))
         const best = question.answers.find(a => a.score === 100)
         expect(grade(question, best.value).score).toBe(100)
         expect(grade(question, 'not a call').score).toBe(0)
+    })
+
+    // "3-6, kolor 6+" is the meaning of both 1♦-2♥ and 1♦-2♠: asking which call shows it has no single answer
+    test('asks for the call only when the meaning points at one call', () => {
+        const twoHearts = card.playable.findIndex(entry => entry.sequence === '1K-2C' && entry.scope === '')
+        // pick 1♦-2♥, then ask for the call (random >= 0.5) – it must fall back to the meaning
+        const picks = [(twoHearts + 0.5) / card.playable.length, 0.9]
+        const question = conventionQuestion(card, () => picks.shift() ?? 0.5)
+        expect(question.kind).toBe('choice')
+        expect(question.answers[0].value).toBe('3-6, kolor 6+')
+
+        const random2 = seeded(6)
+        for (let i = 0; i < 300; i++) {
+            const question = conventionQuestion(card, random2)
+            if (question.kind === 'call') {
+                expect(question.answers.filter(answer => answer.score === 100)).toHaveLength(1)
+                const meaning = question.prompt.replace('Twoja ręka: ', '')
+                expect(question.answers.filter(answer => answer.comment === meaning)).toHaveLength(1)
+            }
+        }
     })
 })
 
