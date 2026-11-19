@@ -44,9 +44,11 @@ describe('MiniCard', () => {
     test('ticks the choices of karta-pzbs.json', () => {
         renderCard()
 
-        expect(checked()).toEqual(['4+♦', 'silne', 'Precision', 'Multi', '5♥ - 5', '5♠ - 5', '5♣ - 5♦', 'naturalne',
-            'z damą atu', '5 asów', 'tak', 'tak', 'tak'])
-        expect(screen.getByText('Bartosz Bańkowski – Marek Jarosz')).toBeInTheDocument()
+        expect(checked()).toEqual(['Wspólny Język', '4+♦', 'silne', 'Precision', 'Multi', '5♥ - 5', '5♠ - 5', '5♣ - 5♦',
+            'rzadko', 'wywoł.', 'wywoł.', 'naturalne', '9-14 PC', 'z damą atu', '5 asów', 'tak', 'tak', 'tak',
+            'odmienny', 'odwrotne', 'Lavinthal'])
+        expect(screen.getByText('Bartosz Bańkowski (PID 13886) – Marek Jarosz (PID 10237)')).toBeInTheDocument()
+        expect(screen.getByText('pierwszy wist; później jakościowo odwrotny')).toBeInTheDocument()
         expect(screen.getByText('54 kolory stare')).toBeInTheDocument()
     })
 
@@ -63,6 +65,7 @@ test('the page shows two copies and the fields to fill in', () => {
 
     expect(document.querySelectorAll('.MiniCard')).toHaveLength(2)
     const missing = within(screen.getByText(/Do uzupełnienia/).closest('.notification'))
-    expect(missing.getByText('Wist')).toBeInTheDocument()
+    expect(missing.getAllByRole('listitem').map(item => item.textContent)).toEqual([
+        'Kontra negatywna do poziomu – po otwarciu 1 w kolor', 'Odwrotka', 'W sekwencji 1BA (ktr) 2♥'])
     expect(screen.getByRole('button', {name: 'Drukuj / zapisz PDF'})).toBeInTheDocument()
 })

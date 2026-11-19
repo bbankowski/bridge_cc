@@ -1,28 +1,73 @@
 {
   "_opis": "Dane minikarty konwencyjnej PZBS (strona /#/karta-pzbs). Wartości null = do uzupełnienia. Obrona po 1BA jest brana z bidding.txt (sekcja podana w obronaPo1BA.sekcja).",
-  "para": "Bartosz Bańkowski – Marek Jarosz",
-  "system": {"wybor": null, "inny": ""},
-  "otwarcia": {
-    "1D": {"wybor": "4+", "uwagi": "12-17 PC, 5+♦ lub 4♦-5♣ lub 4441"},
-    "1NT": {"wybor": "silne", "uwagi": "15-17 PC"},
-    "2C": {"wybor": "precision", "uwagi": "11-14 PC, 6+♣ lub 5+♣ i 4M"},
-    "2D": {"wybor": "multi", "uwagi": "mini-multi 5-10 PC, 6+M"},
-    "2H": {"wybor": "5-5", "uwagi": "5-11 PC"},
-    "2S": {"wybor": "5-5", "uwagi": "5-11 PC, 5♠ i 5+ młodszy"},
-    "2NT": {"wybor": "5-5", "uwagi": "5-11 PC"}
+  "para": "Bartosz Bańkowski (PID 13886) – Marek Jarosz (PID 10237)",
+  "system": {
+    "wybor": "wspolny",
+    "inny": ""
   },
-  "blefy": null,
-  "kontraNaOtwarcie1wKolor": {"przedPasem": null, "poPasie": null},
-  "obronaPo1BA": {"sekcja": "Po klasycznym BA (15-17 PC)", "uwagi": "po słabym BA kontra 12+ PC"},
-  "wejscie1BA": {"wybor": "naturalne", "uwagi": "15-17 PC"},
-  "wejscie1BANaWygasajacej": null,
-  "kontraNegatywna": {"po1wKolor": null, "po1BA": "2♠"},
-  "blackwood": {"asy": "5", "dodatki": ["dama"]},
+  "otwarcia": {
+    "1D": {
+      "wybor": "4+",
+      "uwagi": "12-17 PC, 5+♦ lub 4♦-5♣ lub 4441"
+    },
+    "1NT": {
+      "wybor": "silne",
+      "uwagi": "15-17 PC"
+    },
+    "2C": {
+      "wybor": "precision",
+      "uwagi": "11-14 PC, 6+♣ lub 5+♣ i 4M"
+    },
+    "2D": {
+      "wybor": "multi",
+      "uwagi": "mini-multi 5-10 PC, 6+M"
+    },
+    "2H": {
+      "wybor": "5-5",
+      "uwagi": "5-11 PC"
+    },
+    "2S": {
+      "wybor": "5-5",
+      "uwagi": "5-11 PC, 5♠ i 5+ młodszy"
+    },
+    "2NT": {
+      "wybor": "5-5",
+      "uwagi": "5-11 PC"
+    }
+  },
+  "blefy": "rzadko",
+  "kontraNaOtwarcie1wKolor": {
+    "przedPasem": "wywolawcza",
+    "poPasie": "wywolawcza"
+  },
+  "obronaPo1BA": {
+    "sekcja": "Po klasycznym BA (15-17 PC)",
+    "uwagi": "po słabym BA kontra 12+ PC"
+  },
+  "wejscie1BA": {
+    "wybor": "naturalne",
+    "uwagi": "15-17 PC"
+  },
+  "wejscie1BANaWygasajacej": "9-14",
+  "kontraNegatywna": {
+    "po1wKolor": null,
+    "po1BA": "2♠"
+  },
+  "blackwood": {
+    "asy": "5",
+    "dodatki": [
+      "dama"
+    ]
+  },
   "lebensohl": true,
   "drury": true,
   "czwartyKolor": true,
   "odwrotka": null,
   "po1BAktr2H": null,
-  "wist": null,
-  "zrzutki": []
+  "wist": "odmienny",
+  "wistUwagi": "pierwszy wist; później jakościowo odwrotny",
+  "zrzutki": [
+    "odwrotne",
+    "lavinthal"
+  ]
 }
