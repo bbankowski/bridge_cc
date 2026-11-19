@@ -105,6 +105,14 @@ export const loadPbn = (filename) => {
             let deal = []
             deal['Vulnerable'] = '-'
             deal['notes'] = []
+            // original lines of the current deal (without the comment), used to re-export the PBN
+            let rawLines = []
+            let commentIndex = undefined
+            const finishDeal = () => {
+                deal['rawLines'] = rawLines
+                deal['commentIndex'] = commentIndex
+                loadedDeals.push(updateDeal(deal))
+            }
             let commentStarted = false
             let comment = ''
             let auctionStarted = false
@@ -124,10 +132,19 @@ export const loadPbn = (filename) => {
                 }
 
                 if (line.startsWith('[Event') && Object.keys(deal).length > 2) {
-                    loadedDeals.push(updateDeal(deal))
+                    finishDeal()
                     deal = []
                     deal['Vulnerable'] = '-'
                     deal['notes'] = []
+                    rawLines = []
+                    commentIndex = undefined
+                }
+                if (commentStarted || (line.startsWith('{') && !auctionStarted)) {
+                    if (!commentStarted) {
+                        commentIndex = rawLines.length
+                    }
+                } else {
+                    rawLines.push(line)
                 }
                 if (auctionStarted) {
                     if (line.startsWith('[')) {
@@ -177,7 +194,7 @@ export const loadPbn = (filename) => {
                     }
                 } else if (line.startsWith('{')) {
                     if (line.endsWith('}')) {
-                        comment = line.slice(1, -1)
+                        deal['comment'] = line.slice(1, -1)
                     } else {
                         commentStarted = true
                         comment = line.substring(1)
@@ -190,10 +207,30 @@ export const loadPbn = (filename) => {
             }
 
             if (Object.keys(deal).length > 2) {
-                loadedDeals.push(updateDeal(deal))
+                finishDeal()
             }
 
             return [headers, loadedDeals]
         })
     })])
+}
+
+const dealToPbnLines = deal => {
+    const lines = [...(deal['rawLines'] || [])]
+    while (lines.length > 0 && lines[lines.length - 1].trim() === '') {
+        lines.pop()
+    }
+    if (deal['commentText']) {
+        let index = deal['commentIndex']
+        if (index === undefined) {
+            const resultIndex = lines.findIndex(line => line.startsWith('[Result '))
+            index = resultIndex >= 0 ? resultIndex + 1 : lines.length
+        }
+        lines.splice(index, 0, `{${deal['commentText']}}`)
+    }
+    return lines
+}
+
+export const serializePbn = (headers, deals) => {
+    return [...headers, ...deals.flatMap(deal => [...dealToPbnLines(deal), ''])].join('\n')
 }

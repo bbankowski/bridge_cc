@@ -5,7 +5,7 @@ import DealDiagram from "./DealDiagram";
 import {useLocation} from "react-router-dom";
 import Bid from "./Bid";
 import Minimax from "./Minimax";
-import {loadPbn, replaceBidsInText} from "./PbnLoader"
+import {loadPbn, replaceBidsInText, serializePbn} from "./PbnLoader"
 
 function PbnViewer() {
     const [deals, setDeals] = useState([])
@@ -58,52 +58,14 @@ function PbnViewer() {
     }
 
     const downloadPbn = () => {
-        let body = deals.map(deal => {
-            return `
-            [Event "${deal['Event']}"]
-            [Site "${deal['Site']}"]
-            [Date "${deal['Date']}"]
-            [Board "${deal['Board']}"]
-            [West "${deal['West']}"]
-            [North "${deal['North']}"]
-            [East "${deal['East']}"]
-            [South "${deal['South']}"]
-            [Dealer "${deal['Dealer']}"]
-            [Vulnerable "${deal['Vulnerable']}"]
-            [Deal "${deal['Deal']}"]
-            [Scoring "${deal['Scoring']}"]
-            [Declarer "${deal['Declarer']}"]
-            [Contract "${deal['Contract']}"]
-            [Result "${deal['Result']}"]
-            {${deal['commentText']}}
-            [Ability "${deal['Ability']}"]
-            [BCFlags "${deal['BCFlags']}"]
-            [DoubleDummyTricks "${deal['DoubleDummyTricks']}"]
-            [Minimax "${deal['Minimax']}"]
-            [OptimumScore "${deal['OptimumScore']}"]
-            [ParContract "${deal['ParContract']}"]
-            [Score "${deal['Score']}"]
-            [Auction "${deal['Auction']}"]
-            ${deal['auction'].map(bids => {
-                return bids
-            })}
-            ${deal['Note'].map(note => {
-                return `[Note "${note}"]`
-            })}
-            [OptimumResultTable "${deal['OptimumResultTable']}"]            
-            ${deal['optimumResultTable'].map(result => {
-                return result
-            })}
-            
-            `
-        }).join()
-
-        const element = document.createElement("a");
-        const file = new Blob([body], {type: 'text/plain'});
-        element.href = URL.createObjectURL(file);
-        element.download = filename;
-        document.body.appendChild(element);
-        element.click();
+        const file = new Blob([serializePbn(headers, deals)], {type: 'text/plain'})
+        const element = document.createElement("a")
+        element.href = URL.createObjectURL(file)
+        element.download = filename
+        document.body.appendChild(element)
+        element.click()
+        document.body.removeChild(element)
+        URL.revokeObjectURL(element.href)
     }
 
     return (
@@ -125,7 +87,7 @@ function PbnViewer() {
                     <div className="App-deal-comment" onClick={editMode}>
                         <p><strong>Comment:</strong></p>
                         {isEditing ?
-                            <textarea id="comment" onBlur={viewMode}>{deal['commentText']}</textarea>
+                            <textarea id="comment" onBlur={viewMode} defaultValue={deal['commentText']}/>
                             :
                             <p className="Comment">{deal['comment']}</p>
                         }
