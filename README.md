@@ -20,4 +20,4 @@ npm run build    # output in dist/
 
 Every push to `master` is built and deployed to GitHub Pages by `.github/workflows/deploy.yml`.
 
-To add a tournament, put the `.pbn` file in `public/` and add it to `TOURNAMENTS` in `src/HomePage.jsx`.
+To add a tournament, put the `.pbn` file in `public/` and add it to `src/tournaments.js`.

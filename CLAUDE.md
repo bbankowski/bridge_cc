@@ -24,7 +24,7 @@ npm run build                # dist/
 
 `.github/workflows/deploy.yml` lints, tests, builds and deploys `dist/` to GitHub Pages on every push to `master`. Built files are not committed. The `base` setting in `vite.config.js` is `/bridge_cc/`. Routing uses `createHashRouter` because GitHub Pages has no fallback to `index.html`.
 
-To add a tournament, put the `.pbn` file in `public/` and add an entry to `TOURNAMENTS` in `src/HomePage.jsx`.
+To add a tournament, put the `.pbn` file in `public/` and add an entry to `src/tournaments.js`.
 
 ## Architecture
 
