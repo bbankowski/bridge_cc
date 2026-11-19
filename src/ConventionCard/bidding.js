@@ -8,11 +8,28 @@ const SECTION_MARKERS = ['^', '&', '*']
  * - "T<sequence>" draws an auction table for the sequence,
  * - a single call (e.g. "1T", "2BA", "pas") is an opening,
  * - everything else is a continuation, indented relative to the last table.
+ *
+ * The same sequence means different things in different sections (e.g. "1BA-2C" is a transfer after our 1NT,
+ * but an overcall after the opponents' 1NT), so tables get ids unique per section and a continuation links only
+ * to a table of its own section.
  */
 export const parseBidding = text => {
     const entries = []
     let section = null
+    let sectionIndex = 0
     let tableLevel = 0
+    const usedIds = new Set()
+
+    const tableId = sequence => {
+        // tables before the first section keep the plain "bid-<sequence>" ids used by existing links
+        const base = sectionIndex === 0 ? `bid-${sequence}` : `bid-s${sectionIndex}-${sequence}`
+        let id = base
+        for (let n = 2; usedIds.has(id); n++) {
+            id = `${base}-${n}`
+        }
+        usedIds.add(id)
+        return id
+    }
 
     for (const line of text.split(/\r?\n/)) {
         if (line.trim() === '' || line.startsWith('#')) {
@@ -24,6 +41,7 @@ export const parseBidding = text => {
 
         if (SECTION_MARKERS.includes(bid[0])) {
             section = bid[0]
+            sectionIndex++
             entries.push({type: 'section', title: bid.slice(1).trim()})
         } else if (bid.startsWith('T')) {
             const sequence = bid.substring(1)
@@ -31,13 +49,30 @@ export const parseBidding = text => {
             const described = section === null
                 ? entries.findLast(entry => entry.type !== 'table' && entry.sequence === sequence)
                 : undefined
-            entries.push({type: 'table', sequence, section, description: described?.description})
+            entries.push({
+                type: 'table', id: tableId(sequence), sequence, section, sectionIndex,
+                description: described?.description,
+            })
         } else if (!bid.includes('-')) {
             entries.push({type: 'opening', sequence: bid, description})
         } else {
-            entries.push({type: 'bid', sequence: bid, description, level: Math.max(countDashes(bid) - tableLevel, 0)})
+            entries.push({
+                type: 'bid', sequence: bid, description, sectionIndex,
+                level: Math.max(countDashes(bid) - tableLevel, 0),
+            })
         }
     }
+
+    // a continuation links to the table of its sequence in the same section: the next one, or else the last before it
+    entries.forEach((entry, index) => {
+        if (entry.type !== 'bid') {
+            return
+        }
+        const tables = entries.filter(other => other.type === 'table' && other.sectionIndex === entry.sectionIndex
+            && other.sequence === entry.sequence)
+        const target = tables.find(table => entries.indexOf(table) > index) ?? tables.at(-1)
+        entry.target = target?.id
+    })
     return entries
 }
 
