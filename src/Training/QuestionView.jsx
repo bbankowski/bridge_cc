@@ -4,6 +4,7 @@ import BidGrid from '../ConventionCard/BidGrid'
 import BiddingBox from './BiddingBox'
 import {SEATS} from './calls'
 import HandView, {CardLabel} from './HandView'
+import {hcp, parseHand} from './hands'
 import {isCorrect} from './questions'
 
 const SCORING_LABELS = {IMP: 'Mecz (IMP)', maxy: 'Turniej na maksy'}
@@ -120,7 +121,7 @@ const QuestionView = ({question, result, onAnswer}) => {
             {!question.cardAuction && question.auction && <AuctionTable auction={question.auction} context={question.context}
                                                                         showQuestion={question.kind === 'call'}/>}
             {question.hand && <div>
-                <p className="has-text-grey is-size-7 mb-1">Twoja ręka</p>
+                <p className="has-text-grey is-size-7 mb-1">Twoja ręka ({hcp(parseHand(question.hand))} PC)</p>
                 <HandView hand={question.hand} disabled={answered} selected={answered ? result.value : null}
                           onSelectCard={question.kind === 'card' ? onAnswer : undefined}/>
             </div>}

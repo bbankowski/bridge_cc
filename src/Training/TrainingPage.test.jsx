@@ -68,7 +68,7 @@ describe('TrainingPage', () => {
         const header = [...document.querySelectorAll('.Training-auction th')]
         expect(header.every(th => th.matches('.is-vulnerable, .is-not-vulnerable'))).toBe(true)
         expect(header.filter(th => th.textContent.includes('(ty)'))).toHaveLength(1)
-        expect(screen.getByText('Twoja ręka')).toBeInTheDocument()
+        expect(screen.getByText(/^Twoja ręka \(\d+ PC\)$/)).toBeInTheDocument()
         await answerCurrent()
         expect(screen.getByText('Przy stole:')).toBeInTheDocument()
         expect(screen.getByRole('link', {name: 'Zobacz całe rozdanie →'})).toHaveAttribute('href', expect.stringMatching(/^\/pbn\?filename=.*&deal=\d+$/))
@@ -152,4 +152,5 @@ test('marks vulnerability and our seat in the auction header', () => {
     expect(header.N).toHaveClass('is-not-vulnerable')
     expect(header.W).toHaveTextContent('W (ty)')
     expect(screen.queryByText(/^My:/)).toBeNull()
+    expect(screen.getByText('Twoja ręka (15 PC)')).toBeInTheDocument()
 })
