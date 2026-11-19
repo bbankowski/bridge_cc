@@ -31,6 +31,7 @@ To add a tournament, put the `.pbn` file in `public/` and add an entry to `src/t
 - `src/common/` holds the shared `Suit` and `Bid` components and `suits.js`. Suits are identified by PBN letters `S/H/D/C`. The convention card uses Polish letters `T/K/C/P` (clubs/diamonds/hearts/spades) and `BA` for no trump. Polish bids are converted with `polishBidToPbn` before rendering. Note that `C` means clubs in PBN but hearts in Polish.
 - **Convention card**: `bidding.txt` is bundled with `?raw`, so changing it needs a rebuild, which a push triggers. `ConventionCard/bidding.js` parses it into entries:
   - Lines have the form `<sequence> => <description>`, with `-` separating calls. Lines starting with `#` are comments.
+  - `@` lines start chapters (Nasze otwarcia, Po interwencji przeciwników, W obronie, Konwencje). `buildChapters` groups the entries into chapters and menu items (openings and sections) for the side menu, search (`searchItems`) and the single chapter view (`?chapter=<id>`).
   - `^`, `&` and `*` lines start sections. `*` means we open and `^` means the opponents open, which decides whose calls are shown in parentheses.
   - `T<sequence>` lines draw an auction table.
   - A line without `-` is an opening.

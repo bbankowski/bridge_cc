@@ -45,3 +45,104 @@
         padding: 6px 8px;
     }
 }
+
+/* chapters */
+.ConventionCard-chapter {
+    margin-bottom: 2.5rem;
+}
+
+.ConventionCard-chapterTitle {
+    border-left: 6px solid #485fc7;
+    padding-left: 12px;
+    scroll-margin-top: 1rem;
+}
+
+.ConventionCard-chapter, .ConventionCard .title, .ConventionCard .App-bidTable, .ConventionCard .App-bidLine {
+    scroll-margin-top: 1rem;
+}
+
+.App-bidLine.is-search-match {
+    background-color: #fffbe6;
+    box-shadow: inset 3px 0 0 #ffd83d;
+}
+
+/* menu */
+.ConventionCard-sidebar {
+    position: sticky;
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.CardMenu .menu-label {
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+}
+
+.CardMenu .menu-label a {
+    color: inherit;
+}
+
+.CardMenu .menu-label a.has-text-link {
+    color: #485fc7;
+    font-weight: bold;
+}
+
+.CardMenu .menu-list a {
+    padding: 0.2em 0.6em;
+    font-size: 0.9rem;
+}
+
+.CardMenu-openings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.CardMenu-openings li a {
+    min-width: 3.2em;
+    text-align: center;
+}
+
+.App .CardMenu a:hover {
+    text-decoration: none;
+}
+
+.App .CardMenu .menu-list a.is-active {
+    background-color: #485fc7;
+    color: white;
+}
+
+.App .CardMenu .menu-list a.is-active img {
+    filter: brightness(0) invert(1);
+}
+
+/* mobile table of contents */
+.ConventionCard-mobileBar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    padding: 6px 0;
+    margin-bottom: 1rem;
+}
+
+.ConventionCard-mobileMenu {
+    margin-top: 6px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .ConventionCard-chapter, .ConventionCard .title, .ConventionCard .App-bidTable,
+    .ConventionCard .App-bidLine {
+        scroll-margin-top: 60px;
+    }
+}
+
+.ConventionCard-mobileBar .button {
+    justify-content: flex-start;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

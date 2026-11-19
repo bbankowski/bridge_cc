@@ -4,7 +4,13 @@
 #  po prawej wyjasnienie licytacji
 #  linie z hashem na poczatku to komentarze
 #  T na początku linii oznacza wymuszenie narysowania tabelki z podaną licytacją
+#  @ na początku linii zaczyna rozdział karty (pozycja w menu), np. "@ W obronie"
+#  * zaczyna sekcję, w której otwieramy my (np. po interwencji przeciwnika)
+#  ^ zaczyna sekcję, w której otwierają przeciwnicy (obrona)
+#  & zaczyna sekcję z konwencją
 #
+@ Nasze otwarcia
+
 ### OTWARCIE 1T ###
 1T                          => 12-14 PC skład równy lub 15+ z piątką trefli lub 18+ skład dowolny
 
@@ -812,7 +818,7 @@ pas-1C-2T-2K                => otwarcie nieminimalne, nic nie mówi o karach
 Tpas-1P
 pas-1P-2T                   => drury
 
-### PO INTERWENCJI ###
+@ Po interwencji przeciwników
 
 * Po interwencji na otwarcie 1 trefl
 T1T-X
@@ -970,12 +976,8 @@ T2K-3T
 2K-3T-X					=> kontra na wysokości trzech jest karna
 
 
-* Po blackwoodzie
-T4BA-X
-4BA-X-XX                => karna, reszta szczebelkami (pas też jest szczebelkiem)
-4BA-5T-X                => karna, reszta szczebelkami (tak samo po innych wejsciach)
 
-### W OBRONIE ###
+@ W obronie
 
 ^ Po polskim treflu
 T1T
@@ -1096,7 +1098,7 @@ T1T
 2BA-3T          => 5-5 na młodych
 2BA-3K          => 5-5 na starych            
 
-### KONWENCJE ###
+@ Konwencje
 
 & Blackwood 102 i kolorowe króle/damy (kolejny szczebel oprócz koloru uzgodnionego)
 4BA-5T                => 1 lub 4 wartosci
@@ -1107,6 +1109,11 @@ T1T
 4BA-6T                => 2 lub 5 wartosci, dama atu, król w srodkowym kolorze bocznym lub 2 pozostale króle
 4BA-6K                => 2 lub 5 wartosci, dama atu, król w najwyższym kolorze bocznym lub 2 pozostale króle
 4BA-6C                => 2 lub 5 wartosci, dama atu, 3 króle
+
+* Po blackwoodzie
+T4BA-X
+4BA-X-XX                => karna, reszta szczebelkami (pas też jest szczebelkiem)
+4BA-5T-X                => karna, reszta szczebelkami (tak samo po innych wejsciach)
 
 & Po splinterze przeciwnika
 4K-pas    => sugestia wistu w młodszy z pozostałych kolorów lub brak preferencji
