@@ -11,6 +11,12 @@ const HomePage = () => <div className="HomePage container">
             </ul>
         </div>
         <div className="content">
+            <p>Trening:</p>
+            <ul>
+                <li><Link to="/trening">Testy z karty, otwarć i sytuacji z turniejów</Link></li>
+            </ul>
+        </div>
+        <div className="content">
             <p>PBN Viewer:</p>
             <ul>
                 {TOURNAMENTS.map(({file, name}) =>

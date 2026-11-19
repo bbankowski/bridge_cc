@@ -4,8 +4,9 @@ import './ConventionCard.css'
 import biddingText from '../../bidding.txt?raw'
 import Bid from '../common/Bid'
 import {polishBidToPbn} from '../common/suits'
+import BidGrid from './BidGrid'
 import CardMenu from './CardMenu'
-import {buildChapters, entryMatches, parseBidding, searchItems, tableRows} from './bidding'
+import {buildChapters, entryMatches, parseBidding, searchItems} from './bidding'
 import {useScrollSpy} from './useScrollSpy'
 
 const scrollToElement = id => document.getElementById(id)?.scrollIntoView()
@@ -15,27 +16,12 @@ const BidSequence = ({sequence}) => sequence.split('-').map((call, index) => <Fr
     <Bid bid={polishBidToPbn(call)}/>
 </Fragment>)
 
-const BidTable = ({id, sequence, section, description}) => {
-    // "*" sections and our own openings: we make the first call; otherwise the opponents do.
-    const weStartBidding = section === '*' || section === null
-    return <div className="App-bidTable" id={id}>
-        <div className="App-bidTableHeader">
-            Licytacja po <BidSequence sequence={sequence}/>{description && `: ${description}`}
-        </div>
-        <table>
-            <tbody>
-            {tableRows(sequence, section).map((row, rowIndex) => <tr key={rowIndex}>
-                {row.map((call, index) => {
-                    const theirCall = call !== '' && (index % 2 === 1) === weStartBidding
-                    return <td key={index}>
-                        {theirCall && '('}<Bid bid={polishBidToPbn(call)}/>{theirCall && ')'}
-                    </td>
-                })}
-            </tr>)}
-            </tbody>
-        </table>
+const BidTable = ({id, sequence, section, description}) => <div className="App-bidTable" id={id}>
+    <div className="App-bidTableHeader">
+        Licytacja po <BidSequence sequence={sequence}/>{description && `: ${description}`}
     </div>
-}
+    <BidGrid sequence={sequence} section={section}/>
+</div>
 
 // Splits the entries of a chapter into boxes: one per opening or section (and one for entries before them).
 const groupByItem = chapter => {

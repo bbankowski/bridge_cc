@@ -79,7 +79,7 @@ export const parseBidding = text => {
             entries.push({type: 'opening', id: uniqueId(`opening-${bid}`), sequence: bid, description})
         } else {
             entries.push({
-                type: 'bid', sequence: bid, description, scope: scope(),
+                type: 'bid', sequence: bid, description, scope: scope(), section,
                 level: Math.max(countDashes(bid) - tableLevel, 0),
             })
         }

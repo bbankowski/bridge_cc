@@ -1,0 +1,172 @@
+.Training-modes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.Training-mode.button {
+    height: auto;
+    white-space: normal;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 10px 12px;
+    gap: 2px;
+}
+
+.Training-modeCount {
+    opacity: 0.75;
+}
+
+.Training-settings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    align-items: flex-end;
+}
+
+.Training-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.Training-progress .progress {
+    margin-bottom: 0;
+    flex: 1;
+}
+
+.Training-context {
+    margin-bottom: 0.75rem;
+}
+
+.Training-board {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.BidGrid td, .BidGrid th {
+    padding: 5px 10px;
+    border: 1px solid #dedede;
+    min-width: 55px;
+    background-color: rgba(0, 0, 0, 0.02);
+    white-space: nowrap;
+}
+
+.BidGrid td.is-highlighted {
+    background-color: #fff3c4;
+    font-weight: bold;
+}
+
+.BidGrid th.is-our-seat {
+    background-color: #e8edfb;
+}
+
+.HandView {
+    font-size: 1.15rem;
+}
+
+.HandView-suit {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    min-height: 2rem;
+}
+
+.HandView .App-card-img {
+    width: 16px;
+}
+
+.HandView-rank {
+    min-width: 0.9em;
+}
+
+.HandView-card.button {
+    min-width: 2.2rem;
+    font-weight: bold;
+}
+
+.Training-prompt {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding: 8px 12px;
+    background-color: #f5f7fb;
+    border-left: 4px solid #485fc7;
+}
+
+.Training-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.Training-choice.button {
+    height: auto;
+    white-space: normal;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.BiddingBox {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.BiddingBox-row, .BiddingBox-special {
+    display: flex;
+    gap: 4px;
+}
+
+.BiddingBox-call.button {
+    min-width: 3.2rem;
+    padding: 0 6px;
+}
+
+.BiddingBox-special .button {
+    flex: 1;
+}
+
+.Training-feedback {
+    margin-top: 1rem;
+}
+
+.Training-options td {
+    background: transparent;
+}
+
+.Training-options tr.is-selected-answer td {
+    font-weight: bold;
+}
+
+.Training-optionValue {
+    width: 4rem;
+    white-space: nowrap;
+}
+
+.Training-optionScore {
+    width: 3rem;
+    text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+    .BiddingBox {
+        display: flex;
+    }
+
+    .BiddingBox-call.button {
+        min-width: 0;
+        flex: 1;
+        height: 2.6rem;
+    }
+
+    .BidGrid td, .BidGrid th {
+        min-width: 0;
+        padding: 4px 6px;
+    }
+}

@@ -18,6 +18,8 @@ const router = createHashRouter([
             {path: '/', element: <HomePage/>},
             {path: '/cc', element: <ConventionCard/>},
             {path: '/pbn', element: <PbnViewer/>},
+            // loaded on demand: the training data is large
+            {path: '/trening', lazy: () => import('./Training/TrainingPage').then(module => ({Component: module.default}))},
         ],
     },
 ])

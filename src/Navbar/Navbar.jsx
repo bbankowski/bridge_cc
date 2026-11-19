@@ -6,6 +6,8 @@ const Navbar = () => <nav className="container navbar is-light" aria-label="main
             <img src={`${import.meta.env.BASE_URL}logo-cards.png`} width="80" alt="cards"/>
         </Link>
         <Link className="navbar-item" to="/">Home</Link>
+        <Link className="navbar-item" to="/cc">Karta</Link>
+        <Link className="navbar-item" to="/trening">Trening</Link>
     </div>
 </nav>
 

@@ -29,9 +29,9 @@ T1T
         expect(strip(entries)).toEqual([
             {type: 'chapter', id: 'chapter-nasze-otwarcia', title: 'Nasze otwarcia'},
             {type: 'opening', id: 'opening-1T', sequence: '1T', description: '12-14 PC'},
-            {type: 'bid', sequence: '1T-1K', description: 'negat', level: 1, scope: '', target: 'bid-1T-1K'},
+            {type: 'bid', sequence: '1T-1K', description: 'negat', level: 1, scope: '', section: null, target: 'bid-1T-1K'},
             {type: 'table', id: 'bid-1T-1K', sequence: '1T-1K', section: null, scope: '', description: 'negat'},
-            {type: 'bid', sequence: '1T-1K-1BA', description: '18-20 PC', level: 1, scope: '', target: undefined},
+            {type: 'bid', sequence: '1T-1K-1BA', description: '18-20 PC', level: 1, scope: '', section: null, target: undefined},
             {type: 'chapter', id: 'chapter-w-obronie', title: 'W obronie'},
             {type: 'section', id: 'po-polskim-treflu', title: 'Po polskim treflu'},
             {
@@ -40,7 +40,7 @@ T1T
             },
             {
                 type: 'bid', sequence: '1T-X', description: 'wywolawcza', level: 1, scope: 'po-polskim-treflu',
-                target: undefined,
+                section: '^', target: undefined,
             },
         ])
         expect(entries.map(entry => entry.index)).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8])
