@@ -1,71 +1,76 @@
-import fs from 'node:fs'
-import path from 'node:path'
 import {render, screen, within} from '@testing-library/react'
 import {createMemoryRouter, RouterProvider} from 'react-router'
 import {describe, expect, test} from 'vitest'
 import data from '../../../karta-pzbs.json'
-import MiniCard from './MiniCard'
+import {OpeningsPage, OutsidePage} from './FullCard'
 import PzbsCardPage from './PzbsCardPage'
-import {defenceAfter1NT, missingFields} from './pzbsCard'
+import {LEAD_ROWS, missingFields} from './pzbsCard'
 
-const biddingText = fs.readFileSync(path.join(import.meta.dirname, '../../../bidding.txt'), 'utf8')
+const OPENINGS = ['1♣', '1♦', '1♥', '1♠', '1BA', '2♣', '2♦', '2♥', '2♠', '2BA', '3♣', '3♦', '3♥', '3♠', '3BA', '4♣', '4♦']
 
-describe('defenceAfter1NT', () => {
-    test('reads the defence after 1NT from the section of bidding.txt', () => {
-        expect(defenceAfter1NT(biddingText, data.obronaPo1BA.sekcja)).toEqual([
-            {label: 'Kontra', description: '5 mlodsza, 4 starsza'},
-            {label: '2♣', description: '54 kolory stare'},
-            {label: '2♦', description: '6+ w starym'},
-            {label: '2♥', description: '5+ mlody, 5+ kierów'},
-            {label: '2♠', description: '5+ mlody, 5+ pików'},
-            {label: '2BA', description: '55 w kolorach mlodych'},
+describe('karta-pzbs.json', () => {
+    test('has every opening row of the PZBS form in order', () => {
+        expect(data.otwarcia.map(o => o.otwarcie)).toEqual(OPENINGS)
+    })
+
+    test('has every lead row', () => {
+        expect(Object.keys(data.wisty.wyjscia).sort()).toEqual(LEAD_ROWS.map(([key]) => key).sort())
+    })
+})
+
+describe('missingFields', () => {
+    test('lists the null fields of the current card', () => {
+        expect(missingFields(data)).toEqual([
+            'Otwarcie 4♣: sztuczna, min. kart, opis, odpowiedzi',
+            'Otwarcie 4♦: sztuczna, min. kart, opis, odpowiedzi',
+            'Kategoria PZBS',
+            'Zawody',
+            'Sygnały do wyjścia partnera',
+            'Sygnały do wyjścia rozgrywającego',
+            'Wyjścia: w asa, w króla, w damę, w waleta, 10, 9, w wysoką x, w niską x',
         ])
     })
 
-    test('returns null for an unknown section', () => {
-        expect(defenceAfter1NT(biddingText, 'Nie ma takiej')).toBeNull()
+    test('is empty for a complete card', () => {
+        const leads = Object.fromEntries(LEAD_ROWS.map(([key]) => [key, {kolor: 'x', ba: 'x'}]))
+        const complete = {
+            ...data,
+            naglowek: {...data.naglowek, kategoria: 'II', zawody: 'Liga'},
+            otwarcia: data.otwarcia.map(o => ({sztuczna: false, minKart: '6', opis: 'x', odpowiedzi: 'x', ...Object.fromEntries(Object.entries(o).filter(([, v]) => v !== null))})),
+            wisty: {...data.wisty, wyjscia: leads, sygnaly: {doWyjsciaPartnera: 'x', doWyjsciaRozgrywajacego: 'x', doInnegoKoloru: 'x'}},
+        }
+        expect(missingFields(complete)).toEqual([])
     })
 })
 
-test('missingFields lists the empty fields', () => {
-    const full = {...data, system: {wybor: 'inny'}, blefy: 'rzadko', kontraNaOtwarcie1wKolor: {przedPasem: 'wywolawcza', poPasie: 'wywolawcza'},
-        wejscie1BANaWygasajacej: '12-15', kontraNegatywna: {po1wKolor: '3♠', po1BA: '2♠'}, odwrotka: 'brak',
-        po1BAktr2H: 'transfer', wist: 'naturalny', zrzutki: ['lavinthal']}
+test('the inside page has the openings table with the slam conventions', () => {
+    const {container} = render(<OpeningsPage data={data}/>)
 
-    expect(missingFields(full)).toEqual([])
-    expect(missingFields({...full, wist: null, zrzutki: []})).toEqual(['Wist', 'Zrzutki'])
+    const rows = [...container.querySelectorAll('tbody tr')]
+    expect(rows.map(row => row.querySelector('td').textContent)).toEqual(OPENINGS)
+    expect(rows[0]).toHaveTextContent('12-14 PC skład równy')
+    expect(rows[0].querySelectorAll('td')[1]).toHaveTextContent('X')
+    expect(screen.getByText('KONWENCJE STREFY SZLEMOWEJ').closest('td')).toHaveAttribute('rowspan', '6')
 })
 
-describe('MiniCard', () => {
-    const renderCard = (overrides = {}) => render(<MiniCard data={{...data, ...overrides}} defence={defenceAfter1NT(biddingText, data.obronaPo1BA.sekcja)}/>)
-    const checked = () => [...document.querySelectorAll('.MiniCard-box')]
-        .filter(box => box.querySelector('.MiniCard-check').textContent === '☒').map(box => box.textContent.slice(2))
+test('the outside page has the competitive bidding, leads, doubles and the cover', () => {
+    render(<OutsidePage data={data}/>)
 
-    test('ticks the choices of karta-pzbs.json', () => {
-        renderCard()
-
-        expect(checked()).toEqual(['Wspólny Język', '4+♦', 'silne', 'Precision', 'Multi', '5♥ - 5', '5♠ - 5', '5♣ - 5♦',
-            'rzadko', 'wywoł.', 'wywoł.', 'naturalne', '9-14 PC', 'z damą atu', '5 asów', 'tak', 'tak', 'tak',
-            'odmienny', 'odwrotne', 'Lavinthal'])
-        expect(screen.getByText('Bartosz Bańkowski (PID 13886) – Marek Jarosz (PID 10237)')).toBeInTheDocument()
-        expect(screen.getByText('pierwszy wist; później jakościowo odwrotny')).toBeInTheDocument()
-        expect(screen.getByText('54 kolory stare')).toBeInTheDocument()
-    })
-
-    test('ticks lists and leaves empty fields with dots', () => {
-        renderCard({zrzutki: ['lavinthal', 'ilosciowe'], wist: 'naturalny', kontraNegatywna: {po1wKolor: null, po1BA: '2♠'}})
-
-        expect(checked()).toEqual(expect.arrayContaining(['naturalny', 'ilościowe', 'Lavinthal']))
-        expect(document.querySelectorAll('.MiniCard-dots').length).toBeGreaterThan(0)
-    })
+    for (const heading of ['WEJŚCIE 1BA', 'PRZECIW ZAPORÓWKOM', 'SYGNAŁY UPORZĄDKOWANE POD WZGLĘDEM WAŻNOŚCI',
+        'KONTRY WYWOŁAWCZE', 'OPIS OGÓLNY', 'ODZYWKI PSYCHOLOGICZNE']) {
+        expect(screen.getByText(heading)).toBeInTheDocument()
+    }
+    expect([...document.querySelectorAll('.PzbsCard-leads tbody td:first-child')].map(td => td.textContent))
+        .toEqual(['w asa', 'w króla', 'w damę', 'w waleta', '10', '9', 'w wysoką x', 'w niską x'])
+    expect(screen.getByText(/Bartosz Bańkowski \(PID 13886\)/)).toBeInTheDocument()
+    expect(screen.getByText(/Zrzutki odwrotne, Lavinthal/)).toBeInTheDocument()
 })
 
-test('the page shows two copies and the fields to fill in', () => {
+test('the page shows both pages and the fields to fill in', () => {
     render(<RouterProvider router={createMemoryRouter([{path: '/', element: <PzbsCardPage/>}])}/>)
 
-    expect(document.querySelectorAll('.MiniCard')).toHaveLength(2)
+    expect(document.querySelectorAll('.PzbsCard-page')).toHaveLength(2)
     const missing = within(screen.getByText(/Do uzupełnienia/).closest('.notification'))
-    expect(missing.getAllByRole('listitem').map(item => item.textContent)).toEqual([
-        'Kontra negatywna do poziomu – po otwarciu 1 w kolor', 'Odwrotka', 'W sekwencji 1BA (ktr) 2♥'])
+    expect(missing.getByText('Zawody')).toBeInTheDocument()
     expect(screen.getByRole('button', {name: 'Drukuj / zapisz PDF'})).toBeInTheDocument()
 })

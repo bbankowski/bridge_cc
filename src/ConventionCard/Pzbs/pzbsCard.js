@@ -1,45 +1,59 @@
-import {parseBidding} from '../bidding'
-
 /*
- * Data of the PZBS "minikarta konwencyjna" (one A4 page with two copies, one for each opponent): the choices from
- * karta-pzbs.json, and the defence after 1NT read from the section of bidding.txt named in obronaPo1BA.sekcja.
+ * The PZBS convention card (kartakonw.docx): the content is in karta-pzbs.json; null marks a field still to fill in.
  */
 
-const DEFENCE_CALLS = [['X', 'Kontra'], ['2T', '2♣'], ['2K', '2♦'], ['2C', '2♥'], ['2P', '2♠'], ['2BA', '2BA']]
+// rows of the leads table in the order of the form (an array: numeric object keys would be sorted first)
+export const LEAD_ROWS = [['A', 'w asa'], ['K', 'w króla'], ['Q', 'w damę'], ['J', 'w waleta'], ['10', '10'], ['9', '9'],
+    ['wysokaX', 'w wysoką x'], ['niskaX', 'w niską x']]
 
-export const defenceAfter1NT = (biddingText, sectionTitle) => {
-    const entries = parseBidding(biddingText)
-    const section = entries.find(entry => entry.type === 'section' && entry.title === sectionTitle)
-    if (!section) {
-        return null
-    }
-    const lines = entries.filter(entry => entry.type === 'bid' && entry.scope === section.id)
-    return DEFENCE_CALLS.map(([call, label]) => ({
-        label,
-        description: lines.find(entry => entry.sequence === `1BA-${call}`)?.description ?? null,
-    }))
-}
+const OPENING_FIELDS = {sztuczna: 'sztuczna', minKart: 'min. kart', opis: 'opis', odpowiedzi: 'odpowiedzi',
+    dalszaLicytacja: 'dalsza licytacja', poPasie: 'po pasie'}
 
-const MISSING_LABELS = {
-    'system.wybor': 'System (Wspólny Język / Nasz System / inny)',
-    blefy: 'Blefy',
-    'kontraNaOtwarcie1wKolor.przedPasem': 'Kontra na otwarcie 1 w kolor – partner przed pasem',
-    'kontraNaOtwarcie1wKolor.poPasie': 'Kontra na otwarcie 1 w kolor – partner po pasie',
-    wejscie1BANaWygasajacej: 'Wejście 1BA w obronie na wygasającej',
-    'kontraNegatywna.po1wKolor': 'Kontra negatywna do poziomu – po otwarciu 1 w kolor',
-    'kontraNegatywna.po1BA': 'Kontra negatywna do poziomu – po otwarciu 1BA',
-    odwrotka: 'Odwrotka',
-    po1BAktr2H: 'W sekwencji 1BA (ktr) 2♥',
-    wist: 'Wist',
-    zrzutki: 'Zrzutki',
+const SECTION_LABELS = {
+    'naglowek.gracze': 'Nazwiska graczy',
+    'naglowek.kategoria': 'Kategoria PZBS',
+    'naglowek.zawody': 'Zawody',
+    konwencjeStrefySzlemowej: 'Konwencje strefy szlemowej',
+    'wejscia.wObronie': 'Wejścia w obronie',
+    'wejscia.wejscie1BA': 'Wejście 1BA',
+    'wejscia.zPrzeskokiem': 'Wejścia z przeskokiem',
+    'wejscia.kolorPrzeciwnika': 'Wejścia kolorem przeciwnika',
+    'wejscia.przeciwBA.slabemu': 'Przeciw słabemu BA',
+    'wejscia.przeciwBA.klasycznemu': 'Przeciw klasycznemu BA',
+    'wejscia.przeciwZaporowkom': 'Przeciw zaporówkom',
+    'wejscia.przeciwSztucznymSilnym': 'Przeciw sztucznym silnym otwarciom',
+    'wejscia.przeciwKontrzeWywolawczej': 'Przeciw kontrze wywoławczej',
+    'wisty.sygnaly.doWyjsciaPartnera': 'Sygnały do wyjścia partnera',
+    'wisty.sygnaly.doWyjsciaRozgrywajacego': 'Sygnały do wyjścia rozgrywającego',
+    'wisty.sygnaly.doInnegoKoloru': 'Sygnały do innego koloru',
+    'kontry.wywolawcze': 'Kontry wywoławcze',
+    'kontry.specjalne': 'Specjalne sztuczne kontry i rekontry',
+    'streszczenie.opisOgolny': 'Opis ogólny',
+    'streszczenie.specjalneOdzywki': 'Specjalne odzywki, które wymagają obrony',
+    'streszczenie.forsujacyPas': 'Specjalne sekwencje z forsującym pasem',
+    'streszczenie.wazneUwagi': 'Ważne uwagi',
+    'streszczenie.psychologiczne': 'Odzywki psychologiczne',
 }
 
 const valueAt = (data, path) => path.split('.').reduce((value, key) => value?.[key], data)
 
-// Fields of the card that are still empty in karta-pzbs.json.
-export const missingFields = data => Object.entries(MISSING_LABELS)
-    .filter(([path]) => {
-        const value = valueAt(data, path)
-        return value === null || value === undefined || (Array.isArray(value) && value.length === 0)
-    })
-    .map(([, label]) => label)
+// Fields of karta-pzbs.json that are still null, with readable labels.
+export const missingFields = data => {
+    const missing = []
+    for (const opening of data.otwarcia) {
+        const fields = Object.entries(OPENING_FIELDS).filter(([key]) => opening[key] === null).map(([, label]) => label)
+        if (fields.length > 0) {
+            missing.push(`Otwarcie ${opening.otwarcie}: ${fields.join(', ')}`)
+        }
+    }
+    for (const [path, label] of Object.entries(SECTION_LABELS)) {
+        if (valueAt(data, path) === null) {
+            missing.push(label)
+        }
+    }
+    const leads = LEAD_ROWS.filter(([key]) => ['kolor', 'ba'].some(column => data.wisty.wyjscia[key]?.[column] === null))
+    if (leads.length > 0) {
+        missing.push(`Wyjścia: ${leads.map(([, label]) => label).join(', ')}`)
+    }
+    return missing
+}

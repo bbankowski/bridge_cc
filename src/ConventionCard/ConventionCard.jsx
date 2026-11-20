@@ -127,7 +127,7 @@ const ConventionCard = () => {
     return <div className="container App ConventionCard">
         <div className="ConventionCard-header">
             <h1 className="title">Karta konwencyjna</h1>
-            <Link className="button is-small is-light" to="/karta-pzbs">Minikarta PZBS do druku</Link>
+            <Link className="button is-small is-light" to="/karta-pzbs">Karta PZBS do druku</Link>
         </div>
         <p className="subtitle">Bartosz Bańkowski <span className="tag">13886</span><br/>Marek Jarosz <span
             className="tag">10237</span></p>
