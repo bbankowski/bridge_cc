@@ -4,9 +4,9 @@ import {useScrollSpy} from './useScrollSpy'
 
 const IDS = ['a', 'b', 'c']
 
-const Spy = () => <>
+const Spy = ({preferred = null}) => <>
     {IDS.map(id => <div key={id} id={id}/>)}
-    <p data-testid="active">{useScrollSpy(IDS, 100)}</p>
+    <p data-testid="active">{useScrollSpy(IDS, 100, preferred)}</p>
 </>
 
 const setTops = tops => IDS.forEach((id, index) => {
@@ -54,4 +54,34 @@ test('marks the last visible element at the bottom of the page', async () => {
     await scroll()
 
     expect(getByTestId('active')).toHaveTextContent('c')
+})
+
+// the reported case: "Po silnym 2BA" opened from the menu near the end of the card showed the last section as active
+test('at the bottom of the page the section navigated to wins if it is visible', async () => {
+    const {getByTestId} = render(<Spy preferred="b"/>)
+    vi.spyOn(document.documentElement, 'scrollHeight', 'get').mockReturnValue(800)
+
+    setTops([-200, 0, 500])
+    await scroll()
+
+    expect(getByTestId('active')).toHaveTextContent('b')
+})
+
+test('at the bottom the last visible element wins when the preferred one is scrolled away', async () => {
+    const {getByTestId} = render(<Spy preferred="a"/>)
+    vi.spyOn(document.documentElement, 'scrollHeight', 'get').mockReturnValue(800)
+
+    setTops([-200, 50, 500])
+    await scroll()
+
+    expect(getByTestId('active')).toHaveTextContent('c')
+})
+
+test('away from the bottom the preferred element does not change the result', async () => {
+    const {getByTestId} = render(<Spy preferred="c"/>)
+
+    setTops([-500, 50, 400])
+    await scroll()
+
+    expect(getByTestId('active')).toHaveTextContent('b')
 })
