@@ -70,6 +70,11 @@ test('has unique ids and every link points to an existing table', () => {
 })
 
 const sidebar = () => within(document.querySelector('.ConventionCard-sidebar'))
+// pasting the query at once: typing it re-renders the whole card after every letter, which is slow on CI
+const search = async query => {
+    await userEvent.click(sidebar().getByRole('searchbox', {name: 'Szukaj w karcie'}))
+    await userEvent.paste(query)
+}
 const shownChapters = () => [...document.querySelectorAll('.ConventionCard-chapterTitle')].map(title => title.textContent)
 
 describe('chapters and menu', () => {
@@ -108,7 +113,7 @@ describe('chapters and menu', () => {
     test('searches the card, filters the menu and highlights matching lines', async () => {
         const router = renderCard()
 
-        await userEvent.type(sidebar().getByRole('searchbox', {name: 'Szukaj w karcie'}), 'transfer na piki')
+        await search('transfer na piki')
 
         const results = sidebar().getAllByRole('link').filter(link => link.closest('.menu-list'))
         const oneNoTrump = results.find(link => /^1BA\d+$/.test(link.textContent))
@@ -126,7 +131,7 @@ describe('chapters and menu', () => {
     test('says when nothing was found', async () => {
         renderCard()
 
-        await userEvent.type(sidebar().getByRole('searchbox'), 'nie ma takiej licytacji')
+        await search('nie ma takiej licytacji')
 
         expect(sidebar().getByText('Brak wyników.')).toBeInTheDocument()
     })

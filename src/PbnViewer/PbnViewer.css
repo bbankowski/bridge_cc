@@ -249,3 +249,8 @@
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+.App-bidTable td.is-our-turn {
+    background-color: #fff3c4;
+    font-weight: bold;
+}
