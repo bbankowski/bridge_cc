@@ -1,8 +1,9 @@
 import {useEffect, useState} from 'react'
 
-// Returns the id of the last element (in document order) whose top has scrolled above the given offset
-// (or is visible, when the page is scrolled to the bottom).
-export const useScrollSpy = (ids, offset = 100) => {
+// Returns the id of the last element (in document order) whose top has scrolled above the given offset.
+// At the bottom of the page the last sections cannot reach the top: then the preferred element (the one the user
+// navigated to) wins if it is visible, otherwise the last visible element.
+export const useScrollSpy = (ids, offset = 100, preferredId = null) => {
     const [activeId, setActiveId] = useState(ids[0] ?? null)
 
     useEffect(() => {
@@ -17,6 +18,13 @@ export const useScrollSpy = (ids, offset = 100) => {
                 const element = document.getElementById(id)
                 if (element && element.getBoundingClientRect().top <= limit) {
                     current = id
+                }
+            }
+            const preferred = atBottom && ids.includes(preferredId) ? document.getElementById(preferredId) : null
+            if (preferred) {
+                const top = preferred.getBoundingClientRect().top
+                if (top >= 0 && top < window.innerHeight) {
+                    current = preferredId
                 }
             }
             setActiveId(current)
@@ -36,7 +44,7 @@ export const useScrollSpy = (ids, offset = 100) => {
                 cancelAnimationFrame(frame)
             }
         }
-    }, [ids, offset])
+    }, [ids, offset, preferredId])
 
     return activeId
 }

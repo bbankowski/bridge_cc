@@ -51,7 +51,8 @@ const ConventionCard = () => {
 
     const spyIds = useMemo(() => shownChapters.flatMap(chapter =>
         [...(chapter.title ? [chapter.id] : []), ...chapter.items.map(item => item.id)]), [shownChapters])
-    const activeId = useScrollSpy(spyIds)
+    // the section opened from the menu (or a link) stays active at the bottom of the page
+    const activeId = useScrollSpy(spyIds, 100, decodeURIComponent(hash.substring(1)) || null)
     const activeChapterId = singleChapterId ?? chapterOf(activeId)?.id ?? chapters[0]?.id
 
     const activeEntry = chapters.flatMap(chapter => chapter.items).find(item => item.id === activeId)?.entry
