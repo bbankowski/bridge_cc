@@ -260,8 +260,9 @@ SQ
         expect(document.querySelector('.Minimax')).toBeNull()
         expect(document.querySelector('.PlayControls')).toBeNull()
         expect(screen.getByRole('button', {name: '1'})).not.toHaveClass('is-danger')
-        // the auction stays
-        expect(document.querySelector('.App-bidTable')).toBeInTheDocument()
+        // the auction is revealed step by step, starting before the first call of W
+        expect(screen.getByText('Twoja kolej – co mówisz?')).toBeInTheDocument()
+        expect([...document.querySelectorAll('.App-bidTable td')].map(td => td.textContent)).toEqual(['1NT', 'pas', '3NT', '?'])
     })
 
     test('reveals the current deal and covers the next one again', async () => {
