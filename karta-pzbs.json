@@ -151,7 +151,7 @@
   "konwencjeStrefySzlemowej": "Blackwood na 5 wartości (4 asy i król atu): 5♣ 1 lub 4, 5♦ 0 lub 3, przy 2 lub 5 informacja o damie atu i królach: 5♥ bez damy, 5♠ z damą bez króli, 5BA/6♣/6♦ z damą i królem w najniższym/środkowym/najwyższym kolorze bocznym (lub 2 pozostałymi), 6♥ z damą i 3 królami; o króle i damy pyta kolejny szczebel poza kolorem uzgodnionym. Po wejściu na 4BA: X/XX karne, reszta szczebelkami (pas też). Blackwood wyłączeniowy na 4 wartości (102). 5BA pytanie o honory atu (AKD): 6♣ 0, 6♦ 1, 6♥ 2, 7 w kolor 3. Cue-bidy, splintery, auto-splinter, pytania o krótkość po podniesieniach na poziomie 3. 4BA po otwarciu 3♥/3♠ – Blackwood.",
   "wejscia": {
     "wObronie": "Styl naturalny, kolor 5+; poparcie z przeskokiem blokujące; nowy kolor po wejściu na wysokości 2 F1. Na polskie 1♣: X wywoławcza, 1BA 15-17 naturalne, 2♣ 5-4 starsze, 2♦/2♥/2♠ słabe 6+, 2BA słabe 5-5 młode",
-    "wejscie1BA": "Na 1♣/1♦: 15-17 naturalne (po kontrze uciekamy naturalnie, dalej jak po otwarciu 1BA). Na 1♥: 8-15 PC, 5+ młodszy i 4♠; na 1♠: 8-15 PC, 5+ młodszy i 4♥ (2♣/2♦ partnera do koloru). Na pozycji wygasającej 9-14 PC",
+    "wejscie1BA": "Na 1♣/1♦: 15-17 naturalne (po kontrze uciekamy naturalnie, dalej jak po otwarciu 1BA). Na 1♥: 8-15 PC, 5+ młodszy i 4♠; na 1♠: 8-15 PC, 5+ młodszy i 4♥ (2♣/2♦ partnera do koloru). Na pozycji wygasającej 11-14 PC",
     "zPrzeskokiem": "Słabe, kolor 6+ (1♦-2♥/2♠, na 1♣ także 2♦). 2BA: na 1♣ słabe 5-5 młode, na 1♦ trefle i starszy, na 1♥/1♠ młode. Dalsza licytacja do koloru, kolor przeciwnika inwit. Po 1♣/1♦-pas-1BA: 2♣/2♦ starsze z lepszymi ♥/♠",
     "kolorPrzeciwnika": "1♣ (polski)-2♣: słabe 5-4 starsze (2♦ pytanie o dłuższy); 1♦-2♦: 5-5 starsze; 1♥/1♠-2♥/2♠: 5 młodszy i 5 w drugim starszym; 1♥/1♠-3♥/3♠: pytanie o zatrzymanie, silny na własnym kolorze (4♣ do koloru). Na 2♣ na starych: 2♦/2♥ wywoławcze z pytaniem o trzymanie ♥/♠",
     "przeciwBA": {
@@ -213,6 +213,6 @@
     "specjalneOdzywki": "1♣ (może być krótki: 12-14 równy, 18+ dowolny, 4-4-1-4), 1♦ (4♦ przy 4441 i 4♦-5♣), 1♣-1♦ negat, 1♣-1♥/1♠-2♦ odwrotka, magister, 2♦ mini-multi, 2♥/2♠ 5-5, 2BA 5-5 młode, 3♣-3♠ przed partią najdłuższy kolor dowolnej jakości, 3BA gambling, 1BA-2♠ inwit lub transfer na ♣, 1BA-3♥/3♠ 5431 z singlem, splintery, wejścia 1BA na 1♥/1♠ (8-15, 5+ młodszy i 4 w drugim starszym)",
     "forsujacyPas": "Pas forsujący po 2/1 i interwencji przeciwnika. 1BA-pas-2♣-(X)-pas: brak trzymania ♣, forsuje partnera do XX",
     "wazneUwagi": "Przed partią bardzo słabe otwarcia na wysokości 3; otwarcia na trzeciej ręce mogą być wskazaniem wistu. Otwarcie 4BA pyta o asy (5♣ bez asa, 5♦/5♥/5♠/6♣ as w tym kolorze, 5BA dwa asy). Otwarcia 4♣/4♦/4♥/4♠ naturalne, blokujące. Z 15-17 i 5♥332 zawsze 1BA. Po 1♦-1♠ odpowiedź 1BA może mieć singla ♠ (1444, 1453). Po interwencji przeciwnika na 2♦ odwrotka naturalna, z fitem X",
-    "psychologiczne": "Rzadko"
+    "psychologiczne": "Bardzo rzadko"
   }
 }
