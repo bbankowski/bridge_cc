@@ -14,7 +14,8 @@ export const slugify = text => text
 /*
  * Parses bidding.txt. Each line is "<sequence> => <description>"; lines starting with "#" are comments.
  * - "@ title" starts a chapter of the card (an entry of the menu),
- * - "^ title", "& title", "* title" start a new section ("*": we open, "^": the opponents open, "&": a convention),
+ * - "^ title", "& title", "* title" start a new section ("*": we open, "^": the opponents open, "&": a convention);
+ *   "& title => description" adds a description shown under the heading,
  * - "T<sequence>" draws an auction table for the sequence,
  * - a single call (e.g. "1T", "2BA", "pas") is an opening; its description may be "short | full",
  * - everything else is a continuation, indented relative to the last table.
@@ -63,7 +64,7 @@ export const parseBidding = text => {
             const title = bid.slice(1).trim()
             section = bid[0]
             sectionId = uniqueId(slugify(title))
-            entries.push({type: 'section', id: sectionId, title})
+            entries.push({type: 'section', id: sectionId, title, ...(description ? {description} : {})})
         } else if (bid.startsWith('T')) {
             const sequence = bid.substring(1)
             tableLevel = countDashes(sequence)

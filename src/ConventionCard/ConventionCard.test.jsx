@@ -30,6 +30,14 @@ test('shows the short description in the overview and the full one in the openin
     expect(section.nextElementSibling).toHaveTextContent(/^po partii kolor 7\+ i dwie starsze figury.*wskazaniem wistu$/)
 })
 
+test('shows the description of a section under its heading, and only the title in the menu', () => {
+    renderCard()
+
+    const heading = document.getElementById('blackwood-102-i-kolorowe-krole-damy')
+    expect(heading).toHaveTextContent(/^Blackwood 102 i kolorowe króle\/damy$/)
+    expect(heading.nextElementSibling).toHaveTextContent('kolejny szczebel oprócz koloru uzgodnionego')
+})
+
 test('lists the 4NT opening in the index with its responses', () => {
     renderCard()
 

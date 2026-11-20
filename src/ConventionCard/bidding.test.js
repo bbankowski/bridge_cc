@@ -105,6 +105,23 @@ T1T-1K
         expect(plain).not.toHaveProperty('short')
     })
 
+    test('reads a description of a section after "=>"', () => {
+        const [section, plain] = parseBidding('& Blackwood 102 => kolejny szczebel oprócz koloru uzgodnionego\n^ Po silnym treflu\n')
+
+        expect(section).toEqual({type: 'section', id: 'blackwood-102', title: 'Blackwood 102',
+            description: 'kolejny szczebel oprócz koloru uzgodnionego', index: 0})
+        expect(plain).not.toHaveProperty('description')
+    })
+
+    test.each([
+        ['Blackwood 102 i kolorowe króle/damy', 'kolejny szczebel oprócz koloru uzgodnionego'],
+        ['Po slabych otwarciach 2C/2P i 2K', '2C/2P monokolor lub dwukolorowki, 2K w znaczeniu monokolor karowy'],
+    ])('the section "%s" of bidding.txt has a short title and a description', (title, description) => {
+        const section = parseBidding(readBiddingTxt()).find(entry => entry.type === 'section' && entry.title === title)
+
+        expect(section.description).toBe(description)
+    })
+
     test('finds openings by their short description too', () => {
         expect(entryMatches({sequence: '3T', short: 'blok', description: 'po partii kolor 7+'}, 'blok')).toBe(true)
     })
