@@ -31,6 +31,11 @@
 }
 
 /* inside: openings */
+.PzbsCard-inside {
+    font-size: 6.3pt;
+    padding-bottom: 6mm;
+}
+
 .PzbsCard-openings {
     width: 100%;
     height: 100%;

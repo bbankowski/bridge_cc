@@ -6,7 +6,8 @@ import {OpeningsPage, OutsidePage} from './FullCard'
 import PzbsCardPage from './PzbsCardPage'
 import {LEAD_ROWS, missingFields} from './pzbsCard'
 
-const OPENINGS = ['1♣', '1♦', '1♥', '1♠', '1BA', '2♣', '2♦', '2♥', '2♠', '2BA', '3♣', '3♦', '3♥', '3♠', '3BA', '4♣', '4♦']
+// the form has 4♣ and 4♦ rows; all 4-level openings are natural preempts, so they share one row
+const OPENINGS = ['1♣', '1♦', '1♥', '1♠', '1BA', '2♣', '2♦', '2♥', '2♠', '2BA', '3♣', '3♦', '3♥', '3♠', '3BA', '4♣-4♠']
 
 describe('karta-pzbs.json', () => {
     test('has every opening row of the PZBS form in order', () => {
@@ -46,7 +47,8 @@ test('the inside page has the openings table with the slam conventions', () => {
     expect(rows.map(row => row.querySelector('td').textContent)).toEqual(OPENINGS)
     expect(rows[0]).toHaveTextContent('12-14 PC skład równy')
     expect(rows[0].querySelectorAll('td')[1]).toHaveTextContent('X')
-    expect(screen.getByText('KONWENCJE STREFY SZLEMOWEJ').closest('td')).toHaveAttribute('rowspan', '6')
+    expect(screen.getByText('KONWENCJE STREFY SZLEMOWEJ').closest('td')).toHaveAttribute('rowspan', '5')
+    expect(rows.at(-1)).toHaveTextContent('naturalne, blokujące')
 })
 
 test('the outside page has the competitive bidding, leads, doubles and the cover', () => {

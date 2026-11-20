@@ -134,14 +134,7 @@
       "odpowiedzi": "4♣, 5♣ do koloru; 4♦ pytanie o krótkość (4♥/4♠ krótkość, 4BA krótkość w drugim młodszym, 5♣ 2227, 5♦ 2272); 4♥/4♠ do gry; 4BA inwit szlemikowy (8 kart)"
     },
     {
-      "otwarcie": "4♣",
-      "sztuczna": false,
-      "minKart": "6",
-      "opis": "naturalne, blokujące",
-      "odpowiedzi": ""
-    },
-    {
-      "otwarcie": "4♦",
+      "otwarcie": "4♣-4♠",
       "sztuczna": false,
       "minKart": "6",
       "opis": "naturalne, blokujące",
@@ -212,7 +205,7 @@
     "opisOgolny": "Wspólny Język (polski trefl) z odpowiedziami 2/1 FG po starszych otwarciach. 1♣: 12-14 równy, 15+ z 5+♣, 18+ dowolny lub 12+ 4-4-1-4, 1♦ negat. 1♦: 12-17, 5+♦ lub 4441 z czterema karami, 12-14 także 4♦-5♣. 1♥/1♠: 12-17, 5+. 1BA 15-17 (możliwa starsza piątka lub młodsza szóstka). 2♣ 11-14 trefle, 2♦ mini-multi, 2♥/2♠/2BA słabe dwukolorówki 5-11. Bloki zależne od założeń, 3BA gambling",
     "specjalneOdzywki": "1♣ (może być krótki: 12-14 równy, 18+ dowolny, 4-4-1-4), 1♦ (4♦ przy 4441 i 4♦-5♣), 1♣-1♦ negat, 1♣-1♥/1♠-2♦ odwrotka, magister, 2♦ mini-multi, 2♥/2♠ 5-5, 2BA 5-5 młode, 3♣-3♠ przed partią najdłuższy kolor dowolnej jakości, 3BA gambling, 1BA-2♠ inwit lub transfer na ♣, 1BA-3♥/3♠ 5431 z singlem, splintery, wejścia 1BA na 1♥/1♠ (8-15, 5+ młodszy i 4 w drugim starszym)",
     "forsujacyPas": "Pas forsujący po 2/1 i interwencji przeciwnika. 1BA-pas-2♣-(X)-pas: brak trzymania ♣, forsuje partnera do XX",
-    "wazneUwagi": "Przed partią bardzo słabe otwarcia na wysokości 3; otwarcia na trzeciej ręce mogą być wskazaniem wistu. Otwarcia 4♣/4♦/4♥/4♠ naturalne, blokujące. Z 15-17 i 5♥332 zawsze 1BA. Po 1♦-1♠ odpowiedź 1BA może mieć singla ♠ (1444, 1453). Po interwencji przeciwnika na 2♦ odwrotka naturalna, z fitem X",
+    "wazneUwagi": "Przed partią bardzo słabe otwarcia na wysokości 3; otwarcia na trzeciej ręce mogą być wskazaniem wistu. Z 15-17 i 5♥332 zawsze 1BA. Po 1♦-1♠ odpowiedź 1BA może mieć singla ♠ (1444, 1453). Po interwencji przeciwnika na 2♦ odwrotka naturalna, z fitem X",
     "psychologiczne": "Bardzo rzadko"
   }
 }
