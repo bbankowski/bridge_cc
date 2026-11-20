@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react'
 import {useBlocker, useSearchParams} from 'react-router'
 import './PbnViewer.css'
 import Auction from './Auction'
+import AuctionReplay from './AuctionReplay'
 import Bid from '../common/Bid'
 import DealBoard from './DealBoard'
 import Minimax from './Minimax'
@@ -184,7 +185,9 @@ const PbnViewer = () => {
                     </>}
                 </div>
                 <div className="App-deal-details">
-                    <Auction auction={deal.auction} notes={deal.notes}/>
+                    {hidden
+                        ? <AuctionReplay key={`auction-${dealKey}`} auction={deal.auction} notes={deal.notes} mySeat={mySeat}/>
+                        : <Auction auction={deal.auction} notes={deal.notes}/>}
                     <DealBoard key={dealKey} deal={deal}
                                hiddenSeats={hidden ? ['N', 'E', 'S', 'W'].filter(seat => seat !== mySeat) : []}/>
                     {!hidden && <Minimax minimax={deal.minimax} optimumResults={deal.optimumResults}/>}
