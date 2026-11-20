@@ -218,3 +218,8 @@
         break-after: auto;
     }
 }
+
+.PzbsCard-leads td:first-child, .PzbsCard-leads th:first-child {
+    width: 15%;
+    white-space: nowrap;
+}

@@ -27,7 +27,6 @@ describe('missingFields', () => {
             'Zawody',
             'Sygnały do wyjścia partnera',
             'Sygnały do wyjścia rozgrywającego',
-            'Wyjścia: w asa, w króla, w damę, w waleta, 10, 9, w wysoką x, w niską x',
         ])
     })
 

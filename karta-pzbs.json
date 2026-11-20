@@ -164,16 +164,40 @@
   },
   "wisty": {
     "wyjscia": {
-      "A": {"kolor": null, "ba": null},
-      "K": {"kolor": null, "ba": null},
-      "Q": {"kolor": null, "ba": null},
-      "J": {"kolor": null, "ba": null},
-      "10": {"kolor": null, "ba": null},
-      "9": {"kolor": null, "ba": null},
-      "wysokaX": {"kolor": null, "ba": null},
-      "niskaX": {"kolor": null, "ba": null}
+      "A": {
+        "kolor": "AK… (z AKx i dłuższego), Ax",
+        "ba": "AK…"
+      },
+      "K": {
+        "kolor": "KQ…, AK sec, Kx",
+        "ba": "KQ…, Kx"
+      },
+      "Q": {
+        "kolor": "QJ…, Qx",
+        "ba": "QJ…, Qx"
+      },
+      "J": {
+        "kolor": "JT…, Jx",
+        "ba": "JT…, Jx"
+      },
+      "10": {
+        "kolor": "T9…, wewnętrzny sekwens (KT9, QT9), Tx",
+        "ba": "T9…, wewnętrzny sekwens, Tx"
+      },
+      "9": {
+        "kolor": "98…, 9x",
+        "ba": "98…, 9x"
+      },
+      "wysokaX": {
+        "kolor": "z blotek druga od góry (xx, xxx środkowa, xxxx+)",
+        "ba": "z blotek druga od góry"
+      },
+      "niskaX": {
+        "kolor": "spod honoru: z Hxx środkowa, z Hxxx+ czwarta najstarsza",
+        "ba": "spod honoru: z Hxx środkowa, z Hxxx+ czwarta najstarsza"
+      }
     },
-    "uwagiDoWyjsc": "Pierwszy wist odmienny, później jakościowo odwrotny",
+    "uwagiDoWyjsc": "Wist odmienny: z sekwensu najwyższa (z secy honorowej młodsza), z drugiego honoru honor, spod trzeciego honoru środkowa, spod czwartej figury czwarta najstarsza, z blotek druga od góry. Pierwszy wist odmienny, później jakościowo odwrotny",
     "sygnaly": {
       "doWyjsciaPartnera": null,
       "doWyjsciaRozgrywajacego": null,
