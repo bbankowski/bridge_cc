@@ -1,4 +1,4 @@
-import {render, screen, within} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import {createMemoryRouter, RouterProvider} from 'react-router'
 import {describe, expect, test} from 'vitest'
 import data from '../../../karta-pzbs.json'
@@ -19,11 +19,8 @@ describe('karta-pzbs.json', () => {
 })
 
 describe('missingFields', () => {
-    test('lists the null fields of the current card', () => {
-        expect(missingFields(data)).toEqual([
-            'Sygnały do wyjścia partnera',
-            'Sygnały do wyjścia rozgrywającego',
-        ])
+    test('is empty for the current card', () => {
+        expect(missingFields(data)).toEqual([])
     })
 
     test('is empty for a complete card', () => {
@@ -58,14 +55,13 @@ test('the outside page has the competitive bidding, leads, doubles and the cover
     expect([...document.querySelectorAll('.PzbsCard-leads tbody td:first-child')].map(td => td.textContent))
         .toEqual(['w asa', 'w króla', 'w damę', 'w waleta', '10', '9', 'w wysoką x', 'w niską x'])
     expect(screen.getByText(/Bartosz Bańkowski \(PID 13886\)/)).toBeInTheDocument()
-    expect(screen.getByText(/Zrzutki odwrotne, Lavinthal/)).toBeInTheDocument()
+    expect(screen.getByText(/zrzutka krakowska/)).toBeInTheDocument()
 })
 
-test('the page shows both pages and the fields to fill in', () => {
+test('the page shows both pages and nothing to fill in', () => {
     render(<RouterProvider router={createMemoryRouter([{path: '/', element: <PzbsCardPage/>}])}/>)
 
     expect(document.querySelectorAll('.PzbsCard-page')).toHaveLength(2)
-    const missing = within(screen.getByText(/Do uzupełnienia/).closest('.notification'))
-    expect(missing.getByText('Sygnały do wyjścia partnera')).toBeInTheDocument()
+    expect(screen.queryByText(/Do uzupełnienia/)).toBeNull()
     expect(screen.getByRole('button', {name: 'Drukuj / zapisz PDF'})).toBeInTheDocument()
 })

@@ -9,8 +9,8 @@
     {
       "otwarcie": "1♣",
       "sztuczna": true,
-      "minKart": "2",
-      "opis": "12-14 PC skład równy lub 15+ z 5+♣ lub 18+ skład dowolny",
+      "minKart": "0",
+      "opis": "12-14 PC skład równy lub 15+ z 5+♣ lub 18+ skład dowolny lub 12+ 4-4-1-4",
       "odpowiedzi": "1♦ negat: 0-6 dowolnie, 7-11 z młodymi, 13-15 równy (BA z drugiej ręki), 16+ równy; 1♥/1♠ naturalne 4+, F1; 1BA 7-10; 2♣/2♦ 12+ FG, 5+; 2♥/2♠ 12+ FG, dobry kolor 6+; 2BA inwit; 3♣/3♦ inwit, 6+; 3♥/3♠ 7+ z dwiema starszymi figurami; 3BA 13-15 równy bez starszej 4 i młodszej 5",
       "dalszaLicytacja": "Po 1♦: 1♥/1♠ 4+, 1BA 18-20 (dalej jak po 1BA), 2♣ 5+♣, 2♦ acol, 2♥/2♠/3♣/3♦ podacol, 2BA 21-23 (stayman odwrotny, transfery), 3♥/3♠/4♣ 5-5. Po 1♥/1♠: 2♣ 15+ 5+♣, 2♦ odwrotka, 3♥/3♠ 15-17 z fitem (3♠/3BA pyta o krótkość); po 1♥-1♠ i 1BA: magister",
       "poPasie": "pas-1♣: 2♣/2♦ góra pasa, kolor 5+; 2♥/2♠ 3-6 PC, kolor 6+"
@@ -18,8 +18,8 @@
     {
       "otwarcie": "1♦",
       "sztuczna": true,
-      "minKart": "1",
-      "opis": "12-17 PC: 5+♦ lub 4♦ i 5♣ lub 4441 (także z singlem karo)",
+      "minKart": "4",
+      "opis": "12-17 PC: 5+♦ lub 4441 z czterema karami, 12-14 PC także 4♦ i 5♣",
       "odpowiedzi": "1♥/1♠ 4+, F1; 1BA 6-9 bez starszej 4; 2♣ 12+ FG, 5+; 2♦ 10+ fit 4+, forsuje do 3♦; 2♥/2♠ 3-6, kolor 6+; 2BA 10-12 bez starszej 4; 3♣ blok z fitem lub FG z fitem i krótkością (po 3♦ krótkość); 3♦ 7-9 fit 4+; 3♥/3♠/4♣ 10-12 fit 4+ z krótkością; 3BA do gry",
       "dalszaLicytacja": "Po 1♥: 1♠ 4♠ poniżej rewersu, 1BA 12-14, 2♣ 12-14 5♣4♦ lub 5♦4+♣, 2♦ 12-14 6♦, 2♥ 12-14 4♥, 2♠ rewers, 2BA 15-17 6+♦ bez fitu, 3♦ 15-17 6+♦ z fitem 3, 3♥ 15-17 4♥ (3♠ pyta o krótkość), 3♠ splinter. Po 1♠ analogicznie (1BA może mieć singla ♠). Czwarty kolor FG. Po 2♣: 2♦ słabe, 2♥/2♠ rewers, 2BA 4441, 3♣ fit, 3♦ 15-18 6+♦",
       "poPasie": ""
@@ -46,8 +46,8 @@
       "otwarcie": "1BA",
       "sztuczna": false,
       "minKart": "2",
-      "opis": "15-17 PC, skład równy; możliwa starsza piątka lub młodsza szóstka",
-      "odpowiedzi": "2♣ Stayman; 2♦/2♥ transfery; 2♠ inwit do 3BA lub transfer na ♣ (2BA dół, 3♣ góra); 2BA transfer na ♦ (3♣ góra, 3♦ dół); 3♣/3♦ 6-8, 6+ z dwiema starszymi figurami; 3♥/3♠ FG 5431 z singlem w tym kolorze; 4♣ starsze bez aspiracji; 4♦/4♥ transfery; 4♠ młode bez aspiracji",
+      "opis": "15-17 PC, skład zrównoważony; możliwe 6322, 5332 i 5422 z dowolną piątką",
+      "odpowiedzi": "2♣ Stayman; 2♦/2♥ transfery; 2♠ inwit do 3BA lub transfer na ♣ (2BA dół, 3♣ góra); 2BA transfer na ♦ (3♣ góra, 3♦ dół); 3♣/3♦ 6-8, 6+ z dwiema starszymi figurami; 3♥/3♠ FG 5431 z singlem w tym kolorze; 4♣ starsze bez aspiracji; 4♦/4♥ transfery; 4♠ młode bez aspiracji; 4BA inwit",
       "dalszaLicytacja": "Po Staymanie: 2♦ brak starszej 4, 2♥ 4♥ (możliwe 4♠), 2♠ 4♠ bez 4♥; 2♦-3♥/3♠ 5-4 starsze FG (Smolen). Po transferze: przyjęcie, 2BA góra z fitem i dwiema figurami, 3♣/3♦ góra z 5 kartami i fitem, 3 w kolor transferu góra z fitem 4+. Po interwencji 2 w kolor: X negatywna, 2BA lebensohl",
       "poPasie": ""
     },
@@ -99,8 +99,8 @@
     {
       "otwarcie": "3♣",
       "sztuczna": false,
-      "minKart": "6",
-      "opis": "po partii 7+ z dwiema z trzech starszych figur; przed partią najdłuższy kolor, siła dowolna",
+      "minKart": "5",
+      "opis": "naturalne, blokujące: po partii 7+ z dwiema z trzech starszych figur; przed partią najdłuższy kolor, bardzo słabe",
       "odpowiedzi": "3♦/3♥/3♠ naturalne F1; 3BA do gry; 4♣ przedłużenie bloku; 4♦ forsujące uzgodnienie ♣; 4♥/4♠ do gry",
       "dalszaLicytacja": "",
       "poPasie": ""
@@ -108,21 +108,21 @@
     {
       "otwarcie": "3♦",
       "sztuczna": false,
-      "minKart": "6",
+      "minKart": "5",
       "opis": "jak 3♣",
       "odpowiedzi": "3♥/3♠ naturalne F1; 3BA do gry; 4♣ forsujące uzgodnienie ♦; 4♦ przedłużenie bloku; 4♥/4♠ do gry"
     },
     {
       "otwarcie": "3♥",
       "sztuczna": false,
-      "minKart": "6",
+      "minKart": "5",
       "opis": "jak 3♣",
       "odpowiedzi": "3♠ naturalne F1; 3BA, 4♥, 4♠ do gry; 4♣/4♦ cue-bid z fitem; 4BA Blackwood"
     },
     {
       "otwarcie": "3♠",
       "sztuczna": false,
-      "minKart": "6",
+      "minKart": "5",
       "opis": "jak 3♣",
       "odpowiedzi": "3BA, 4♥, 4♠ do gry; 4♣/4♦ cue-bid z fitem; 4BA Blackwood"
     },
@@ -136,83 +136,83 @@
     {
       "otwarcie": "4♣",
       "sztuczna": false,
-      "minKart": "7",
+      "minKart": "6",
       "opis": "naturalne, blokujące",
       "odpowiedzi": ""
     },
     {
       "otwarcie": "4♦",
       "sztuczna": false,
-      "minKart": "7",
+      "minKart": "6",
       "opis": "naturalne, blokujące",
       "odpowiedzi": ""
     }
   ],
-  "konwencjeStrefySzlemowej": "Blackwood na 5 wartości (4 asy i król atu): 5♣ 1 lub 4, 5♦ 0 lub 3, przy 2 lub 5 informacja o damie atu i królach: 5♥ bez damy, 5♠ z damą bez króli, 5BA/6♣/6♦ z damą i królem w najniższym/środkowym/najwyższym kolorze bocznym (lub 2 pozostałymi), 6♥ z damą i 3 królami; o króle i damy pyta kolejny szczebel poza kolorem uzgodnionym. Po wejściu na 4BA: X/XX karne, reszta szczebelkami (pas też). Cue-bidy, splintery i pytania o krótkość po podniesieniach na poziomie 3. 4BA po otwarciu 3♥/3♠ – Blackwood.",
+  "konwencjeStrefySzlemowej": "Blackwood na 5 wartości (4 asy i król atu): 5♣ 1 lub 4, 5♦ 0 lub 3, przy 2 lub 5 informacja o damie atu i królach: 5♥ bez damy, 5♠ z damą bez króli, 5BA/6♣/6♦ z damą i królem w najniższym/środkowym/najwyższym kolorze bocznym (lub 2 pozostałymi), 6♥ z damą i 3 królami; o króle i damy pyta kolejny szczebel poza kolorem uzgodnionym. Po wejściu na 4BA: X/XX karne, reszta szczebelkami (pas też). Blackwood wyłączeniowy na 4 wartości (102). 5BA pytanie o honory atu (AKD): 6♣ 0, 6♦ 1, 6♥ 2, 7 w kolor 3. Cue-bidy, splintery, auto-splinter, pytania o krótkość po podniesieniach na poziomie 3. 4BA po otwarciu 3♥/3♠ – Blackwood.",
   "wejscia": {
-    "wObronie": "Proste wejścia naturalne. Na polskie 1♣: X wywoławcza, 1BA 15-17 naturalne, 2♣ 5-4 starsze, 2♦/2♥/2♠ słabe 6+, 2BA słabe 5-5 młode",
+    "wObronie": "Styl naturalny, kolor 5+; poparcie z przeskokiem blokujące; nowy kolor po wejściu na wysokości 2 F1. Na polskie 1♣: X wywoławcza, 1BA 15-17 naturalne, 2♣ 5-4 starsze, 2♦/2♥/2♠ słabe 6+, 2BA słabe 5-5 młode",
     "wejscie1BA": "Na 1♣/1♦: 15-17 naturalne (po kontrze uciekamy naturalnie, dalej jak po otwarciu 1BA). Na 1♥: 8-15 PC, 5+ młodszy i 4♠; na 1♠: 8-15 PC, 5+ młodszy i 4♥ (2♣/2♦ partnera do koloru). Na pozycji wygasającej 9-14 PC",
-    "zPrzeskokiem": "Słabe, kolor 6+ (1♦-2♥/2♠, na 1♣ także 2♦). 2BA: na 1♣ słabe 5-5 młode, na 1♦ trefle i starszy. Po 1♣/1♦-pas-1BA: 2♣/2♦ starsze z lepszymi ♥/♠",
-    "kolorPrzeciwnika": "1♣ (polski)-2♣: 5-4 starsze; 1♦-2♦: 5-5 starsze. Na 2♣ na starych: 2♦/2♥ wywoławcze z pytaniem o trzymanie ♥/♠",
+    "zPrzeskokiem": "Słabe, kolor 6+ (1♦-2♥/2♠, na 1♣ także 2♦). 2BA: na 1♣ słabe 5-5 młode, na 1♦ trefle i starszy, na 1♥/1♠ młode. Dalsza licytacja do koloru, kolor przeciwnika inwit. Po 1♣/1♦-pas-1BA: 2♣/2♦ starsze z lepszymi ♥/♠",
+    "kolorPrzeciwnika": "1♣ (polski)-2♣: słabe 5-4 starsze (2♦ pytanie o dłuższy); 1♦-2♦: 5-5 starsze; 1♥/1♠-2♥/2♠: 5 młodszy i 5 w drugim starszym; 1♥/1♠-3♥/3♠: pytanie o zatrzymanie, silny na własnym kolorze (4♣ do koloru). Na 2♣ na starych: 2♦/2♥ wywoławcze z pytaniem o trzymanie ♥/♠",
     "przeciwBA": {
       "slabemu": "X 12+ PC; 2♣ 5-4 starsze; 2♦ 6+ w starszym; 2♥/2♠ naturalne 5+; 2BA 5-5 młode",
-      "klasycznemu": "X 5 młodsza i 4 starsza; 2♣ 5-4 starsze; 2♦ 6+ w starszym; 2♥/2♠ 5+ w tym kolorze i 5+ młodszy; 2BA 5-5 młode"
+      "klasycznemu": "X 5 młodsza i 4 starsza; 2♣ 5-4 starsze; 2♦ 6+ w starszym; 2♥/2♠ 5+ w tym kolorze i 5+ młodszy; 2BA 5-5 młode. Na wznowieniu tak samo, po silnym BA kontra wznawiająca"
     },
-    "przeciwZaporowkom": "Na multi 2♦: X wywoławcza do ♠ lub objaśniająca, 2♥/2♠ naturalne, 2BA 15-18 równy (dalej jak po silnym 2BA), 3♥/3♠ konstruktywne 6-7, 4♣/4♦ 5-5 z ♥ GF. Na słabe 2♥/2♠ i 2♦ karowe: 2BA 16-18 równy (3♣ transfer na ♦, 3♦ 4♠, 3♥ transfer na ♠, 3♠ transfer na ♣). Na Flannery 2♦: X do ♥, 2♥ słabsze 5-5 ♠ i młodszy, 3♥ silne 5-5. Na 2♣ na starych: X siłowa, 2♠ wywołanie na młode, 2BA silna jednokolorowa starsza, 3♣/3♦ dobry kolor 6+",
+    "przeciwZaporowkom": "Na multi 2♦: X wywoławcza do ♠ lub objaśniająca, 2♥/2♠ naturalne, 2BA 15-18 równy (dalej jak po silnym 2BA), 3♥/3♠ konstruktywne 6-7, 4♣/4♦ 5-5 z ♥ GF. Na słabe 2♥/2♠ i 2♦ karowe: 2BA 16-18 równy (3♣ transfer na ♦, 3♦ 4♠, 3♥ transfer na ♠, 3♠ transfer na ♣). Na Flannery 2♦: X do ♥, 2♥ słabsze 5-5 ♠ i młodszy, 3♥ silne 5-5. Na 2♣ na starych: X siłowa, 2♠ wywołanie na młode, 2BA silna jednokolorowa starsza, 3♣/3♦ dobry kolor 6+. Wejście skokiem 4♣/4♦ po słabym 2 w kolor – dwukolorówka. Na 2BA na młodych: 3♣ starsze z lepszymi ♥, 3♦ starsze z lepszymi ♠",
     "przeciwSztucznymSilnym": "Na silny 1♣: X 5 młodsza i 4 starsza, 1BA 5-4+ młode, reszta jak na polski 1♣. Na silne 2BA: X 5-5 młodszy i starszy, 3♣ 5-5 młode, 3♦ 5-5 starsze. Na 2♣ acol: X trefle, 2BA 5-5 młodszy i starszy, 3♣ 5-5 młode, 3♦ 5-5 starsze",
-    "przeciwKontrzeWywolawczej": "1♣/1♦-(X): 2♥/2♠ 3-6 PC, kolor 6+. 1♥/1♠-(X): XX 10+ bez fitu, podniesienie do 2 2-6 z fitem, 1BA 7-9 z fitem, 2BA 10-12 z fitem, 3BA 13-15 z fitem. 1BA-(X): XX punkty, reszta jak bez kontry. 2♦-(X): pas z karami, XX pokaż kolor"
+    "przeciwKontrzeWywolawczej": "XX siłowa (po 1♥/1♠ 10+ bez fitu); nowy kolor na wysokości 1 F1, na wysokości 2 NF. 1♣/1♦-(X): 2♥/2♠ 3-6 PC, kolor 6+; 1♣-(X)-1♦ negat. 1♥/1♠-(X): podniesienie do 2 2-6 z fitem, 1BA 7-9 z fitem, 2BA 10-12 z fitem, 3BA 13-15 z fitem. 1BA-(X): XX punkty, reszta jak bez kontry. 2♦-(X): pas z karami, XX pokaż kolor"
   },
   "wisty": {
     "wyjscia": {
       "A": {
-        "kolor": "AK… (z AKx i dłuższego), Ax",
-        "ba": "AK…"
+        "kolor": "AK(x), Ax",
+        "ba": "tak samo"
       },
       "K": {
-        "kolor": "KQ…, AK sec, Kx",
-        "ba": "KQ…, Kx"
+        "kolor": "KD(x), AK(x), Kx",
+        "ba": "tak samo"
       },
       "Q": {
-        "kolor": "QJ…, Qx",
-        "ba": "QJ…, Qx"
+        "kolor": "DW(x), ADW(x), AD10(x), Dx",
+        "ba": "KD109(x)"
       },
       "J": {
-        "kolor": "JT…, Jx",
-        "ba": "JT…, Jx"
+        "kolor": "W10(x), HW10(x), Wx",
+        "ba": "tak samo"
       },
       "10": {
-        "kolor": "T9…, wewnętrzny sekwens (KT9, QT9), Tx",
-        "ba": "T9…, wewnętrzny sekwens, Tx"
+        "kolor": "H109(x), 10x",
+        "ba": "tak samo"
       },
       "9": {
-        "kolor": "98…, 9x",
-        "ba": "98…, 9x"
+        "kolor": "H9x, 109x(x)",
+        "ba": "tak samo"
       },
       "wysokaX": {
-        "kolor": "z blotek druga od góry (xx, xxx środkowa, xxxx+)",
-        "ba": "z blotek druga od góry"
+        "kolor": "xXx(x), HXx, 10Xx",
+        "ba": "tak samo"
       },
       "niskaX": {
-        "kolor": "spod honoru: z Hxx środkowa, z Hxxx+ czwarta najstarsza",
-        "ba": "spod honoru: z Hxx środkowa, z Hxxx+ czwarta najstarsza"
+        "kolor": "xX, HxxX(x)",
+        "ba": "tak samo"
       }
     },
-    "uwagiDoWyjsc": "Wist odmienny: z sekwensu najwyższa (z secy honorowej młodsza), z drugiego honoru honor, spod trzeciego honoru środkowa, spod czwartej figury czwarta najstarsza, z blotek druga od góry. Pierwszy wist odmienny, później jakościowo odwrotny",
+    "uwagiDoWyjsc": "Wist odmienny (H – honor, X – wistowana karta). Pierwszy wist odmienny, później jakościowo odwrotny. Nie gramy silną 10 ani potwierdzeniem wistu",
     "sygnaly": {
-      "doWyjsciaPartnera": null,
-      "doWyjsciaRozgrywajacego": null,
-      "doInnegoKoloru": "Zrzutki odwrotne, Lavinthal"
+      "doWyjsciaPartnera": "1. ilościówka odwrotna, 2. Lavinthal (w kolor i w BA)",
+      "doWyjsciaRozgrywajacego": "1. ilościówka odwrotna, 2. Lavinthal (w kolor i w BA)",
+      "doInnegoKoloru": "1. Lavinthal, 2. zrzutka krakowska (w kolor i w BA)"
     }
   },
   "kontry": {
-    "wywolawcze": "Na otwarcie 1 w kolor wywoławcza (partner przed i po pasie), także na polskie 1♣; na silne 1♣ 5 młodsza i 4 starsza; na słabe 1BA 12+ PC, na klasyczne 1BA 5 młodsza i 4 starsza; na multi do ♠ lub objaśniająca; na Flannery do ♥. Po naszym 1♣/1♦ i wejściu 2 w kolor wywoławcza; po 1BA i wejściu 2 w kolor negatywna (do 2♠). Po wejściu na nasze 2♦: X na wysokości 2 do koloru, na 3 karna",
-    "specjalne": "1BA-(X)-XX punkty; 1♥/1♠-(X)-XX 10+ bez fitu; 2♦-(X)-XX pokaż kolor. 1BA-pas-2♣-(X): XX karna, pas brak trzymania ♣ (forsuje do XX). Kontra na transfer: pas brak fitu, XX karna, przyjęcie z fitem. 1♣-(2BA): X wywoławcza (dalej X wywoławcze), pas brak punktów lub trapping (dalej X karne). Po wejściu na 4BA: X/XX karne, reszta szczebelkami"
+    "wywolawcze": "Wywoławcza 12+ (odpowiedzi z bilansu, kolor przeciwnika F1), objaśniająca 18+, na wznowieniu 10+. Na otwarcie 1 w kolor wywoławcza (partner przed i po pasie), także na polskie 1♣; na silne 1♣ 5 młodsza i 4 starsza; na słabe 1BA 12+ PC, na klasyczne 1BA 5 młodsza i 4 starsza; na multi do ♠ lub objaśniająca; na Flannery do ♥. Po naszym 1♣/1♦ i wejściu 2 w kolor wywoławcza; kontra negatywna do 3♠ (po 1♠ do 3♥), także po 1BA i 2♣. Po wejściu na nasze 2♦: X na wysokości 2 do koloru, na 3 karna",
+    "specjalne": "Kontra wistowa (Lightner) i kontra z fitem. Kontra na splinter zachęca do wistu w wyższy z pozostałych kolorów (pas – w młodszy). Rekontra z fitem, rekontra SOS. 1BA-(X)-XX punkty; 1♥/1♠-(X)-XX 10+ bez fitu; 2♦-(X)-XX pokaż kolor. 1BA-pas-2♣-(X): XX karna, pas brak trzymania ♣ (forsuje do XX). Kontra na transfer: pas brak fitu, XX karna, przyjęcie z fitem. 1♣-(2BA): X wywoławcza (dalej X wywoławcze), pas brak punktów lub trapping (dalej X karne). Po wejściu na 4BA: X/XX karne, reszta szczebelkami"
   },
   "streszczenie": {
-    "opisOgolny": "Wspólny Język (polski trefl) z odpowiedziami 2/1 FG po starszych otwarciach. 1♣: 12-14 równy, 15+ z 5+♣ lub 18+ dowolny, 1♦ negat. 1♦: 12-17, 5+♦ lub 4♦-5♣ lub 4441. 1♥/1♠: 12-17, 5+. 1BA 15-17 (możliwa starsza piątka lub młodsza szóstka). 2♣ 11-14 trefle, 2♦ mini-multi, 2♥/2♠/2BA słabe dwukolorówki 5-11. Bloki zależne od założeń, 3BA gambling",
-    "specjalneOdzywki": "1♣ (może być 2-kartowy), 1♦ (może być singiel przy 4-4-1-4), 1♣-1♦ negat, 1♣-1♥/1♠-2♦ odwrotka, magister, 2♦ mini-multi, 2♥/2♠ 5-5, 2BA 5-5 młode, 3♣-3♠ przed partią najdłuższy kolor dowolnej jakości, 3BA gambling, 1BA-2♠ inwit lub transfer na ♣, 1BA-3♥/3♠ 5431 z singlem, splintery, wejścia 1BA na 1♥/1♠ (8-15, 5+ młodszy i 4 w drugim starszym)",
-    "forsujacyPas": "1BA-pas-2♣-(X)-pas: brak trzymania ♣, forsuje partnera do XX",
-    "wazneUwagi": "Z 15-17 i 5♥332 zawsze 1BA. Po 1♦-1♠ odpowiedź 1BA może mieć singla ♠ (1444, 1453). Po interwencji przeciwnika na 2♦ odwrotka naturalna, z fitem X. Otwarcia 4♣/4♦/4♥/4♠ naturalne, blokujące",
+    "opisOgolny": "Wspólny Język (polski trefl) z odpowiedziami 2/1 FG po starszych otwarciach. 1♣: 12-14 równy, 15+ z 5+♣, 18+ dowolny lub 12+ 4-4-1-4, 1♦ negat. 1♦: 12-17, 5+♦ lub 4441 z czterema karami, 12-14 także 4♦-5♣. 1♥/1♠: 12-17, 5+. 1BA 15-17 (możliwa starsza piątka lub młodsza szóstka). 2♣ 11-14 trefle, 2♦ mini-multi, 2♥/2♠/2BA słabe dwukolorówki 5-11. Bloki zależne od założeń, 3BA gambling",
+    "specjalneOdzywki": "1♣ (może być krótki: 12-14 równy, 18+ dowolny, 4-4-1-4), 1♦ (4♦ przy 4441 i 4♦-5♣), 1♣-1♦ negat, 1♣-1♥/1♠-2♦ odwrotka, magister, 2♦ mini-multi, 2♥/2♠ 5-5, 2BA 5-5 młode, 3♣-3♠ przed partią najdłuższy kolor dowolnej jakości, 3BA gambling, 1BA-2♠ inwit lub transfer na ♣, 1BA-3♥/3♠ 5431 z singlem, splintery, wejścia 1BA na 1♥/1♠ (8-15, 5+ młodszy i 4 w drugim starszym)",
+    "forsujacyPas": "Pas forsujący po 2/1 i interwencji przeciwnika. 1BA-pas-2♣-(X)-pas: brak trzymania ♣, forsuje partnera do XX",
+    "wazneUwagi": "Przed partią bardzo słabe otwarcia na wysokości 3; otwarcia na trzeciej ręce mogą być wskazaniem wistu. Otwarcie 4BA pyta o asy (5♣ bez asa, 5♦/5♥/5♠/6♣ as w tym kolorze, 5BA dwa asy). Otwarcia 4♣/4♦/4♥/4♠ naturalne, blokujące. Z 15-17 i 5♥332 zawsze 1BA. Po 1♦-1♠ odpowiedź 1BA może mieć singla ♠ (1444, 1453). Po interwencji przeciwnika na 2♦ odwrotka naturalna, z fitem X",
     "psychologiczne": "Rzadko"
   }
 }
