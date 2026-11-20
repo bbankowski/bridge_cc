@@ -20,6 +20,14 @@ test('renders the openings index and the bidding from bidding.txt', () => {
     expect(document.getElementById('bid-1T-1K')).toHaveTextContent('Licytacja po 1-1: negat')
 })
 
+test('lists the 4NT opening in the index with its responses', () => {
+    renderCard()
+
+    const index = within(document.querySelector('.App-openings'))
+    expect(index.getByRole('link', {name: /^4BA\s*pytanie o asy/})).toBeInTheDocument()
+    expect(document.getElementById('opening-4BA')).toHaveTextContent('Dalsza licytacja po otwarciu 4BA')
+})
+
 test('scrolls to the opening clicked in the index and keeps it in the URL', async () => {
     const router = renderCard()
 

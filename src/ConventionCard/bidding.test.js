@@ -97,6 +97,24 @@ T1T-1K
             .toEqual(['bid-1T-1K', 'bid-chapter-drugi-1T-1K'])
     })
 
+    test('the 4NT opening of bidding.txt asks for specific aces', () => {
+        const entries = parseBidding(readBiddingTxt())
+        const opening = entries.find(entry => entry.type === 'opening' && entry.sequence === '4BA')
+
+        expect(opening.description).toMatch(/pytanie o asy/)
+        const responses = entries.filter(entry => entry.type === 'bid' && entry.scope === '' && entry.sequence.startsWith('4BA-'))
+        expect(Object.fromEntries(responses.map(entry => [entry.sequence, entry.description]))).toEqual({
+            '4BA-5T': 'bez asa',
+            '4BA-5K': 'as karo',
+            '4BA-5C': 'as kier',
+            '4BA-5P': 'as pik',
+            '4BA-6T': 'as trefl',
+            '4BA-5BA': 'dwa asy',
+        })
+        // the Blackwood responses of the "Konwencje" chapter stay separate
+        expect(entries.find(entry => entry.sequence === '4BA-5T' && entry.scope !== '').description).toBe('1 lub 4 wartosci')
+    })
+
     test('parses bidding.txt', () => {
         const entries = parseBidding(readBiddingTxt())
 

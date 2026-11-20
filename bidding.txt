@@ -780,6 +780,13 @@ T3BA-4K
 
 
 ### OTWARCIE 4BA ###
+4BA                         => pytanie o asy (ręka, która potrzebuje wiedzieć, które asy ma partner)
+4BA-5T                      => bez asa
+4BA-5K                      => as karo
+4BA-5C                      => as kier
+4BA-5P                      => as pik
+4BA-6T                      => as trefl
+4BA-5BA                     => dwa asy
 #4BA                         => 5P-5C albo 5T-5K
 #4BA-3T                      => do koloru
 #4BA-3K                      => do koloru

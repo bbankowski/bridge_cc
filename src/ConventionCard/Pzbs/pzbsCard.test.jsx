@@ -13,6 +13,10 @@ describe('karta-pzbs.json', () => {
         expect(data.otwarcia.map(o => o.otwarcie)).toEqual(OPENINGS)
     })
 
+    test('keeps the 4NT opening out of the important notes (it is in the convention card)', () => {
+        expect(data.streszczenie.wazneUwagi).not.toMatch(/4BA/)
+    })
+
     test('has every lead row', () => {
         expect(Object.keys(data.wisty.wyjscia).sort()).toEqual(LEAD_ROWS.map(([key]) => key).sort())
     })
