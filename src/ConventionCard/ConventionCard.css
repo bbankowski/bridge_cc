@@ -154,3 +154,8 @@
     align-items: baseline;
     gap: 10px;
 }
+
+.App-openingDescription {
+    margin-bottom: 1rem;
+    color: #4a4a4a;
+}

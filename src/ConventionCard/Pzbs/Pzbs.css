@@ -7,131 +7,200 @@
     margin-left: 1.5rem;
 }
 
-.PzbsCardPage-sheet {
-    width: 210mm;
-    max-width: 100%;
-    margin: 0 auto 30px;
-    background: white;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
-    padding: 8mm 10mm;
-    font-family: "Times New Roman", Times, serif;
-    color: black;
-    font-size: 9.5pt;
-    line-height: 1.17;
+.PzbsCardPage-sheets {
+    overflow-x: auto;
+    padding-bottom: 30px;
 }
 
-.MiniCard {
-    display: flex;
-    gap: 8mm;
-    height: 136mm;
+.PzbsCard-page {
+    width: 297mm;
+    height: 210mm;
+    margin: 0 auto 20px;
+    padding: 8mm;
+    background: white;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+    color: black;
+    font-family: "DejaVu Sans", Arial, sans-serif;
+    font-size: 6.6pt;
+    line-height: 1.22;
     overflow: hidden;
 }
 
-.MiniCard + .MiniCard {
-    border-top: 1px dashed #999;
-    padding-top: 5mm;
-    margin-top: 3mm;
-}
-
-.MiniCard-column {
-    flex: 1;
-    min-width: 0;
-}
-
-.MiniCard-column > strong {
-    display: block;
-    margin-top: 1.6mm;
-}
-
-.MiniCard-title {
-    font-size: 12pt;
-    text-align: center;
-    margin-bottom: 1mm;
-}
-
-.MiniCard-red {
+.PzbsCard-red {
     color: #c00;
 }
 
-.MiniCard-check {
-    font-family: "DejaVu Sans", sans-serif;
-    font-size: 10pt;
+/* inside: openings */
+.PzbsCard-inside {
+    font-size: 6.3pt;
+    padding-bottom: 6mm;
 }
 
-.MiniCard-box {
-    white-space: nowrap;
-    margin-right: 3mm;
-}
-
-.MiniCard-dots {
-    display: inline-block;
-    min-width: 40mm;
-    border-bottom: 1px dotted black;
-    height: 1em;
-}
-
-.MiniCard-filled {
-    font-family: "DejaVu Sans", sans-serif;
-    font-size: 8.5pt;
-}
-
-.MiniCard-system {
-    display: flex;
-    gap: 3mm;
-    margin-bottom: 1.5mm;
-}
-
-.MiniCard-table {
-    border-collapse: collapse;
+.PzbsCard-openings {
     width: 100%;
-    font-size: 8.8pt;
+    height: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
 }
 
-.MiniCard-table td, .MiniCard-table th {
+.PzbsCard-openings th, .PzbsCard-openings td {
     border: 1px solid black;
-    padding: 0.2mm 1mm;
-    font-weight: normal;
+    padding: 0.6mm 1mm;
     vertical-align: top;
 }
 
-.MiniCard-remarks {
-    font-family: "DejaVu Sans", sans-serif;
+.PzbsCard-openings th {
+    background-color: #d4d4d4;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 8pt;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.PzbsCard-openings .col-opening { width: 9mm; }
+.PzbsCard-openings .col-flag { width: 6mm; }
+.PzbsCard-openings .col-description { width: 40mm; }
+.PzbsCard-openings .col-responses { width: 72mm; }
+.PzbsCard-openings .col-rebids { width: 100mm; }
+
+.PzbsCard-vertical {
+    height: 20mm;
+}
+
+.PzbsCard-vertical span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
     font-size: 7pt;
-    line-height: 1.15;
 }
 
-.MiniCard-lines > div {
-    margin-bottom: 0.2mm;
+.PzbsCard-openingCell {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 8.5pt;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle !important;
 }
 
-.MiniCard-note {
-    font-family: "DejaVu Sans", sans-serif;
-    font-size: 7.5pt;
-    color: #333;
+.PzbsCard-center {
+    text-align: center;
+    vertical-align: middle !important;
 }
 
-.MiniCard-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2mm;
-    align-items: baseline;
+.PzbsCard-slam .PzbsCard-heading {
+    margin: -0.6mm -1mm 1mm;
 }
 
-.MiniCard-grid2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 1.6mm;
-}
-
-.MiniCard-grid3 {
+/* outside: three columns */
+.PzbsCard-outside {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 1.6mm;
+    gap: 0;
+    border: 1px solid black;
+}
+
+.PzbsCard-column {
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.PzbsCard-column:last-child {
+    border-right: 0;
+}
+
+.PzbsCard-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    background-color: #c8c8c8;
+    border-bottom: 1px solid black;
+    padding: 0.8mm;
+}
+
+.PzbsCard-heading {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 7pt;
+    font-weight: bold;
+    text-align: center;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid black;
+    padding: 0.3mm 1mm;
+}
+
+.PzbsCard-field {
+    border-bottom: 1px solid black;
+}
+
+.PzbsCard-content {
+    padding: 0.8mm 1.2mm;
+}
+
+.PzbsCard-content p {
+    margin-bottom: 0.6mm;
+}
+
+.PzbsCard-twoColumns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.PzbsCard-twoColumns > div {
+    padding: 0.8mm 1.2mm;
+}
+
+.PzbsCard-twoColumns > div:first-child {
+    border-right: 1px solid black;
+}
+
+.PzbsCard-leads {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.PzbsCard-leads th, .PzbsCard-leads td {
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #999;
+    padding: 0.2mm 1mm;
+    font-weight: normal;
+    height: 3.6mm;
+}
+
+.PzbsCard-leads th {
+    font-size: 6pt;
+}
+
+.PzbsCard-note {
+    padding: 0.6mm 1.2mm;
+    font-style: italic;
+}
+
+.PzbsCard-cover {
+    padding: 2mm 3mm;
+    border-bottom: 1px solid black;
+}
+
+.PzbsCard-coverTitle {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.PzbsCard-suits {
+    font-size: 12pt;
+    margin: 1mm 0 2mm;
+}
+
+.PzbsCard-cover p {
+    margin-bottom: 0.8mm;
+    font-size: 7.5pt;
 }
 
 @media print {
     @page {
-        size: A4 portrait;
+        size: A4 landscape;
         margin: 0;
     }
 
@@ -139,10 +208,23 @@
         display: none !important;
     }
 
-    .PzbsCardPage-sheet {
-        box-shadow: none;
-        margin: 0;
-        width: 210mm;
-        height: 297mm;
+    .PzbsCardPage-sheets {
+        overflow: visible;
+        padding: 0;
     }
+
+    .PzbsCard-page {
+        margin: 0;
+        box-shadow: none;
+        break-after: page;
+    }
+
+    .PzbsCard-page:last-child {
+        break-after: auto;
+    }
+}
+
+.PzbsCard-leads td:first-child, .PzbsCard-leads th:first-child {
+    width: 15%;
+    white-space: nowrap;
 }

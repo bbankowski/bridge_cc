@@ -19,10 +19,12 @@ describe('evaluateOpening', () => {
         ['KJ4.Q9.K8.AQJ642', '1NT', '16 PC 6322 z treflami: 1BA'],
         ['AJ4.Q9.K8.AQJ642', '1NT', '16 PC 6322: 1BA'],
         ['AJ43.Q.K8.AKJ642', '1C', '17 PC, 6 trefli niezrównoważony: 1♣'],
-        ['AJ4.Q.KQ84.KJ642', '1D', '16 PC 3-1-4-5: 1♦ (4 kara i 5 trefli)'],
+        ['AJ4.Q.KQ84.KJ642', '1C', '16 PC 3-1-4-5: 1♣ (4 kara i 5 trefli tylko 12-14)'],
         ['KJ4.Q.K852.AJ642', '1D', '12 PC 4♦ 5♣: 1♦'],
         ['KJ43.Q.K852.AJ64', '1D', '13 PC 4441: 1♦'],
         ['KJ43.QJ93.K852.A', '1D', '14 PC 4441 z singlem trefl: 1♦'],
+        ['KJ43.QJ93.5.AK52', '1C', '15 PC 4414 (singiel karo): 1♣'],
+        ['KJ43.Q932.5.AQ52', '1C', '12 PC 4414: 1♣'],
         ['KQJ43.Q9.Q85.A64', '1S', '14 PC, 5 pików: 1♠'],
         ['AQ4.KJ943.K8.A64', '1NT', '17 PC 5♥332: zawsze 1BA'],
         ['Q4.KJ9432.K8.A64', '1H', '13 PC, 6 kierów: 1♥'],
@@ -45,6 +47,19 @@ describe('evaluateOpening', () => {
     test('preempts not vulnerable with any long suit, vulnerable only with two top honours', () => {
         expect(best('84.J9875432.Q4.8', {vulnerable: false})).toBe('3H')
         expect(best('84.J9875432.Q4.8', {vulnerable: true})).toBe('Pass')
+    })
+
+    test('4♦-5♣ is 1♦ only with 12-14', () => {
+        expect(options('KJ4.Q.K852.AJ642')).toMatchObject({'1D': 100})
+        expect(options('AJ4.Q.KQ84.KJ642')).toMatchObject({'1C': 100, '1D': 40})
+    })
+
+    test('4414 is 1♣, 1♦ promises four diamonds', () => {
+        expect(options('KJ43.QJ93.5.AK52')).toEqual({'1C': 100, '1D': 20})
+    })
+
+    test('15-17 5422 may also open 1NT', () => {
+        expect(options('AQ.KJ.QT987.KJ62')).toMatchObject({'1D': 100, '1NT': 80})
     })
 
     test('gives judgement calls several scores', () => {

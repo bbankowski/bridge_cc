@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 A Vite + React 19 single-page app (react-router 8, Bulma 1) hosted on GitHub Pages at https://bbankowski.github.io/bridge_cc/. It has these bridge tools:
 - **Convention card** (`/#/cc`) renders the bidding system in `bidding.txt`.
 - **PBN viewer** (`/#/pbn?filename=<file>.pbn&deal=<n>`) shows tournament deals from `public/*.pbn`.
-- **PZBS mini convention card** (`/#/karta-pzbs`) to print: two copies on A4, filled from `karta-pzbs.json` (choices; `null` = to fill in) and the defence after 1NT from `bidding.txt`.
+- **PZBS convention card** (`/#/karta-pzbs`) to print: the PZBS form (kartakonw.docx) on two A4 landscape pages, filled from `karta-pzbs.json` (written from `bidding.txt`; `null` = to fill in, listed on the page). Keep it in sync when the system in `bidding.txt` changes.
 - **Training** (`/#/trening`) quizzes the convention card, openings of random hands, and real decisions and leads from tournaments (`trening/sytuacje.json`).
 
 The UI text and the bidding notes are in Polish.
@@ -36,7 +36,7 @@ To add a tournament, put the `.pbn` file in `public/` and add an entry to `src/t
   - `@` lines start chapters (Nasze otwarcia, Po interwencji przeciwników, W obronie, Konwencje). `buildChapters` groups the entries into chapters and menu items (openings and sections) for the side menu, search (`searchItems`) and the single chapter view (`?chapter=<id>`).
   - `^`, `&` and `*` lines start sections. `*` means we open and `^` means the opponents open, which decides whose calls are shown in parentheses.
   - `T<sequence>` lines draw an auction table.
-  - A line without `-` is an opening.
+  - A line without `-` is an opening. Its description may be `short | full`: the short one is shown in the openings overview, the full one under the opening's heading.
   - Continuation lines are indented relative to the last table.
 - **PBN viewer**: `PbnViewer/pbn.js` contains `parsePbn`, a pure function that returns plain deal objects. Each deal object keeps its original lines (`rawLines`) without the comment. `serializePbn` writes the file back from those lines plus the edited `commentText`, so unknown tags survive the round trip. Comments and notes are formatted only when rendered: `formatText` turns `\S`, `\H`, `\D` and `\C` into suit icons. The current deal lives in the `deal` URL parameter (1-based). Edited comments exist only in memory until "Pobierz PBN" is clicked. Unsaved edits are guarded by `beforeunload` and `useBlocker`.
 - Tests (`*.test.js`) cover the parsers. `pbn.test.js` round-trips every file in `public/`, so a new `.pbn` file that the parser cannot handle makes the tests fail.

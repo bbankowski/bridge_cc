@@ -97,9 +97,11 @@ const ConventionCard = () => {
             case 'section':
                 return <h4 key={entry.id} className="title is-4" id={entry.id}>{entry.title}</h4>
             case 'opening':
-                return <h4 key={entry.id} className="title is-4" id={entry.id}>
-                    {openingTitle(entry.sequence)}
-                </h4>
+                return <Fragment key={entry.id}>
+                    <h4 className="title is-4 mb-2" id={entry.id}>{openingTitle(entry.sequence)}</h4>
+                    {entry.description && entry.sequence !== 'pas'
+                        && <p className="App-openingDescription">{entry.description}</p>}
+                </Fragment>
             case 'table':
                 return <BidTable key={entry.id} {...entry}/>
             default: {
@@ -119,7 +121,7 @@ const ConventionCard = () => {
         {openings.map(entry => <div key={entry.id}>
             {anchorLink(entry.id, <>
                 <b><Bid bid={polishBidToPbn(entry.sequence)}/></b>
-                <span className="App-description">{entry.description}</span>
+                <span className="App-description">{entry.short ?? entry.description}</span>
             </>)}
         </div>)}
     </div>
@@ -127,7 +129,7 @@ const ConventionCard = () => {
     return <div className="container App ConventionCard">
         <div className="ConventionCard-header">
             <h1 className="title">Karta konwencyjna</h1>
-            <Link className="button is-small is-light" to="/karta-pzbs">Minikarta PZBS do druku</Link>
+            <Link className="button is-small is-light" to="/karta-pzbs">Karta PZBS do druku</Link>
         </div>
         <p className="subtitle">Bartosz Bańkowski <span className="tag">13886</span><br/>Marek Jarosz <span
             className="tag">10237</span></p>

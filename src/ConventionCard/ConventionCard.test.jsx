@@ -15,9 +15,27 @@ test('renders the openings index and the bidding from bidding.txt', () => {
 
     const openings = document.querySelectorAll('.App-openings a')
     expect(openings.length).toBeGreaterThan(10)
-    expect(openings[0]).toHaveTextContent(/^1.*12-14 PC/)
+    expect(openings[0]).toHaveTextContent(/^1.*12-14 równy, 15\+ z 5\+ trefli, 18\+ dowolny, 12\+ 4414$/)
     expect(document.getElementById('opening-1T')).toBeInTheDocument()
     expect(document.getElementById('bid-1T-1K')).toHaveTextContent('Licytacja po 1-1: negat')
+})
+
+test('shows the short description in the overview and the full one in the opening section', () => {
+    renderCard()
+
+    const threeClubs = [...document.querySelectorAll('.App-openings a')].find(link => link.getAttribute('href').endsWith('#opening-3T'))
+    expect(threeClubs).toHaveTextContent(/^3\s*blok, kolor 7\+ \(przed partią słabszy\)$/)
+    const section = document.getElementById('opening-3T')
+    expect(section.nextElementSibling).toHaveClass('App-openingDescription')
+    expect(section.nextElementSibling).toHaveTextContent(/^po partii kolor 7\+ i dwie starsze figury.*wskazaniem wistu$/)
+})
+
+test('lists the 4NT opening in the index with its responses', () => {
+    renderCard()
+
+    const index = within(document.querySelector('.App-openings'))
+    expect(index.getByRole('link', {name: /^4BA\s*pytanie o asy/})).toBeInTheDocument()
+    expect(document.getElementById('opening-4BA')).toHaveTextContent('Dalsza licytacja po otwarciu 4BA')
 })
 
 test('scrolls to the opening clicked in the index and keeps it in the URL', async () => {

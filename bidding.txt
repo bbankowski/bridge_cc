@@ -12,7 +12,7 @@
 @ Nasze otwarcia
 
 ### OTWARCIE 1T ###
-1T                          => 12-14 PC skład równy lub 15+ z piątką trefli lub 18+ skład dowolny
+1T                          => 12-14 równy, 15+ z 5+ trefli, 18+ dowolny, 12+ 4414 | 12-14 PC skład równy lub 15+ z piątką trefli lub 18+ skład dowolny lub 12+ 4414
 
 1T-1K                       => negat, 0-6 PC skład dowolny, 7-11 PC młode, 13-15 PC w składzie równym chęć grania BA z drugiej ręki, 16+ skład równy
 1T-1BA                      => 7-10 PC
@@ -180,7 +180,7 @@ T1T-3BA
 1T-3BA-4P                   => 18+ naturalne, F1
 
 ### OTWARCIE 1K ###
-1K                          => 12-17 PC, 5+ kar lub 4 kara i 5 trefli lub 4441
+1K                          => 12-17 PC, 5+ kar lub 4441 z 4 karami | 12-17 PC, 5+ kar lub 4441 z czterema karami; 12-14 PC także 4 kara i 5 trefli
 1K-1C						=> 4+ kiery, F1
 1K-1P						=> 4+ piki, F1
 1K-1BA                      => 6-9 bez starszej czwóki
@@ -276,7 +276,7 @@ T1K-3T-3K
 
 
 ### OTWARCIE 1C ###
-1C                          => 12-17 PC, 5+ kierów (z siłą 15-17 i składem 5332 otwieramy zawsze 1BA)
+1C                          => 12-17 PC, 5+ kierów | 12-17 PC, 5+ kierów (z siłą 15-17 i składem 5332 otwieramy zawsze 1BA)
 1C-1P                       => 6+ PC, 4+ piki
 1C-1BA                      => 7-11 PC bez fitu, nie forsujące
 1C-2T                       => 12+ PC, FG, kolor 5+ i/lub fit
@@ -404,7 +404,7 @@ T1P-2BA
 
 
 ### OTWARCIE 1BA ###
-1BA                         => 15-17 PC, skład równy, bardzo możliwa starsza piątka lub młodsza szóstka
+1BA                         => 15-17 PC, skład zrównoważony | 15-17 PC, skład zrównoważony; możliwe 6322, 5332 i 5422 z dowolną piątką
 
 1BA-2T                      => Stayman
 1BA-2K                      => transfer na kiery
@@ -419,6 +419,7 @@ T1P-2BA
 1BA-4K                      => transfer na kiery
 1BA-4C                      => transfer na piki
 1BA-4P                      => kolory młodsze, bez aspiracji
+1BA-4BA                     => inwit
 
 T1BA-2T
 1BA-2T-2K                  => brak starszych czwórek
@@ -638,7 +639,7 @@ T2BA-3P
 
 
 ### OTWARCIE 3T ###
-3T                          => po partii kolor 7+ i dwie starsze figury, przed partią wskazuje najdłuższy kolor (siła dowolna)
+3T                          => blok, kolor 7+ (przed partią słabszy) | po partii kolor 7+ i dwie starsze figury, przed partią najdłuższy kolor, bardzo słabe; na trzeciej ręce może być wskazaniem wistu
 
 3T-3K                       => naturalne, F1
 3T-3C                       => naturalne, F1
@@ -651,7 +652,7 @@ T2BA-3P
 
 
 ### OTWARCIE 3K ###
-3K                          => po partii kolor 7+ i dwie starsze figury, przed partią wskazuje najdłuższy kolor (siła dowolna)
+3K                          => blok, kolor 7+ (przed partią słabszy) | po partii kolor 7+ i dwie starsze figury, przed partią najdłuższy kolor, bardzo słabe; na trzeciej ręce może być wskazaniem wistu
 
 3K-3C                       => naturalne, F1
 3K-3P                       => naturalne, F1
@@ -662,7 +663,7 @@ T2BA-3P
 3K-4P                       => do gry
 
 ### OTWARCIE 3C ###
-3C                          => po partii kolor 7+ i dwie starsze figury, przed partią wskazuje najdłuższy kolor (siła dowolna)
+3C                          => blok, kolor 7+ (przed partią słabszy) | po partii kolor 7+ i dwie starsze figury, przed partią najdłuższy kolor, bardzo słabe; na trzeciej ręce może być wskazaniem wistu
 
 3C-3P                       => natrualne, F1
 3C-3BA                      => do gry
@@ -673,7 +674,7 @@ T2BA-3P
 3C-4BA                      => blackwood na kierach
 
 ### OTWARCIE 3P ###
-3P                          => po partii kolor 7+ i dwie starsze figury, przed partią wskazuje najdłuższy kolor (siła dowolna)
+3P                          => blok, kolor 7+ (przed partią słabszy) | po partii kolor 7+ i dwie starsze figury, przed partią najdłuższy kolor, bardzo słabe; na trzeciej ręce może być wskazaniem wistu
 
 3P-3BA                      => do gry
 3P-4T                       => cue bid na pikach
@@ -702,9 +703,11 @@ T3BA-4K
 
 
 ### OTWARCIE 4T ###
+4T                          => naturalne, blokujące
 #4T                          => naturalne, blokujące
 
 ### OTWARCIE 4K ###
+4K                          => naturalne, blokujące
 #4K                          => 5K-5P albo 6C
 
 #4K-pas                      => do koloru, nic nie mówi o karach
@@ -733,6 +736,7 @@ T3BA-4K
 
 
 ### OTWARCIE 4C ###
+4C                          => naturalne, blokujące
 #4C                          => 5T-5C albo 6P
 #4C-pas                      => do koloru, nie nie mówi o kierach
 #4C-2BA                      => pytanie, FG
@@ -758,6 +762,7 @@ T3BA-4K
 
 
 ### OTWARCIE 4P ###
+4P                          => naturalne, blokujące
 #4P                          => 5T-5P albo 5C-5K
 
 #4P-pas                      => do koloru, nie nie mówi o pikach
@@ -780,6 +785,13 @@ T3BA-4K
 
 
 ### OTWARCIE 4BA ###
+4BA                         => pytanie o asy | pytanie o asy (ręka, która potrzebuje wiedzieć, które asy ma partner)
+4BA-5T                      => bez asa
+4BA-5K                      => as karo
+4BA-5C                      => as kier
+4BA-5P                      => as pik
+4BA-6T                      => as trefl
+4BA-5BA                     => dwa asy
 #4BA                         => 5P-5C albo 5T-5K
 #4BA-3T                      => do koloru
 #4BA-3K                      => do koloru
