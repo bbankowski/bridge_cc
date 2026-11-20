@@ -2,10 +2,10 @@ import {hcp, isBalanced, lengths, shape} from './hands'
 
 /*
  * Openings of the BB–MJ system (bidding.txt, chapter "Nasze otwarcia"):
- *  1♣  12-14 balanced, or 15+ with 5+ clubs, or any 18+
- *  1♦  12-17, 5+ diamonds, or 4 diamonds + 5 clubs, or 4441
+ *  1♣  12-14 balanced, or 15+ with 5+ clubs, or any 18+, or 12+ 4-4-1-4 (singleton diamond)
+ *  1♦  12-17, 5+ diamonds, or 4441 with four diamonds; 12-14 also 4 diamonds + 5 clubs
  *  1♥  12-17, 5+ hearts (15-17 with 5332 always 1NT);  1♠ 12-17, 5+ spades
- *  1NT 15-17 balanced, a 5-card major or a 6-card minor possible
+ *  1NT 15-17 balanced, a 5-card major or a 6-card minor possible; 5422 possible too
  *  2♣  11-14, 6+ clubs or 5+ clubs and a 4-card major
  *  2♦  mini multi: 5-10, 6+ in a major
  *  2♥  5-11, 5+ hearts and 5+ another;  2♠ 5-11, 5+ spades and 5+ minor;  2NT 5-11, 5+ clubs and 5+ diamonds
@@ -65,18 +65,21 @@ export const evaluateOpening = (hand, {vulnerable = false} = {}) => {
             if (len.D >= 5) {
                 add(options, '1D', 60, 'możliwe 1♦, ale skład równy 15-17 to przede wszystkim 1BA')
             }
+        } else if (sorted.join('') === '4441' && len.D === 1) {
+            add(options, '1C', 100, '12+ 4-4-1-4 (singiel karo): 1♣')
+            add(options, '1D', 20, '1♦ obiecuje cztery kara; 4-4-1-4 system otwiera 1♣')
         } else if (sorted.join('') === '4441') {
-            add(options, '1D', 100, '4441 z 12-17 PC: 1♦')
+            add(options, '1D', 100, '4441 z czterema karami, 12-17 PC: 1♦')
         } else if (fiveCardMajor && (len[fiveCardMajor] >= len.D && len[fiveCardMajor] >= len.C)) {
             const major = len.S >= 5 && len.S >= len.H ? 'S' : 'H'
             add(options, `1${CALL[major]}`, 100, `12-17 PC, 5+ ${major === 'S' ? 'pików' : 'kierów'}`)
+        } else if (len.D === 4 && len.C === 5 && points >= 15 && len.S < 5 && len.H < 5) {
+            add(options, '1C', 100, '15+ PC z piątką trefli: 1♣ (4 kara i 5 trefli otwieramy 1♦ tylko z 12-14)')
+            add(options, '1D', 40, '4 kara i 5 trefli to 1♦ tylko z 12-14 PC')
         } else if ((longest === 'D' && len.D >= 5) || (len.D === 4 && len.C === 5)) {
             add(options, '1D', 100, len.D >= 5 ? '12-17 PC, 5+ kar' : '12-17 PC, 4 kara i 5 trefli')
             if (balanced && points <= 14) {
                 add(options, '1C', 50, '12-14 w składzie równym to 1♣, ale z piątką kar system daje 1♦')
-            }
-            if (len.D === 4 && points >= 15) {
-                add(options, '1C', 70, '15+ z piątką trefli to też 1♣, ale 4 kara i 5 trefli system otwiera 1♦')
             }
             if (len.D === 4 && points <= 14 && (len.S === 4 || len.H === 4)) {
                 add(options, '2C', 50, '5 trefli i starsza czwórka to też 2♣, ale z czwórką kar system daje 1♦')
@@ -102,6 +105,10 @@ export const evaluateOpening = (hand, {vulnerable = false} = {}) => {
         }
     } else if (points === 11 && (len.C >= 6 || (len.C >= 5 && ['S', 'H'].some(suit => len[suit] === 4)))) {
         add(options, '2C', 100, '11-14 PC, 6+ trefli lub 5+ trefli i 4 w starszym: 2♣')
+    }
+
+    if (points >= 15 && points <= 17 && sorted.join('') === '5422') {
+        add(options, '1NT', 80, '15-17 PC: z 5422 możliwe też 1BA')
     }
 
     if (points >= 5 && points <= 11) {
