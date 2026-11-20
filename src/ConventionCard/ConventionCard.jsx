@@ -95,7 +95,10 @@ const ConventionCard = () => {
         const lineId = `line-${entry.index}`
         switch (entry.type) {
             case 'section':
-                return <h4 key={entry.id} className="title is-4" id={entry.id}>{entry.title}</h4>
+                return <Fragment key={entry.id}>
+                    <h4 className={`title is-4${entry.description ? ' mb-2' : ''}`} id={entry.id}>{entry.title}</h4>
+                    {entry.description && <p className="App-openingDescription">{entry.description}</p>}
+                </Fragment>
             case 'opening':
                 return <Fragment key={entry.id}>
                     <h4 className="title is-4 mb-2" id={entry.id}>{openingTitle(entry.sequence)}</h4>

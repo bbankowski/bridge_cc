@@ -8,6 +8,7 @@
 #  * zaczyna sekcję, w której otwieramy my (np. po interwencji przeciwnika)
 #  ^ zaczyna sekcję, w której otwierają przeciwnicy (obrona)
 #  & zaczyna sekcję z konwencją
+#  sekcja może mieć opis po "=>", np. "& Blackwood => opis", a otwarcie krótki i pełny opis: "1T => krótki | pełny"
 #
 @ Nasze otwarcia
 
@@ -948,7 +949,7 @@ T1C-2K
 1C-2K-4K				=> krótkość, fit
 1C-2K-4C				=> do gry, taktyczne
 
-* Po otwarciu 1BA
+* Po interwencji na 1BA
 T1BA-X
 1BA-X-XX                => punkty, pozostale odzywki zgodnie jak bez kontry
 
@@ -1097,7 +1098,7 @@ T1T
 2K-3C         => silne 5-5 piki i młodszy
 2K-3P         => naturalne, konstruktywne
 
-^ Po slabych otwarciach 2C/2P (monokolor lub dwukolorowki) i 2K w znaczeniu monokolor karowy
+^ Po slabych otwarciach 2C/2P i 2K => 2C/2P monokolor lub dwukolorowki, 2K w znaczeniu monokolor karowy
 2C-2BA                  => 16-18 PC, równy sklad (może być starsza piatka, mlodsza szostka)
 2C-2BA-pas-3T           => transfer na kara
 2C-2BA-pas-3K           => 4 piki
@@ -1112,7 +1113,7 @@ T1T
 
 @ Konwencje
 
-& Blackwood 102 i kolorowe króle/damy (kolejny szczebel oprócz koloru uzgodnionego)
+& Blackwood 102 i kolorowe króle/damy => kolejny szczebel oprócz koloru uzgodnionego
 4BA-5T                => 1 lub 4 wartosci
 4BA-5K                => 0 lub 3 wartosci
 4BA-5C                => 2 lub 5 wartosci, bez damy atu

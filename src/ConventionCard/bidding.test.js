@@ -52,7 +52,7 @@ T1T
 1BA-2C      => transfer na piki
 T1BA-2C
 1BA-2C-2P   => przyjecie transferu
-* Po otwarciu 1BA
+* Po interwencji na 1BA
 T1BA-2C
 1BA-2C-X    => negatywna
 ^ Po klasycznym BA
@@ -61,7 +61,7 @@ T1BA-2C
 
         const tables = entries.filter(entry => entry.type === 'table').map(entry => entry.id)
         const targets = entries.filter(entry => entry.type === 'bid').map(entry => [entry.sequence, entry.target])
-        expect(tables).toEqual(['bid-1BA-2C', 'bid-po-otwarciu-1ba-1BA-2C'])
+        expect(tables).toEqual(['bid-1BA-2C', 'bid-po-interwencji-na-1ba-1BA-2C'])
         expect(targets).toEqual([
             ['1BA-2C', 'bid-1BA-2C'],
             ['1BA-2C-2P', undefined],
@@ -105,6 +105,23 @@ T1T-1K
         expect(plain).not.toHaveProperty('short')
     })
 
+    test('reads a description of a section after "=>"', () => {
+        const [section, plain] = parseBidding('& Blackwood 102 => kolejny szczebel oprócz koloru uzgodnionego\n^ Po silnym treflu\n')
+
+        expect(section).toEqual({type: 'section', id: 'blackwood-102', title: 'Blackwood 102',
+            description: 'kolejny szczebel oprócz koloru uzgodnionego', index: 0})
+        expect(plain).not.toHaveProperty('description')
+    })
+
+    test.each([
+        ['Blackwood 102 i kolorowe króle/damy', 'kolejny szczebel oprócz koloru uzgodnionego'],
+        ['Po slabych otwarciach 2C/2P i 2K', '2C/2P monokolor lub dwukolorowki, 2K w znaczeniu monokolor karowy'],
+    ])('the section "%s" of bidding.txt has a short title and a description', (title, description) => {
+        const section = parseBidding(readBiddingTxt()).find(entry => entry.type === 'section' && entry.title === title)
+
+        expect(section.description).toBe(description)
+    })
+
     test('finds openings by their short description too', () => {
         expect(entryMatches({sequence: '3T', short: 'blok', description: 'po partii kolor 7+'}, 'blok')).toBe(true)
     })
@@ -125,6 +142,16 @@ T1T-1K
         })
         // the Blackwood responses of the "Konwencje" chapter stay separate
         expect(entries.find(entry => entry.sequence === '4BA-5T' && entry.scope !== '').description).toBe('1 lub 4 wartosci')
+    })
+
+    test('names every section of the interference chapter "Po interwencji …"', () => {
+        const chapters = buildChapters(parseBidding(readBiddingTxt()))
+        const interference = chapters.find(chapter => chapter.title === 'Po interwencji przeciwników')
+
+        expect(interference.items.map(item => item.entry.title)).toEqual([
+            'Po interwencji na otwarcie 1 trefl', 'Po interwencji na otwarcie 1 karo',
+            'Po interwencji na otwarcie 1 w starszy', 'Po interwencji na 1BA', 'Po interwencji na multi',
+        ])
     })
 
     test('parses bidding.txt', () => {
