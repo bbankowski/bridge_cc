@@ -949,7 +949,7 @@ T1C-2K
 1C-2K-4K				=> krótkość, fit
 1C-2K-4C				=> do gry, taktyczne
 
-* Po otwarciu 1BA
+* Po interwencji na 1BA
 T1BA-X
 1BA-X-XX                => punkty, pozostale odzywki zgodnie jak bez kontry
 

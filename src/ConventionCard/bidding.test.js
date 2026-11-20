@@ -52,7 +52,7 @@ T1T
 1BA-2C      => transfer na piki
 T1BA-2C
 1BA-2C-2P   => przyjecie transferu
-* Po otwarciu 1BA
+* Po interwencji na 1BA
 T1BA-2C
 1BA-2C-X    => negatywna
 ^ Po klasycznym BA
@@ -61,7 +61,7 @@ T1BA-2C
 
         const tables = entries.filter(entry => entry.type === 'table').map(entry => entry.id)
         const targets = entries.filter(entry => entry.type === 'bid').map(entry => [entry.sequence, entry.target])
-        expect(tables).toEqual(['bid-1BA-2C', 'bid-po-otwarciu-1ba-1BA-2C'])
+        expect(tables).toEqual(['bid-1BA-2C', 'bid-po-interwencji-na-1ba-1BA-2C'])
         expect(targets).toEqual([
             ['1BA-2C', 'bid-1BA-2C'],
             ['1BA-2C-2P', undefined],
@@ -142,6 +142,16 @@ T1T-1K
         })
         // the Blackwood responses of the "Konwencje" chapter stay separate
         expect(entries.find(entry => entry.sequence === '4BA-5T' && entry.scope !== '').description).toBe('1 lub 4 wartosci')
+    })
+
+    test('names every section of the interference chapter "Po interwencji …"', () => {
+        const chapters = buildChapters(parseBidding(readBiddingTxt()))
+        const interference = chapters.find(chapter => chapter.title === 'Po interwencji przeciwników')
+
+        expect(interference.items.map(item => item.entry.title)).toEqual([
+            'Po interwencji na otwarcie 1 trefl', 'Po interwencji na otwarcie 1 karo',
+            'Po interwencji na otwarcie 1 w starszy', 'Po interwencji na 1BA', 'Po interwencji na multi',
+        ])
     })
 
     test('parses bidding.txt', () => {
