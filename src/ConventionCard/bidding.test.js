@@ -97,6 +97,18 @@ T1T-1K
             .toEqual(['bid-1T-1K', 'bid-chapter-drugi-1T-1K'])
     })
 
+    test('splits the description of an opening into "short | full"', () => {
+        const [withShort, plain] = parseBidding('3T => blok | po partii kolor 7+\n1P => 12-17 PC, 5+ pików\n')
+
+        expect(withShort).toMatchObject({type: 'opening', short: 'blok', description: 'po partii kolor 7+'})
+        expect(plain.description).toBe('12-17 PC, 5+ pików')
+        expect(plain).not.toHaveProperty('short')
+    })
+
+    test('finds openings by their short description too', () => {
+        expect(entryMatches({sequence: '3T', short: 'blok', description: 'po partii kolor 7+'}, 'blok')).toBe(true)
+    })
+
     test('the 4NT opening of bidding.txt asks for specific aces', () => {
         const entries = parseBidding(readBiddingTxt())
         const opening = entries.find(entry => entry.type === 'opening' && entry.sequence === '4BA')

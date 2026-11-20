@@ -97,9 +97,11 @@ const ConventionCard = () => {
             case 'section':
                 return <h4 key={entry.id} className="title is-4" id={entry.id}>{entry.title}</h4>
             case 'opening':
-                return <h4 key={entry.id} className="title is-4" id={entry.id}>
-                    {openingTitle(entry.sequence)}
-                </h4>
+                return <Fragment key={entry.id}>
+                    <h4 className="title is-4 mb-2" id={entry.id}>{openingTitle(entry.sequence)}</h4>
+                    {entry.description && entry.sequence !== 'pas'
+                        && <p className="App-openingDescription">{entry.description}</p>}
+                </Fragment>
             case 'table':
                 return <BidTable key={entry.id} {...entry}/>
             default: {
@@ -119,7 +121,7 @@ const ConventionCard = () => {
         {openings.map(entry => <div key={entry.id}>
             {anchorLink(entry.id, <>
                 <b><Bid bid={polishBidToPbn(entry.sequence)}/></b>
-                <span className="App-description">{entry.description}</span>
+                <span className="App-description">{entry.short ?? entry.description}</span>
             </>)}
         </div>)}
     </div>

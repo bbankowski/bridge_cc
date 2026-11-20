@@ -10,7 +10,7 @@
       "otwarcie": "1♣",
       "sztuczna": true,
       "minKart": "0",
-      "opis": "12-14 PC skład równy lub 15+ z 5+♣ lub 18+ skład dowolny lub 12+ 4-4-1-4",
+      "opis": "12-14 PC skład równy lub 15+ z 5+♣ lub 18+ skład dowolny lub 12+ 4414",
       "odpowiedzi": "1♦ negat: 0-6 dowolnie, 7-11 z młodymi, 13-15 równy (BA z drugiej ręki), 16+ równy; 1♥/1♠ naturalne 4+, F1; 1BA 7-10; 2♣/2♦ 12+ FG, 5+; 2♥/2♠ 12+ FG, dobry kolor 6+; 2BA inwit; 3♣/3♦ inwit, 6+; 3♥/3♠ 7+ z dwiema starszymi figurami; 3BA 13-15 równy bez starszej 4 i młodszej 5",
       "dalszaLicytacja": "Po 1♦: 1♥/1♠ 4+, 1BA 18-20 (dalej jak po 1BA), 2♣ 5+♣, 2♦ acol, 2♥/2♠/3♣/3♦ podacol, 2BA 21-23 (stayman odwrotny, transfery), 3♥/3♠/4♣ 5-5. Po 1♥/1♠: 2♣ 15+ 5+♣, 2♦ odwrotka, 3♥/3♠ 15-17 z fitem (3♠/3BA pyta o krótkość); po 1♥-1♠ i 1BA: magister",
       "poPasie": "pas-1♣: 2♣/2♦ góra pasa, kolor 5+; 2♥/2♠ 3-6 PC, kolor 6+"
@@ -202,8 +202,8 @@
     "specjalne": "Kontra wistowa (Lightner) i kontra z fitem. Kontra na splinter zachęca do wistu w wyższy z pozostałych kolorów (pas – w młodszy). Rekontra z fitem, rekontra SOS. 1BA-(X)-XX punkty; 1♥/1♠-(X)-XX 10+ bez fitu; 2♦-(X)-XX pokaż kolor. 1BA-pas-2♣-(X): XX karna, pas brak trzymania ♣ (forsuje do XX). Kontra na transfer: pas brak fitu, XX karna, przyjęcie z fitem. 1♣-(2BA): X wywoławcza (dalej X wywoławcze), pas brak punktów lub trapping (dalej X karne). Po wejściu na 4BA: X/XX karne, reszta szczebelkami"
   },
   "streszczenie": {
-    "opisOgolny": "Wspólny Język (polski trefl) z odpowiedziami 2/1 FG po starszych otwarciach. 1♣: 12-14 równy, 15+ z 5+♣, 18+ dowolny lub 12+ 4-4-1-4, 1♦ negat. 1♦: 12-17, 5+♦ lub 4441 z czterema karami, 12-14 także 4♦-5♣. 1♥/1♠: 12-17, 5+. 1BA 15-17 (możliwa starsza piątka lub młodsza szóstka). 2♣ 11-14 trefle, 2♦ mini-multi, 2♥/2♠/2BA słabe dwukolorówki 5-11. Bloki zależne od założeń, 3BA gambling",
-    "specjalneOdzywki": "1♣ (może być krótki: 12-14 równy, 18+ dowolny, 4-4-1-4), 1♦ (4♦ przy 4441 i 4♦-5♣), 1♣-1♦ negat, 1♣-1♥/1♠-2♦ odwrotka, magister, 2♦ mini-multi, 2♥/2♠ 5-5, 2BA 5-5 młode, 3♣-3♠ przed partią najdłuższy kolor dowolnej jakości, 3BA gambling, 1BA-2♠ inwit lub transfer na ♣, 1BA-3♥/3♠ 5431 z singlem, splintery, wejścia 1BA na 1♥/1♠ (8-15, 5+ młodszy i 4 w drugim starszym)",
+    "opisOgolny": "Wspólny Język (polski trefl) z odpowiedziami 2/1 FG po starszych otwarciach. 1♣: 12-14 równy, 15+ z 5+♣, 18+ dowolny lub 12+ 4414, 1♦ negat. 1♦: 12-17, 5+♦ lub 4441 z czterema karami, 12-14 także 4♦-5♣. 1♥/1♠: 12-17, 5+. 1BA 15-17 (możliwa starsza piątka lub młodsza szóstka). 2♣ 11-14 trefle, 2♦ mini-multi, 2♥/2♠/2BA słabe dwukolorówki 5-11. Bloki zależne od założeń, 3BA gambling",
+    "specjalneOdzywki": "1♣ (może być krótki: 12-14 równy, 18+ dowolny, 4414), 1♦ (4♦ przy 4441 i 4♦-5♣), 1♣-1♦ negat, 1♣-1♥/1♠-2♦ odwrotka, magister, 2♦ mini-multi, 2♥/2♠ 5-5, 2BA 5-5 młode, 3♣-3♠ przed partią najdłuższy kolor dowolnej jakości, 3BA gambling, 1BA-2♠ inwit lub transfer na ♣, 1BA-3♥/3♠ 5431 z singlem, splintery, wejścia 1BA na 1♥/1♠ (8-15, 5+ młodszy i 4 w drugim starszym)",
     "forsujacyPas": "Pas forsujący po 2/1 i interwencji przeciwnika. 1BA-pas-2♣-(X)-pas: brak trzymania ♣, forsuje partnera do XX",
     "wazneUwagi": "Przed partią bardzo słabe otwarcia na wysokości 3; otwarcia na trzeciej ręce mogą być wskazaniem wistu. Z 15-17 i 5♥332 zawsze 1BA. Po 1♦-1♠ odpowiedź 1BA może mieć singla ♠ (1444, 1453). Po interwencji przeciwnika na 2♦ odwrotka naturalna, z fitem X",
     "psychologiczne": "Bardzo rzadko"

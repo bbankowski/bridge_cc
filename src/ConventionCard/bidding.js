@@ -16,7 +16,7 @@ export const slugify = text => text
  * - "@ title" starts a chapter of the card (an entry of the menu),
  * - "^ title", "& title", "* title" start a new section ("*": we open, "^": the opponents open, "&": a convention),
  * - "T<sequence>" draws an auction table for the sequence,
- * - a single call (e.g. "1T", "2BA", "pas") is an opening,
+ * - a single call (e.g. "1T", "2BA", "pas") is an opening; its description may be "short | full",
  * - everything else is a continuation, indented relative to the last table.
  *
  * The same sequence means different things in different sections (e.g. "1BA-2C" is a transfer after our 1NT,
@@ -76,7 +76,10 @@ export const parseBidding = text => {
                 sequence, section, scope: scope(), description: described?.description,
             })
         } else if (!bid.includes('-')) {
-            entries.push({type: 'opening', id: uniqueId(`opening-${bid}`), sequence: bid, description})
+            // "short | full": the short description is shown in the openings overview, the full one in the section
+            const [short, full] = description.split(/\s+\|\s+/)
+            entries.push({type: 'opening', id: uniqueId(`opening-${bid}`), sequence: bid, description: full ?? short,
+                ...(full ? {short} : {})})
         } else {
             entries.push({
                 type: 'bid', sequence: bid, description, scope: scope(), section,
@@ -140,7 +143,7 @@ export const entryMatches = (entry, query) => {
     if (words.length === 0) {
         return false
     }
-    const text = normalize(`${entry.sequence ?? ''} ${entry.description ?? ''} ${entry.title ?? ''}`)
+    const text = normalize(`${entry.sequence ?? ''} ${entry.short ?? ''} ${entry.description ?? ''} ${entry.title ?? ''}`)
     return words.every(word => text.includes(word))
 }
 

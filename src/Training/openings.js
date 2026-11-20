@@ -2,7 +2,7 @@ import {hcp, isBalanced, lengths, shape} from './hands'
 
 /*
  * Openings of the BB–MJ system (bidding.txt, chapter "Nasze otwarcia"):
- *  1♣  12-14 balanced, or 15+ with 5+ clubs, or any 18+, or 12+ 4-4-1-4 (singleton diamond)
+ *  1♣  12-14 balanced, or 15+ with 5+ clubs, or any 18+, or 12+ 4414 (singleton diamond)
  *  1♦  12-17, 5+ diamonds, or 4441 with four diamonds; 12-14 also 4 diamonds + 5 clubs
  *  1♥  12-17, 5+ hearts (15-17 with 5332 always 1NT);  1♠ 12-17, 5+ spades
  *  1NT 15-17 balanced, a 5-card major or a 6-card minor possible; 5422 possible too
@@ -66,8 +66,8 @@ export const evaluateOpening = (hand, {vulnerable = false} = {}) => {
                 add(options, '1D', 60, 'możliwe 1♦, ale skład równy 15-17 to przede wszystkim 1BA')
             }
         } else if (sorted.join('') === '4441' && len.D === 1) {
-            add(options, '1C', 100, '12+ 4-4-1-4 (singiel karo): 1♣')
-            add(options, '1D', 20, '1♦ obiecuje cztery kara; 4-4-1-4 system otwiera 1♣')
+            add(options, '1C', 100, '12+ 4414 (singiel karo): 1♣')
+            add(options, '1D', 20, '1♦ obiecuje cztery kara; 4414 system otwiera 1♣')
         } else if (sorted.join('') === '4441') {
             add(options, '1D', 100, '4441 z czterema karami, 12-17 PC: 1♦')
         } else if (fiveCardMajor && (len[fiveCardMajor] >= len.D && len[fiveCardMajor] >= len.C)) {
