@@ -21,10 +21,6 @@ describe('karta-pzbs.json', () => {
 describe('missingFields', () => {
     test('lists the null fields of the current card', () => {
         expect(missingFields(data)).toEqual([
-            'Otwarcie 4♣: sztuczna, min. kart, opis, odpowiedzi',
-            'Otwarcie 4♦: sztuczna, min. kart, opis, odpowiedzi',
-            'Kategoria PZBS',
-            'Zawody',
             'Sygnały do wyjścia partnera',
             'Sygnały do wyjścia rozgrywającego',
         ])
@@ -70,6 +66,6 @@ test('the page shows both pages and the fields to fill in', () => {
 
     expect(document.querySelectorAll('.PzbsCard-page')).toHaveLength(2)
     const missing = within(screen.getByText(/Do uzupełnienia/).closest('.notification'))
-    expect(missing.getByText('Zawody')).toBeInTheDocument()
+    expect(missing.getByText('Sygnały do wyjścia partnera')).toBeInTheDocument()
     expect(screen.getByRole('button', {name: 'Drukuj / zapisz PDF'})).toBeInTheDocument()
 })

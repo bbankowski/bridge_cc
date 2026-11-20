@@ -2,8 +2,8 @@
   "_opis": "Treść karty konwencyjnej PZBS (wzór kartakonw.docx, strona /#/karta-pzbs), opracowana na podstawie bidding.txt. Wartość null = do uzupełnienia (lista na stronie). Pusty tekst = brak specjalnych ustaleń.",
   "naglowek": {
     "gracze": "Bartosz Bańkowski (PID 13886) – Marek Jarosz (PID 10237)",
-    "kategoria": null,
-    "zawody": null
+    "kategoria": "niebieska",
+    "zawody": "Liga i turnieje"
   },
   "otwarcia": [
     {
@@ -135,17 +135,17 @@
     },
     {
       "otwarcie": "4♣",
-      "sztuczna": null,
-      "minKart": null,
-      "opis": null,
-      "odpowiedzi": null
+      "sztuczna": false,
+      "minKart": "7",
+      "opis": "naturalne, blokujące",
+      "odpowiedzi": ""
     },
     {
       "otwarcie": "4♦",
-      "sztuczna": null,
-      "minKart": null,
-      "opis": null,
-      "odpowiedzi": null
+      "sztuczna": false,
+      "minKart": "7",
+      "opis": "naturalne, blokujące",
+      "odpowiedzi": ""
     }
   ],
   "konwencjeStrefySzlemowej": "Blackwood na 5 wartości (4 asy i król atu): 5♣ 1 lub 4, 5♦ 0 lub 3, przy 2 lub 5 informacja o damie atu i królach: 5♥ bez damy, 5♠ z damą bez króli, 5BA/6♣/6♦ z damą i królem w najniższym/środkowym/najwyższym kolorze bocznym (lub 2 pozostałymi), 6♥ z damą i 3 królami; o króle i damy pyta kolejny szczebel poza kolorem uzgodnionym. Po wejściu na 4BA: X/XX karne, reszta szczebelkami (pas też). Cue-bidy, splintery i pytania o krótkość po podniesieniach na poziomie 3. 4BA po otwarciu 3♥/3♠ – Blackwood.",
@@ -212,7 +212,7 @@
     "opisOgolny": "Wspólny Język (polski trefl) z odpowiedziami 2/1 FG po starszych otwarciach. 1♣: 12-14 równy, 15+ z 5+♣ lub 18+ dowolny, 1♦ negat. 1♦: 12-17, 5+♦ lub 4♦-5♣ lub 4441. 1♥/1♠: 12-17, 5+. 1BA 15-17 (możliwa starsza piątka lub młodsza szóstka). 2♣ 11-14 trefle, 2♦ mini-multi, 2♥/2♠/2BA słabe dwukolorówki 5-11. Bloki zależne od założeń, 3BA gambling",
     "specjalneOdzywki": "1♣ (może być 2-kartowy), 1♦ (może być singiel przy 4-4-1-4), 1♣-1♦ negat, 1♣-1♥/1♠-2♦ odwrotka, magister, 2♦ mini-multi, 2♥/2♠ 5-5, 2BA 5-5 młode, 3♣-3♠ przed partią najdłuższy kolor dowolnej jakości, 3BA gambling, 1BA-2♠ inwit lub transfer na ♣, 1BA-3♥/3♠ 5431 z singlem, splintery, wejścia 1BA na 1♥/1♠ (8-15, 5+ młodszy i 4 w drugim starszym)",
     "forsujacyPas": "1BA-pas-2♣-(X)-pas: brak trzymania ♣, forsuje partnera do XX",
-    "wazneUwagi": "Z 15-17 i 5♥332 zawsze 1BA. Po 1♦-1♠ odpowiedź 1BA może mieć singla ♠ (1444, 1453). Po interwencji przeciwnika na 2♦ odwrotka naturalna, z fitem X",
+    "wazneUwagi": "Z 15-17 i 5♥332 zawsze 1BA. Po 1♦-1♠ odpowiedź 1BA może mieć singla ♠ (1444, 1453). Po interwencji przeciwnika na 2♦ odwrotka naturalna, z fitem X. Otwarcia 4♣/4♦/4♥/4♠ naturalne, blokujące",
     "psychologiczne": "Rzadko"
   }
 }
