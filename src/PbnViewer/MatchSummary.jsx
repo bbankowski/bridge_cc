@@ -16,7 +16,7 @@ const resultClass = ([our, their]) => our > their ? 'is-success' : our < their ?
  */
 const MatchSummary = ({tournament, deals, onSelectDeal}) => {
     const boardOf = position => deals[position - 1]?.board ?? position
-    return <details className="box MatchSummary" open>
+    return <details className="box MatchSummary">
         <summary className="has-text-weight-bold">{tournament.name} – podsumowanie</summary>
         {tournament.matches.map(match => <div key={match.title} className="MatchSummary-match">
             <p className="mb-1">

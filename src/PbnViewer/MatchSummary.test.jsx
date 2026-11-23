@@ -37,3 +37,9 @@ test('names a segment by its board numbers and opens its first deal', async () =
 
     expect(onSelectDeal).toHaveBeenCalledWith(2)
 })
+
+test('is collapsed by default', () => {
+    const {container} = render(<MatchSummary tournament={tournament} deals={deals} onSelectDeal={() => {}}/>)
+
+    expect(container.querySelector('details')).not.toHaveAttribute('open')
+})
