@@ -254,3 +254,19 @@
     background-color: #fff3c4;
     font-weight: bold;
 }
+
+.MatchSummary summary {
+    cursor: pointer;
+}
+
+.MatchSummary-match {
+    margin-top: 12px;
+}
+
+.MatchSummary-segment {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 4px 12px;
+    margin: 0 0 8px 12px;
+}
