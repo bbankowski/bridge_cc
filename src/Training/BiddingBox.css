@@ -1,0 +1,31 @@
+.BiddingBox {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.BiddingBox-row, .BiddingBox-special {
+    display: flex;
+    gap: 4px;
+}
+
+.BiddingBox-call.button {
+    min-width: 3.2rem;
+    padding: 0 6px;
+}
+
+.BiddingBox-special .button {
+    flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .BiddingBox {
+        display: flex;
+    }
+
+    .BiddingBox-call.button {
+        min-width: 0;
+        flex: 1;
+        height: 2.6rem;
+    }
+}

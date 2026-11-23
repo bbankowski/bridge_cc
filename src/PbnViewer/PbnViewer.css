@@ -270,3 +270,72 @@
     gap: 4px 12px;
     margin: 0 0 8px 12px;
 }
+
+.DealEditor-auction {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+    margin-bottom: 12px;
+}
+
+.DealEditor-auction .field {
+    max-width: 320px;
+}
+
+.DealEditor-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.DealEditor-tricks.input {
+    width: 5rem;
+}
+
+.DealEditor-contract {
+    margin-bottom: 12px;
+}
+
+.App-deal-box {
+    position: relative;
+}
+
+.DealMenu {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 2;
+}
+
+.DealMenu-trigger.button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.DealMenu-modified {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: hsl(171, 100%, 41%);
+}
+
+.DealMenu .dropdown-item {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+}
+
+.DealMenu .dropdown-item:hover:not(:disabled) {
+    background: hsl(0, 0%, 96%);
+}
+
+.DealMenu .dropdown-item:disabled {
+    color: hsl(0, 0%, 71%);
+    cursor: default;
+}
