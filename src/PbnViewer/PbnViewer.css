@@ -161,6 +161,8 @@
 
 .App-deal-navigation {
     background-color: white;
+    justify-content: flex-end;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -188,8 +190,8 @@
         bottom: 0;
         z-index: 1;
         padding: 8px 0 0;
-        margin: 0 -0.75rem;
-        padding-left: 0.75rem;
+        margin: 10px -1.25rem 0;
+        padding-right: 1.25rem;
         box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
         flex-wrap: nowrap;
     }
@@ -263,12 +265,42 @@
     margin-top: 12px;
 }
 
-.MatchSummary-segment {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 4px 12px;
-    margin: 0 0 8px 12px;
+.MatchSummary-grid {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr);
+    gap: 6px 24px;
+    align-items: start;
+    margin: 4px 0 12px 12px;
+}
+
+.MatchSummary-roomName {
+    font-weight: bold;
+    border-bottom: 1px solid hsl(0, 0%, 86%);
+}
+
+.MatchSummary-cellRoom {
+    display: none;
+    font-weight: bold;
+}
+
+.MatchSummary-line {
+    display: inline-block;
+    width: 2.2em;
+    color: hsl(0, 0%, 48%);
+}
+
+@media screen and (max-width: 600px) {
+    .MatchSummary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .MatchSummary-grid > .MatchSummary-roomName, .MatchSummary-grid > div:first-child {
+        display: none;
+    }
+
+    .MatchSummary-cellRoom {
+        display: block;
+    }
 }
 
 .DealEditor-auction {
@@ -338,4 +370,19 @@
 .DealMenu .dropdown-item:disabled {
     color: hsl(0, 0%, 71%);
     cursor: default;
+}
+
+.App-deal-lead {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.DealBoard-diagram {
+    position: relative;
+}
+
+.DealBoard-play.button {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
 }

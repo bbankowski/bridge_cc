@@ -4,12 +4,14 @@ import './PbnViewer.css'
 import Auction from './Auction'
 import AuctionReplay from './AuctionReplay'
 import Bid from '../common/Bid'
+import CardLabel from './CardLabel'
 import DealBoard from './DealBoard'
 import Minimax from './Minimax'
 import DealEditor from './DealEditor'
 import DealMenu from './DealMenu'
 import {dealResult, FILTERS, formatResult, isGain, isLoss, parseFilters, visibleDeals} from './dealFilters'
 import {PLAYERS, seatOf} from './hideHands'
+import {openingLead} from './play'
 import {loadPbn, serializePbn, updateDeal} from './pbn'
 import MatchSummary from './MatchSummary'
 import {tournamentOf} from '../tournaments'
@@ -57,6 +59,7 @@ const PbnViewer = () => {
     // The current deal is kept in the URL (1-based), so a page refresh shows the same deal.
     const currentDeal = Math.min(Math.max(Number(searchParams.get('deal')) - 1 || 0, 0), Math.max(deals.length - 1, 0))
     const deal = deals[currentDeal]
+    const lead = deal ? openingLead(deal) : null
 
     const setCurrentDeal = index => {
         // a revealed deal is covered again after moving to another one, and an edit not saved is dropped
@@ -191,15 +194,18 @@ const PbnViewer = () => {
                             Odkryj rozdanie
                         </button>
                     </p> : <>
-                        Contract: <Bid bid={deal.contract}/> {deal.declarer}<br/>
-                        Result (tricks): {deal.result}<br/>
-                        Score: {deal.score || '?'}<br/>
+                        Kontrakt: <Bid bid={deal.contract}/> {deal.declarer}<br/>
+                        Liczba lew: {deal.result}<br/>
+                        Zapis: {deal.score || '?'}<br/>
                     </>}
                 </div>
                 <div className="App-deal-details">
                     {hidden
                         ? <AuctionReplay key={`auction-${dealKey}`} auction={deal.auction} notes={deal.notes} mySeat={mySeat}/>
-                        : <Auction auction={deal.auction} notes={deal.notes}/>}
+                        : <div>
+                            <Auction auction={deal.auction} notes={deal.notes}/>
+                            {lead && <p className="App-deal-lead">Wist: <CardLabel card={lead.card}/> ({lead.seat})</p>}
+                        </div>}
                     <DealBoard key={dealKey} deal={deal}
                                hiddenSeats={hidden ? ['N', 'E', 'S', 'W'].filter(seat => seat !== mySeat) : []}/>
                     {!hidden && <Minimax minimax={deal.minimax} optimumResults={deal.optimumResults}/>}
@@ -207,15 +213,15 @@ const PbnViewer = () => {
                 {!hidden && <DealEditor key={dealKey} deal={deal} editing={editing} onSave={saveDeal}
                                         onClose={() => setEditing(false)}/>}
             </div>
+            <div className="buttons are-normal App-deal-navigation">
+                <button className="button is-light" disabled={previousDeal === undefined}
+                        onClick={() => setCurrentDeal(previousDeal)}>Poprzednie
+                </button>
+                <button className="button is-light" disabled={nextDeal === undefined}
+                        onClick={() => setCurrentDeal(nextDeal)}>Następne
+                </button>
+            </div>
         </div>}
-        <div className="buttons are-normal App-deal-navigation">
-            <button className="button is-light" disabled={previousDeal === undefined}
-                    onClick={() => setCurrentDeal(previousDeal)}>Poprzednie
-            </button>
-            <button className="button is-light" disabled={nextDeal === undefined}
-                    onClick={() => setCurrentDeal(nextDeal)}>Następne
-            </button>
-        </div>
         <div className="App-deal-filters">
             {Object.entries(FILTERS).map(([name, {label}]) => <label key={name} className="checkbox">
                 <input type="checkbox" checked={filters.includes(name)} onChange={() => toggleFilter(name)}/> {label}

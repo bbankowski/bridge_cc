@@ -43,3 +43,20 @@ test('is collapsed by default', () => {
 
     expect(container.querySelector('details')).not.toHaveAttribute('open')
 })
+
+test('shows the deals of each segment and then the open and the closed room in columns, marking our table', () => {
+    const closedOurs = {...tournament, matches: [{...tournament.matches[0], segments: [{
+        ...tournament.matches[0].segments[0],
+        ourTable: {...tournament.matches[0].segments[0].ourTable, room: 'zamknięty'},
+        otherTable: {...tournament.matches[0].segments[0].otherTable, room: 'otwarty'},
+    }]}]}
+    render(<MatchSummary tournament={closedOurs} deals={deals} onSelectDeal={() => {}}/>)
+
+    expect([...document.querySelectorAll('.MatchSummary-grid > .MatchSummary-roomName')].map(header => header.textContent))
+        .toEqual(['Pokój otwarty', 'Pokój zamknięty (nasz stół)'])
+    // a row: the deals of the segment, then the open and the closed room
+    const row = [...document.querySelector('.MatchSummary-grid').children].slice(3)
+    expect(row[0]).toHaveTextContent('rozdania 7-8')
+    expect(row[1]).toHaveTextContent('NS Celina C – Dorota D')
+    expect(row[2]).toHaveTextContent('EW Marek Jarosz – Bartosz Bańkowski')
+})
