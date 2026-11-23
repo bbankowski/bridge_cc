@@ -1,3 +1,4 @@
+import './BiddingBox.css'
 import Bid from '../common/Bid'
 import {isLegal, STRAINS} from './calls'
 

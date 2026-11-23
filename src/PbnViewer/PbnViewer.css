@@ -270,3 +270,28 @@
     gap: 4px 12px;
     margin: 0 0 8px 12px;
 }
+
+.DealEditor-auction {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+    margin-bottom: 12px;
+}
+
+.DealEditor-auction .field {
+    max-width: 320px;
+}
+
+.DealEditor-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.DealEditor-tricks.input {
+    width: 5rem;
+}
+
+.DealEditor-contract {
+    margin-bottom: 12px;
+}

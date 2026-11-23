@@ -6,10 +6,10 @@ import AuctionReplay from './AuctionReplay'
 import Bid from '../common/Bid'
 import DealBoard from './DealBoard'
 import Minimax from './Minimax'
-import CommentEditor from './CommentEditor'
+import DealEditor from './DealEditor'
 import {dealResult, FILTERS, formatResult, isGain, isLoss, parseFilters, visibleDeals} from './dealFilters'
 import {PLAYERS, seatOf} from './hideHands'
-import {loadPbn, serializePbn} from './pbn'
+import {loadPbn, serializePbn, updateDeal} from './pbn'
 import MatchSummary from './MatchSummary'
 import {tournamentOf} from '../tournaments'
 
@@ -132,7 +132,7 @@ const PbnViewer = () => {
 
     useEffect(() => {
         if (blocker.state === 'blocked') {
-            if (window.confirm('Masz niepobrane zmiany w komentarzach. Opuścić stronę?')) {
+            if (window.confirm('Masz niepobrane zmiany w rozdaniach. Opuścić stronę?')) {
                 blocker.proceed()
             } else {
                 blocker.reset()
@@ -140,11 +140,12 @@ const PbnViewer = () => {
         }
     }, [blocker])
 
-    const updateComment = commentText => {
-        if (commentText === deal.commentText) {
+    const saveDeal = changes => {
+        const edited = updateDeal(deal, changes)
+        if (serializePbn([], [edited]) === serializePbn([], [deal])) {
             return
         }
-        setPbn({...pbn, deals: deals.map((d, index) => index === currentDeal ? {...d, commentText} : d)})
+        setPbn({...pbn, deals: deals.map((d, index) => index === currentDeal ? edited : d)})
         setIsModified(true)
     }
 
@@ -197,7 +198,7 @@ const PbnViewer = () => {
                                hiddenSeats={hidden ? ['N', 'E', 'S', 'W'].filter(seat => seat !== mySeat) : []}/>
                     {!hidden && <Minimax minimax={deal.minimax} optimumResults={deal.optimumResults}/>}
                 </div>
-                {!hidden && <CommentEditor key={dealKey} commentText={deal.commentText} onSave={updateComment}/>}
+                {!hidden && <DealEditor key={dealKey} deal={deal} onSave={saveDeal}/>}
             </div>
         </div>}
         <div className="buttons are-normal App-deal-navigation">
@@ -208,7 +209,7 @@ const PbnViewer = () => {
                     onClick={() => setCurrentDeal(nextDeal)}>Następne
             </button>
             <button className={'button ' + (isModified ? 'is-primary' : 'is-light')} onClick={download}
-                    title={isModified ? 'Są niepobrane zmiany w komentarzach' : undefined}>
+                    title={isModified ? 'Są niepobrane zmiany w rozdaniach' : undefined}>
                 Pobierz PBN{isModified && ' *'}
             </button>
         </div>

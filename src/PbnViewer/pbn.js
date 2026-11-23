@@ -209,3 +209,66 @@ const dealToPbnLines = deal => {
 
 export const serializePbn = (headers, deals) =>
     [...headers, ...deals.flatMap(deal => [...dealToPbnLines(deal), ''])].join('\n')
+
+const RESULT_TAGS = ['Declarer', 'Contract', 'Result', 'Score']
+// the auction and the play follow the result tags in the files
+const AFTER_RESULT = ['[Auction ', '[Note ', '[Play ', '[OptimumResultTable ']
+
+/*
+ * Applies an edit to a deal: {contract, declarer, result, score, auctionLines, commentText}. The tags and the
+ * auction are rewritten in place among the original lines, so the other tags survive; the deal is then parsed again.
+ * A tag with a null value is left as it is.
+ */
+export const updateDeal = (deal, {contract, declarer, result, score, auctionLines, commentText}) => {
+    const lines = [...deal.rawLines]
+    let commentIndex = deal.commentIndex
+    const remove = index => {
+        lines.splice(index, 1)
+        if (commentIndex !== undefined && index < commentIndex) {
+            commentIndex--
+        }
+    }
+    const insert = (index, newLines) => {
+        lines.splice(index, 0, ...newLines)
+        if (commentIndex !== undefined && index < commentIndex) {
+            commentIndex += newLines.length
+        }
+    }
+    const firstAfterResult = () => {
+        const index = lines.findIndex(line => AFTER_RESULT.some(prefix => line.startsWith(prefix)))
+        return index >= 0 ? index : lines.length
+    }
+
+    if (auctionLines) {
+        let at = lines.findIndex(line => line.startsWith('[Auction '))
+        if (at >= 0) {
+            remove(at)
+            while (at < lines.length && lines[at].trim() !== '' && !lines[at].startsWith('[')) {
+                remove(at)
+            }
+        }
+        for (let index = lines.findIndex(line => line.startsWith('[Note ')); index >= 0;
+             index = lines.findIndex(line => line.startsWith('[Note '))) {
+            remove(index)
+            at = at < 0 || index < at ? index : at
+        }
+        insert(at >= 0 ? Math.min(at, lines.length) : firstAfterResult(), auctionLines)
+    }
+
+    const values = {Declarer: declarer, Contract: contract, Result: result, Score: score}
+    for (const tag of RESULT_TAGS) {
+        if (values[tag] === null || values[tag] === undefined) {
+            continue
+        }
+        const line = `[${tag} "${values[tag]}"]`
+        const index = lines.findIndex(l => l.startsWith(`[${tag} `))
+        if (index >= 0) {
+            lines[index] = line
+        } else {
+            insert(firstAfterResult(), [line])
+        }
+    }
+
+    const edited = {...deal, rawLines: lines, commentIndex, commentText: commentText ?? deal.commentText}
+    return parsePbn(dealToPbnLines(edited).join('\n')).deals[0]
+}
