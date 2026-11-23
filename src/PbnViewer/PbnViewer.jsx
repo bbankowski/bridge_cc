@@ -213,15 +213,15 @@ const PbnViewer = () => {
                 {!hidden && <DealEditor key={dealKey} deal={deal} editing={editing} onSave={saveDeal}
                                         onClose={() => setEditing(false)}/>}
             </div>
+            <div className="buttons are-normal App-deal-navigation">
+                <button className="button is-light" disabled={previousDeal === undefined}
+                        onClick={() => setCurrentDeal(previousDeal)}>Poprzednie
+                </button>
+                <button className="button is-light" disabled={nextDeal === undefined}
+                        onClick={() => setCurrentDeal(nextDeal)}>Następne
+                </button>
+            </div>
         </div>}
-        <div className="buttons are-normal App-deal-navigation">
-            <button className="button is-light" disabled={previousDeal === undefined}
-                    onClick={() => setCurrentDeal(previousDeal)}>Poprzednie
-            </button>
-            <button className="button is-light" disabled={nextDeal === undefined}
-                    onClick={() => setCurrentDeal(nextDeal)}>Następne
-            </button>
-        </div>
         <div className="App-deal-filters">
             {Object.entries(FILTERS).map(([name, {label}]) => <label key={name} className="checkbox">
                 <input type="checkbox" checked={filters.includes(name)} onChange={() => toggleFilter(name)}/> {label}
