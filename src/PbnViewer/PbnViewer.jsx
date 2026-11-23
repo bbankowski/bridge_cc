@@ -10,6 +10,8 @@ import CommentEditor from './CommentEditor'
 import {dealResult, FILTERS, formatResult, isGain, isLoss, parseFilters, visibleDeals} from './dealFilters'
 import {PLAYERS, seatOf} from './hideHands'
 import {loadPbn, serializePbn} from './pbn'
+import MatchSummary from './MatchSummary'
+import {tournamentOf} from '../tournaments'
 
 const downloadFile = (filename, content) => {
     const url = URL.createObjectURL(new Blob([content], {type: 'text/plain'}))
@@ -48,6 +50,7 @@ const PbnViewer = () => {
     }, [filename])
 
     const {headers, deals} = pbn
+    const tournament = tournamentOf(pbn.filename)
     // The current deal is kept in the URL (1-based), so a page refresh shows the same deal.
     const currentDeal = Math.min(Math.max(Number(searchParams.get('deal')) - 1 || 0, 0), Math.max(deals.length - 1, 0))
     const deal = deals[currentDeal]
@@ -155,6 +158,8 @@ const PbnViewer = () => {
     }
 
     return <div className="App container">
+        {tournament?.matches && deals.length > 0
+            && <MatchSummary tournament={tournament} deals={deals} onSelectDeal={setCurrentDeal}/>}
         <div className="App-hide-hands">
             <span className="mr-2">Zakryj ręce:</span>
             <div className="buttons has-addons are-small">
