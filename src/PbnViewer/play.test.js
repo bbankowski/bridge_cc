@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import {describe, expect, test} from 'vitest'
 import {parsePbn} from './pbn'
-import {playSequence, positionAfter} from './play'
+import {openingLead, playSequence, positionAfter} from './play'
 
 const dealWith = (contract, playLines, leader = 'N') => ({
     contract,
@@ -69,4 +69,16 @@ test('positionAfter', () => {
     const afterFive = positionAfter(sequence, 5)
     expect(afterFive.trick).toEqual({S: 'D4'})
     expect([...afterFive.played]).toEqual(['H5', 'HT', 'HQ', 'H6', 'D4'])
+})
+
+describe('openingLead', () => {
+    test.each([
+        ['[Play "W"]\nCK', {seat: 'W', card: 'CK'}],
+        ['[Play "E"]\nS7 S2 SA S3', {seat: 'E', card: 'S7'}],
+        ['[Board "1"]', null],
+    ])('%j', (text, lead) => {
+        const [deal] = parsePbn(`[Deal "N:AJ63.T876.T93.A8 KQ54.J43.AQ64.T2 972.AKQ5.J8.7653 T8.92.K752.KQJ94"]\n${text}`).deals
+
+        expect(openingLead(deal) && {seat: openingLead(deal).seat, card: openingLead(deal).card}).toEqual(lead)
+    })
 })

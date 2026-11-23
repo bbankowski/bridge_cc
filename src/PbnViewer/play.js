@@ -88,3 +88,6 @@ export const positionAfter = (sequence, step) => {
     })
     return {played, trick, won, trickNumber: current === null ? 0 : current + 1}
 }
+
+// The opening lead of the play record: {seat, card}, or null.
+export const openingLead = deal => playSequence(deal)?.plays[0] ?? null

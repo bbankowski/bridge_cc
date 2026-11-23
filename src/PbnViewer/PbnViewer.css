@@ -339,3 +339,18 @@
     color: hsl(0, 0%, 71%);
     cursor: default;
 }
+
+.App-deal-lead {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.DealBoard-diagram {
+    position: relative;
+}
+
+.DealBoard-play.button {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+}

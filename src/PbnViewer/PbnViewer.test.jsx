@@ -339,6 +339,18 @@ SQ
         expect(dealParam(router)).toBe('21')
     })
 
+    test('shows the opening lead under the auction', async () => {
+        const file = '3liga_2026-2027_runda5-6.pbn'
+        const text = fs.readFileSync(path.join(import.meta.dirname, '../../public', file), 'utf8')
+        fetch.mockResolvedValue({ok: true, text: async () => text})
+        renderViewer(`/pbn?filename=${file}`)
+
+        // board 1 of round 5: 3H by S, W led the king of clubs
+        const lead = await screen.findByText(/Wist:/)
+        expect(lead).toHaveTextContent('Wist: K (W)')
+        expect(lead.querySelector('img')).toHaveAttribute('alt', 'C')
+    })
+
     test('shows no summary for other files', async () => {
         fetch.mockResolvedValue({ok: true, text: async () => PBN})
         renderViewer()
