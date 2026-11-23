@@ -7,6 +7,7 @@ import Bid from '../common/Bid'
 import DealBoard from './DealBoard'
 import Minimax from './Minimax'
 import DealEditor from './DealEditor'
+import DealMenu from './DealMenu'
 import {dealResult, FILTERS, formatResult, isGain, isLoss, parseFilters, visibleDeals} from './dealFilters'
 import {PLAYERS, seatOf} from './hideHands'
 import {loadPbn, serializePbn, updateDeal} from './pbn'
@@ -32,6 +33,7 @@ const PbnViewer = () => {
     const [error, setError] = useState(null)
     const [isModified, setIsModified] = useState(false)
     const [revealed, setRevealed] = useState(null)
+    const [editing, setEditing] = useState(false)
 
     useEffect(() => {
         let cancelled = false
@@ -39,6 +41,7 @@ const PbnViewer = () => {
             .then(result => {
                 if (!cancelled) {
                     setPbn({filename, ...result})
+                    setEditing(false)
                     setError(null)
                     setIsModified(false)
                 }
@@ -56,8 +59,9 @@ const PbnViewer = () => {
     const deal = deals[currentDeal]
 
     const setCurrentDeal = index => {
-        // a revealed deal is covered again after moving to another one
+        // a revealed deal is covered again after moving to another one, and an edit not saved is dropped
         setRevealed(null)
+        setEditing(false)
         setSearchParams(params => {
             params.set('deal', String(index + 1))
             return params
@@ -112,7 +116,7 @@ const PbnViewer = () => {
 
     useEffect(() => {
         const onKeyDown = event => {
-            if (event.target.closest('textarea, input') || event.altKey || event.ctrlKey || event.metaKey) {
+            if (editing || event.target.closest('textarea, input, select') || event.altKey || event.ctrlKey || event.metaKey) {
                 return
             }
             if (event.key === 'ArrowLeft' && previousDeal !== undefined) {
@@ -175,7 +179,9 @@ const PbnViewer = () => {
         {hideFor && deal && mySeat === null && <p className="has-text-grey is-size-7 mb-2">
             W tym rozdaniu nie ma {PLAYERS[hideFor].genitive} – pokazuję wszystkie ręce.
         </p>}
-        {deal && <div className="box">
+        {deal && <div className="box App-deal-box">
+            <DealMenu canEdit={!hidden && !editing} isModified={isModified} onEdit={() => setEditing(true)}
+                      onDownload={download}/>
             <div className="App-deal">
                 <div className="App-deal-header">
                     {deal.event && <h1 className="title">{deal.event}</h1>}
@@ -198,7 +204,8 @@ const PbnViewer = () => {
                                hiddenSeats={hidden ? ['N', 'E', 'S', 'W'].filter(seat => seat !== mySeat) : []}/>
                     {!hidden && <Minimax minimax={deal.minimax} optimumResults={deal.optimumResults}/>}
                 </div>
-                {!hidden && <DealEditor key={dealKey} deal={deal} onSave={saveDeal}/>}
+                {!hidden && <DealEditor key={dealKey} deal={deal} editing={editing} onSave={saveDeal}
+                                        onClose={() => setEditing(false)}/>}
             </div>
         </div>}
         <div className="buttons are-normal App-deal-navigation">
@@ -207,10 +214,6 @@ const PbnViewer = () => {
             </button>
             <button className="button is-light" disabled={nextDeal === undefined}
                     onClick={() => setCurrentDeal(nextDeal)}>Następne
-            </button>
-            <button className={'button ' + (isModified ? 'is-primary' : 'is-light')} onClick={download}
-                    title={isModified ? 'Są niepobrane zmiany w rozdaniach' : undefined}>
-                Pobierz PBN{isModified && ' *'}
             </button>
         </div>
         <div className="App-deal-filters">

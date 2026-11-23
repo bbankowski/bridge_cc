@@ -51,35 +51,20 @@ const startDraft = deal => {
 }
 
 /*
- * The comment of a deal, and the editor of the whole deal: the auction (clicked on a bidding box, with an alert for
- * each call), the contract with the declarer and the tricks taken, and the comment. The score is computed.
- * onSave gets the changes for updateDeal.
+ * The editor of the whole deal: the auction (clicked on a bidding box, with an alert for each call), the contract
+ * with the declarer and the tricks taken, and the comment. The score is computed. onSave gets the changes for
+ * updateDeal; onClose closes the editor.
  */
-const DealEditor = ({deal, onSave}) => {
-    const [draft, setDraft] = useState(null)
-    const isEditing = draft !== null
+const DealForm = ({deal, onSave, onClose}) => {
+    const [draft, setDraft] = useState(() => startDraft(deal))
     const commentRef = useRef(null)
 
     useEffect(() => {
         const textarea = commentRef.current
-        if (isEditing && textarea) {
-            // start typing at the end of the comment
-            textarea.focus()
-            textarea.setSelectionRange(textarea.value.length, textarea.value.length)
-        }
-    }, [isEditing])
-
-    if (!isEditing) {
-        return <div className="App-deal-comment">
-            <div className="App-deal-comment-header">
-                <strong>Komentarz:</strong>
-                <button className="button is-small is-light" onClick={() => setDraft(startDraft(deal))}>
-                    Edytuj rozdanie
-                </button>
-            </div>
-            <p className="Comment">{formatText(deal.commentText)}</p>
-        </div>
-    }
+        // start typing at the end of the comment
+        textarea.focus()
+        textarea.setSelectionRange(textarea.value.length, textarea.value.length)
+    }, [])
 
     const update = changes => setDraft({...draft, ...changes})
     const {dealer, calls} = draft
@@ -108,12 +93,12 @@ const DealEditor = ({deal, onSave}) => {
             ...(resultChanged ? {contract, declarer, result, score} : {}),
             commentText: draft.commentText,
         })
-        setDraft(null)
+        onClose()
     }
 
     const onKeyDown = event => {
         if (event.key === 'Escape') {
-            setDraft(null)
+            onClose()
         } else if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
             save()
         }
@@ -199,10 +184,18 @@ const DealEditor = ({deal, onSave}) => {
         </div>
         <div className="buttons are-small App-deal-comment-buttons">
             <button className="button is-primary" onClick={save}>Zapisz</button>
-            <button className="button is-light" onClick={() => setDraft(null)}>Anuluj</button>
+            <button className="button is-light" onClick={onClose}>Anuluj</button>
             <span className="help">Ctrl+Enter zapisuje, Esc anuluje. Zmiany trafiają do pliku po „Pobierz PBN”.</span>
         </div>
     </div>
 }
+
+// The comment of a deal, or the editor of the deal while it is edited (opened from the menu of the deal).
+const DealEditor = ({deal, editing, onSave, onClose}) => editing
+    ? <DealForm deal={deal} onSave={onSave} onClose={onClose}/>
+    : <div className="App-deal-comment">
+        <strong>Komentarz:</strong>
+        <p className="Comment">{formatText(deal.commentText)}</p>
+    </div>
 
 export default DealEditor

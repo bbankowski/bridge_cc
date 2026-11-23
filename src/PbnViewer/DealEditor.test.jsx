@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import {render, screen, within} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import {describe, expect, test, vi} from 'vitest'
@@ -16,9 +17,18 @@ const pbnDeal = ({comment = 'Wist w \\S8', auction = '', contract = '3NT', decla
 {${comment}}
 ${auction}`).deals[0]
 
+// the editor is opened from the menu of the deal; here from a plain button
+const Harness = ({deal, onSave}) => {
+    const [editing, setEditing] = useState(false)
+    return <>
+        <button onClick={() => setEditing(true)}>Edytuj rozdanie</button>
+        <DealEditor deal={deal} editing={editing} onSave={onSave} onClose={() => setEditing(false)}/>
+    </>
+}
+
 const renderEditor = deal => {
     const onSave = vi.fn()
-    render(<DealEditor deal={deal} onSave={onSave}/>)
+    render(<Harness deal={deal} onSave={onSave}/>)
     return onSave
 }
 
@@ -27,7 +37,7 @@ const edit = () => userEvent.click(screen.getByRole('button', {name: 'Edytuj roz
 const bid = call => userEvent.click(screen.getByRole('button', {name: call}))
 
 describe('DealEditor', () => {
-    test('shows the formatted comment until "Edytuj rozdanie" is clicked', async () => {
+    test('shows the formatted comment until the deal is edited', async () => {
         renderEditor(pbnDeal())
 
         expect(screen.queryByRole('textbox')).toBeNull()
@@ -37,7 +47,6 @@ describe('DealEditor', () => {
 
         expect(comment()).toHaveValue('Wist w \\S8')
         expect(comment()).toHaveFocus()
-        expect(screen.queryByRole('button', {name: 'Edytuj rozdanie'})).toBeNull()
     })
 
     test('saves only the comment when nothing else was changed', async () => {
