@@ -1,15 +1,19 @@
+import {Fragment} from 'react'
+
 const formatVp = vp => vp.toLocaleString('pl-PL', {maximumFractionDigits: 2})
 
 const Pair = ({names, ours}) => ours ? <strong>{names.join(' – ')}</strong> : names.join(' – ')
 
-// One room of a segment: who sat NS and who EW, our team in bold.
-const Room = ({table, isOurTable}) => <div className="MatchSummary-room">
-    <p className="MatchSummary-roomName">
-        Pokój {table.room}{isOurTable && <span className="has-text-grey has-text-weight-normal"> (nasz stół)</span>}
-    </p>
+const ROOMS = ['otwarty', 'zamknięty']
+
+// The pairs of one room in a segment, our team in bold. The name of the room is repeated in the cell on narrow screens.
+const RoomCell = ({table}) => <div className="MatchSummary-cell">
+    <p className="MatchSummary-cellRoom">Pokój {table.room}</p>
     <p><span className="MatchSummary-line">NS</span> <Pair names={table.ns} ours={table.ours === 'ns'}/></p>
     <p><span className="MatchSummary-line">EW</span> <Pair names={table.ew} ours={table.ours === 'ew'}/></p>
 </div>
+
+const tableIn = (segment, room) => [segment.ourTable, segment.otherTable].find(table => table.room === room)
 
 const resultClass = ([our, their]) => our > their ? 'is-success' : our < their ? 'is-danger' : ''
 
@@ -28,17 +32,23 @@ const MatchSummary = ({tournament, deals, onSelectDeal}) => {
                 <span className={`tag is-light ${resultClass(match.imps)}`}>{match.imps.join(' : ')} IMP</span>{' '}
                 {match.vp && <span className="tag is-light">{match.vp.map(formatVp).join(' : ')} VP</span>}
             </p>
-            {match.segments.map(segment => <div key={segment.deals[0]} className="MatchSummary-segment">
-                <button type="button" className="button is-small is-light" onClick={() => onSelectDeal(segment.deals[0] - 1)}>
-                    rozdania {boardOf(segment.deals[0])}-{boardOf(segment.deals[1])}
-                </button>
-                <div className="MatchSummary-rooms">
-                    {[{table: segment.ourTable, isOurTable: true}, {table: segment.otherTable, isOurTable: false}]
-                        // the open room first
-                        .sort((a, b) => (a.table.room === 'otwarty' ? 0 : 1) - (b.table.room === 'otwarty' ? 0 : 1))
-                        .map(({table, isOurTable}) => <Room key={table.room} table={table} isOurTable={isOurTable}/>)}
-                </div>
-            </div>)}
+            <div className="MatchSummary-grid">
+                <div/>
+                {ROOMS.map(room => <div key={room} className="MatchSummary-roomName">
+                    Pokój {room}
+                    {match.segments.every(segment => segment.ourTable.room === room)
+                        && <span className="has-text-grey has-text-weight-normal"> (nasz stół)</span>}
+                </div>)}
+                {match.segments.map(segment => <Fragment key={segment.deals[0]}>
+                    <div>
+                        <button type="button" className="button is-small is-light"
+                                onClick={() => onSelectDeal(segment.deals[0] - 1)}>
+                            rozdania {boardOf(segment.deals[0])}-{boardOf(segment.deals[1])}
+                        </button>
+                    </div>
+                    {ROOMS.map(room => <RoomCell key={room} table={tableIn(segment, room)}/>)}
+                </Fragment>)}
+            </div>
         </div>)}
     </details>
 }
