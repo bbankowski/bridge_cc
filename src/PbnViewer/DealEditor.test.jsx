@@ -162,12 +162,24 @@ describe('DealEditor', () => {
         expect(onSave).toHaveBeenCalledWith(expect.objectContaining({contract: '4H', declarer: 'S', score: 'NS 620'}))
     })
 
-    test('shows the auction being entered in the auction table', async () => {
+    test('shows the auction being entered, with "?" where the next call goes', async () => {
         renderEditor(pbnDeal())
         await edit()
+        const table = screen.getByRole('table')
+        expect(within(table).getByText('?')).toHaveClass('is-our-turn')
+
         await bid('2D')
 
-        const table = screen.getByRole('table')
+        const cells = within(table).getAllByRole('cell')
+        expect(cells[1]).toHaveTextContent('?')
+        expect(cells[1]).toHaveClass('is-our-turn')
         expect(within(table).getAllByRole('row')).toHaveLength(2)
+    })
+
+    test('shows no "?" when the auction is complete', async () => {
+        renderEditor(pbnDeal({auction: '[Auction "N"]\n1NT Pass 3NT AP'}))
+        await edit()
+
+        expect(within(screen.getByRole('table')).queryByText('?')).toBeNull()
     })
 })

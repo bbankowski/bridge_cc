@@ -8,8 +8,9 @@ import {formatText} from './formatText'
 const LEVELS = ['1', '2', '3', '4', '5', '6', '7']
 const STRAINS = [['C', '♣'], ['D', '♦'], ['H', '♥'], ['S', '♠'], ['NT', 'BA']]
 
-// The draft calls as rows of the Auction component, with alerts numbered in order.
-const draftAuction = (dealer, calls) => {
+// The draft calls as rows of the Auction component, with alerts numbered in order. Until the auction is complete,
+// an empty cell follows for the next call, which the Auction component marks with "?".
+const draftAuction = (dealer, calls, complete) => {
     const cells = Array(SEATS.indexOf(dealer)).fill(null)
     const notes = []
     calls.forEach(({call, note}) => {
@@ -20,6 +21,9 @@ const draftAuction = (dealer, calls) => {
         }
         cells.push(cell)
     })
+    if (!complete) {
+        cells.push(['?'])
+    }
     while (cells.length % 4 !== 0) {
         cells.push(null)
     }
@@ -76,7 +80,7 @@ const DealForm = ({deal, onSave, onClose}) => {
     const differs = fromAuction && (fromAuction.contract !== contract || fromAuction.declarer !== draft.declarer)
     const tricks = draft.result === '' ? NaN : Number(draft.result)
     const score = scoreTag(contract, draft.declarer, tricks, deal.vulnerable)
-    const {rows, notes} = draftAuction(dealer, calls)
+    const {rows, notes} = draftAuction(dealer, calls, complete)
     const lastCall = calls.at(-1)
 
     const setLastNote = note => update({calls: [...calls.slice(0, -1), {...lastCall, note}]})
@@ -107,7 +111,7 @@ const DealForm = ({deal, onSave, onClose}) => {
     return <div className="App-deal-comment DealEditor" onKeyDown={onKeyDown}>
         <div className="DealEditor-auction">
             <div>
-                <Auction auction={rows} notes={notes}/>
+                <Auction auction={rows} notes={notes} visibleCalls={calls.length} askSeat={complete ? null : seat}/>
                 <div className="buttons are-small mt-2">
                     <button type="button" className="button is-light" disabled={calls.length === 0}
                             onClick={() => update({calls: calls.slice(0, -1)})}>Cofnij odzywkę</button>
