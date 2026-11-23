@@ -74,6 +74,24 @@ const parseMinimax = minimax => {
     }
 }
 
+/*
+ * The [Ability] tag (e.g. "N:66745 E:76598 S:66745 W:76598"): the double dummy tricks of each declarer in NT, S, H, D
+ * and C, as hexadecimal digits. Returns the same shape as the [OptimumResultTable] section, or null.
+ */
+export const parseAbility = ability => {
+    const results = {}
+    for (const part of (ability ?? '').trim().split(/\s+/)) {
+        const match = /^([NESW]):([0-9A-D]{5})$/i.exec(part)
+        if (!match) {
+            return null
+        }
+        const [, seat, digits] = match
+        results[seat.toUpperCase()] = Object.fromEntries(['NT', 'S', 'H', 'D', 'C']
+            .map((strain, index) => [strain, String(parseInt(digits[index], 16))]))
+    }
+    return ['N', 'E', 'S', 'W'].every(seat => results[seat]) ? results : null
+}
+
 const createDeal = (tags, notes, optimumResults, auctionText, comment, rawLines, commentIndex) => ({
     event: tags.Event,
     board: tags.Board,
@@ -87,7 +105,8 @@ const createDeal = (tags, notes, optimumResults, auctionText, comment, rawLines,
     auction: parseAuction(auctionText, tags.Auction || tags.Dealer),
     notes,
     minimax: parseMinimax(tags.Minimax),
-    optimumResults,
+    // the table of BridgeComposer, or else the tricks of the [Ability] tag (Tournament Calculator)
+    optimumResults: optimumResults ?? parseAbility(tags.Ability),
     commentText: comment,
     // original lines of the deal without its comment, used to write the PBN back
     rawLines,
