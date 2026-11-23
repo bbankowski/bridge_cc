@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import {describe, expect, test} from 'vitest'
-import {parseAbility, parsePbn, serializePbn} from './pbn'
+import {parseAbility, parsePbn, serializePbn, updateDeal} from './pbn'
 
 const publicDir = path.join(import.meta.dirname, '../../public')
 const pbnFiles = fs.readdirSync(publicDir).filter(file => file.endsWith('.pbn'))
@@ -120,5 +120,67 @@ describe('the [Ability] tag', () => {
         const [deal] = parsePbn('[Ability "N:00000 E:00000 S:00000 W:00000"]\n[OptimumResultTable "Declarer;Denomination\\\\2R;Result\\\\2R"]\nN  C 10').deals
 
         expect(deal.optimumResults.N.C).toBe('10')
+    })
+})
+
+describe('updateDeal', () => {
+    const DEAL = `[Event "Mecz"]
+[Board "1"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AK.QJ.T9.8765 Q.K.A.J 2.3.4.5 6.7.8.9"]
+[Declarer "S"]
+[Contract "3H"]
+[Result "7"]
+[Score "NS -100"]
+{Nasz stół: 3\\H S -2}
+[Ability "N:66745 E:76598 S:66745 W:76598"]
+[Minimax "3DW-110"]
+[Play "W"]
+CK`
+    const [deal] = parsePbn(DEAL).deals
+    const lines = edited => serializePbn([], [edited]).trim().split('\n')
+
+    test('adds an auction before the play and keeps everything else', () => {
+        const edited = updateDeal(deal, {auctionLines: ['[Auction "N"]', '1C =1= Pass 1H Pass', '[Note "1:16+"]']})
+
+        expect(lines(edited)).toEqual([...DEAL.split('\n').slice(0, -2),
+            '[Auction "N"]', '1C =1= Pass 1H Pass', '[Note "1:16+"]', '[Play "W"]', 'CK'])
+        expect(edited.auction).toEqual([[['1C', '1'], ['pas'], ['1H'], ['pas']]])
+        expect(edited.notes).toEqual(['1:16+'])
+        expect(edited.commentText).toBe('Nasz stół: 3\\H S -2')
+    })
+
+    test('replaces an auction with its notes', () => {
+        const withAuction = updateDeal(deal, {auctionLines: ['[Auction "N"]', '1C =1= Pass', '1H AP', '[Note "1:16+"]']})
+
+        const edited = updateDeal(withAuction, {auctionLines: ['[Auction "N"]', '1NT Pass 3NT AP']})
+
+        expect(lines(edited).filter(line => /Auction|Note|NT|1C/.test(line))).toEqual(['[Auction "N"]', '1NT Pass 3NT AP'])
+        expect(edited.notes).toEqual([])
+    })
+
+    test('removes the auction when it was cleared', () => {
+        const withAuction = updateDeal(deal, {auctionLines: ['[Auction "N"]', 'Pass Pass Pass Pass']})
+
+        expect(lines(updateDeal(withAuction, {auctionLines: []}))).toEqual(DEAL.split('\n'))
+    })
+
+    test('changes the result tags in place and keeps the comment where it was', () => {
+        const edited = updateDeal(deal, {contract: '4SX', declarer: 'W', result: '8', score: 'NS 300', commentText: 'nowy'})
+
+        expect(lines(edited).slice(5, 10)).toEqual(
+            ['[Declarer "W"]', '[Contract "4SX"]', '[Result "8"]', '[Score "NS 300"]', '{nowy}'])
+        expect(edited).toMatchObject({contract: '4SX', declarer: 'W', result: '8', score: 'NS 300'})
+    })
+
+    test('adds missing result tags', () => {
+        const [bare] = parsePbn('[Board "2"]\n[Dealer "E"]\n[Deal "N:AK.QJ.T9.8765 Q.K.A.J 2.3.4.5 6.7.8.9"]').deals
+
+        const edited = updateDeal(bare, {contract: 'Pass', declarer: '', result: '', score: 'NS 0',
+            auctionLines: ['[Auction "E"]', 'Pass Pass Pass Pass']})
+
+        expect(lines(edited)).toEqual(['[Board "2"]', '[Dealer "E"]', '[Deal "N:AK.QJ.T9.8765 Q.K.A.J 2.3.4.5 6.7.8.9"]',
+            '[Declarer ""]', '[Contract "Pass"]', '[Result ""]', '[Score "NS 0"]', '[Auction "E"]', 'Pass Pass Pass Pass'])
     })
 })

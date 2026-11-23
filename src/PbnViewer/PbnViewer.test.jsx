@@ -32,10 +32,15 @@ const renderViewer = (url = '/pbn?filename=test.pbn') => {
 const currentBoard = () => document.querySelector('.DealNumber').textContent
 const dealParam = router => new URLSearchParams(router.state.location.search).get('deal')
 
+const openMenuItem = async name => {
+    await userEvent.click(screen.getByRole('button', {name: 'Menu rozdania'}))
+    await userEvent.click(screen.getByRole('menuitem', {name}))
+}
+
 const editComment = async text => {
-    await userEvent.click(screen.getByRole('button', {name: 'Edytuj'}))
-    await userEvent.clear(screen.getByRole('textbox'))
-    await userEvent.type(screen.getByRole('textbox'), text)
+    await openMenuItem('Edytuj rozdanie')
+    await userEvent.clear(screen.getByRole('textbox', {name: 'Komentarz'}))
+    await userEvent.type(screen.getByRole('textbox', {name: 'Komentarz'}), text)
     await userEvent.click(screen.getByRole('button', {name: 'Zapisz'}))
 }
 
@@ -90,7 +95,7 @@ describe('PbnViewer', () => {
         renderViewer()
         await screen.findByText('pierwszy')
 
-        await userEvent.click(screen.getByRole('button', {name: 'Edytuj'}))
+        await openMenuItem('Edytuj rozdanie')
         await userEvent.keyboard('{ArrowRight}')
 
         expect(currentBoard()).toBe('1.')
@@ -113,16 +118,41 @@ describe('PbnViewer', () => {
         await screen.findByText('pierwszy')
 
         await editComment('poprawiony')
-        const downloadButton = screen.getByRole('button', {name: /Pobierz PBN/})
-        expect(downloadButton).toHaveTextContent('Pobierz PBN *')
-        await userEvent.click(downloadButton)
+        expect(screen.getByRole('button', {name: 'Menu rozdania'})).toHaveAttribute('title', 'Są niepobrane zmiany w rozdaniach')
+        await openMenuItem('Pobierz PBN *')
 
         expect(click).toHaveBeenCalled()
         const content = await createObjectURL.mock.calls[0][0].text()
         expect(content).toContain('{poprawiony}')
         expect(content).toContain('{drugi}')
         expect(content).not.toContain('{pierwszy}')
-        expect(downloadButton).toHaveTextContent(/^Pobierz PBN$/)
+        expect(screen.getByRole('button', {name: 'Menu rozdania'})).not.toHaveAttribute('title')
+        await userEvent.click(screen.getByRole('button', {name: 'Menu rozdania'}))
+        expect(screen.getByRole('menuitem', {name: 'Pobierz PBN'})).toBeInTheDocument()
+    })
+
+    test('edits the auction and the contract of a deal and downloads them', async () => {
+        const createObjectURL = vi.fn(() => 'blob:test')
+        vi.stubGlobal('URL', Object.assign(URL, {createObjectURL, revokeObjectURL: vi.fn()}))
+        vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(() => {
+        })
+        renderViewer()
+        await screen.findByText('pierwszy')
+
+        await openMenuItem('Edytuj rozdanie')
+        await userEvent.click(screen.getByRole('button', {name: 'Wyczyść licytację'}))
+        for (const call of ['1NT', 'Pass', '4S', 'Pass', 'Pass', 'Pass']) {
+            await userEvent.click(screen.getByRole('button', {name: call}))
+        }
+        await userEvent.click(screen.getByRole('button', {name: 'Ustaw z licytacji'}))
+        await userEvent.clear(screen.getByRole('spinbutton', {name: 'Lewy'}))
+        await userEvent.type(screen.getByRole('spinbutton', {name: 'Lewy'}), '11')
+        await userEvent.click(screen.getByRole('button', {name: 'Zapisz'}))
+
+        expect(screen.getByText(/Contract:/)).toHaveTextContent('Contract: 4 S')
+        await openMenuItem(/Pobierz PBN/)
+        const content = await createObjectURL.mock.calls[0][0].text()
+        expect(content).toContain('[Contract "4S"]\n[Result "11"]\n{pierwszy}\n[Declarer "S"]\n[Score "NS 450"]\n[Auction "N"]\n1NT Pass 4S Pass\nPass Pass')
     })
 
     test('asks before leaving the page with edits that were not downloaded', async () => {
