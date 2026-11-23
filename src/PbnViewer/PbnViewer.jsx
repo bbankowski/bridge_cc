@@ -36,6 +36,7 @@ const PbnViewer = () => {
     const [isModified, setIsModified] = useState(false)
     const [revealed, setRevealed] = useState(null)
     const [editing, setEditing] = useState(false)
+    const [biddingSeat, setBiddingSeat] = useState(null)
 
     useEffect(() => {
         let cancelled = false
@@ -206,12 +207,12 @@ const PbnViewer = () => {
                             <Auction auction={deal.auction} notes={deal.notes}/>
                             {lead && <p className="App-deal-lead">Wist: <CardLabel card={lead.card}/> ({lead.seat})</p>}
                         </div>}
-                    <DealBoard key={dealKey} deal={deal}
+                    <DealBoard key={dealKey} deal={deal} activeSeat={editing ? biddingSeat : null}
                                hiddenSeats={hidden ? ['N', 'E', 'S', 'W'].filter(seat => seat !== mySeat) : []}/>
                     {!hidden && <Minimax minimax={deal.minimax} optimumResults={deal.optimumResults}/>}
                 </div>
                 {!hidden && <DealEditor key={dealKey} deal={deal} editing={editing} onSave={saveDeal}
-                                        onClose={() => setEditing(false)}/>}
+                                        onClose={() => setEditing(false)} onTurnChange={setBiddingSeat}/>}
             </div>
             <div className="buttons are-normal App-deal-navigation">
                 <button className="button is-light" disabled={previousDeal === undefined}

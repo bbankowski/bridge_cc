@@ -59,7 +59,7 @@ const startDraft = deal => {
  * with the declarer and the tricks taken, and the comment. The score is computed. onSave gets the changes for
  * updateDeal; onClose closes the editor.
  */
-const DealForm = ({deal, onSave, onClose}) => {
+const DealForm = ({deal, onSave, onClose, onTurnChange}) => {
     const [draft, setDraft] = useState(() => startDraft(deal))
     const commentRef = useRef(null)
 
@@ -69,6 +69,11 @@ const DealForm = ({deal, onSave, onClose}) => {
         textarea.focus()
         textarea.setSelectionRange(textarea.value.length, textarea.value.length)
     }, [])
+
+    // the seat whose call is entered next, highlighted on the diagram
+    const turn = isAuctionComplete(draft.calls) ? null : nextSeat(draft.dealer, draft.calls.length)
+    useEffect(() => onTurnChange?.(turn), [turn, onTurnChange])
+    useEffect(() => () => onTurnChange?.(null), [onTurnChange])
 
     const update = changes => setDraft({...draft, ...changes})
     const {dealer, calls} = draft
@@ -195,8 +200,8 @@ const DealForm = ({deal, onSave, onClose}) => {
 }
 
 // The comment of a deal, or the editor of the deal while it is edited (opened from the menu of the deal).
-const DealEditor = ({deal, editing, onSave, onClose}) => editing
-    ? <DealForm deal={deal} onSave={onSave} onClose={onClose}/>
+const DealEditor = ({deal, editing, onSave, onClose, onTurnChange}) => editing
+    ? <DealForm deal={deal} onSave={onSave} onClose={onClose} onTurnChange={onTurnChange}/>
     : <div className="App-deal-comment">
         <strong>Komentarz:</strong>
         <p className="Comment">{formatText(deal.commentText)}</p>

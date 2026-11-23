@@ -8,7 +8,7 @@ import {playSequence, positionAfter} from './play'
  * Played cards leave the hands, the current trick is shown in the middle of the diagram. The opening lead alone is
  * shown under the auction, not here.
  */
-const DealBoard = ({deal, hiddenSeats = []}) => {
+const DealBoard = ({deal, hiddenSeats = [], activeSeat = null}) => {
     const sequence = useMemo(() => playSequence(deal), [deal])
     const [step, setStep] = useState(0)
     const [playing, setPlaying] = useState(false)
@@ -31,7 +31,8 @@ const DealBoard = ({deal, hiddenSeats = []}) => {
         <div className="DealBoard-diagram">
             <DealDiagram hands={deal.hands} dealer={deal.dealer} vulnerable={deal.vulnerable} board={deal.board}
                          played={position?.played} trick={position?.trick}
-                         renderCard={card => <CardLabel card={card}/>} hiddenSeats={hiddenSeats}/>
+                         renderCard={card => <CardLabel card={card}/>} hiddenSeats={hiddenSeats}
+                         activeSeat={activeSeat}/>
             {canReplay && <button type="button" className={`button is-small DealBoard-play ${playing ? 'is-link' : 'is-light'}`}
                                   aria-label={playing ? 'Zamknij rozgrywkę' : 'Odtwórz rozgrywkę'} aria-pressed={playing}
                                   title={playing ? 'Zamknij rozgrywkę' : 'Odtwórz rozgrywkę'} onClick={togglePlaying}>

@@ -28,3 +28,12 @@ test('renders without hands', () => {
 
     expect(container.querySelectorAll('.Hand img')).toHaveLength(16)
 })
+
+test('highlights the hand and the seat of activeSeat', () => {
+    render(<DealDiagram hands={{N: ['A', 'K', 'Q', 'J'], E: [], S: [], W: []}} dealer="N" vulnerable={[]} board="1"
+                        activeSeat="E"/>)
+
+    expect(document.querySelector('.East.Hand')).toHaveClass('is-active')
+    expect(document.querySelector('.North.Hand')).not.toHaveClass('is-active')
+    expect([...document.querySelectorAll('.Letter.is-active')].map(letter => letter.textContent)).toEqual(['E'])
+})

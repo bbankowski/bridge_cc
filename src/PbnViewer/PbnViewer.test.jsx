@@ -155,6 +155,21 @@ describe('PbnViewer', () => {
         expect(content).toContain('[Contract "4S"]\n[Result "11"]\n{pierwszy}\n[Declarer "S"]\n[Score "NS 450"]\n[Auction "N"]\n1NT Pass 4S Pass\nPass Pass')
     })
 
+    test('highlights the hand whose call is entered while editing', async () => {
+        renderViewer()
+        await screen.findByText('pierwszy')
+        expect(document.querySelector('.Hand.is-active')).toBeNull()
+
+        await openMenuItem('Edytuj rozdanie')
+        await userEvent.click(screen.getByRole('button', {name: 'Wyczyść licytację'}))
+        expect(document.querySelector('.Hand.is-active')).toHaveClass('North')
+        await userEvent.click(screen.getByRole('button', {name: '1C'}))
+        expect(document.querySelector('.Hand.is-active')).toHaveClass('East')
+
+        await userEvent.click(screen.getByRole('button', {name: 'Anuluj'}))
+        expect(document.querySelector('.Hand.is-active')).toBeNull()
+    })
+
     test('asks before leaving the page with edits that were not downloaded', async () => {
         const confirm = vi.spyOn(window, 'confirm').mockReturnValue(false)
         const router = renderViewer()

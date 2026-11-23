@@ -386,3 +386,14 @@
     right: 6px;
     bottom: 6px;
 }
+
+/* the hand whose call is entered in the deal editor */
+.DealDiagram .Hand.is-active {
+    background-color: #fff3c4;
+    border-radius: 4px;
+    box-shadow: 0 0 0 3px #fff3c4;
+}
+
+.DealDiagram .Letter.is-active {
+    box-shadow: 0 0 0 3px #ffd75e;
+}
