@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import {describe, expect, test} from 'vitest'
-import {parsePbn, serializePbn, updateDeal} from './pbn'
+import {parseAbility, parsePbn, serializePbn, updateDeal} from './pbn'
 
 const publicDir = path.join(import.meta.dirname, '../../public')
 const pbnFiles = fs.readdirSync(publicDir).filter(file => file.endsWith('.pbn'))
@@ -91,6 +91,35 @@ describe('serializePbn', () => {
         const serialized = serializePbn(headers, [{...deals[0], commentText: 'new'}])
 
         expect(serialized).toEqual('[Event "x"]\n[Result "9"]\n{new}\n[Score "NS 140"]\n')
+    })
+})
+
+describe('the [Ability] tag', () => {
+    test('gives the double dummy tricks of each declarer, in hexadecimal digits', () => {
+        expect(parseAbility('N:9DC57 E:10176 S:9DB57 W:10176')).toEqual({
+            N: {NT: '9', S: '13', H: '12', D: '5', C: '7'},
+            E: {NT: '1', S: '0', H: '1', D: '7', C: '6'},
+            S: {NT: '9', S: '13', H: '11', D: '5', C: '7'},
+            W: {NT: '1', S: '0', H: '1', D: '7', C: '6'},
+        })
+    })
+
+    test.each([undefined, '', 'N:66745 E:76598', 'N:6674 E:76598 S:66745 W:76598'])('ignores %j', ability => {
+        expect(parseAbility(ability)).toBeNull()
+    })
+
+    test('fills the table of tricks of the deals that have no [OptimumResultTable]', () => {
+        const [deal] = parsePbn(readPbn('3liga_2026-2027_runda5-6.pbn')).deals
+
+        // board 1 of round 5: the double dummy analysis of the MZBS results
+        expect(deal.optimumResults.N).toEqual({NT: '6', S: '6', H: '7', D: '4', C: '5'})
+        expect(deal.optimumResults.W).toEqual({NT: '7', S: '6', H: '5', D: '9', C: '8'})
+    })
+
+    test('prefers the [OptimumResultTable] of BridgeComposer', () => {
+        const [deal] = parsePbn('[Ability "N:00000 E:00000 S:00000 W:00000"]\n[OptimumResultTable "Declarer;Denomination\\\\2R;Result\\\\2R"]\nN  C 10').deals
+
+        expect(deal.optimumResults.N.C).toBe('10')
     })
 })
 
