@@ -1,3 +1,5 @@
+import fs from 'node:fs'
+import path from 'node:path'
 import {act, render, screen, waitFor} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import {createMemoryRouter, RouterProvider} from 'react-router'
@@ -288,5 +290,30 @@ SQ
 
         expect(router.state.location.search).not.toContain('zakryj')
         expect(screen.getByText('WYNIK: -6')).toBeInTheDocument()
+    })
+
+    test('shows the summary of the matches of a team event and opens a segment from it', async () => {
+        const file = '3liga_2026-2027_runda5-6.pbn'
+        const text = fs.readFileSync(path.join(import.meta.dirname, '../../public', file), 'utf8')
+        fetch.mockResolvedValue({ok: true, text: async () => text})
+        const router = renderViewer(`/pbn?filename=${file}`)
+
+        expect(await screen.findByText(/Pierwszy zjazd III ligi – podsumowanie/)).toBeInTheDocument()
+        expect(screen.getByText('53 : 33 IMP')).toBeInTheDocument()
+        expect(screen.getByText(/CKiS Skawina – CKiS IV Skawina/)).toBeInTheDocument()
+
+        const segments = screen.getAllByRole('button', {name: /^rozdania/})
+        expect(segments.map(button => button.textContent)).toEqual(['rozdania 1-10', 'rozdania 11-20', 'rozdania 1-20'])
+        await userEvent.click(segments[2])
+
+        expect(dealParam(router)).toBe('21')
+    })
+
+    test('shows no summary for other files', async () => {
+        fetch.mockResolvedValue({ok: true, text: async () => PBN})
+        renderViewer()
+
+        await screen.findByText('pierwszy')
+        expect(screen.queryByText(/podsumowanie/)).not.toBeInTheDocument()
     })
 })
