@@ -43,3 +43,18 @@ test('is collapsed by default', () => {
 
     expect(container.querySelector('details')).not.toHaveAttribute('open')
 })
+
+test('shows the open room first and the closed one next to it, marking our table', () => {
+    const closedOurs = {...tournament, matches: [{...tournament.matches[0], segments: [{
+        ...tournament.matches[0].segments[0],
+        ourTable: {...tournament.matches[0].segments[0].ourTable, room: 'zamknięty'},
+        otherTable: {...tournament.matches[0].segments[0].otherTable, room: 'otwarty'},
+    }]}]}
+    render(<MatchSummary tournament={closedOurs} deals={deals} onSelectDeal={() => {}}/>)
+
+    const rooms = [...document.querySelectorAll('.MatchSummary-room')]
+    expect(rooms.map(room => room.querySelector('.MatchSummary-roomName').textContent))
+        .toEqual(['Pokój otwarty', 'Pokój zamknięty (nasz stół)'])
+    expect(rooms[1]).toHaveTextContent('EW Marek Jarosz – Bartosz Bańkowski')
+    expect(rooms[0]).toHaveTextContent('NS Celina C – Dorota D')
+})

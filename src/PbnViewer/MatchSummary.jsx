@@ -2,10 +2,13 @@ const formatVp = vp => vp.toLocaleString('pl-PL', {maximumFractionDigits: 2})
 
 const Pair = ({names, ours}) => ours ? <strong>{names.join(' – ')}</strong> : names.join(' – ')
 
-const TableLine = ({label, table}) => <div className="MatchSummary-table">
-    <span className="has-text-grey">{label} ({table.room}):</span>{' '}
-    NS <Pair names={table.ns} ours={table.ours === 'ns'}/>{' · '}
-    EW <Pair names={table.ew} ours={table.ours === 'ew'}/>
+// One room of a segment: who sat NS and who EW, our team in bold.
+const Room = ({table, isOurTable}) => <div className="MatchSummary-room">
+    <p className="MatchSummary-roomName">
+        Pokój {table.room}{isOurTable && <span className="has-text-grey has-text-weight-normal"> (nasz stół)</span>}
+    </p>
+    <p><span className="MatchSummary-line">NS</span> <Pair names={table.ns} ours={table.ours === 'ns'}/></p>
+    <p><span className="MatchSummary-line">EW</span> <Pair names={table.ew} ours={table.ours === 'ew'}/></p>
 </div>
 
 const resultClass = ([our, their]) => our > their ? 'is-success' : our < their ? 'is-danger' : ''
@@ -29,9 +32,11 @@ const MatchSummary = ({tournament, deals, onSelectDeal}) => {
                 <button type="button" className="button is-small is-light" onClick={() => onSelectDeal(segment.deals[0] - 1)}>
                     rozdania {boardOf(segment.deals[0])}-{boardOf(segment.deals[1])}
                 </button>
-                <div>
-                    <TableLine label="Nasz stół" table={segment.ourTable}/>
-                    <TableLine label="Drugi stół" table={segment.otherTable}/>
+                <div className="MatchSummary-rooms">
+                    {[{table: segment.ourTable, isOurTable: true}, {table: segment.otherTable, isOurTable: false}]
+                        // the open room first
+                        .sort((a, b) => (a.table.room === 'otwarty' ? 0 : 1) - (b.table.room === 'otwarty' ? 0 : 1))
+                        .map(({table, isOurTable}) => <Room key={table.room} table={table} isOurTable={isOurTable}/>)}
                 </div>
             </div>)}
         </div>)}
