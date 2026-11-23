@@ -8,4 +8,5 @@ export const TOURNAMENTS = [
     {file: '2024.04.06-RewersJoker.pbn', name: '2024.04.06 II liga play-off vs Rewers Joker (2 i 3 składka)'},
     {file: '2024.06.23-Slawa_GPP.pbn', name: '2024.06.23 GPPP w Sławie'},
     {file: '3liga_2025-2026_3zjazd.pbn', name: '2026.01.31-02.01 Trzeci zjazd III ligi'},
+    {file: '3liga_2026-2027_runda5-6.pbn', name: '2026.11.21-22 III liga 2026/27, rundy 5 i 6'},
 ]
