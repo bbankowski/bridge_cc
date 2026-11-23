@@ -149,7 +149,7 @@ describe('PbnViewer', () => {
         await userEvent.type(screen.getByRole('spinbutton', {name: 'Lewy'}), '11')
         await userEvent.click(screen.getByRole('button', {name: 'Zapisz'}))
 
-        expect(screen.getByText(/Contract:/)).toHaveTextContent('Contract: 4 S')
+        expect(screen.getByText(/Kontrakt:/)).toHaveTextContent('Kontrakt: 4 S')
         await openMenuItem(/Pobierz PBN/)
         const content = await createObjectURL.mock.calls[0][0].text()
         expect(content).toContain('[Contract "4S"]\n[Result "11"]\n{pierwszy}\n[Declarer "S"]\n[Score "NS 450"]\n[Auction "N"]\n1NT Pass 4S Pass\nPass Pass')

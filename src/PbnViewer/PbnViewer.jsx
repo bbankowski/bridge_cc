@@ -194,9 +194,9 @@ const PbnViewer = () => {
                             Odkryj rozdanie
                         </button>
                     </p> : <>
-                        Contract: <Bid bid={deal.contract}/> {deal.declarer}<br/>
-                        Result (tricks): {deal.result}<br/>
-                        Score: {deal.score || '?'}<br/>
+                        Kontrakt: <Bid bid={deal.contract}/> {deal.declarer}<br/>
+                        Liczba lew: {deal.result}<br/>
+                        Zapis: {deal.score || '?'}<br/>
                     </>}
                 </div>
                 <div className="App-deal-details">
