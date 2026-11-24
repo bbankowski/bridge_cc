@@ -108,6 +108,8 @@ const createDeal = (tags, notes, optimumResults, auctionText, comment, rawLines,
     // the table of BridgeComposer, or else the tricks of the [Ability] tag (Tournament Calculator)
     optimumResults: optimumResults ?? parseAbility(tags.Ability),
     commentText: comment,
+    // all the tags of the deal, e.g. those of a team match (see matches.js)
+    tags,
     // original lines of the deal without its comment, used to write the PBN back
     rawLines,
     commentIndex,

@@ -3,8 +3,8 @@ import userEvent from '@testing-library/user-event'
 import {expect, test, vi} from 'vitest'
 import MatchSummary from './MatchSummary'
 
-const tournament = {
-    name: 'Zjazd ligi', team: 'Nasi',
+const summary = {
+    team: 'Nasi',
     matches: [{
         title: 'Runda 1', opponent: 'Rywale', imps: [30, 12], vp: [15.5, 4.5],
         segments: [{
@@ -17,9 +17,9 @@ const tournament = {
 const deals = [{board: '1'}, {board: '2'}, {board: '7'}, {board: '8'}]
 
 test('shows the matches with their scores and who sat where', () => {
-    render(<MatchSummary tournament={tournament} deals={deals} onSelectDeal={() => {}}/>)
+    render(<MatchSummary summary={summary} deals={deals} onSelectDeal={() => {}}/>)
 
-    expect(screen.getByText('Zjazd ligi – podsumowanie')).toBeInTheDocument()
+    expect(screen.getByText('Podsumowanie meczów')).toBeInTheDocument()
     expect(screen.getByText(/Nasi – Rywale/)).toBeInTheDocument()
     expect(screen.getByText('30 : 12 IMP')).toHaveClass('is-success')
     expect(screen.getByText('15,5 : 4,5 VP')).toBeInTheDocument()
@@ -31,7 +31,7 @@ test('shows the matches with their scores and who sat where', () => {
 
 test('names a segment by its board numbers and opens its first deal', async () => {
     const onSelectDeal = vi.fn()
-    render(<MatchSummary tournament={tournament} deals={deals} onSelectDeal={onSelectDeal}/>)
+    render(<MatchSummary summary={summary} deals={deals} onSelectDeal={onSelectDeal}/>)
 
     await userEvent.click(screen.getByRole('button', {name: 'rozdania 7-8'}))
 
@@ -39,18 +39,18 @@ test('names a segment by its board numbers and opens its first deal', async () =
 })
 
 test('is collapsed by default', () => {
-    const {container} = render(<MatchSummary tournament={tournament} deals={deals} onSelectDeal={() => {}}/>)
+    const {container} = render(<MatchSummary summary={summary} deals={deals} onSelectDeal={() => {}}/>)
 
     expect(container.querySelector('details')).not.toHaveAttribute('open')
 })
 
 test('shows the deals of each segment and then the open and the closed room in columns, marking our table', () => {
-    const closedOurs = {...tournament, matches: [{...tournament.matches[0], segments: [{
-        ...tournament.matches[0].segments[0],
-        ourTable: {...tournament.matches[0].segments[0].ourTable, room: 'zamknięty'},
-        otherTable: {...tournament.matches[0].segments[0].otherTable, room: 'otwarty'},
+    const closedOurs = {...summary, matches: [{...summary.matches[0], segments: [{
+        ...summary.matches[0].segments[0],
+        ourTable: {...summary.matches[0].segments[0].ourTable, room: 'zamknięty'},
+        otherTable: {...summary.matches[0].segments[0].otherTable, room: 'otwarty'},
     }]}]}
-    render(<MatchSummary tournament={closedOurs} deals={deals} onSelectDeal={() => {}}/>)
+    render(<MatchSummary summary={closedOurs} deals={deals} onSelectDeal={() => {}}/>)
 
     expect([...document.querySelectorAll('.MatchSummary-grid > .MatchSummary-roomName')].map(header => header.textContent))
         .toEqual(['Pokój otwarty', 'Pokój zamknięty (nasz stół)'])

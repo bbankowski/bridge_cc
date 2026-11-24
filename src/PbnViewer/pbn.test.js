@@ -109,9 +109,9 @@ describe('the [Ability] tag', () => {
     })
 
     test('fills the table of tricks of the deals that have no [OptimumResultTable]', () => {
-        const [deal] = parsePbn(readPbn('3liga_2026-2027_runda5-6.pbn')).deals
+        const [deal] = parsePbn(fs.readFileSync(path.join(import.meta.dirname, 'fixtures/team-match.pbn'), 'utf8')).deals
 
-        // board 1 of round 5: the double dummy analysis of the MZBS results
+        // board 1 of round 5 of the III league: the double dummy analysis of the MZBS results
         expect(deal.optimumResults.N).toEqual({NT: '6', S: '6', H: '7', D: '4', C: '5'})
         expect(deal.optimumResults.W).toEqual({NT: '7', S: '6', H: '5', D: '9', C: '8'})
     })

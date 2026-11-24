@@ -323,25 +323,25 @@ SQ
     })
 
     test('shows the summary of the matches of a team event and opens a segment from it', async () => {
-        const file = '3liga_2026-2027_runda5-6.pbn'
-        const text = fs.readFileSync(path.join(import.meta.dirname, '../../public', file), 'utf8')
+        const file = 'team-match.pbn'
+        const text = fs.readFileSync(path.join(import.meta.dirname, 'fixtures', file), 'utf8')
         fetch.mockResolvedValue({ok: true, text: async () => text})
         const router = renderViewer(`/pbn?filename=${file}`)
 
-        expect(await screen.findByText(/Pierwszy zjazd III ligi – podsumowanie/)).toBeInTheDocument()
-        expect(screen.getByText('53 : 33 IMP')).toBeInTheDocument()
+        expect(await screen.findByText('Podsumowanie meczów')).toBeInTheDocument()
+        expect(screen.getByText('11 : 1 IMP')).toBeInTheDocument()
         expect(screen.getByText(/CKiS Skawina – CKiS IV Skawina/)).toBeInTheDocument()
 
         const segments = screen.getAllByRole('button', {name: /^rozdania/})
-        expect(segments.map(button => button.textContent)).toEqual(['rozdania 1-10', 'rozdania 11-20', 'rozdania 1-20'])
+        expect(segments.map(button => button.textContent)).toEqual(['rozdania 1-2', 'rozdania 11-11', 'rozdania 1-1'])
         await userEvent.click(segments[2])
 
-        expect(dealParam(router)).toBe('21')
+        expect(dealParam(router)).toBe('4')
     })
 
     test('shows the opening lead under the auction', async () => {
-        const file = '3liga_2026-2027_runda5-6.pbn'
-        const text = fs.readFileSync(path.join(import.meta.dirname, '../../public', file), 'utf8')
+        const file = 'team-match.pbn'
+        const text = fs.readFileSync(path.join(import.meta.dirname, 'fixtures', file), 'utf8')
         fetch.mockResolvedValue({ok: true, text: async () => text})
         renderViewer(`/pbn?filename=${file}`)
 
@@ -356,6 +356,6 @@ SQ
         renderViewer()
 
         await screen.findByText('pierwszy')
-        expect(screen.queryByText(/podsumowanie/)).not.toBeInTheDocument()
+        expect(screen.queryByText(/podsumowanie/i)).not.toBeInTheDocument()
     })
 })

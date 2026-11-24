@@ -18,17 +18,17 @@ const tableIn = (segment, room) => [segment.ourTable, segment.otherTable].find(t
 const resultClass = ([our, their]) => our > their ? 'is-success' : our < their ? 'is-danger' : ''
 
 /*
- * The summary of a team event above the deals: the matches with their scores and who sat where at both tables.
- * A segment links to its first deal.
+ * The summary of a team event above the deals (see matchSummary): the matches with their scores and who sat where
+ * at both tables. A segment links to its first deal.
  */
-const MatchSummary = ({tournament, deals, onSelectDeal}) => {
+const MatchSummary = ({summary, deals, onSelectDeal}) => {
     const boardOf = position => deals[position - 1]?.board ?? position
     return <details className="box MatchSummary">
-        <summary className="has-text-weight-bold">{tournament.name} – podsumowanie</summary>
-        {tournament.matches.map(match => <div key={match.title} className="MatchSummary-match">
+        <summary className="has-text-weight-bold">Podsumowanie meczów</summary>
+        {summary.matches.map(match => <div key={match.title} className="MatchSummary-match">
             <p className="mb-1">
                 <span className="has-text-weight-bold">{match.title}:</span>{' '}
-                {tournament.team} – {match.opponent}{' '}
+                {summary.team} – {match.opponent}{' '}
                 <span className={`tag is-light ${resultClass(match.imps)}`}>{match.imps.join(' : ')} IMP</span>{' '}
                 {match.vp && <span className="tag is-light">{match.vp.map(formatVp).join(' : ')} VP</span>}
             </p>

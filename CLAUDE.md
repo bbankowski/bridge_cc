@@ -26,7 +26,9 @@ npm run build                # dist/
 
 `.github/workflows/deploy.yml` lints, tests, builds and deploys `dist/` to GitHub Pages on every push to `master`. Built files are not committed. The `base` setting in `vite.config.js` is `/bridge_cc/`. Routing uses `createHashRouter` because GitHub Pages has no fallback to `index.html`.
 
-To add a tournament, put the `.pbn` file in `public/` and add an entry to `src/tournaments.js`.
+To add a tournament, put the `.pbn` file in `public/` and add `{"file", "name"}` to `public/tournaments.json` (loaded by the home page at runtime). Data like this lives in `public/`, never in the code.
+
+A team event gets a summary of its matches above the deals when every deal has these tags (`PbnViewer/matches.js`): `[Round "5"]`, `[Room "Open"|"Closed"]` (room of the recorded table), `[HomeTeam]` (team sitting NS there), `[VisitTeam]` (EW), and `[OtherNorth]`, `[OtherSouth]`, `[OtherWest]`, `[OtherEast]` (the other table). Our team is the one with our pair (`PLAYERS`); the IMPs of a match add up the `WYNIK:` of its deals, the VPs use the WBF scale. `[Score]` is from the declaring side, as BridgeComposer writes it (`EW 420`).
 
 ## Architecture
 
@@ -39,7 +41,7 @@ To add a tournament, put the `.pbn` file in `public/` and add an entry to `src/t
   - A line without `-` is an opening. Its description may be `short | full`: the short one is shown in the openings overview, the full one under the opening's heading.
   - Continuation lines are indented relative to the last table.
 - **PBN viewer**: `PbnViewer/pbn.js` contains `parsePbn`, a pure function that returns plain deal objects. Each deal object keeps its original lines (`rawLines`) without the comment. `serializePbn` writes the file back from those lines plus the edited `commentText`, so unknown tags survive the round trip. Comments and notes are formatted only when rendered: `formatText` turns `\S`, `\H`, `\D` and `\C` into suit icons. The current deal lives in the `deal` URL parameter (1-based). `DealEditor` edits a whole deal: the auction (on the bidding box of the training, with an alert per call), the contract, declarer and tricks (the score is computed in `dealEdit.js`) and the comment. `updateDeal` writes only what changed back into the deal's original lines. Edits exist only in memory until "Pobierz PBN" is clicked. Unsaved edits are guarded by `beforeunload` and `useBlocker`.
-- Tests (`*.test.js`) cover the parsers. `pbn.test.js` round-trips every file in `public/`, so a new `.pbn` file that the parser cannot handle makes the tests fail.
+- Tests (`*.test.js`) cover the parsers. `pbn.test.js` round-trips every file in `public/`, so a new `.pbn` file that the parser cannot handle makes the tests fail. Other tests must not depend on the content of the data in `public/` (adding or editing a tournament must not break them): use fixtures (`PbnViewer/fixtures/`) or inline PBN.
 - **Training** (`src/Training/`, lazy-loaded route):
   - `questions.js` builds plain-data questions: from the convention card (meaning of a sequence, or the call for a meaning), from random hands (`openings.js` encodes the opening rules of the system – keep it in sync with the "Nasze otwarcia" chapter of `bidding.txt`), and from `trening/sytuacje.json`.
   - `trening/sytuacje.json` holds tournament situations made from the comments of MJ and the coach MK: the auction before the decision, the hand, rated options and an explanation. `situations.test.js` checks every situation against the PBN files (hand, auction, legal calls), so edits that do not match the deals fail the tests.

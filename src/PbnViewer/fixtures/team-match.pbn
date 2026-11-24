@@ -1,0 +1,257 @@
+% PBN 2.1
+% Four deals of a team event (III league, rounds 5 and 6) for the tests of the match summary
+[Event "RUNDA 5, SEGMENT 1, STÓŁ A9"]
+[Site "Not known"]
+[Date "2026.11.18"]
+[Round "5"]
+[Room "Open"]
+[HomeTeam "CKiS II Skawina"]
+[VisitTeam "CKiS Skawina"]
+[Board "1"]
+[West "Bartosz Bańkowski"]
+[North "Tomasz Lasota"]
+[East "Marek Jarosz"]
+[South "Mikołaj Chmielewski"]
+[OtherNorth "Milena Klimiuk"]
+[OtherSouth "Martyna Pucyk"]
+[OtherWest "Kacper Kisielewski"]
+[OtherEast "Antoni Wójtowicz"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AJ63.T876.T93.A8 KQ54.J43.AQ64.T2 972.AKQ5.J8.7653 T8.92.K752.KQJ94"]
+[Scoring "Teams"]
+[Declarer "S"]
+[Contract "3H"]
+[Result "7"]
+[Ability "N:66745 E:76598 S:66745 W:76598"]
+[BCFlags "1f"]
+[DoubleDummyTricks "66745667457659876598"]
+[Minimax "3DW-110"]
+[OptimumScore "EW 110"]
+[ParContract "EW 3D="]
+[Score "NS -100"]
+{[MJ] Wejście 1\H nie takie złe, ręka N niby ładna ale za wysoko.
+
+
+Drugi stół: 1BA W +1, wist \SA (EW 120)\n
+WYNIK: -1}
+[Auction "N"]
+Pass 1C 1H X
+2NT Pass 3H AP
+[Play "W"]
+CK
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N NT 6
+N  S 6
+N  H 7
+N  D 4
+N  C 5
+S NT 6
+S  S 6
+S  H 7
+S  D 4
+S  C 5
+E NT 7
+E  S 6
+E  H 5
+E  D 9
+E  C 8
+W NT 7
+W  S 6
+W  H 5
+W  D 9
+W  C 8
+
+[Event "RUNDA 5, SEGMENT 1, STÓŁ A9"]
+[Site "Not known"]
+[Date "2026.11.18"]
+[Round "5"]
+[Room "Open"]
+[HomeTeam "CKiS II Skawina"]
+[VisitTeam "CKiS Skawina"]
+[Board "2"]
+[West "Bartosz Bańkowski"]
+[North "Tomasz Lasota"]
+[East "Marek Jarosz"]
+[South "Mikołaj Chmielewski"]
+[OtherNorth "Milena Klimiuk"]
+[OtherSouth "Martyna Pucyk"]
+[OtherWest "Kacper Kisielewski"]
+[OtherEast "Antoni Wójtowicz"]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:AQJ6.62.QJT96.K8 73.T853.72.QT652 K984.KQJ4.K84.43 T52.A97.A53.AJ97"]
+[Scoring "Teams"]
+[Declarer "E"]
+[Contract "4S"]
+[Result "10"]
+[Ability "N:43537 E:7A7A6 S:43537 W:7A7A6"]
+[BCFlags "1f"]
+[DoubleDummyTricks "43537435377a7a67a7a6"]
+[Minimax "4SW-420"]
+[OptimumScore "EW 420"]
+[ParContract "EW 4S="]
+[Score "EW 420"]
+{[MJ]Płaska końcówka.
+
+
+Drugi stół: 4\S E =, wist \C5 (EW 420)\n
+WYNIK: +0}
+[Auction "E"]
+1D Pass 1H Pass
+1S Pass 4S AP
+[Play "S"]
+S3
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  4
+N  S  3
+N  H  5
+N  D  3
+N  C  7
+S NT  4
+S  S  3
+S  H  5
+S  D  3
+S  C  7
+E NT  7
+E  S 10
+E  H  7
+E  D 10
+E  C  6
+W NT  7
+W  S 10
+W  H  7
+W  D 10
+W  C  6
+
+[Event "RUNDA 5, SEGMENT 2, STÓŁ A9"]
+[Site "Not known"]
+[Date "2026.11.18"]
+[Round "5"]
+[Room "Open"]
+[HomeTeam "CKiS II Skawina"]
+[VisitTeam "CKiS Skawina"]
+[Board "11"]
+[West "Bartosz Bańkowski"]
+[North "Tomasz Lasota"]
+[East "Marek Jarosz"]
+[South "Mikołaj Chmielewski"]
+[OtherNorth "Milena Klimiuk"]
+[OtherSouth "Martyna Pucyk"]
+[OtherWest "Adam Stachura"]
+[OtherEast "Antonina Chmielewska"]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "S:A97.Q74.AQ65.976 KJ.52.KT94.QT432 QT8653.AK93.7.A8 42.JT86.J832.KJ5"]
+[Scoring "Teams"]
+[Declarer "S"]
+[Contract "4NT"]
+[Result "8"]
+[Ability "N:8BA66 E:32367 S:8BA66 W:32367"]
+[BCFlags "1f"]
+[DoubleDummyTricks "8ba668ba663236732367"]
+[Minimax "4SS450"]
+[OptimumScore "NS 450"]
+[ParContract "NS 4S+1"]
+[Score "NS -100"]
+{[MJ] Nieporozumienie licytacyjne. Po wiście treflowym biorę królem i kiepsko
+odwracam w \C5, bo widać że partner dojdzie tylko jeden raz i jeżeli nie ma
+\C10 to kolor jest zablokowany, a jeżeli ma to nie musi się pocić po odwrocie
+waletem. Na szczęscie Bartek ściąga damę i przeciwnik przegrywa -2.
+
+
+Drugi stół: 4\S N +1, wist \HJ (NS 450)\n
+WYNIK: +11}
+[Auction "S"]
+1C Pass 1S Pass
+1NT Pass 2D Pass
+2S Pass 4NT AP
+[Play "W"]
+C3
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  8
+N  S 11
+N  H 10
+N  D  6
+N  C  6
+S NT  8
+S  S 11
+S  H 10
+S  D  6
+S  C  6
+E NT  3
+E  S  2
+E  H  3
+E  D  6
+E  C  7
+W NT  3
+W  S  2
+W  H  3
+W  D  6
+W  C  7
+
+[Event "RUNDA 6, SEGMENT 1, STÓŁ A9"]
+[Site "Not known"]
+[Date "2026.11.18"]
+[Round "6"]
+[Room "Closed"]
+[HomeTeam "CKiS IV Skawina"]
+[VisitTeam "CKiS Skawina"]
+[Board "1"]
+[West "Marek Jarosz"]
+[North "Bohdan Shulha"]
+[East "Bartosz Bańkowski"]
+[South "Krzysztof Ziętarski"]
+[OtherNorth "Jakub Michalski"]
+[OtherSouth "Marcel Prokopowicz"]
+[OtherWest "Marcel Miłoś"]
+[OtherEast "Franciszek Rządzik"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:KQT62.AKT7.6.532 J.63.KQ5432.AK87 A9.QJ54.AJ987.Q4 87543.982.T.JT96"]
+[Scoring "Teams"]
+[Declarer "E"]
+[Contract "2DX"]
+[Result "6"]
+[Ability "N:9AB76 E:33166 S:9AB76 W:33166"]
+[BCFlags "1f"]
+[DoubleDummyTricks "9ab769ab763316633166"]
+[Minimax "4HS450"]
+[OptimumScore "NS 450"]
+[ParContract "NS 4H+1"]
+[Score "EW -300"]
+{[MJ] Z ciekawości zrobiłem analizę widząc rękę S, a także mając dane o
+otwarciu i wejściu: 4\S/3BA wygrywa się w 84% rozdań, 4\H 62%. Z kolei
+rozgrywający na 2\Dx bierze z reguły niecałe cztery lewy, więc trapping pas
+jest najlepszą opcją (jeżeli partner wznowi).
+
+
+Drugi stół: 2\DX E -2, wist \HQ (EW -300)\n
+WYNIK: +0}
+[Auction "N"]
+1S 2D Pass Pass
+X AP
+[Play "S"]
+SA
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  9
+N  S 10
+N  H 11
+N  D  7
+N  C  6
+S NT  9
+S  S 10
+S  H 11
+S  D  7
+S  C  6
+E NT  3
+E  S  3
+E  H  1
+E  D  6
+E  C  6
+W NT  3
+W  S  3
+W  H  1
+W  D  6
+W  C  6
+
