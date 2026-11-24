@@ -109,9 +109,9 @@ describe('the [Ability] tag', () => {
     })
 
     test('fills the table of tricks of the deals that have no [OptimumResultTable]', () => {
-        const [deal] = parsePbn(readPbn('3liga_2026-2027_runda5-6.pbn')).deals
+        const [deal] = parsePbn(fs.readFileSync(path.join(import.meta.dirname, 'fixtures/team-match.pbn'), 'utf8')).deals
 
-        // board 1 of round 5: the double dummy analysis of the MZBS results
+        // board 1 of round 5 of the III league: the double dummy analysis of the MZBS results
         expect(deal.optimumResults.N).toEqual({NT: '6', S: '6', H: '7', D: '4', C: '5'})
         expect(deal.optimumResults.W).toEqual({NT: '7', S: '6', H: '5', D: '9', C: '8'})
     })
@@ -167,11 +167,11 @@ CK`
     })
 
     test('changes the result tags in place and keeps the comment where it was', () => {
-        const edited = updateDeal(deal, {contract: '4SX', declarer: 'W', result: '8', score: 'NS 300', commentText: 'nowy'})
+        const edited = updateDeal(deal, {contract: '4SX', declarer: 'W', result: '8', score: 'EW -300', commentText: 'nowy'})
 
         expect(lines(edited).slice(5, 10)).toEqual(
-            ['[Declarer "W"]', '[Contract "4SX"]', '[Result "8"]', '[Score "NS 300"]', '{nowy}'])
-        expect(edited).toMatchObject({contract: '4SX', declarer: 'W', result: '8', score: 'NS 300'})
+            ['[Declarer "W"]', '[Contract "4SX"]', '[Result "8"]', '[Score "EW -300"]', '{nowy}'])
+        expect(edited).toMatchObject({contract: '4SX', declarer: 'W', result: '8', score: 'EW -300'})
     })
 
     test('adds missing result tags', () => {

@@ -77,7 +77,8 @@ export const declarerScore = (contract, tricks, vulnerable) => {
     return contractPoints + game + slam + insult + overtrickPoints
 }
 
-// The Score tag: "NS 620", "NS -100" (always from the NS point of view), or null if the result is not known.
+// The Score tag, from the point of view of the declaring side as BridgeComposer writes it: "NS 620", "EW -100";
+// "NS 0" for a passed out deal, or null if the result is not known.
 export const scoreTag = (contract, declarer, tricks, vulnerableSeats) => {
     if (contract === 'Pass') {
         return 'NS 0'
@@ -85,8 +86,8 @@ export const scoreTag = (contract, declarer, tricks, vulnerableSeats) => {
     if (!parseContract(contract) || !SEATS.includes(declarer) || !(tricks >= 0 && tricks <= 13)) {
         return null
     }
-    const score = declarerScore(contract, tricks, vulnerableSeats.includes(declarer))
-    return `NS ${declarer === 'N' || declarer === 'S' ? score : -score}`
+    const side = declarer === 'N' || declarer === 'S' ? 'NS' : 'EW'
+    return `${side} ${declarerScore(contract, tricks, vulnerableSeats.includes(declarer))}`
 }
 
 // The [Auction] section and [Note] tags of the calls; alerts are numbered in order.

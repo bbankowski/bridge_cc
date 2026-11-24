@@ -1001,9 +1001,13 @@ T1T
 1T-2C                   => slabe, kolor 6+
 1T-2P                   => slabe, kolor 6+
 1T-2BA                  => slabe, 55 kolory mlode
+
+T1T-2T-X
 1T-2T-X-XX              => pokaż lepszy kolor
 1T-2T-X-2K              => do pasa
 1T-2T-X-pas             => karny
+
+T1T-2T-pas
 1T-2T-pas-2K            => pokaż lepszy kolor
 1T-2T-pas-2BA           => naturalne, NF
 1T-2T-pas-2C            => wybór koloru, NF

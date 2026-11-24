@@ -136,12 +136,12 @@ describe('DealEditor', () => {
         await userEvent.selectOptions(screen.getByRole('combobox', {name: 'Rozgrywający'}), 'W')
         await userEvent.type(screen.getByRole('spinbutton', {name: 'Lewy'}), '8')
 
-        // EW not vulnerable, 4SX-2: 300 for NS
-        expect(screen.getByText(/Zapis: NS 300/)).toBeInTheDocument()
+        // EW not vulnerable, 4SX-2: -300 for EW
+        expect(screen.getByText(/Zapis: EW -300/)).toBeInTheDocument()
         await userEvent.click(screen.getByRole('button', {name: 'Zapisz'}))
 
         expect(onSave).toHaveBeenCalledWith(expect.objectContaining({
-            contract: '4SX', declarer: 'W', result: '8', score: 'NS 300',
+            contract: '4SX', declarer: 'W', result: '8', score: 'EW -300',
         }))
     })
 
