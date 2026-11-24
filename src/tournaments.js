@@ -23,7 +23,7 @@ export const TOURNAMENTS = [
                 segments: [
                     {
                         deals: [1, 10],
-                        ourTable: {room: 'otwarty', ns: ['Tomasz Lasota', 'Mikołaj Chmielewski'], ew: ['Marek Jarosz', 'Bartosz Bańkowski'], ours: 'ew'},
+                        ourTable: {room: 'otwarty', ns: ['Tomasz Lasota', 'Mikołaj Chmielewski'], ew: ['Bartosz Bańkowski', 'Marek Jarosz'], ours: 'ew'},
                         otherTable: {room: 'zamknięty', ns: ['Milena Klimiuk', 'Martyna Pucyk'], ew: ['Kacper Kisielewski', 'Antoni Wójtowicz'], ours: 'ns'},
                     },
                     {

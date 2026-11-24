@@ -1,3 +1,5 @@
+import fs from 'node:fs'
+import path from 'node:path'
 import {describe, expect, test} from 'vitest'
 import {auctionLines, contractFromAuction, declarerScore, editableAuction, isAuctionComplete, scoreTag} from './dealEdit'
 import {parsePbn} from './pbn'
@@ -73,13 +75,21 @@ test.each([
 
 test.each([
     ['4H', 'S', 10, ['N', 'S'], 'NS 620'],
-    ['4H', 'E', 10, ['N', 'S'], 'NS -420'],
-    ['3NT', 'W', 7, [], 'NS 100'],
+    ['4H', 'E', 10, ['N', 'S'], 'EW 420'],
+    ['3NT', 'W', 7, [], 'EW -100'],
     ['Pass', '', NaN, [], 'NS 0'],
     ['4H', '', 10, [], null],
     ['4H', 'S', NaN, [], null],
 ])('scoreTag(%s %s %i tricks)', (contract, declarer, tricks, vulnerable, expected) => {
     expect(scoreTag(contract, declarer, tricks, vulnerable)).toBe(expected)
+})
+
+test('computes the [Score] tags of the III league file, as BridgeComposer writes them', () => {
+    const file = path.join(import.meta.dirname, '../../public/3liga_2026-2027_runda5-6.pbn')
+    const {deals} = parsePbn(fs.readFileSync(file, 'utf8'))
+
+    deals.forEach(deal => expect(scoreTag(deal.contract, deal.declarer, Number(deal.result), deal.vulnerable),
+        `board ${deal.board} of ${deal.event}`).toBe(deal.score))
 })
 
 test('writes the auction four calls a line, with the alerts as notes', () => {

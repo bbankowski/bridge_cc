@@ -167,11 +167,11 @@ CK`
     })
 
     test('changes the result tags in place and keeps the comment where it was', () => {
-        const edited = updateDeal(deal, {contract: '4SX', declarer: 'W', result: '8', score: 'NS 300', commentText: 'nowy'})
+        const edited = updateDeal(deal, {contract: '4SX', declarer: 'W', result: '8', score: 'EW -300', commentText: 'nowy'})
 
         expect(lines(edited).slice(5, 10)).toEqual(
-            ['[Declarer "W"]', '[Contract "4SX"]', '[Result "8"]', '[Score "NS 300"]', '{nowy}'])
-        expect(edited).toMatchObject({contract: '4SX', declarer: 'W', result: '8', score: 'NS 300'})
+            ['[Declarer "W"]', '[Contract "4SX"]', '[Result "8"]', '[Score "EW -300"]', '{nowy}'])
+        expect(edited).toMatchObject({contract: '4SX', declarer: 'W', result: '8', score: 'EW -300'})
     })
 
     test('adds missing result tags', () => {

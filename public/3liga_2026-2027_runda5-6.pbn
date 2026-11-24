@@ -73,7 +73,7 @@
 {[MJ] Wejście 1\H nie takie złe, ręka N niby ładna ale za wysoko.
 
 
-Drugi stół: 1BA W +1, wist \SA (NS -120)\n
+Drugi stół: 1BA W +1, wist \SA (EW 120)\n
 WYNIK: -1}
 [Auction "N"]
 Pass 1C 1H X
@@ -123,11 +123,11 @@ W  C 8
 [Minimax "4SW-420"]
 [OptimumScore "EW 420"]
 [ParContract "EW 4S="]
-[Score "NS -420"]
+[Score "EW 420"]
 {[MJ]Płaska końcówka.
 
 
-Drugi stół: 4\S E =, wist \C5 (NS -420)\n
+Drugi stół: 4\S E =, wist \C5 (EW 420)\n
 WYNIK: +0}
 [Auction "E"]
 1D Pass 1H Pass
@@ -177,12 +177,12 @@ W  C  6
 [Minimax "7DW-2140"]
 [OptimumScore "EW 2140"]
 [ParContract "EW 7D="]
-[Score "NS -1390"]
+[Score "EW 1390"]
 {[MJ] Wejście 3\D za mocne, ale w tym rozdaniu okazało się bardzo celne i
 pozwala dojść do szlemika. Z moją ręką może lepiej zalicytować 4\H od razu, bo
 widać że przeciwnik robi zajazd z fitem kie i niewiele potrzeba do szlemika.
 
-Drugi stół: 3BA W +3, wist \C7 (NS -690)\n
+Drugi stół: 3BA W +3, wist \C7 (EW 690)\n
 WYNIK: +12}
 [Auction "S"]
 2H 3D 3NT X
@@ -288,7 +288,7 @@ W  C 8
 [Minimax "1CW-130"]
 [OptimumScore "EW 130"]
 [ParContract "EW 1C+3"]
-[Score "NS -150"]
+[Score "EW 150"]
 {[MJ] Po wiście kierowym przeciwnik bierze asem i odwraca w\D6, Bartek bardzo
 dobrze kładzie 10-kę, a pozagraniu \CA i trefla przeciwnik nie otwiera pików,
 więc ostatecznie dwie nadróbki.
@@ -348,7 +348,7 @@ W  C 10
 całej karty przed przeciwnikiem) i odwraca w trefla, więc jedyną szansą jest
 dubel kier u N i montujemy przebitkę.
 
-Drugi stół: 2\D W =, wist \CA (NS -90)\n
+Drugi stół: 2\D W =, wist \CA (EW 90)\n
 WYNIK: -1}
 [Auction "E"]
 Pass 2D =1= Pass 2NT
@@ -459,10 +459,10 @@ W  C  3
 [Minimax "4SW-450"]
 [OptimumScore "EW 450"]
 [ParContract "EW 4S+1"]
-[Score "NS -420"]
+[Score "EW 420"]
 {[MJ] Po odpowiedzi Bartka szlemik zależy tylko od liczby asów.
 
-Drugi stół: 4\S E +1, wist \C3 (NS -450)\n
+Drugi stół: 4\S E +1, wist \C3 (EW 450)\n
 WYNIK: -1}
 [Auction "W"]
 1H Pass 1S Pass
@@ -521,7 +521,7 @@ drugim stole po podobnym początku S uzgadnia trefle, N wycofuje się do 5\C i
 niestety S nie dokłada, chociaż cięzko wyobrazić sobie otwarcie partnera przy
 którym szlemik będzie bardzo zły.
 
-Drugi stół: 5\C N +1, wist \HJ (NS +420)\n
+Drugi stół: 5\C N +1, wist \HJ (NS 420)\n
 WYNIK: -11}
 [Auction "N"]
 1D Pass 1H Pass
@@ -574,11 +574,11 @@ W  C  0
 [Minimax "4SS650"]
 [OptimumScore "NS 650"]
 [ParContract "NS 4S+1"]
-[Score "NS +600"]
+[Score "NS 600"]
 {[MJ] Nic nie mogliśmy zrobić, otwarcie 3\D z ręką W chyba trochę za ostre w
 tych założeniach.
 
-Drugi stół: 4\S S +1, wist \DK (NS +650)\n
+Drugi stół: 4\S S +1, wist \DK (NS 650)\n
 WYNIK: +2}
 [Auction "E"]
 Pass Pass Pass 1C
@@ -638,7 +638,7 @@ odwracam w \C5, bo widać że partner dojdzie tylko jeden raz i jeżeli nie ma
 waletem. Na szczęscie Bartek ściąga damę i przeciwnik przegrywa -2.
 
 
-Drugi stół: 4\S N +1, wist \HJ (NS +450)\n
+Drugi stół: 4\S N +1, wist \HJ (NS 450)\n
 WYNIK: +11}
 [Auction "S"]
 1C Pass 1S Pass
@@ -693,7 +693,7 @@ W  C  7
 {[MJ] Nie wiem czy z ręką W powinno się licytować 2\S. Jeżeli partner ma fit to
 powinniśmy to wygrać bo jest równowaga siły.
 
-Drugi stół: 3\S E -1, wist \C6 (NS +50)\n
+Drugi stół: 3\S E -1, wist \C6 (EW -50)\n
 WYNIK: +4}
 [Auction "W"]
 Pass 1C 1NT 2D
@@ -743,7 +743,7 @@ W  C 6
 [Minimax "4SXS-500"]
 [OptimumScore "NS -500"]
 [ParContract "NS 4SX-2"]
-[Score "NS -110"]
+[Score "EW 110"]
 {[MJ] Wejście 1BA to nie taka ręka, tutaj najlepsza jest kontra (a także kontra
 na wznowieniu jeżeli już tak poszła licytacja). Z kolei z mojej pozycji, jeżeli
 partner ma 6-4 to jest szansa na końcówkę kierową, ale ostatecznie spasowałem
@@ -754,7 +754,7 @@ W praktyce końcówkę się wygrywa, bo S ciężko się będzie powstrzymać prz
 sciągnięciem \SA na wiście.
 
 
-Drugi stół: 4\C W -1, wist \S6 (NS +100)\n
+Drugi stół: 4\C W -1, wist \S6 (EW -100)\n
 WYNIK: +5}
 [Auction "N"]
 Pass Pass 1S 1NT =1=
@@ -810,7 +810,7 @@ W  C  9
 {[MJ] Z ręką E chyba się nie walczy 3\H w rozdaniu.
 
 
-Drugi stół: 3BA S +2, wist \H5 (NS +460)\n
+Drugi stół: 3BA S +2, wist \H5 (NS 460)\n
 WYNIK: +0}
 [Auction "E"]
 Pass 1C 1H 1S
@@ -862,13 +862,13 @@ W  C  2
 [Minimax "3NW-430"]
 [OptimumScore "EW 430"]
 [ParContract "EW 3N+1"]
-[Score "NS -490"]
+[Score "EW 490"]
 {[MJ] Ciekawa ręka E, w rozdaniu może iść szlemik a partner spasuje na 3\D.
 Wszystko sprowadza się do ilości pików u otwierającego. Po ściągnięciu kar
 przeciwnicy odrzucają się od kierów, więc 12 lew.
 
 
-Drugi stół: 3BA E +3, wist \C2 (NS -490)\n
+Drugi stół: 3BA E +3, wist \C2 (EW 490)\n
 WYNIK: +0}
 [Auction "S"]
 Pass 1H Pass 1S
@@ -972,11 +972,11 @@ W  C 9
 [Minimax "3NW-400"]
 [OptimumScore "EW 400"]
 [ParContract "EW 3N="]
-[Score "NS -130"]
+[Score "EW 130"]
 {[MJ] Przeciwnik otwiera na 14, ale i tak ciężko byłoby wylicytować, a
 następnie wygrać 3BA.
 
-Drugi stół: 3\C E +2, wist \C8 (NS -150)\n
+Drugi stół: 3\C E +2, wist \C8 (EW 150)\n
 WYNIK: -1}
 [Auction "N"]
 Pass Pass 1NT X
@@ -1032,7 +1032,7 @@ W  C 10
 czterema kierami również mógłby otworzyć ten kolor, a jak ma \HK to nie
 ucieknie).
 
-Drugi stół: 1BA S +3, wist \C10 (NS +180)\n
+Drugi stół: 1BA S +3, wist \C10 (NS 180)\n
 WYNIK: +1}
 [Auction "E"]
 Pass Pass Pass 1S
@@ -1142,7 +1142,7 @@ W  C 4
 {[MJ] Przeciwnik nie dostrzegł szans na szlemika, a partner dokładał idealną
 kartę.
 
-Drugi stół: 6\S S +1, wist \D3 (NS +1460)\n
+Drugi stół: 6\S S +1, wist \D3 (NS 1460)\n
 WYNIK: +13}
 [Auction "W"]
 Pass 2C Pass 2D
@@ -1193,14 +1193,14 @@ W  C  6
 [Minimax "4HS450"]
 [OptimumScore "NS 450"]
 [ParContract "NS 4H+1"]
-[Score "NS 300"]
+[Score "EW -300"]
 {[MJ] Z ciekawości zrobiłem analizę widząc rękę S, a także mając dane o
 otwarciu i wejściu: 4\S/3BA wygrywa się w 84% rozdań, 4\H 62%. Z kolei
 rozgrywający na 2\Dx bierze z reguły niecałe cztery lewy, więc trapping pas
 jest najlepszą opcją (jeżeli partner wznowi).
 
 
-Drugi stół: 2\DX E -2, wist \HQ (NS +300)\n
+Drugi stół: 2\DX E -2, wist \HQ (EW -300)\n
 WYNIK: +0}
 [Auction "N"]
 1S 2D Pass Pass
@@ -1250,12 +1250,12 @@ W  C  6
 [Minimax "3NW-430"]
 [OptimumScore "EW 430"]
 [ParContract "EW 3N+1"]
-[Score "NS -400"]
+[Score "EW 400"]
 {[MJ] Bartek myli się na otwarciu i trochę przypadkowo gramy lepszą końcówkę,
 która po wiście kierowym nie sprawia problemów.
 
 
-Drugi stół: 4\S E -1, wist \S2 (NS +50)\n
+Drugi stół: 4\S E -1, wist \S2 (EW -50)\n
 WYNIK: +10}
 [Auction "E"]
 1NT Pass 3NT AP
@@ -1309,7 +1309,7 @@ W  C  5
 z ręką S w drugim okrążeniu).
 
 
-Drugi stół: 4\H S =, wist \CA (NS +420)\n
+Drugi stół: 4\H S =, wist \CA (NS 420)\n
 WYNIK: +0}
 [Auction "S"]
 Pass 2NT X XX
@@ -1365,7 +1365,7 @@ W  C  7
 albo N otworzyć 1BA.
 
 
-Drugi stół: 2\H N +2, wist \S6 (NS +170)\n
+Drugi stół: 2\H N +2, wist \S6 (NS 170)\n
 WYNIK: +0}
 [Auction "W"]
 Pass 1C Pass 1H
@@ -1416,11 +1416,11 @@ W  C  6
 [Minimax "3NW-430"]
 [OptimumScore "EW 430"]
 [ParContract "EW 3N+1"]
-[Score "NS -460"]
+[Score "EW 460"]
 {[MJ] Przeciwnik ściąga dwa trefle i odwraca w karo. Jego partner dosyć szybko
 odrzuca się od pika, więc ustawia się przymus treflowo-pikowy na 11 lew.
 
-Drugi stół: 3\D W +1, wist \H2 (NS -130)\n
+Drugi stół: 3\D W +1, wist \H2 (EW 130)\n
 WYNIK: +8}
 [Auction "N"]
 Pass Pass 1C X
@@ -1475,7 +1475,7 @@ W  C  6
 {[MJ] N nic się nie bał, że partner może mieć 0. Z ręką S lepiej powiedzieć 3\H
 po 2NT jeżeli już tak poszła licytacja.
 
-Drugi stół: 4\S S +1, wist \H4 (NS +450) WYNIK: +1}
+Drugi stół: 4\S S +1, wist \H4 (NS 450) WYNIK: +1}
 [Auction "E"]
 1H Pass Pass X
 Pass 1S Pass 2NT
@@ -1526,14 +1526,14 @@ W  C  2
 [Minimax "6DW-1370"]
 [OptimumScore "EW 1370"]
 [ParContract "EW 6D="]
-[Score "NS -690"]
+[Score "EW 690"]
 {[MJ] Po wiście kierowym chyba powinno się grać na podział trefli 3-3. Ja
 wybrałem dojście do stołu i \SD. S faktycznie nie wskoczył, a dodatkowo dama
 wzięła lewę. Teraz przerzuciłem się na trefle i S po dojściu zagrał w kiera. Na
 końcu N odrzucił się od damy kier.
 
 
-Drugi stół: 3BA W +1, wist \H3 (NS -630)\n
+Drugi stół: 3BA W +1, wist \H3 (EW 630)\n
 WYNIK: +2}
 [Auction "S"]
 Pass 1C Pass 1S
@@ -1588,7 +1588,7 @@ W  C 10
 [Score "NS -300"]
 {[MJ] Przeciwnicy trochę się rozpędzili...
 
-Drugi stół: 2\SX W -5, wist \DA (NS +1100)\n
+Drugi stół: 2\SX W -5, wist \DA (EW -1100)\n
 WYNIK: +16}
 [Auction "W"]
 Pass 1NT X 2C
@@ -1645,7 +1645,7 @@ W  C  4
 na 3\H i skoro i tak zalicytował 4\S to dlaczego nie mógł tego zrobić okrążenie
 wcześniej.
 
-Drugi stół: 4\S N +1, wist \DA (NS +450)\n
+Drugi stół: 4\S N +1, wist \DA (NS 450)\n
 WYNIK: -1}
 [Auction "N"]
 1S Pass 1NT Pass
@@ -1702,7 +1702,7 @@ dochodzi królem pik do stołu i gra trefle, a zagranego pika przepuszcza do
 stołu.
 
 
-Drugi stół: 3BA N +3, wist \DJ (NS +690)\n
+Drugi stół: 3BA N +3, wist \DJ (NS 690)\n
 WYNIK: +0}
 [Auction "E"]
 Pass 1C Pass 1H
@@ -1757,7 +1757,7 @@ W  C  2
 {[MJ] Nie wiem co przeciwnik planował zalicytować po 3\S/4\S od partnera, ale
 spadli na cztery łapy.
 
-Drugi stół: 4\C N =, wist \SA (NS +130)\n
+Drugi stół: 4\C N =, wist \SA (NS 130)\n
 WYNIK: +0}
 [Auction "S"]
 Pass 2D 3C 3H
@@ -1808,11 +1808,11 @@ W  C  2
 [Minimax "3NW-400"]
 [OptimumScore "EW 400"]
 [ParContract "EW 3N=; EW 5D="]
-[Score "EW +460"]
+[Score "EW 460"]
 {[MJ] Podłożony król i Bartek gra trefla do 10, przeciwnik ponawia kiery, a
 następnie daje dojść do ręki na wyrobione w międzyczasie kara.
 
-Drugi stół: 3BA W =, wist \S8 (NS -400)\n
+Drugi stół: 3BA W =, wist \S8 (EW 400)\n
 WYNIK: +2}
 [Auction "W"]
 2C Pass 2D Pass
@@ -1865,12 +1865,12 @@ W  C 10
 [Minimax "3HS140"]
 [OptimumScore "NS 140"]
 [ParContract "NS 3H="]
-[Score "NS -630"]
+[Score "EW 630"]
 {[MJ] Pierwszy wist przepuszczony, odwrót w pika i po zagraniu kara z ręki
 przeciwnik nie wskakuje żeby otworzyć kiery, więc na końcu S staje w przymusie
 treflowo-kierowym.
 
-Drugi stół: 3BA E +1, wist \H5 (NS -630)\n
+Drugi stół: 3BA E +1, wist \H5 (EW 630)\n
 WYNIK: +0}
 [Auction "N"]
 Pass Pass Pass 1NT
@@ -1923,7 +1923,7 @@ W  C 8
 [Score "NS -100"]
 {[MJ] Bardzo ostre wejście, ale dzięki temu przeciwnicy grają zły kontrakt.
 
-Drugi stół: 3BA N +2, wist \SJ (NS +460)\n
+Drugi stół: 3BA N +2, wist \SJ (NS 460)\n
 WYNIK: +11}
 [Auction "E"]
 Pass 1C 4C X
@@ -1973,11 +1973,11 @@ W  C 6
 [Minimax "4NE-430"]
 [OptimumScore "EW 430"]
 [ParContract "E 4N="]
-[Score "EW +420"]
+[Score "EW 420"]
 {[MJ] Po wiście treflowym gram kiera do waleta i przeciwnik odwraca w karo. N
 nie przebija, więc nie ma już problemów z realizacją kontraktu.
 
-Drugi stół: 3\H E =, wist \CK (NS -140)\n
+Drugi stół: 3\H E =, wist \CK (EW 140)\n
 WYNIK: +7}
 [Auction "S"]
 Pass 1D 2S 3D =1=
@@ -2033,7 +2033,7 @@ W  C  3
 końcówki.
 
 
-Drugi stół: 4\S N =, wist \H6 (NS +420)\n
+Drugi stół: 4\S N =, wist \H6 (NS 420)\n
 WYNIK: +6}
 [Auction "W"]
 Pass 1NT Pass 2H
@@ -2083,13 +2083,13 @@ W  C  5
 [Minimax "5CW-400"]
 [OptimumScore "EW 400"]
 [ParContract "EW 5C="]
-[Score "EW +400"]
+[Score "EW 400"]
 {[MJ] Nie jestem przekonany czy 4\S Bartka to jest cue-bid na treflach czy
 wybór koloru starszego, więc nie dochodzimy do szlemika (który fartownie nie
 idzie). Wiadomo, że partner nie ma starszej czwórki, nie wiem czy teraz lepiej
 dać kontrę lub 3\S i co powinno znaczyć 4\D 
 
-Drugi stół: 4\S W -1, wist \DQ (NS +50)\n
+Drugi stół: 4\S W -1, wist \DQ (EW -50)\n
 WYNIK: +10}
 [Auction "N"]
 Pass 2C Pass 2D
@@ -2145,7 +2145,7 @@ W  C 11
 {[MJ] Dużo walki w rozdaniu, nie jestem przekonany do kontry z ręką E.
 
 
-Drugi stół: 2\H E -1, wist \C6 (NS +50)\n
+Drugi stół: 2\H E -1, wist \C6 (EW -50)\n
 WYNIK: -3}
 [Auction "E"]
 1S 2C X XX
@@ -2201,7 +2201,7 @@ W  C  2
 {[MJ] Bardzo ostry szlemik, po wiście karowym na szczęście kolory nie dzielą
 się przyjaźnie dla rozgrywającego.
 
-Drugi stół: 4\H S +1, wist \D8 (NS +450)\n
+Drugi stół: 4\H S +1, wist \D8 (NS 450)\n
 WYNIK: +11}
 [Auction "S"]
 1C Pass 1H Pass
@@ -2253,12 +2253,12 @@ W  C  4
 [Minimax "3NE-600"]
 [OptimumScore "EW 600"]
 [ParContract "E 3N="]
-[Score "EW +600"]
+[Score "EW 600"]
 {[MJ] Po wiście karowym Bartek nawraca i bierze lewę. Teraz mały kier,
 przeciwnik wskakuje królem i wyrabia sobie kara, ale sprzyjający układ treflowy
 pozwala na wzięcie 9 lew.
 
-Drugi stół: 3BA E -1, wist \S6 (NS +100)\n
+Drugi stół: 3BA E -1, wist \S6 (EW -100)\n
 WYNIK: +12}
 [Auction "W"]
 Pass Pass 1C Pass
