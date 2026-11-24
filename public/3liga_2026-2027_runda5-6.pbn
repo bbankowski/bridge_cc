@@ -1,5 +1,46 @@
 % PBN 2.1
 % EXPORT
+%Content-type: text/x-pbn; charset=UTF-8
+%Creator: BridgeComposer Version 5.118.2
+%Created: Tue Nov 24 20:47:25 2026 +0100
+%BCOptions Center STBorder STShade
+%BidAndCardSpacing Thin
+%BoardsPerPage 1
+%CardTableColors #008000,#ffffff,#aaaaaa
+%DDAFormat 0
+%DefaultPagination 0
+%Font:CardTable "Arial",11,400,0
+%Font:Commentary "Times New Roman",12,400,0
+%Font:Diagram "Times New Roman",12,400,0
+%Font:Event "Times New Roman",12,400,0
+%Font:FixedPitch "Courier New",10,400,0
+%Font:HandRecord "Arial",11,400,0
+%GutterSize 500,500
+%HRTitleDate 2026.11.18
+%HRTitleEvent "RUNDA 5, SEGMENT 1, STÓŁ A9"
+%HRTitleSetID ""
+%HRTitleSetIDPrefix ""
+%HRTitleSite "Not known"
+%HtmlClubs entity,"https://bridgecomposer.com/suitimg/c.gif"
+%HtmlDiamonds entity,"https://bridgecomposer.com/suitimg/d.gif"
+%HtmlHearts entity,"https://bridgecomposer.com/suitimg/h.gif"
+%HtmlNavBar 0.75,#cfe2f3
+%HtmlSpades entity,"https://bridgecomposer.com/suitimg/s.gif"
+%Margins 1000,1000,1000,1000
+%PaperSize 1,2159,2794,2
+%ParaIndent 0
+%PipColors #000000,#ff0000,#ff0000,#000000
+%PipFont "Symbol","Symbol",2,0xAA,0xA9,0xA8,0xA7
+%ScoreTableColors #e6e6e6,#000000
+%SectionSpacing 0,0,0
+%SelectedBoard 20
+%ShowBoardLabels 2
+%ShowCardTable 2
+%TSTCustomSortOrder Default
+%TSTReport List
+%TSTReportOrder ByNumber
+%TSTReportShade Yes
+%Translate "Rule of 19/20" "hide"
 % 
 % <META name=Generator content="Tournament Calculator">
 % <META name=Version content="1.10.61.36621">
@@ -11,9 +52,9 @@
 [Site "Not known"]
 [Date "2026.11.18"]
 [Board "1"]
-[West "Marek Jarosz"]
+[West "Bartosz Bańkowski"]
 [North "Tomasz Lasota"]
-[East "Bartosz Bańkowski"]
+[East "Marek Jarosz"]
 [South "Mikołaj Chmielewski"]
 [Dealer "N"]
 [Vulnerable "None"]
@@ -22,94 +63,217 @@
 [Declarer "S"]
 [Contract "3H"]
 [Result "7"]
-[Score "NS -100"]
-{Nasz stół: 3\H S -2, wist \CK (NS -100)
-Drugi stół: 1BA W +1, wist \SA (NS -120)
-WYNIK: -1}
 [Ability "N:66745 E:76598 S:66745 W:76598"]
+[BCFlags "1f"]
+[DoubleDummyTricks "66745667457659876598"]
 [Minimax "3DW-110"]
+[OptimumScore "EW 110"]
+[ParContract "EW 3D="]
+[Score "NS -100"]
+{[MJ] Wejście 1\H nie takie złe, ręka N niby ładna ale za wysoko.
+
+
+Drugi stół: 1BA W +1, wist \SA (NS -120)\n
+WYNIK: -1}
+[Auction "N"]
+Pass 1C 1H X
+2NT Pass 3H AP
 [Play "W"]
 CK
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N NT 6
+N  S 6
+N  H 7
+N  D 4
+N  C 5
+S NT 6
+S  S 6
+S  H 7
+S  D 4
+S  C 5
+E NT 7
+E  S 6
+E  H 5
+E  D 9
+E  C 8
+W NT 7
+W  S 6
+W  H 5
+W  D 9
+W  C 8
 
 [Event "RUNDA 5, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
 [Date "2026.11.18"]
 [Board "2"]
-[West "Marek Jarosz"]
+[West "Bartosz Bańkowski"]
 [North "Tomasz Lasota"]
-[East "Bartosz Bańkowski"]
+[East "Marek Jarosz"]
 [South "Mikołaj Chmielewski"]
 [Dealer "E"]
 [Vulnerable "NS"]
-[Deal "N:T52.A97.A53.AJ97 AQJ6.62.QJT96.K8 73.T853.72.QT652 K984.KQJ4.K84.43"]
+[Deal "E:AQJ6.62.QJT96.K8 73.T853.72.QT652 K984.KQJ4.K84.43 T52.A97.A53.AJ97"]
 [Scoring "Teams"]
 [Declarer "E"]
 [Contract "4S"]
 [Result "10"]
-[Score "NS -420"]
-{Nasz stół: 4\S E =, wist \S3 (NS -420)
-Drugi stół: 4\S E =, wist \C5 (NS -420)
-WYNIK: +0}
 [Ability "N:43537 E:7A7A6 S:43537 W:7A7A6"]
+[BCFlags "1f"]
+[DoubleDummyTricks "43537435377a7a67a7a6"]
 [Minimax "4SW-420"]
+[OptimumScore "EW 420"]
+[ParContract "EW 4S="]
+[Score "NS -420"]
+{[MJ]Płaska końcówka.
+
+
+Drugi stół: 4\S E =, wist \C5 (NS -420)\n
+WYNIK: +0}
+[Auction "E"]
+1D Pass 1H Pass
+1S Pass 4S AP
 [Play "S"]
 S3
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  4
+N  S  3
+N  H  5
+N  D  3
+N  C  7
+S NT  4
+S  S  3
+S  H  5
+S  D  3
+S  C  7
+E NT  7
+E  S 10
+E  H  7
+E  D 10
+E  C  6
+W NT  7
+W  S 10
+W  H  7
+W  D 10
+W  C  6
 
 [Event "RUNDA 5, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
 [Date "2026.11.18"]
 [Board "3"]
-[West "Marek Jarosz"]
+[West "Bartosz Bańkowski"]
 [North "Tomasz Lasota"]
-[East "Bartosz Bańkowski"]
+[East "Marek Jarosz"]
 [South "Mikołaj Chmielewski"]
 [Dealer "S"]
 [Vulnerable "EW"]
-[Deal "N:J96.K8.54.876543 AK853.2.T976.K92 QT42.T76543.K2.J 7.AQJ9.AQJ83.AQT"]
+[Deal "S:QT42.T76543.K2.J 7.AQJ9.AQJ83.AQT J96.K8.54.876543 AK853.2.T976.K92"]
 [Scoring "Teams"]
 [Declarer "W"]
 [Contract "6D"]
 [Result "13"]
-[Score "NS -1390"]
-{Nasz stół: 6\D W +1, wist \HK (NS -1390)
-Drugi stół: 3BA W +3, wist \C7 (NS -690)
-WYNIK: +12}
 [Ability "N:12402 E:CB8DA S:12402 W:CB8DA"]
+[BCFlags "1f"]
+[DoubleDummyTricks "1240212402cb8dacb8da"]
 [Minimax "7DW-2140"]
+[OptimumScore "EW 2140"]
+[ParContract "EW 7D="]
+[Score "NS -1390"]
+{[MJ] Wejście 3\D za mocne, ale w tym rozdaniu okazało się bardzo celne i
+pozwala dojść do szlemika. Z moją ręką może lepiej zalicytować 4\H od razu, bo
+widać że przeciwnik robi zajazd z fitem kie i niewiele potrzeba do szlemika.
+
+Drugi stół: 3BA W +3, wist \C7 (NS -690)\n
+WYNIK: +12}
+[Auction "S"]
+2H 3D 3NT X
+Pass Pass 4H 5D
+Pass 6D AP
 [Play "N"]
 HK
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  1
+N  S  2
+N  H  4
+N  D  0
+N  C  2
+S NT  1
+S  S  2
+S  H  4
+S  D  0
+S  C  2
+E NT 12
+E  S 11
+E  H  8
+E  D 13
+E  C 10
+W NT 12
+W  S 11
+W  H  8
+W  D 13
+W  C 10
 
 [Event "RUNDA 5, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
 [Date "2026.11.18"]
 [Board "4"]
-[West "Marek Jarosz"]
+[West "Bartosz Bańkowski"]
 [North "Tomasz Lasota"]
-[East "Bartosz Bańkowski"]
+[East "Marek Jarosz"]
 [South "Mikołaj Chmielewski"]
 [Dealer "W"]
 [Vulnerable "All"]
-[Deal "N:AQ7.QJ982.AK54.3 K842.T54..KQJ972 JT6.K63.862.AT64 953.A7.QJT973.85"]
+[Deal "W:953.A7.QJT973.85 AQ7.QJ982.AK54.3 K842.T54..KQJ972 JT6.K63.862.AT64"]
 [Scoring "Teams"]
 [Declarer "N"]
 [Contract "4H"]
 [Result "9"]
-[Score "NS -100"]
-{Nasz stół: 4\H N -1, wist \CK (NS -100)
-Drugi stół: 4\H N -1, wist \CK (NS -100)
-WYNIK: +0}
 [Ability "N:97975 E:46468 S:97875 W:46468"]
+[BCFlags "1f"]
+[DoubleDummyTricks "97975978754646846468"]
 [Minimax "4CXE500"]
+[OptimumScore "EW -500"]
+[ParContract "EW 4CX-2"]
+[Score "NS -100"]
+{[MJ] Po wiście treflowym przeciwnik przebija trefla w ręcę i gra pika z ręki
+którego przepuszczam, ale i tak nie ma jak wziąć 10 lew.
+
+Drugi stół: 4\H N -1, wist \CK (NS -100)\n
+WYNIK: +0}
+[Auction "W"]
+Pass 1H 1NT =1= 2H
+Pass 4H AP
+[Note "1: 4\S-5+m"]
 [Play "E"]
 CK
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N NT 9
+N  S 7
+N  H 9
+N  D 7
+N  C 5
+S NT 9
+S  S 7
+S  H 8
+S  D 7
+S  C 5
+E NT 4
+E  S 6
+E  H 4
+E  D 6
+E  C 8
+W NT 4
+W  S 6
+W  H 4
+W  D 6
+W  C 8
 
 [Event "RUNDA 5, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
 [Date "2026.11.18"]
 [Board "5"]
-[West "Marek Jarosz"]
+[West "Bartosz Bańkowski"]
 [North "Tomasz Lasota"]
-[East "Bartosz Bańkowski"]
+[East "Marek Jarosz"]
 [South "Mikołaj Chmielewski"]
 [Dealer "N"]
 [Vulnerable "NS"]
@@ -118,94 +282,225 @@ CK
 [Declarer "W"]
 [Contract "1NT"]
 [Result "9"]
-[Score "NS -150"]
-{Nasz stół: 1BA W +2, wist \H3 (NS -150)
-Drugi stół: 1BA S -1, wist \HQ (NS -100)
-WYNIK: +2}
 [Ability "N:55553 E:7877A S:65653 W:7877A"]
+[BCFlags "1f"]
+[DoubleDummyTricks "55553656537877a7877a"]
 [Minimax "1CW-130"]
+[OptimumScore "EW 130"]
+[ParContract "EW 1C+3"]
+[Score "NS -150"]
+{[MJ] Po wiście kierowym przeciwnik bierze asem i odwraca w\D6, Bartek bardzo
+dobrze kładzie 10-kę, a pozagraniu \CA i trefla przeciwnik nie otwiera pików,
+więc ostatecznie dwie nadróbki.
+
+Drugi stół: 1BA S -1, wist \HQ (NS -100)\n
+WYNIK: +2}
+[Auction "N"]
+Pass Pass 1D 1NT
+AP
 [Play "N"]
 H3
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  5
+N  S  5
+N  H  5
+N  D  5
+N  C  3
+S NT  6
+S  S  5
+S  H  6
+S  D  5
+S  C  3
+E NT  7
+E  S  8
+E  H  7
+E  D  7
+E  C 10
+W NT  7
+W  S  8
+W  H  7
+W  D  7
+W  C 10
 
 [Event "RUNDA 5, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
 [Date "2026.11.18"]
 [Board "6"]
-[West "Marek Jarosz"]
+[West "Bartosz Bańkowski"]
 [North "Tomasz Lasota"]
-[East "Bartosz Bańkowski"]
+[East "Marek Jarosz"]
 [South "Mikołaj Chmielewski"]
 [Dealer "E"]
 [Vulnerable "EW"]
-[Deal "N:AJ85.A4.9432.AK2 KT976.KJ9.7.9863 Q.QT876.65.QJT54 432.532.AKQJT8.7"]
+[Deal "E:KT976.KJ9.7.9863 Q.QT876.65.QJT54 432.532.AKQJT8.7 AJ85.A4.9432.AK2"]
 [Scoring "Teams"]
 [Declarer "N"]
 [Contract "4H"]
 [Result "9"]
-[Score "NS -50"]
-{Nasz stół: 4\H N -1, wist \D7 (NS -50)
-Drugi stół: 2\D W =, wist \CA (NS -90)
-WYNIK: -1}
 [Ability "N:7494A E:68383 S:7494A W:68383"]
+[BCFlags "1f"]
+[DoubleDummyTricks "7494a7494a6838368383"]
 [Minimax "3HS140"]
+[OptimumScore "NS 140"]
+[ParContract "NS 3H="]
+[Score "NS -50"]
+{[MJ] Bartek bierze pierwszą lewę \D10 (nie wiem czy to za bardzo nie obnaża
+całej karty przed przeciwnikiem) i odwraca w trefla, więc jedyną szansą jest
+dubel kier u N i montujemy przebitkę.
+
+Drugi stół: 2\D W =, wist \CA (NS -90)\n
+WYNIK: -1}
+[Auction "E"]
+Pass 2D =1= Pass 2NT
+Pass 3C Pass 3D
+Pass 3S Pass 4H
+AP
+[Note "1:wilkosz"]
 [Play "E"]
 D7
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  7
+N  S  4
+N  H  9
+N  D  4
+N  C 10
+S NT  7
+S  S  4
+S  H  9
+S  D  4
+S  C 10
+E NT  6
+E  S  8
+E  H  3
+E  D  8
+E  C  3
+W NT  6
+W  S  8
+W  H  3
+W  D  8
+W  C  3
 
 [Event "RUNDA 5, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
 [Date "2026.11.18"]
 [Board "7"]
-[West "Marek Jarosz"]
+[West "Bartosz Bańkowski"]
 [North "Tomasz Lasota"]
-[East "Bartosz Bańkowski"]
+[East "Marek Jarosz"]
 [South "Mikołaj Chmielewski"]
 [Dealer "S"]
 [Vulnerable "All"]
-[Deal "N:AK93.42.KQ7.AKT6 865.KQ83.AJ82.43 JT4.T975.96.QJ95 Q72.AJ6.T543.872"]
+[Deal "S:JT4.T975.96.QJ95 Q72.AJ6.T543.872 AK93.42.KQ7.AKT6 865.KQ83.AJ82.43"]
 [Scoring "Teams"]
 [Declarer "N"]
 [Contract "3NT"]
 [Result "9"]
-[Score "NS 600"]
-{Nasz stół: 3BA N =, wist \D2 (NS +600)
-Drugi stół: 3BA N -2, wist \H3 (NS -200)
-WYNIK: -13}
 [Ability "N:8976A E:53673 S:8976A W:53673"]
+[BCFlags "1f"]
+[DoubleDummyTricks "8976a8976a5367353673"]
 [Minimax "1SS140"]
+[OptimumScore "NS 140"]
+[ParContract "NS 1S+2"]
+[Score "NS 600"]
+{[MJ] Nie wistuję w kiera (ciągle wydaje mi się słaby po tej licytacji) i po
+wiście karowym przeciwnik bierze 9 lew.
+
+Drugi stół: 3BA N -2, wist \H3 (NS -200)\n
+WYNIK: -13}
+[Auction "S"]
+Pass Pass 2NT =1= Pass
+3C Pass 3D =2= Pass
+3S =3= Pass 3NT AP
+[Note "1:20-21"]
+[Note "2:minium jedna starsza czwórka"]
+[Note "3:kiery"]
 [Play "E"]
 D2
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  8
+N  S  9
+N  H  7
+N  D  6
+N  C 10
+S NT  8
+S  S  9
+S  H  7
+S  D  6
+S  C 10
+E NT  5
+E  S  3
+E  H  6
+E  D  7
+E  C  3
+W NT  5
+W  S  3
+W  H  6
+W  D  7
+W  C  3
 
 [Event "RUNDA 5, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
 [Date "2026.11.18"]
 [Board "8"]
-[West "Marek Jarosz"]
+[West "Bartosz Bańkowski"]
 [North "Tomasz Lasota"]
-[East "Bartosz Bańkowski"]
+[East "Marek Jarosz"]
 [South "Mikołaj Chmielewski"]
 [Dealer "W"]
 [Vulnerable "None"]
-[Deal "N:J32.532.63.AQT97 AKT976.7.KJ972.8 854.AQ86.QT.J643 Q.KJT94.A854.K52"]
+[Deal "W:Q.KJT94.A854.K52 J32.532.63.AQT97 AKT976.7.KJ972.8 854.AQ86.QT.J643"]
 [Scoring "Teams"]
 [Declarer "W"]
 [Contract "5D"]
 [Result "12"]
-[Score "NS -420"]
-{Nasz stół: 5\D W +1, wist \S2 (NS -420)
-Drugi stół: 4\S E +1, wist \C3 (NS -450)
-WYNIK: -1}
 [Ability "N:22416 E:7B8B6 S:22416 W:7B8B6"]
+[BCFlags "1f"]
+[DoubleDummyTricks "22416224167b8b67b8b6"]
 [Minimax "4SW-450"]
+[OptimumScore "EW 450"]
+[ParContract "EW 4S+1"]
+[Score "NS -420"]
+{[MJ] Po odpowiedzi Bartka szlemik zależy tylko od liczby asów.
+
+Drugi stół: 4\S E +1, wist \C3 (NS -450)\n
+WYNIK: -1}
+[Auction "W"]
+1H Pass 1S Pass
+2D Pass 3C Pass
+3NT Pass 4D Pass
+4H Pass 4NT Pass
+5C Pass 5D AP
 [Play "N"]
 S2
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  2
+N  S  2
+N  H  4
+N  D  1
+N  C  6
+S NT  2
+S  S  2
+S  H  4
+S  D  1
+S  C  6
+E NT  7
+E  S 11
+E  H  8
+E  D 11
+E  C  6
+W NT  7
+W  S 11
+W  H  8
+W  D 11
+W  C  6
 
 [Event "RUNDA 5, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
 [Date "2026.11.18"]
 [Board "9"]
-[West "Marek Jarosz"]
+[West "Bartosz Bańkowski"]
 [North "Tomasz Lasota"]
-[East "Bartosz Bańkowski"]
+[East "Marek Jarosz"]
 [South "Mikołaj Chmielewski"]
 [Dealer "N"]
 [Vulnerable "EW"]
@@ -214,38 +509,106 @@ S2
 [Declarer "N"]
 [Contract "6S"]
 [Result "12"]
-[Score "NS 980"]
-{Nasz stół: 6\S N =, wist \DA (NS +980)
-Drugi stół: 5\C N +1, wist \HJ (NS +420)
-WYNIK: -11}
 [Ability "N:CCAAC E:11320 S:CCAAC W:11320"]
+[BCFlags "1f"]
+[DoubleDummyTricks "ccaacccaac1132011320"]
 [Minimax "6NS990"]
+[OptimumScore "NS 990"]
+[ParContract "NS 6N="]
+[Score "NS 980"]
+{[MJ] Dosyć losowa licytacja, przeciwnik gra piki z góry i wygrywa szlemika. Na
+drugim stole po podobnym początku S uzgadnia trefle, N wycofuje się do 5\C i
+niestety S nie dokłada, chociaż cięzko wyobrazić sobie otwarcie partnera przy
+którym szlemik będzie bardzo zły.
+
+Drugi stół: 5\C N +1, wist \HJ (NS +420)\n
+WYNIK: -11}
+[Auction "N"]
+1D Pass 1H Pass
+1S Pass 2D =1= Pass
+3C =2= Pass 6S AP
+[Note "1:GF"]
+[Note "2:tłumaczone jako pytanie o zatrzymanie"]
 [Play "E"]
 DA
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT 12
+N  S 12
+N  H 10
+N  D 10
+N  C 12
+S NT 12
+S  S 12
+S  H 10
+S  D 10
+S  C 12
+E NT  1
+E  S  1
+E  H  3
+E  D  2
+E  C  0
+W NT  1
+W  S  1
+W  H  3
+W  D  2
+W  C  0
 
 [Event "RUNDA 5, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
 [Date "2026.11.18"]
 [Board "10"]
-[West "Marek Jarosz"]
+[West "Bartosz Bańkowski"]
 [North "Tomasz Lasota"]
-[East "Bartosz Bańkowski"]
+[East "Marek Jarosz"]
 [South "Mikołaj Chmielewski"]
 [Dealer "E"]
 [Vulnerable "All"]
-[Deal "N:A3.AQ853.A7.AK95 KJ86.942.96.QT74 QT9754.K.JT8.J82 2.JT76.KQ5432.63"]
+[Deal "E:KJ86.942.96.QT74 QT9754.K.JT8.J82 2.JT76.KQ5432.63 A3.AQ853.A7.AK95"]
 [Scoring "Teams"]
 [Declarer "S"]
 [Contract "3NT"]
 [Result "9"]
-[Score "NS 600"]
-{Nasz stół: 3BA S =, wist \DK (NS +600)
-Drugi stół: 4\S S +1, wist \DK (NS +650)
-WYNIK: +2}
 [Ability "N:AB98A E:32353 S:AB98A W:32353"]
+[BCFlags "1f"]
+[DoubleDummyTricks "ab98aab98a3235332353"]
 [Minimax "4SS650"]
+[OptimumScore "NS 650"]
+[ParContract "NS 4S+1"]
+[Score "NS +600"]
+{[MJ] Nic nie mogliśmy zrobić, otwarcie 3\D z ręką W chyba trochę za ostre w
+tych założeniach.
+
+Drugi stół: 4\S S +1, wist \DK (NS +650)\n
+WYNIK: +2}
+[Auction "E"]
+Pass Pass Pass 1C
+Pass 1S Pass 2H
+Pass 2S Pass 3C
+Pass 3D X XX
+Pass 3NT AP
 [Play "W"]
 DK
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT 10
+N  S 11
+N  H  9
+N  D  8
+N  C 10
+S NT 10
+S  S 11
+S  H  9
+S  D  8
+S  C 10
+E NT  3
+E  S  2
+E  H  3
+E  D  5
+E  C  3
+W NT  3
+W  S  2
+W  H  3
+W  D  5
+W  C  3
 
 [Event "RUNDA 5, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -257,19 +620,53 @@ DK
 [South "Mikołaj Chmielewski"]
 [Dealer "S"]
 [Vulnerable "None"]
-[Deal "N:QT8653.AK93.7.A8 42.JT86.J832.KJ5 A97.Q74.AQ65.976 KJ.52.KT94.QT432"]
+[Deal "S:A97.Q74.AQ65.976 KJ.52.KT94.QT432 QT8653.AK93.7.A8 42.JT86.J832.KJ5"]
 [Scoring "Teams"]
 [Declarer "S"]
 [Contract "4NT"]
 [Result "8"]
-[Score "NS -100"]
-{Nasz stół: 4BA S -2, wist \C3 (NS -100)
-Drugi stół: 4\S N +1, wist \HJ (NS +450)
-WYNIK: +11}
 [Ability "N:8BA66 E:32367 S:8BA66 W:32367"]
+[BCFlags "1f"]
+[DoubleDummyTricks "8ba668ba663236732367"]
 [Minimax "4SS450"]
+[OptimumScore "NS 450"]
+[ParContract "NS 4S+1"]
+[Score "NS -100"]
+{[MJ] Nieporozumienie licytacyjne. Po wiście treflowym biorę królem i kiepsko
+odwracam w \C5, bo widać że partner dojdzie tylko jeden raz i jeżeli nie ma
+\C10 to kolor jest zablokowany, a jeżeli ma to nie musi się pocić po odwrocie
+waletem. Na szczęscie Bartek ściąga damę i przeciwnik przegrywa -2.
+
+
+Drugi stół: 4\S N +1, wist \HJ (NS +450)\n
+WYNIK: +11}
+[Auction "S"]
+1C Pass 1S Pass
+1NT Pass 2D Pass
+2S Pass 4NT AP
 [Play "W"]
 C3
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  8
+N  S 11
+N  H 10
+N  D  6
+N  C  6
+S NT  8
+S  S 11
+S  H 10
+S  D  6
+S  C  6
+E NT  3
+E  S  2
+E  H  3
+E  D  6
+E  C  7
+W NT  3
+W  S  2
+W  H  3
+W  D  6
+W  C  7
 
 [Event "RUNDA 5, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -281,19 +678,49 @@ C3
 [South "Mikołaj Chmielewski"]
 [Dealer "W"]
 [Vulnerable "NS"]
-[Deal "N:QJ87.KQJ3.32.QJT AT63.842.AT.AK97 .A976.KJ975.8642 K9542.T5.Q864.53"]
+[Deal "W:K9542.T5.Q864.53 QJ87.KQJ3.32.QJT AT63.842.AT.AK97 .A976.KJ975.8642"]
 [Scoring "Teams"]
 [Declarer "S"]
 [Contract "2D"]
 [Result "7"]
-[Score "NS -100"]
-{Nasz stół: 2\D S -1, wist \C3 (NS -100)
-Drugi stół: 3\S E -1, wist \C6 (NS +50)
-WYNIK: +4}
 [Ability "N:64876 E:79567 S:64876 W:79566"]
+[BCFlags "1f"]
+[DoubleDummyTricks "64876648767956779566"]
 [Minimax "2SW-140"]
+[OptimumScore "EW 140"]
+[ParContract "EW 2S+1"]
+[Score "NS -100"]
+{[MJ] Nie wiem czy z ręką W powinno się licytować 2\S. Jeżeli partner ma fit to
+powinniśmy to wygrać bo jest równowaga siły.
+
+Drugi stół: 3\S E -1, wist \C6 (NS +50)\n
+WYNIK: +4}
+[Auction "W"]
+Pass 1C 1NT 2D
+AP
 [Play "W"]
 C3
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N NT 6
+N  S 4
+N  H 8
+N  D 7
+N  C 6
+S NT 6
+S  S 4
+S  H 8
+S  D 7
+S  C 6
+E NT 7
+E  S 9
+E  H 5
+E  D 6
+E  C 7
+W NT 7
+W  S 9
+W  H 5
+W  D 6
+W  C 6
 
 [Event "RUNDA 5, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -310,14 +737,53 @@ C3
 [Declarer "W"]
 [Contract "3C"]
 [Result "9"]
-[Score "NS -110"]
-{Nasz stół: 3\C W =, wist \S6 (NS -110)
-Drugi stół: 4\C W -1, wist \S6 (NS +100)
-WYNIK: +5}
 [Ability "N:68364 E:75979 S:68364 W:75A79"]
+[BCFlags "1f"]
+[DoubleDummyTricks "68364683647597975a79"]
 [Minimax "4SXS-500"]
+[OptimumScore "NS -500"]
+[ParContract "NS 4SX-2"]
+[Score "NS -110"]
+{[MJ] Wejście 1BA to nie taka ręka, tutaj najlepsza jest kontra (a także kontra
+na wznowieniu jeżeli już tak poszła licytacja). Z kolei z mojej pozycji, jeżeli
+partner ma 6-4 to jest szansa na końcówkę kierową, ale ostatecznie spasowałem
+(żeby grać spokojnie na 9 atutach). Zastanawiam się czy teraz moje 3\D to nie
+powinna być góra pasa z fitem kier (bo z karami albo otworzę wcześniej albo
+spasuję na 3\C).\n
+W praktyce końcówkę się wygrywa, bo S ciężko się będzie powstrzymać przed
+sciągnięciem \SA na wiście.
+
+
+Drugi stół: 4\C W -1, wist \S6 (NS +100)\n
+WYNIK: +5}
+[Auction "N"]
+Pass Pass 1S 1NT =1=
+2S Pass Pass 3C
+AP
+[Note "1:4\H-5+m"]
 [Play "N"]
 S6
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  6
+N  S  8
+N  H  3
+N  D  6
+N  C  4
+S NT  6
+S  S  8
+S  H  3
+S  D  6
+S  C  4
+E NT  7
+E  S  5
+E  H  9
+E  D  7
+E  C  9
+W NT  7
+W  S  5
+W  H 10
+W  D  7
+W  C  9
 
 [Event "RUNDA 5, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -329,19 +795,51 @@ S6
 [South "Mikołaj Chmielewski"]
 [Dealer "E"]
 [Vulnerable "None"]
-[Deal "N:AQ73.T7.Q82.QT84 JT5.9842.54.K962 K94.AK.AKJ97.J75 862.QJ653.T63.A3"]
+[Deal "E:JT5.9842.54.K962 K94.AK.AKJ97.J75 862.QJ653.T63.A3 AQ73.T7.Q82.QT84"]
 [Scoring "Teams"]
 [Declarer "S"]
 [Contract "3NT"]
 [Result "11"]
-[Score "NS 460"]
-{Nasz stół: 3BA S +2, wist \H5 (NS +460)
-Drugi stół: 3BA S +2, wist \H5 (NS +460)
-WYNIK: +0}
 [Ability "N:BA7AA E:22622 S:BA7AA W:22622"]
+[BCFlags "1f"]
+[DoubleDummyTricks "ba7aaba7aa2262222622"]
 [Minimax "3NS460"]
+[OptimumScore "NS 460"]
+[ParContract "NS 3N+2"]
+[Score "NS 460"]
+{[MJ] Z ręką E chyba się nie walczy 3\H w rozdaniu.
+
+
+Drugi stół: 3BA S +2, wist \H5 (NS +460)\n
+WYNIK: +0}
+[Auction "E"]
+Pass 1C 1H 1S
+Pass 2D =1= Pass 2H
+Pass 3NT AP
+[Note "1: odwrotka"]
 [Play "W"]
 H5
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT 11
+N  S 10
+N  H  7
+N  D 10
+N  C 10
+S NT 11
+S  S 10
+S  H  7
+S  D 10
+S  C 10
+E NT  2
+E  S  2
+E  H  6
+E  D  2
+E  C  2
+W NT  2
+W  S  2
+W  H  6
+W  D  2
+W  C  2
 
 [Event "RUNDA 5, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -353,19 +851,53 @@ H5
 [South "Mikołaj Chmielewski"]
 [Dealer "S"]
 [Vulnerable "NS"]
-[Deal "N:AQ8.T82.9.J97654 9642.K3.J6543.AK KJ3.Q95.T82.QT82 T75.AJ764.AKQ7.3"]
+[Deal "S:KJ3.Q95.T82.QT82 T75.AJ764.AKQ7.3 AQ8.T82.9.J97654 9642.K3.J6543.AK"]
 [Scoring "Teams"]
 [Declarer "E"]
 [Contract "3NT"]
 [Result "12"]
-[Score "NS -490"]
-{Nasz stół: 3BA E +3, wist \C2 (NS -490)
-Drugi stół: 3BA E +3, wist \C2 (NS -490)
-WYNIK: +0}
 [Ability "N:14117 E:A9AA6 S:14117 W:A9AA6"]
+[BCFlags "1f"]
+[DoubleDummyTricks "1411714117a9aa6a9aa6"]
 [Minimax "3NW-430"]
+[OptimumScore "EW 430"]
+[ParContract "EW 3N+1"]
+[Score "NS -490"]
+{[MJ] Ciekawa ręka E, w rozdaniu może iść szlemik a partner spasuje na 3\D.
+Wszystko sprowadza się do ilości pików u otwierającego. Po ściągnięciu kar
+przeciwnicy odrzucają się od kierów, więc 12 lew.
+
+
+Drugi stół: 3BA E +3, wist \C2 (NS -490)\n
+WYNIK: +0}
+[Auction "S"]
+Pass 1H Pass 1S
+Pass 2D Pass 3D
+Pass 3S Pass 3NT
+AP
 [Play "S"]
 C2
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  1
+N  S  4
+N  H  1
+N  D  1
+N  C  7
+S NT  1
+S  S  4
+S  H  1
+S  D  1
+S  C  7
+E NT 10
+E  S  9
+E  H 10
+E  D 10
+E  C  6
+W NT 10
+W  S  9
+W  H 10
+W  D 10
+W  C  6
 
 [Event "RUNDA 5, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -377,19 +909,47 @@ C2
 [South "Mikołaj Chmielewski"]
 [Dealer "W"]
 [Vulnerable "EW"]
-[Deal "N:K4.A976543.932.5 AQT9.T82.54.KJ96 7632.K.AKJT76.Q3 J85.QJ.Q8.AT8742"]
+[Deal "W:J85.QJ.Q8.AT8742 K4.A976543.932.5 AQT9.T82.54.KJ96 7632.K.AKJT76.Q3"]
 [Scoring "Teams"]
 [Declarer "N"]
 [Contract "3H"]
 [Result "9"]
-[Score "NS 140"]
-{Nasz stół: 3\H N =, wist \D4 (NS +140)
-Drugi stół: 4\D S -1, wist \HJ (NS -50)
-WYNIK: -5}
 [Ability "N:33993 E:69449 S:33993 W:69449"]
+[BCFlags "1f"]
+[DoubleDummyTricks "33993339936944969449"]
 [Minimax "4DXN-100"]
+[OptimumScore "NS -100"]
+[ParContract "NS 4DX-1; NS 4HX-1"]
+[Score "NS 140"]
+{[MJ] Wygląda na normalną licytację.
+
+Drugi stół: 4\D S -1, wist \HJ (NS -50)\n
+WYNIK: -5}
+[Auction "W"]
+Pass 3H AP
 [Play "E"]
 D4
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N NT 3
+N  S 3
+N  H 9
+N  D 9
+N  C 3
+S NT 3
+S  S 3
+S  H 9
+S  D 9
+S  C 3
+E NT 6
+E  S 9
+E  H 4
+E  D 4
+E  C 9
+W NT 6
+W  S 9
+W  H 4
+W  D 4
+W  C 9
 
 [Event "RUNDA 5, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -406,14 +966,44 @@ D4
 [Declarer "E"]
 [Contract "2C"]
 [Result "10"]
-[Score "NS -130"]
-{Nasz stół: 2\C E +2, wist \C6 (NS -130)
-Drugi stół: 3\C E +2, wist \C8 (NS -150)
-WYNIK: -1}
 [Ability "N:34642 E:9979A S:44642 W:9979A"]
+[BCFlags "1f"]
+[DoubleDummyTricks "34642446429979a9979a"]
 [Minimax "3NW-400"]
+[OptimumScore "EW 400"]
+[ParContract "EW 3N="]
+[Score "NS -130"]
+{[MJ] Przeciwnik otwiera na 14, ale i tak ciężko byłoby wylicytować, a
+następnie wygrać 3BA.
+
+Drugi stół: 3\C E +2, wist \C8 (NS -150)\n
+WYNIK: -1}
+[Auction "N"]
+Pass Pass 1NT X
+Pass 2C AP
 [Play "S"]
 C6
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  3
+N  S  4
+N  H  6
+N  D  4
+N  C  2
+S NT  4
+S  S  4
+S  H  6
+S  D  4
+S  C  2
+E NT  9
+E  S  9
+E  H  7
+E  D  9
+E  C 10
+W NT  9
+W  S  9
+W  H  7
+W  D  9
+W  C 10
 
 [Event "RUNDA 5, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -425,19 +1015,51 @@ C6
 [South "Mikołaj Chmielewski"]
 [Dealer "E"]
 [Vulnerable "NS"]
-[Deal "N:AKQ87.974.J9.Q75 T962.AQ6.A53.J42 J5.K532.KT42.A63 43.JT8.Q876.KT98"]
+[Deal "E:T962.AQ6.A53.J42 J5.K532.KT42.A63 43.JT8.Q876.KT98 AKQ87.974.J9.Q75"]
 [Scoring "Teams"]
 [Declarer "S"]
 [Contract "1NT"]
 [Result "9"]
-[Score "NS 150"]
-{Nasz stół: 1BA S +2, wist \C10 (NS +150)
-Drugi stół: 1BA S +3, wist \C10 (NS +180)
-WYNIK: +1}
 [Ability "N:99877 E:44556 S:99877 W:44556"]
+[BCFlags "1f"]
+[DoubleDummyTricks "99877998774455644556"]
 [Minimax "3NS600"]
+[OptimumScore "NS 600"]
+[ParContract "NS 3N="]
+[Score "NS 150"]
+{[MJ] Przeciwnik bierze w stole i gra \DW wkoło, po kontynuacji treflowej
+(przepuszczonej) nie otwieram kierów i puszczam lewę (ale założyłem że Bartek z
+czterema kierami również mógłby otworzyć ten kolor, a jak ma \HK to nie
+ucieknie).
+
+Drugi stół: 1BA S +3, wist \C10 (NS +180)\n
+WYNIK: +1}
+[Auction "E"]
+Pass Pass Pass 1S
+Pass 1NT AP
 [Play "W"]
 CT
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N NT 9
+N  S 9
+N  H 8
+N  D 7
+N  C 7
+S NT 9
+S  S 9
+S  H 8
+S  D 7
+S  C 7
+E NT 4
+E  S 4
+E  H 5
+E  D 5
+E  C 6
+W NT 4
+W  S 4
+W  H 5
+W  D 5
+W  C 6
 
 [Event "RUNDA 5, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -449,19 +1071,51 @@ CT
 [South "Mikołaj Chmielewski"]
 [Dealer "S"]
 [Vulnerable "EW"]
-[Deal "N:KT4.J732.K98.A98 7.965.JT765.KT64 82.AQ4.A43.QJ753 AQJ9653.KT8.Q2.2"]
+[Deal "S:82.AQ4.A43.QJ753 AQJ9653.KT8.Q2.2 KT4.J732.K98.A98 7.965.JT765.KT64"]
 [Scoring "Teams"]
 [Declarer "S"]
 [Contract "3NT"]
 [Result "5"]
-[Score "NS -200"]
-{Nasz stół: 3BA S -4, wist \SA (NS -200)
-Drugi stół: 5\C S -2, wist \SA (NS -100)
-WYNIK: +3}
 [Ability "N:86879 E:37464 S:86879 W:37464"]
+[BCFlags "1f"]
+[DoubleDummyTricks "86879868793746437464"]
 [Minimax "1NS120"]
+[OptimumScore "NS 120"]
+[ParContract "NS 1N+1"]
+[Score "NS -200"]
+{[MJ] Przeciwnik po tym jak Bartek wyrobił sobie piki wrócił do ręki \DA i
+zagrał \CD na impas i po odwrocie kierowym myślał że wyszdłem spod króla, więc
+poległ bez wielu.
+
+Drugi stół: 5\C S -2, wist \SA (NS -100)\n
+WYNIK: +3}
+[Auction "S"]
+1C 1S X Pass
+1NT 2S 2NT Pass
+3NT AP
 [Play "W"]
 SA
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N NT 8
+N  S 6
+N  H 8
+N  D 7
+N  C 9
+S NT 8
+S  S 6
+S  H 8
+S  D 7
+S  C 9
+E NT 3
+E  S 7
+E  H 4
+E  D 6
+E  C 4
+W NT 3
+W  S 7
+W  H 4
+W  D 6
+W  C 4
 
 [Event "RUNDA 5, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -473,19 +1127,50 @@ SA
 [South "Mikołaj Chmielewski"]
 [Dealer "W"]
 [Vulnerable "All"]
-[Deal "N:KJ87.A9.A7.Q8653 .T72.J8642.AJT74 AQ9643.KQJ63.Q5. T52.854.KT93.K92"]
+[Deal "W:T52.854.KT93.K92 KJ87.A9.A7.Q8653 .T72.J8642.AJT74 AQ9643.KQJ63.Q5."]
 [Scoring "Teams"]
 [Declarer "N"]
 [Contract "4S"]
 [Result "13"]
-[Score "NS 710"]
-{Nasz stół: 4\S N +3, wist \H7 (NS +710)
-Drugi stół: 6\S S +1, wist \D3 (NS +1460)
-WYNIK: +13}
 [Ability "N:9DC57 E:10176 S:9DB57 W:10176"]
+[BCFlags "1f"]
+[DoubleDummyTricks "9dc579db571017610176"]
 [Minimax "7SS2210"]
+[OptimumScore "NS 2210"]
+[ParContract "NS 7S="]
+[Score "NS 710"]
+{[MJ] Przeciwnik nie dostrzegł szans na szlemika, a partner dokładał idealną
+kartę.
+
+Drugi stół: 6\S S +1, wist \D3 (NS +1460)\n
+WYNIK: +13}
+[Auction "W"]
+Pass 2C Pass 2D
+Pass 2S Pass 4S
+AP
 [Play "E"]
 H7
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  9
+N  S 13
+N  H 12
+N  D  5
+N  C  7
+S NT  9
+S  S 13
+S  H 11
+S  D  5
+S  C  7
+E NT  1
+E  S  0
+E  H  1
+E  D  7
+E  C  6
+W NT  1
+W  S  0
+W  H  1
+W  D  7
+W  C  6
 
 [Event "RUNDA 6, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
@@ -502,14 +1187,47 @@ H7
 [Declarer "E"]
 [Contract "2DX"]
 [Result "6"]
-[Score "NS 300"]
-{Nasz stół: 2\DX E -2, wist \SA (NS +300)
-Drugi stół: 2\DX E -2, wist \HQ (NS +300)
-WYNIK: +0}
 [Ability "N:9AB76 E:33166 S:9AB76 W:33166"]
+[BCFlags "1f"]
+[DoubleDummyTricks "9ab769ab763316633166"]
 [Minimax "4HS450"]
+[OptimumScore "NS 450"]
+[ParContract "NS 4H+1"]
+[Score "NS 300"]
+{[MJ] Z ciekawości zrobiłem analizę widząc rękę S, a także mając dane o
+otwarciu i wejściu: 4\S/3BA wygrywa się w 84% rozdań, 4\H 62%. Z kolei
+rozgrywający na 2\Dx bierze z reguły niecałe cztery lewy, więc trapping pas
+jest najlepszą opcją (jeżeli partner wznowi).
+
+
+Drugi stół: 2\DX E -2, wist \HQ (NS +300)\n
+WYNIK: +0}
+[Auction "N"]
+1S 2D Pass Pass
+X AP
 [Play "S"]
 SA
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  9
+N  S 10
+N  H 11
+N  D  7
+N  C  6
+S NT  9
+S  S 10
+S  H 11
+S  D  7
+S  C  6
+E NT  3
+E  S  3
+E  H  1
+E  D  6
+E  C  6
+W NT  3
+W  S  3
+W  H  1
+W  D  6
+W  C  6
 
 [Event "RUNDA 6, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
@@ -521,19 +1239,49 @@ SA
 [South "Krzysztof Ziętarski"]
 [Dealer "E"]
 [Vulnerable "NS"]
-[Deal "N:9.42.A8632.QT965 KJT74.AK53.J5.K8 6532.J987.QT.A72 AQ8.QT6.K974.J43"]
+[Deal "E:KJT74.AK53.J5.K8 6532.J987.QT.A72 AQ8.QT6.K974.J43 9.42.A8632.QT965"]
 [Scoring "Teams"]
 [Declarer "E"]
 [Contract "3NT"]
 [Result "9"]
-[Score "NS -400"]
-{Nasz stół: 3BA E =, wist \H7 (NS -400)
-Drugi stół: 4\S E -1, wist \S2 (NS +50)
-WYNIK: +10}
 [Ability "N:33367 E:AAA76 S:33367 W:AAA75"]
+[BCFlags "1f"]
+[DoubleDummyTricks "3336733367aaa76aaa75"]
 [Minimax "3NW-430"]
+[OptimumScore "EW 430"]
+[ParContract "EW 3N+1"]
+[Score "NS -400"]
+{[MJ] Bartek myli się na otwarciu i trochę przypadkowo gramy lepszą końcówkę,
+która po wiście kierowym nie sprawia problemów.
+
+
+Drugi stół: 4\S E -1, wist \S2 (NS +50)\n
+WYNIK: +10}
+[Auction "E"]
+1NT Pass 3NT AP
 [Play "S"]
 H7
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  3
+N  S  3
+N  H  3
+N  D  6
+N  C  7
+S NT  3
+S  S  3
+S  H  3
+S  D  6
+S  C  7
+E NT 10
+E  S 10
+E  H 10
+E  D  7
+E  C  6
+W NT 10
+W  S 10
+W  H 10
+W  D  7
+W  C  5
 
 [Event "RUNDA 6, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
@@ -545,19 +1293,51 @@ H7
 [South "Krzysztof Ziętarski"]
 [Dealer "S"]
 [Vulnerable "EW"]
-[Deal "N:KQ83.QJT9.AKT.Q7 A976542.75.98.54 JT.AK863.J73.J82 .42.Q6542.AKT963"]
+[Deal "S:JT.AK863.J73.J82 .42.Q6542.AKT963 KQ83.QJT9.AKT.Q7 A976542.75.98.54"]
 [Scoring "Teams"]
 [Declarer "S"]
 [Contract "4H"]
 [Result "10"]
-[Score "NS 420"]
-{Nasz stół: 4\H S =, wist \CK (NS +420)
-Drugi stół: 4\H S =, wist \CA (NS +420)
-WYNIK: +0}
 [Ability "N:97975 E:36367 S:97A76 W:36367"]
+[BCFlags "1f"]
+[DoubleDummyTricks "9797597a763636736367"]
 [Minimax "4HS420"]
+[OptimumScore "NS 420"]
+[ParContract "S 4H="]
+[Score "NS 420"]
+{[MJ] Przeciwnicy dochodzą do końcówki (chociaż ja po prostu powiedziałbym 4\H
+z ręką S w drugim okrążeniu).
+
+
+Drugi stół: 4\H S =, wist \CA (NS +420)\n
+WYNIK: +0}
+[Auction "S"]
+Pass 2NT X XX
+Pass 3C Pass Pass
+3H Pass 4H AP
 [Play "W"]
 CK
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  9
+N  S  7
+N  H  9
+N  D  7
+N  C  5
+S NT  9
+S  S  7
+S  H 10
+S  D  7
+S  C  6
+E NT  3
+E  S  6
+E  H  3
+E  D  6
+E  C  7
+W NT  3
+W  S  6
+W  H  3
+W  D  6
+W  C  7
 
 [Event "RUNDA 6, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
@@ -569,19 +1349,51 @@ CK
 [South "Krzysztof Ziętarski"]
 [Dealer "W"]
 [Vulnerable "All"]
-[Deal "N:AJ7.A95.K83.Q652 9643.Q8.AQ92.J43 QT2.KJT732.T4.K7 K85.64.J765.AT98"]
+[Deal "W:K85.64.J765.AT98 AJ7.A95.K83.Q652 9643.Q8.AQ92.J43 QT2.KJT732.T4.K7"]
 [Scoring "Teams"]
 [Declarer "S"]
 [Contract "2H"]
 [Result "10"]
-[Score "NS 170"]
-{Nasz stół: 2\H S +2, wist \D5 (NS +170)
-Drugi stół: 2\H N +2, wist \S6 (NS +170)
-WYNIK: +0}
 [Ability "N:87A67 E:46376 S:87A67 W:46376"]
+[BCFlags "1f"]
+[DoubleDummyTricks "87a6787a674637646376"]
 [Minimax "4HS620"]
+[OptimumScore "NS 620"]
+[ParContract "NS 4H="]
+[Score "NS 170"]
+{[MJ] Końcówka całkiem przyzwoita, ale albo S musiałby się naciągnąć na inwit
+albo N otworzyć 1BA.
+
+
+Drugi stół: 2\H N +2, wist \S6 (NS +170)\n
+WYNIK: +0}
+[Auction "W"]
+Pass 1C Pass 1H
+Pass 1NT Pass 2H
+AP
 [Play "W"]
 D5
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  8
+N  S  7
+N  H 10
+N  D  6
+N  C  7
+S NT  8
+S  S  7
+S  H 10
+S  D  6
+S  C  7
+E NT  4
+E  S  6
+E  H  3
+E  D  7
+E  C  6
+W NT  4
+W  S  6
+W  H  3
+W  D  7
+W  C  6
 
 [Event "RUNDA 6, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
@@ -598,14 +1410,45 @@ D5
 [Declarer "W"]
 [Contract "3NT"]
 [Result "11"]
-[Score "NS -460"]
-{Nasz stół: 3BA W +2, wist \C7 (NS -460)
-Drugi stół: 3\D W +1, wist \H2 (NS -130)
-WYNIK: +8}
 [Ability "N:23526 E:A87A6 S:23526 W:A87A6"]
+[BCFlags "1f"]
+[DoubleDummyTricks "2352623526a87a6a87a6"]
 [Minimax "3NW-430"]
+[OptimumScore "EW 430"]
+[ParContract "EW 3N+1"]
+[Score "NS -460"]
+{[MJ] Przeciwnik ściąga dwa trefle i odwraca w karo. Jego partner dosyć szybko
+odrzuca się od pika, więc ustawia się przymus treflowo-pikowy na 11 lew.
+
+Drugi stół: 3\D W +1, wist \H2 (NS -130)\n
+WYNIK: +8}
+[Auction "N"]
+Pass Pass 1C X
+Pass 1H Pass 3NT
+AP
 [Play "N"]
 C7
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  2
+N  S  3
+N  H  5
+N  D  2
+N  C  6
+S NT  2
+S  S  3
+S  H  5
+S  D  2
+S  C  6
+E NT 10
+E  S  8
+E  H  7
+E  D 10
+E  C  6
+W NT 10
+W  S  8
+W  H  7
+W  D 10
+W  C  6
 
 [Event "RUNDA 6, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
@@ -617,19 +1460,50 @@ C7
 [South "Krzysztof Ziętarski"]
 [Dealer "E"]
 [Vulnerable "EW"]
-[Deal "N:AT87.A653.A32.AQ K9.KQJT9.Q7.8632 J6543.82.K6.KT95 Q2.74.JT9854.J74"]
+[Deal "E:K9.KQJT9.Q7.8632 J6543.82.K6.KT95 Q2.74.JT9854.J74 AT87.A653.A32.AQ"]
 [Scoring "Teams"]
 [Declarer "S"]
 [Contract "4S"]
 [Result "10"]
-[Score "NS 420"]
-{Nasz stół: 4\S S =, wist \H4 (NS +420)
-Drugi stół: 4\S S +1, wist \H4 (NS +450)
-WYNIK: +1}
 [Ability "N:8B878 E:22562 S:8B878 W:22562"]
+[BCFlags "1f"]
+[DoubleDummyTricks "8b8788b8782256222562"]
 [Minimax "4SS450"]
+[OptimumScore "NS 450"]
+[ParContract "NS 4S+1"]
+[Score "NS 420"]
+{[MJ] N nic się nie bał, że partner może mieć 0. Z ręką S lepiej powiedzieć 3\H
+po 2NT jeżeli już tak poszła licytacja.
+
+Drugi stół: 4\S S +1, wist \H4 (NS +450) WYNIK: +1}
+[Auction "E"]
+1H Pass Pass X
+Pass 1S Pass 2NT
+Pass 3S Pass 4S
+AP
 [Play "W"]
 H4
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  8
+N  S 11
+N  H  8
+N  D  7
+N  C  8
+S NT  8
+S  S 11
+S  H  8
+S  D  7
+S  C  8
+E NT  2
+E  S  2
+E  H  5
+E  D  6
+E  C  2
+W NT  2
+W  S  2
+W  H  5
+W  D  6
+W  C  2
 
 [Event "RUNDA 6, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
@@ -641,19 +1515,54 @@ H4
 [South "Krzysztof Ziętarski"]
 [Dealer "S"]
 [Vulnerable "All"]
-[Deal "N:K986.Q7532.8.762 QJT54.84.AQ63.K5 A32.J96.9542.QJ9 7.AKT.KJT7.AT843"]
+[Deal "S:A32.J96.9542.QJ9 7.AKT.KJT7.AT843 K986.Q7532.8.762 QJT54.84.AQ63.K5"]
 [Scoring "Teams"]
 [Declarer "W"]
 [Contract "3NT"]
 [Result "12"]
-[Score "NS -690"]
-{Nasz stół: 3BA W +3, wist \H3 (NS -690)
-Drugi stół: 3BA W +1, wist \H3 (NS -630)
-WYNIK: +2}
 [Ability "N:33512 E:AA8CA S:33512 W:AA8CA"]
+[BCFlags "1f"]
+[DoubleDummyTricks "3351233512aa8caaa8ca"]
 [Minimax "6DW-1370"]
+[OptimumScore "EW 1370"]
+[ParContract "EW 6D="]
+[Score "NS -690"]
+{[MJ] Po wiście kierowym chyba powinno się grać na podział trefli 3-3. Ja
+wybrałem dojście do stołu i \SD. S faktycznie nie wskoczył, a dodatkowo dama
+wzięła lewę. Teraz przerzuciłem się na trefle i S po dojściu zagrał w kiera. Na
+końcu N odrzucił się od damy kier.
+
+
+Drugi stół: 3BA W +1, wist \H3 (NS -630)\n
+WYNIK: +2}
+[Auction "S"]
+Pass 1C Pass 1S
+Pass 2C Pass 2D
+Pass 2NT Pass 3NT
+AP
 [Play "N"]
 H3
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  3
+N  S  3
+N  H  5
+N  D  1
+N  C  2
+S NT  3
+S  S  3
+S  H  5
+S  D  1
+S  C  2
+E NT 10
+E  S 10
+E  H  8
+E  D 12
+E  C 10
+W NT 10
+W  S 10
+W  H  8
+W  D 12
+W  C 10
 
 [Event "RUNDA 6, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
@@ -665,19 +1574,50 @@ H3
 [South "Krzysztof Ziętarski"]
 [Dealer "W"]
 [Vulnerable "None"]
-[Deal "N:95.K654.AKQ4.A73 K.AJT9.652.T9852 AQT6.Q832.JT7.KQ J87432.7.983.J64"]
+[Deal "W:J87432.7.983.J64 95.K654.AKQ4.A73 K.AJT9.652.T9852 AQT6.Q832.JT7.KQ"]
 [Scoring "Teams"]
 [Declarer "N"]
 [Contract "6HX"]
 [Result "10"]
-[Score "NS -300"]
-{Nasz stół: 6\HX N -2, wist \C8 (NS -300)
-Drugi stół: 2\SX W -5, wist \DA (NS +1100)
-WYNIK: +16}
 [Ability "N:B9AB9 E:24324 S:B9AB9 W:24324"]
+[BCFlags "1f"]
+[DoubleDummyTricks "b9ab9b9ab92432424324"]
 [Minimax "3NS460"]
+[OptimumScore "NS 460"]
+[ParContract "NS 3N+2"]
+[Score "NS -300"]
+{[MJ] Przeciwnicy trochę się rozpędzili...
+
+Drugi stół: 2\SX W -5, wist \DA (NS +1100)\n
+WYNIK: +16}
+[Auction "W"]
+Pass 1NT X 2C
+Pass 2H Pass 4C
+Pass 5C Pass 5H
+Pass 6H X AP
 [Play "E"]
 C8
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT 11
+N  S  9
+N  H 10
+N  D 11
+N  C  9
+S NT 11
+S  S  9
+S  H 10
+S  D 11
+S  C  9
+E NT  2
+E  S  4
+E  H  3
+E  D  2
+E  C  4
+W NT  2
+W  S  4
+W  H  3
+W  D  2
+W  C  4
 
 [Event "RUNDA 6, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
@@ -694,14 +1634,46 @@ C8
 [Declarer "N"]
 [Contract "4S"]
 [Result "12"]
-[Score "NS 480"]
-{Nasz stół: 4\S N +2, wist \DA (NS +480)
-Drugi stół: 4\S N +1, wist \DA (NS +450)
-WYNIK: -1}
 [Ability "N:AA968 E:31464 S:9A968 W:31474"]
+[BCFlags "1f"]
+[DoubleDummyTricks "aa9689a9683146431474"]
 [Minimax "3NN430"]
+[OptimumScore "NS 430"]
+[ParContract "N 3N+1"]
+[Score "NS 480"]
+{[MJ] Nie jestem przekonany czy S zdawał sobie sprawę że partner może spasować
+na 3\H i skoro i tak zalicytował 4\S to dlaczego nie mógł tego zrobić okrążenie
+wcześniej.
+
+Drugi stół: 4\S N +1, wist \DA (NS +450)\n
+WYNIK: -1}
+[Auction "N"]
+1S Pass 1NT Pass
+2S Pass 3H Pass
+3S Pass 4S AP
 [Play "E"]
 DA
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT 10
+N  S 10
+N  H  9
+N  D  6
+N  C  8
+S NT  9
+S  S 10
+S  H  9
+S  D  6
+S  C  8
+E NT  3
+E  S  1
+E  H  4
+E  D  6
+E  C  4
+W NT  3
+W  S  1
+W  H  4
+W  D  7
+W  C  4
 
 [Event "RUNDA 6, SEGMENT 1, STÓŁ A9"]
 [Site "Not known"]
@@ -713,19 +1685,52 @@ DA
 [South "Krzysztof Ziętarski"]
 [Dealer "E"]
 [Vulnerable "All"]
-[Deal "N:A97.Q982.AQ873.J 63.T74.KJT9642.5 KJT.AJ.5.AKT8432 Q8542.K653..Q976"]
+[Deal "E:63.T74.KJT9642.5 KJT.AJ.5.AKT8432 Q8542.K653..Q976 A97.Q982.AQ873.J"]
 [Scoring "Teams"]
 [Declarer "N"]
 [Contract "3NT"]
 [Result "12"]
-[Score "NS 690"]
-{Nasz stół: 3BA N +3, wist \DJ (NS +690)
-Drugi stół: 3BA N +3, wist \DJ (NS +690)
-WYNIK: +0}
 [Ability "N:B998B E:23352 S:B9A8B W:24352"]
+[BCFlags "1f"]
+[DoubleDummyTricks "b998bb9a8b2335224352"]
 [Minimax "3NS660"]
+[OptimumScore "NS 660"]
+[ParContract "NS 3N+2"]
+[Score "NS 690"]
+{[MJ] Po wzięciu pierwszej lewy na damę przeciwnik gra \CW przepusczonego,
+dochodzi królem pik do stołu i gra trefle, a zagranego pika przepuszcza do
+stołu.
+
+
+Drugi stół: 3BA N +3, wist \DJ (NS +690)\n
+WYNIK: +0}
+[Auction "E"]
+Pass 1C Pass 1H
+Pass 3C Pass 3NT
+AP
 [Play "E"]
 DJ
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT 11
+N  S  9
+N  H  9
+N  D  8
+N  C 11
+S NT 11
+S  S  9
+S  H 10
+S  D  8
+S  C 11
+E NT  2
+E  S  3
+E  H  3
+E  D  5
+E  C  2
+W NT  2
+W  S  4
+W  H  3
+W  D  5
+W  C  2
 
 [Event "RUNDA 6, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -737,19 +1742,50 @@ DJ
 [South "Krzysztof Ziętarski"]
 [Dealer "S"]
 [Vulnerable "None"]
-[Deal "N:5.KJ4.AJT.AK9654 AKQJ3.T7.9843.73 T972.92.K762.JT8 864.AQ8653.Q5.Q2"]
+[Deal "S:T972.92.K762.JT8 864.AQ8653.Q5.Q2 5.KJ4.AJT.AK9654 AKQJ3.T7.9843.73"]
 [Scoring "Teams"]
 [Declarer "N"]
 [Contract "4C"]
 [Result "10"]
-[Score "NS 130"]
-{Nasz stół: 4\C N =, wist \SK (NS +130)
-Drugi stół: 4\C N =, wist \SA (NS +130)
-WYNIK: +0}
 [Ability "N:7668B E:37742 S:7668B W:37752"]
+[BCFlags "1f"]
+[DoubleDummyTricks "7668b7668b3774237752"]
 [Minimax "5CS400"]
+[OptimumScore "NS 400"]
+[ParContract "NS 5C="]
+[Score "NS 130"]
+{[MJ] Nie wiem co przeciwnik planował zalicytować po 3\S/4\S od partnera, ale
+spadli na cztery łapy.
+
+Drugi stół: 4\C N =, wist \SA (NS +130)\n
+WYNIK: +0}
+[Auction "S"]
+Pass 2D 3C 3H
+Pass Pass X Pass
+4C AP
 [Play "E"]
 SK
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  7
+N  S  6
+N  H  6
+N  D  8
+N  C 11
+S NT  7
+S  S  6
+S  H  6
+S  D  8
+S  C 11
+E NT  3
+E  S  7
+E  H  7
+E  D  4
+E  C  2
+W NT  3
+W  S  7
+W  H  7
+W  D  5
+W  C  2
 
 [Event "RUNDA 6, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -761,19 +1797,52 @@ SK
 [South "Krzysztof Ziętarski"]
 [Dealer "W"]
 [Vulnerable "NS"]
-[Deal "N:987.KT852.A2.J64 6.AQJ97.KQJ964.5 KQT52.43.853.Q72 AJ43.6.T7.AKT983"]
+[Deal "W:AJ43.6.T7.AKT983 987.KT852.A2.J64 6.AQJ97.KQJ964.5 KQT52.43.853.Q72"]
 [Scoring "Teams"]
 [Declarer "E"]
 [Contract "3NT"]
 [Result "11"]
-[Score "NS -460"]
-{Nasz stół: 3BA E +2, wist \H3 (NS -460)
-Drugi stół: 3BA W =, wist \S8 (NS -400)
-WYNIK: +2}
 [Ability "N:35413 E:979BA S:35413 W:979BA"]
+[BCFlags "1f"]
+[DoubleDummyTricks "3541335413979ba979ba"]
 [Minimax "3NW-400"]
+[OptimumScore "EW 400"]
+[ParContract "EW 3N=; EW 5D="]
+[Score "EW +460"]
+{[MJ] Podłożony król i Bartek gra trefla do 10, przeciwnik ponawia kiery, a
+następnie daje dojść do ręki na wyrobione w międzyczasie kara.
+
+Drugi stół: 3BA W =, wist \S8 (NS -400)\n
+WYNIK: +2}
+[Auction "W"]
+2C Pass 2D Pass
+2S Pass 2NT =1= Pass
+3C =2= Pass 3NT AP
+[Note "1: pytanie"]
+[Note "2:6-4"]
 [Play "S"]
 H3
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  3
+N  S  5
+N  H  4
+N  D  1
+N  C  3
+S NT  3
+S  S  5
+S  H  4
+S  D  1
+S  C  3
+E NT  9
+E  S  7
+E  H  9
+E  D 11
+E  C 10
+W NT  9
+W  S  7
+W  H  9
+W  D 11
+W  C 10
 
 [Event "RUNDA 6, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -790,14 +1859,45 @@ H3
 [Declarer "W"]
 [Contract "3NT"]
 [Result "10"]
-[Score "NS -630"]
-{Nasz stół: 3BA W +1, wist \S6 (NS -630)
-Drugi stół: 3BA E +1, wist \H5 (NS -630)
-WYNIK: +0}
 [Ability "N:68943 E:75498 S:68944 W:75498"]
+[BCFlags "1f"]
+[DoubleDummyTricks "68943689447549875498"]
 [Minimax "3HS140"]
+[OptimumScore "NS 140"]
+[ParContract "NS 3H="]
+[Score "NS -630"]
+{[MJ] Pierwszy wist przepuszczony, odwrót w pika i po zagraniu kara z ręki
+przeciwnik nie wskakuje żeby otworzyć kiery, więc na końcu S staje w przymusie
+treflowo-kierowym.
+
+Drugi stół: 3BA E +1, wist \H5 (NS -630)\n
+WYNIK: +0}
+[Auction "N"]
+Pass Pass Pass 1NT
+Pass 3NT AP
 [Play "N"]
 S6
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N NT 6
+N  S 8
+N  H 9
+N  D 4
+N  C 3
+S NT 6
+S  S 8
+S  H 9
+S  D 4
+S  C 4
+E NT 7
+E  S 5
+E  H 4
+E  D 9
+E  C 8
+W NT 7
+W  S 5
+W  H 4
+W  D 9
+W  C 8
 
 [Event "RUNDA 6, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -809,19 +1909,48 @@ S6
 [South "Krzysztof Ziętarski"]
 [Dealer "E"]
 [Vulnerable "None"]
-[Deal "N:Q3.KT3.AQ98.JT96 AJT87.J975.JT42. 6542.AQ82.K65.A4 K9.64.73.KQ87532"]
+[Deal "E:AJT87.J975.JT42. 6542.AQ82.K65.A4 K9.64.73.KQ87532 Q3.KT3.AQ98.JT96"]
 [Scoring "Teams"]
 [Declarer "S"]
 [Contract "4H"]
 [Result "8"]
-[Score "NS -100"]
-{Nasz stół: 4\H S -2, wist \CK (NS -100)
-Drugi stół: 3BA N +2, wist \SJ (NS +460)
-WYNIK: +11}
 [Ability "N:88996 E:55446 S:87996 W:55446"]
+[BCFlags "1f"]
+[DoubleDummyTricks "88996879965544655446"]
 [Minimax "1HS140"]
+[OptimumScore "NS 140"]
+[ParContract "NS 1H+2"]
+[Score "NS -100"]
+{[MJ] Bardzo ostre wejście, ale dzięki temu przeciwnicy grają zły kontrakt.
+
+Drugi stół: 3BA N +2, wist \SJ (NS +460)\n
+WYNIK: +11}
+[Auction "E"]
+Pass 1C 4C X
+Pass 4H AP
 [Play "W"]
 CK
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N NT 8
+N  S 8
+N  H 9
+N  D 9
+N  C 6
+S NT 8
+S  S 7
+S  H 9
+S  D 9
+S  C 6
+E NT 5
+E  S 5
+E  H 4
+E  D 4
+E  C 6
+W NT 5
+W  S 5
+W  H 4
+W  D 4
+W  C 6
 
 [Event "RUNDA 6, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -833,19 +1962,50 @@ CK
 [South "Krzysztof Ziętarski"]
 [Dealer "S"]
 [Vulnerable "NS"]
-[Deal "N:AT7632.7..T98642 KJ5.KJ9643.QJ.J5 Q9.AQ8.T76542.K3 84.T52.AK983.AQ7"]
+[Deal "S:Q9.AQ8.T76542.K3 84.T52.AK983.AQ7 AT7632.7..T98642 KJ5.KJ9643.QJ.J5"]
 [Scoring "Teams"]
 [Declarer "W"]
 [Contract "4H"]
 [Result "10"]
-[Score "NS -420"]
-{Nasz stół: 4\H W =, wist \C10 (NS -420)
-Drugi stół: 3\H E =, wist \CK (NS -140)
-WYNIK: +7}
 [Ability "N:39349 E:A4994 S:39349 W:93A93"]
+[BCFlags "1f"]
+[DoubleDummyTricks "3934939349a499493a93"]
 [Minimax "4NE-430"]
+[OptimumScore "EW 430"]
+[ParContract "E 4N="]
+[Score "EW +420"]
+{[MJ] Po wiście treflowym gram kiera do waleta i przeciwnik odwraca w karo. N
+nie przebija, więc nie ma już problemów z realizacją kontraktu.
+
+Drugi stół: 3\H E =, wist \CK (NS -140)\n
+WYNIK: +7}
+[Auction "S"]
+Pass 1D 2S 3D =1=
+Pass 4H AP
+[Note "1:5+\H INV+"]
 [Play "N"]
 CT
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  3
+N  S  9
+N  H  3
+N  D  4
+N  C  9
+S NT  3
+S  S  9
+S  H  3
+S  D  4
+S  C  9
+E NT 10
+E  S  4
+E  H  9
+E  D  9
+E  C  4
+W NT  9
+W  S  3
+W  H 10
+W  D  9
+W  C  3
 
 [Event "RUNDA 6, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -857,19 +2017,50 @@ CT
 [South "Krzysztof Ziętarski"]
 [Dealer "W"]
 [Vulnerable "EW"]
-[Deal "N:AKJ8.AK4.Q865.65 T4.76532.A94.AJ9 Q9762.Q.KT2.T842 53.JT98.J73.KQ73"]
+[Deal "W:53.JT98.J73.KQ73 AKJ8.AK4.Q865.65 T4.76532.A94.AJ9 Q9762.Q.KT2.T842"]
 [Scoring "Teams"]
 [Declarer "N"]
 [Contract "2S"]
 [Result "10"]
-[Score "NS 170"]
-{Nasz stół: 2\S N +2, wist \H6 (NS +170)
-Drugi stół: 4\S N =, wist \H6 (NS +420)
-WYNIK: +6}
 [Ability "N:8A697 E:53745 S:8A697 W:53745"]
+[BCFlags "1f"]
+[DoubleDummyTricks "8a6978a6975374553745"]
 [Minimax "4SS420"]
+[OptimumScore "NS 420"]
+[ParContract "NS 4S="]
+[Score "NS 170"]
+{[MJ] N nie przyjmuje transferu nadwyżkowo, więc przeciwnicy nie dochodzą do
+końcówki.
+
+
+Drugi stół: 4\S N =, wist \H6 (NS +420)\n
+WYNIK: +6}
+[Auction "W"]
+Pass 1NT Pass 2H
+Pass 2S AP
 [Play "E"]
 H6
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  8
+N  S 10
+N  H  6
+N  D  9
+N  C  7
+S NT  8
+S  S 10
+S  H  6
+S  D  9
+S  C  7
+E NT  5
+E  S  3
+E  H  7
+E  D  4
+E  C  5
+W NT  5
+W  S  3
+W  H  7
+W  D  4
+W  C  5
 
 [Event "RUNDA 6, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -885,15 +2076,49 @@ H6
 [Scoring "Teams"]
 [Declarer "E"]
 [Contract "5C"]
-[Result "12"]
-[Score "NS -420"]
-{Nasz stół: 5\C E +1, wist \DA (NS -420)
-Drugi stół: 4\S W -1, wist \DQ (NS +50)
-WYNIK: +10}
+[Result "11"]
 [Ability "N:54481 E:8985B S:54481 W:8985B"]
+[BCFlags "1f"]
+[DoubleDummyTricks "54481544818985b8985b"]
 [Minimax "5CW-400"]
+[OptimumScore "EW 400"]
+[ParContract "EW 5C="]
+[Score "EW +400"]
+{[MJ] Nie jestem przekonany czy 4\S Bartka to jest cue-bid na treflach czy
+wybór koloru starszego, więc nie dochodzimy do szlemika (który fartownie nie
+idzie). Wiadomo, że partner nie ma starszej czwórki, nie wiem czy teraz lepiej
+dać kontrę lub 3\S i co powinno znaczyć 4\D 
+
+Drugi stół: 4\S W -1, wist \DQ (NS +50)\n
+WYNIK: +10}
+[Auction "N"]
+Pass 2C Pass 2D
+X 3C 3D 4D
+Pass 4S Pass 5C
+AP
 [Play "S"]
 DA
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  5
+N  S  4
+N  H  4
+N  D  8
+N  C  1
+S NT  5
+S  S  4
+S  H  4
+S  D  8
+S  C  1
+E NT  8
+E  S  9
+E  H  8
+E  D  5
+E  C 11
+W NT  8
+W  S  9
+W  H  8
+W  D  5
+W  C 11
 
 [Event "RUNDA 6, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -905,19 +2130,51 @@ DA
 [South "Krzysztof Ziętarski"]
 [Dealer "E"]
 [Vulnerable "NS"]
-[Deal "N:JT862.87.K2.AQ93 AQ953.KJ62.Q83.T 7.AT9.A75.K87652 K4.Q543.JT964.J4"]
+[Deal "E:AQ953.KJ62.Q83.T 7.AT9.A75.K87652 K4.Q543.JT964.J4 JT862.87.K2.AQ93"]
 [Scoring "Teams"]
 [Declarer "S"]
 [Contract "4C"]
 [Result "11"]
-[Score "NS 150"]
-{Nasz stół: 4\C S +1, wist \SK (NS +150)
-Drugi stół: 2\H E -1, wist \C6 (NS +50)
-WYNIK: -3}
 [Ability "N:9755B E:46772 S:9755B W:46772"]
+[BCFlags "1f"]
+[DoubleDummyTricks "9755b9755b4677246772"]
 [Minimax "5CS600"]
+[OptimumScore "NS 600"]
+[ParContract "NS 5C="]
+[Score "NS 150"]
+{[MJ] Dużo walki w rozdaniu, nie jestem przekonany do kontry z ręką E.
+
+
+Drugi stół: 2\H E -1, wist \C6 (NS +50)\n
+WYNIK: -3}
+[Auction "E"]
+1S 2C X XX
+2H 3C Pass Pass
+X Pass 3H 4C
+AP
 [Play "W"]
 SK
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT  9
+N  S  7
+N  H  5
+N  D  5
+N  C 11
+S NT  9
+S  S  7
+S  H  5
+S  D  5
+S  C 11
+E NT  4
+E  S  6
+E  H  7
+E  D  7
+E  C  2
+W NT  4
+W  S  6
+W  H  7
+W  D  7
+W  C  2
 
 [Event "RUNDA 6, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -929,19 +2186,51 @@ SK
 [South "Krzysztof Ziętarski"]
 [Dealer "S"]
 [Vulnerable "EW"]
-[Deal "N:AJ.KJT8652.T4.A2 K974.3.QJ7652.84 863.A4.AK3.JT753 QT52.Q97.98.KQ96"]
+[Deal "S:863.A4.AK3.JT753 QT52.Q97.98.KQ96 AJ.KJT8652.T4.A2 K974.3.QJ7652.84"]
 [Scoring "Teams"]
 [Declarer "N"]
 [Contract "6H"]
 [Result "10"]
-[Score "NS -100"]
-{Nasz stół: 6\H N -2, wist \DQ (NS -100)
-Drugi stół: 4\H S +1, wist \D8 (NS +450)
-WYNIK: +11}
 [Ability "N:B6B59 E:27174 S:B6B59 W:27274"]
+[BCFlags "1f"]
+[DoubleDummyTricks "b6b59b6b592717427274"]
 [Minimax "3NS460"]
+[OptimumScore "NS 460"]
+[ParContract "NS 3N+2"]
+[Score "NS -100"]
+{[MJ] Bardzo ostry szlemik, po wiście karowym na szczęście kolory nie dzielą
+się przyjaźnie dla rozgrywającego.
+
+Drugi stół: 4\H S +1, wist \D8 (NS +450)\n
+WYNIK: +11}
+[Auction "S"]
+1C Pass 1H Pass
+1NT Pass 2D Pass
+3NT Pass 5H Pass
+6H AP
 [Play "E"]
 DQ
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N NT 11
+N  S  6
+N  H 11
+N  D  5
+N  C  9
+S NT 11
+S  S  6
+S  H 11
+S  D  5
+S  C  9
+E NT  2
+E  S  7
+E  H  1
+E  D  7
+E  C  4
+W NT  2
+W  S  7
+W  H  2
+W  D  7
+W  C  4
 
 [Event "RUNDA 6, SEGMENT 2, STÓŁ A9"]
 [Site "Not known"]
@@ -953,16 +2242,48 @@ DQ
 [South "Krzysztof Ziętarski"]
 [Dealer "W"]
 [Vulnerable "All"]
-[Deal "N:QJ7.7542.92.A532 AK84.A86.A87.K97 9632.KJ3.QJ64.QT T5.QT9.KT53.J864"]
+[Deal "W:T5.QT9.KT53.J864 QJ7.7542.92.A532 AK84.A86.A87.K97 9632.KJ3.QJ64.QT"]
 [Scoring "Teams"]
 [Declarer "E"]
 [Contract "3NT"]
 [Result "9"]
-[Score "NS -600"]
-{Nasz stół: 3BA E =, wist \D4 (NS -600)
-Drugi stół: 3BA E -1, wist \S6 (NS +100)
-WYNIK: +12}
 [Ability "N:45444 E:98999 S:45444 W:88899"]
+[BCFlags "1f"]
+[DoubleDummyTricks "45444454449899988899"]
 [Minimax "3NE-600"]
+[OptimumScore "EW 600"]
+[ParContract "E 3N="]
+[Score "EW +600"]
+{[MJ] Po wiście karowym Bartek nawraca i bierze lewę. Teraz mały kier,
+przeciwnik wskakuje królem i wyrabia sobie kara, ale sprzyjający układ treflowy
+pozwala na wzięcie 9 lew.
+
+Drugi stół: 3BA E -1, wist \S6 (NS +100)\n
+WYNIK: +12}
+[Auction "W"]
+Pass Pass 1C Pass
+1D Pass 1NT Pass
+3NT AP
 [Play "S"]
 D4
+[OptimumResultTable "Declarer;Denomination\2R;Result\1R"]
+N NT 4
+N  S 5
+N  H 4
+N  D 4
+N  C 4
+S NT 4
+S  S 5
+S  H 4
+S  D 4
+S  C 4
+E NT 9
+E  S 8
+E  H 9
+E  D 9
+E  C 9
+W NT 8
+W  S 8
+W  H 8
+W  D 9
+W  C 9
