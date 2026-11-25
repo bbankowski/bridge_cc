@@ -115,7 +115,7 @@ const QuestionView = ({question, result, onAnswer}) => {
         <Context context={question.context}/>
 
         <div className="Training-board">
-            {question.cardAuction && <BidGrid sequence={question.cardAuction.sequence} section={question.cardAuction.section}
+            {question.cardAuction && <BidGrid sequence={question.cardAuction.sequence}
                                               withoutQuestion={question.cardAuction.highlightLast}
                                               highlightLast={question.cardAuction.highlightLast}/>}
             {!question.cardAuction && question.auction && <AuctionTable auction={question.auction} context={question.context}

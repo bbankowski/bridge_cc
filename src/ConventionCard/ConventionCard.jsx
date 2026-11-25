@@ -6,21 +6,21 @@ import Bid from '../common/Bid'
 import {polishBidToPbn} from '../common/suits'
 import BidGrid from './BidGrid'
 import CardMenu from './CardMenu'
-import {buildChapters, entryMatches, parseBidding, searchItems} from './bidding'
+import {buildChapters, entryMatches, parseBidding, searchItems, sequenceCalls} from './bidding'
 import {useScrollSpy} from './useScrollSpy'
 
 const scrollToElement = id => document.getElementById(id)?.scrollIntoView()
 
-const BidSequence = ({sequence}) => sequence.split('-').map((call, index) => <Fragment key={index}>
+const BidSequence = ({sequence}) => sequenceCalls(sequence).map(({call, theirs}, index) => <Fragment key={index}>
     {index > 0 && '-'}
-    <Bid bid={polishBidToPbn(call)}/>
+    {theirs && '('}<Bid bid={polishBidToPbn(call)}/>{theirs && ')'}
 </Fragment>)
 
-const BidTable = ({id, sequence, section, description}) => <div className="App-bidTable" id={id}>
+const BidTable = ({id, sequence, description}) => <div className="App-bidTable" id={id}>
     <div className="App-bidTableHeader">
         Licytacja po <BidSequence sequence={sequence}/>{description && `: ${description}`}
     </div>
-    <BidGrid sequence={sequence} section={section}/>
+    <BidGrid sequence={sequence}/>
 </div>
 
 // Splits the entries of a chapter into boxes: one per opening or section (and one for entries before them).
@@ -109,8 +109,8 @@ const ConventionCard = () => {
             case 'table':
                 return <BidTable key={entry.id} {...entry}/>
             default: {
-                const lastCall = entry.sequence.substring(entry.sequence.lastIndexOf('-') + 1)
-                const content = <><b><Bid bid={polishBidToPbn(lastCall)}/></b>
+                const lastCall = sequenceCalls(entry.sequence).at(-1)
+                const content = <><b>{lastCall.theirs && '('}<Bid bid={polishBidToPbn(lastCall.call)}/>{lastCall.theirs && ')'}</b>
                     <span className="App-description">{entry.description}</span></>
                 const className = 'App-bidLine' + (searching && entryMatches(entry, query) ? ' is-search-match' : '')
                 return <div key={lineId} id={lineId} className={className} style={{'--level': entry.level}}>

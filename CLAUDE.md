@@ -36,7 +36,9 @@ A team event gets a summary of its matches above the deals when every deal has t
 - **Convention card**: `bidding.txt` is bundled with `?raw`, so changing it needs a rebuild, which a push triggers. `ConventionCard/bidding.js` parses it into entries:
   - Lines have the form `<sequence> => <description>`, with `-` separating calls. Lines starting with `#` are comments.
   - `@` lines start chapters (Nasze otwarcia, Po interwencji przeciwników, W obronie, Konwencje). `buildChapters` groups the entries into chapters and menu items (openings and sections) for the side menu, search (`searchItems`) and the single chapter view (`?chapter=<id>`).
-  - `^`, `&` and `*` lines start sections; `& title => description` adds a description shown under the heading (the menu shows only the title). `*` means we open and `^` means the opponents open, which decides whose calls are shown in parentheses.
+  - `^`, `&` and `*` lines start sections; `& title => description` adds a description shown under the heading (the menu shows only the title). `*` means we open and `^` means the opponents open; the markers are only headings now.
+  - The calls of the opponents are written in parentheses: `(1T)-2T-(X)-XX`, `1BA-(pas)-2T-(X)`. A sequence without parentheses is uncontested (the opponents pass, which is not written). Ids, links and search use the sequence without the parentheses (`plainSequence`).
+  - `biddingFile.test.js` checks the file: known and legal calls, every other call of a contested sequence in parentheses, answers in bidding order (pas, X, XX, then from the lowest bid) and continuations that extend the table or opening above them.
   - `T<sequence>` lines draw an auction table.
   - A line without `-` is an opening. Its description may be `short | full`: the short one is shown in the openings overview, the full one under the opening's heading.
   - Continuation lines are indented relative to the last table.
