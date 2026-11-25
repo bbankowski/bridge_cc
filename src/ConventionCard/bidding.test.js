@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import {describe, expect, test} from 'vitest'
-import {buildChapters, entryMatches, parseBidding, searchItems, slugify, tableRows} from './bidding'
+import {buildChapters, entryMatches, parseBidding, plainSequence, searchItems, sequenceCalls, slugify, tableRows} from './bidding'
 
 const strip = entries => entries.map(entry => {
     const copy = {...entry}
@@ -244,16 +244,41 @@ describe('search', () => {
 })
 
 describe('tableRows', () => {
-    test('adds opponent passes after our own opening', () => {
-        expect(tableRows('1T-1K', null)).toEqual([['1T', 'pas', '1K', 'pas'], ['?', '', '', '']])
+    // calls as shown: the opponents' in parentheses
+    const shown = sequence => tableRows(sequence).map(row => row.map(({call, theirs}) => theirs ? `(${call})` : call))
+
+    test('adds opponent passes to an uncontested sequence', () => {
+        expect(shown('1T-1K')).toEqual([['1T', '(pas)', '1K', '(pas)'], ['?', '', '', '']])
+        expect(tableRows('1T-1K')[0][1]).toEqual({call: 'pas', theirs: true, implicit: true})
     })
 
     // the reported case: 1♣ (pas) 1♦ (pas) 2BA (pas) ? -- no pass after "?", it is our turn
     test('ends with our turn, without a pass after it', () => {
-        expect(tableRows('1T-1K-2BA', null)).toEqual([['1T', 'pas', '1K', 'pas'], ['2BA', 'pas', '?', '']])
+        expect(shown('1T-1K-2BA')).toEqual([['1T', '(pas)', '1K', '(pas)'], ['2BA', '(pas)', '?', '']])
     })
 
-    test('does not add passes in sections', () => {
-        expect(tableRows('1T-X', '^')).toEqual([['1T', 'X', '?', '']])
+    test('takes the calls of the opponents from the parentheses, without adding passes', () => {
+        expect(shown('(1T)-2T-(X)-XX')).toEqual([['(1T)', '2T', '(X)', 'XX'], ['?', '', '', '']])
+        expect(shown('1BA-(pas)-2T-(X)')).toEqual([['1BA', '(pas)', '2T', '(X)'], ['?', '', '', '']])
+    })
+})
+
+describe('sequences with the calls of the opponents', () => {
+    test('sequenceCalls and plainSequence', () => {
+        expect(sequenceCalls('(1T)-2T-(X)')).toEqual([{call: '1T', theirs: true}, {call: '2T', theirs: false},
+            {call: 'X', theirs: true}])
+        expect(plainSequence('(1T)-2T-(X)')).toBe('1T-2T-X')
+    })
+
+    test('keep the ids and links without the parentheses', () => {
+        const entries = parseBidding('@ W obronie\n^ Po polskim treflu\nT(1T)-2T-(X)\n(1T)-2T-(X)-XX => pokaż lepszy kolor\n')
+        const [table, bid] = entries.filter(entry => entry.type === 'table' || entry.type === 'bid')
+
+        expect(table).toMatchObject({id: 'bid-po-polskim-treflu-1T-2T-X', sequence: '(1T)-2T-(X)'})
+        expect(bid).toMatchObject({sequence: '(1T)-2T-(X)-XX', level: 1})
+    })
+
+    test('are found when searched without the parentheses', () => {
+        expect(entryMatches({sequence: '(1T)-2T-(X)-XX', description: 'pokaż'}, '1T-2T-X-XX')).toBe(true)
     })
 })

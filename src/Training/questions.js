@@ -1,4 +1,4 @@
-import {buildChapters, parseBidding, tableRows} from '../ConventionCard/bidding'
+import {buildChapters, parseBidding, sequenceCalls, tableRows} from '../ConventionCard/bidding'
 import {isLegal, nextSeat, polishCallToPbn, SEATS, withSeats} from './calls'
 import {describeHand, formatHand, randomHand, shuffle} from './hands'
 import {evaluateOpening} from './openings'
@@ -7,7 +7,7 @@ import {evaluateOpening} from './openings'
  * A question is plain data (so it can be stored for reviews):
  * {id, mode, category, kind: 'choice' | 'call' | 'card', title, context?, cardAuction?, auction?, hand?, choices?,
  *  answers: [{value, score, comment}], explanation, links: [{label, to}]}
- * - cardAuction: {sequence, section, highlightLast} – an auction from the convention card (polish calls)
+ * - cardAuction: {sequence, highlightLast} – an auction from the convention card (polish calls, theirs in parentheses)
  * - auction: {calls: [{seat, call}], firstSeat, seat} – a real auction in PBN notation; seat = who answers
  */
 
@@ -20,13 +20,13 @@ export const MODES = {
 
 // ---------- convention card ----------
 
-const callsOf = sequence => sequence.split('-')
+const callsOf = sequence => sequenceCalls(sequence).map(({call}) => call)
 
 const parentOf = sequence => sequence.substring(0, sequence.lastIndexOf('-'))
 
 // Seats and calls of a convention card auction as shown in its table, without the final "?".
-const cardAuctionCalls = (sequence, section) => {
-    const cells = tableRows(sequence, section).flat()
+const cardAuctionCalls = sequence => {
+    const cells = tableRows(sequence).flat().map(({call}) => call)
     return withSeats(cells.slice(0, cells.indexOf('?')), 'N')
 }
 
@@ -38,8 +38,7 @@ const isPlayable = (entry) => {
     if (calls.some(call => polishCallToPbn(call) === null)) {
         return false
     }
-    const section = entry.section ?? null
-    const auction = cardAuctionCalls(entry.sequence, section).map(({seat, call}) => ({seat, call: polishCallToPbn(call)}))
+    const auction = cardAuctionCalls(entry.sequence).map(({seat, call}) => ({seat, call: polishCallToPbn(call)}))
     return auction.every((call, index) => isLegal(auction.slice(0, index), call.seat, call.call))
 }
 
@@ -96,7 +95,7 @@ const meaningQuestion = (card, entry, random) => {
         kind: 'choice',
         title: 'Co oznacza ostatnia odzywka?',
         subtitle: label,
-        cardAuction: {sequence: entry.sequence, section: entry.section, highlightLast: true},
+        cardAuction: {sequence: entry.sequence, highlightLast: true},
         choices: shuffle(answers.map(answer => answer.value), random),
         answers,
         explanation: `${entry.sequence}: ${entry.description}`,
@@ -111,7 +110,7 @@ const callQuestion = (card, entry) => {
     const {label, chapter} = cardLocation(card.chapters, entry)
     const call = polishCallToPbn(callsOf(entry.sequence).at(-1))
     const prefix = parentOf(entry.sequence)
-    const auction = cardAuctionCalls(prefix, entry.section)
+    const auction = cardAuctionCalls(prefix)
         .map(({seat, call: c}) => ({seat, call: polishCallToPbn(c)}))
     const seat = nextSeat(auction.at(-1)?.seat ?? 'W')
     const siblings = siblingsOf(card, entry)
@@ -131,7 +130,7 @@ const callQuestion = (card, entry) => {
         title: 'Co zalicytujesz?',
         subtitle: label,
         prompt: `Twoja ręka: ${entry.description}`,
-        cardAuction: {sequence: prefix, section: entry.section, highlightLast: false},
+        cardAuction: {sequence: prefix, highlightLast: false},
         auction: {calls: auction, firstSeat: 'N', seat},
         answers,
         explanation: `${entry.sequence}: ${entry.description}`,

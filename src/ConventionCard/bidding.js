@@ -1,5 +1,19 @@
 const countDashes = sequence => (sequence.match(/-/g) || []).length
 
+/*
+ * Calls of a sequence: "(1T)-2T-(X)" -> [{call: '1T', theirs: true}, {call: '2T', theirs: false}, …].
+ * The calls of the opponents are in parentheses. A sequence without any is an uncontested auction of our side.
+ */
+export const sequenceCalls = sequence => sequence.split('-').map(call => {
+    const theirs = call.startsWith('(') && call.endsWith(')')
+    return {call: theirs ? call.slice(1, -1) : call, theirs}
+})
+
+// "(1T)-2T-(X)" -> "1T-2T-X": used for ids, links and search, so they do not depend on the parentheses
+export const plainSequence = sequence => sequence.replace(/[()]/g, '')
+
+export const isContested = sequence => sequence.includes('(')
+
 const SECTION_MARKERS = ['^', '&', '*']
 const CHAPTER_MARKER = '@'
 
@@ -17,6 +31,8 @@ export const slugify = text => text
  * - "^ title", "& title", "* title" start a new section ("*": we open, "^": the opponents open, "&": a convention);
  *   "& title => description" adds a description shown under the heading,
  * - "T<sequence>" draws an auction table for the sequence,
+ * - the calls of the opponents are in parentheses ("(1T)-2T-(X)-XX"); a sequence without them is uncontested
+ *   (the opponents pass, which is not written),
  * - a single call (e.g. "1T", "2BA", "pas") is an opening; its description may be "short | full",
  * - everything else is a continuation, indented relative to the last table.
  *
@@ -67,13 +83,14 @@ export const parseBidding = text => {
             entries.push({type: 'section', id: sectionId, title, ...(description ? {description} : {})})
         } else if (bid.startsWith('T')) {
             const sequence = bid.substring(1)
+            const plain = plainSequence(sequence)
             tableLevel = countDashes(sequence)
             const described = section === null
                 ? entries.findLast(entry => (entry.type === 'bid' || entry.type === 'opening')
-                    && entry.sequence === sequence)
+                    && plainSequence(entry.sequence) === plain)
                 : undefined
             entries.push({
-                type: 'table', id: uniqueId(scope() ? `bid-${scope()}-${sequence}` : `bid-${sequence}`),
+                type: 'table', id: uniqueId(scope() ? `bid-${scope()}-${plain}` : `bid-${plain}`),
                 sequence, section, scope: scope(), description: described?.description,
             })
         } else if (!bid.includes('-')) {
@@ -96,7 +113,7 @@ export const parseBidding = text => {
             return
         }
         const tables = entries.filter(other => other.type === 'table' && other.scope === entry.scope
-            && other.sequence === entry.sequence)
+            && plainSequence(other.sequence) === plainSequence(entry.sequence))
         const target = tables.find(table => entries.indexOf(table) > index) ?? tables.at(-1)
         entry.target = target?.id
     })
@@ -136,7 +153,7 @@ export const buildChapters = entries => {
 }
 
 // Normalizes a search query or a text: lowercase, no diacritics; "1BA-2C" matches sequences as written in the file.
-const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replaceAll('ł', 'l')
+const normalize = text => text.replace(/[()]/g, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replaceAll('ł', 'l')
     .replaceAll('Ł', 'L').toLowerCase()
 
 export const entryMatches = (entry, query) => {
@@ -163,16 +180,18 @@ export const searchItems = (chapters, query) => {
     return results
 }
 
-// Lays out the auction of a table in rows of 4, ending with "?" (our turn). Outside any section the opponents pass
-// after each of our calls.
-export const tableRows = (sequence, section) => {
-    let calls = sequence.split('-')
-    if (section === null) {
-        calls = calls.flatMap(call => [call, 'pas'])
+/*
+ * Lays out the auction of a table in rows of 4 cells {call, theirs, implicit?}, ending with "?" (our turn).
+ * In an uncontested sequence the opponents pass after each of our calls (implicit: not written in the sequence).
+ */
+export const tableRows = sequence => {
+    let calls = sequenceCalls(sequence)
+    if (!isContested(sequence)) {
+        calls = calls.flatMap(call => [call, {call: 'pas', theirs: true, implicit: true}])
     }
-    calls.push('?')
+    calls.push({call: '?', theirs: false})
     while (calls.length % 4 !== 0) {
-        calls.push('')
+        calls.push({call: '', theirs: false})
     }
     const rows = []
     for (let i = 0; i < calls.length; i += 4) {
