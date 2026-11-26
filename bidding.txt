@@ -1069,13 +1069,13 @@ T(2T)
 (2T)-2C    => wywoławcze, pytanie o trzymanie pik
 (2T)-2P    => wywołanie na młode, bez aspiracji
 (2T)-2BA    => silna, jednokolorowa ręka na kolorze starszym
-(2T)-2BA-3T => z wartości
-(2T)-2BA-3K => z wartości
-(2T)-2BA-3C => do koloru
-(2T)-2BA-3P => do koloru
-(2T)-2BA-3BA => do gry
-(2T)-2BA-4T => pokaż kolor transferem
-(2T)-2BA-4K => pokaż kolor naturalnie
+(2T)-2BA-(pas)-3T => z wartości
+(2T)-2BA-(pas)-3K => z wartości
+(2T)-2BA-(pas)-3C => do koloru
+(2T)-2BA-(pas)-3P => do koloru
+(2T)-2BA-(pas)-3BA => do gry
+(2T)-2BA-(pas)-4T => pokaż kolor transferem
+(2T)-2BA-(pas)-4K => pokaż kolor naturalnie
 (2T)-3T   => naturalne, dobry kolor 6+
 (2T)-3K   => natrualne, dobry kolor 6+
 (2T)-3C   => pytanie o trzymanie
@@ -1088,7 +1088,7 @@ T(2T)
 (2T)-2C         => naturalne
 (2T)-2P         => naturalne
 (2T)-2BA        => 5-5 młodszy starszy
-(2T)-2BA-3T     => licytacja do koloru
+(2T)-2BA-(pas)-3T   => licytacja do koloru
 (2T)-3T         => 5-5 na młodych
 (2T)-3K         => 5-5 na starych
 
@@ -1121,6 +1121,8 @@ T(2K)
 (2K)-3C       => silne 5-5 piki i młodszy
 (2K)-3P       => naturalne, konstruktywne
 
+^ Po slabych otwarciach 2C/2P i 2K => 2C/2P monokolor lub dwukolorowki, 2K w znaczeniu monokolor karowy
+
 ^ Po 2K monokolor
 T(2K)
 (2K)-X              => wywoławcza 
@@ -1136,7 +1138,6 @@ T(2K)
 (2K)-3K             => 5-5 na starych
 (2K)-3C             => naturalne, konstruktywne
 (2K)-3P             => naturalne, konstruktywne
-
 
 ^ Po 2C monokolor lub dwukolorówka
 T(2C)
@@ -1175,7 +1176,7 @@ T(2BA)
 4BA-6K                => 2 lub 5 wartosci, dama atu, król w najwyższym kolorze bocznym lub 2 pozostale króle
 4BA-6C                => 2 lub 5 wartosci, dama atu, 3 króle
 
-* Po interwencji na Blackwooda
+* Po blackwoodzie
 T4BA-(X)
 4BA-(X)-XX              => karna, reszta szczebelkami (pas też jest szczebelkiem)
 
