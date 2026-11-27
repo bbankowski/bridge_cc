@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import {describe, expect, test} from 'vitest'
 import {isLegal, parseBid, polishCallToPbn, withSeats} from '../Training/calls'
-import {isContested, parseBidding, plainSequence, sequenceCalls, tableRows} from './bidding'
+import {buildChapters, isContested, parseBidding, plainSequence, sequenceCalls, tableRows} from './bidding'
 
 /*
  * Checks of the bidding system in bidding.txt, so mistakes in the file fail the tests instead of showing up on
@@ -63,7 +63,8 @@ describe('bidding.txt', () => {
         expect(wrong).toEqual([])
     })
 
-    test('continues the sequence of the table or the opening above it', () => {
+    // a line shows only its last call, so without a table (or an opening) above it the reader does not know the auction
+    test('continues the sequence of the table or the opening above it, in the same section', () => {
         const wrong = []
         let anchor = null
         for (const entry of entries) {
@@ -71,12 +72,21 @@ describe('bidding.txt', () => {
                 anchor = null
             } else if (entry.type === 'table' || entry.type === 'opening') {
                 anchor = entry
-            } else if (entry.type === 'bid' && anchor
+            } else if (entry.type === 'bid' && !anchor) {
+                wrong.push(`${where(entry)} bez tabelki nad nią`)
+            } else if (entry.type === 'bid'
                 && !plainSequence(entry.sequence).startsWith(`${plainSequence(anchor.sequence)}-`)) {
                 wrong.push(`${where(entry)} pod ${anchor.sequence}`)
             }
         }
 
         expect(wrong).toEqual([])
+    })
+
+    test('has unique ids and every section in a chapter', () => {
+        const ids = entries.filter(entry => entry.id).map(entry => entry.id)
+
+        expect(ids.filter((id, index) => ids.indexOf(id) !== index)).toEqual([])
+        expect(buildChapters(entries).map(chapter => chapter.title)).not.toContain(null)
     })
 })
