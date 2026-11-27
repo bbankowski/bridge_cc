@@ -1,0 +1,60 @@
+# A small convention card for the tests: they must not depend on the content of bidding.txt
+@ Nasze otwarcia
+
+1T                => 12-14 PC lub 15+ | 12-14 PC skład równy lub 15+ z piątką trefli
+
+1T-1K             => negat
+1T-1BA            => 7-10 PC
+
+T1T-1K
+1T-1K-1BA         => 18-20 PC
+
+1BA               => 15-17 PC
+
+1BA-2T            => Stayman
+1BA-2C            => transfer na piki
+
+T1BA-2C
+1BA-2C-2P         => przyjęcie transferu
+
+3T                => blok, kolor 7+ | po partii kolor 7+ i dwie starsze figury
+
+3T-3BA            => do gry
+
+4BA               => pytanie o asy
+
+4BA-5T            => bez asa
+4BA-5K            => as karo
+
+pas               => brak otwarcia
+
+pas-1T-2T         => góra pasa
+
+@ Po interwencji przeciwników
+
+* Po interwencji na 1BA
+T1BA-(2C)
+1BA-(2C)-X        => wywoławcza
+
+@ W obronie
+
+^ Po polskim treflu
+T(1T)
+(1T)-X            => wywoławcza
+
+^ Po klasycznym BA
+T(1BA)
+(1BA)-2C          => naturalne
+
+T(1BA)-2C
+(1BA)-2C-(pas)-2P => do koloru
+
+@ Konwencje
+
+& Blackwood 102 => kolejny szczebel oprócz koloru uzgodnionego
+T4BA
+4BA-5T            => 1 lub 4 wartości
+
+* Po interwencji na Blackwooda
+T4BA-(X)
+4BA-(X)-XX        => karna

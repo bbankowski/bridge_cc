@@ -1121,8 +1121,6 @@ T(2K)
 (2K)-3C       => silne 5-5 piki i młodszy
 (2K)-3P       => naturalne, konstruktywne
 
-^ Po slabych otwarciach 2C/2P i 2K => 2C/2P monokolor lub dwukolorowki, 2K w znaczeniu monokolor karowy
-
 ^ Po 2K monokolor
 T(2K)
 (2K)-X              => wywoławcza 
@@ -1167,6 +1165,7 @@ T(2BA)
 @ Konwencje
 
 & Blackwood 102 i kolorowe króle/damy => kolejny szczebel oprócz koloru uzgodnionego
+T4BA
 4BA-5T                => 1 lub 4 wartosci
 4BA-5K                => 0 lub 3 wartosci
 4BA-5C                => 2 lub 5 wartosci, bez damy atu
@@ -1176,7 +1175,7 @@ T(2BA)
 4BA-6K                => 2 lub 5 wartosci, dama atu, król w najwyższym kolorze bocznym lub 2 pozostale króle
 4BA-6C                => 2 lub 5 wartosci, dama atu, 3 króle
 
-* Po blackwoodzie
+* Po interwencji na Blackwooda
 T4BA-(X)
 4BA-(X)-XX              => karna, reszta szczebelkami (pas też jest szczebelkiem)
 
@@ -1184,5 +1183,6 @@ T4BA-(5T)
 4BA-(5T)-X              => karna, reszta szczebelkami (tak samo po innych wejsciach)
 
 & Po splinterze przeciwnika
+T(4K)
 (4K)-pas  => sugestia wistu w młodszy z pozostałych kolorów lub brak preferencji
 (4K)-X    => sugestia wistu w starszy z pozostałych kolorow

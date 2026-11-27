@@ -1,5 +1,3 @@
-import fs from 'node:fs'
-import path from 'node:path'
 import {describe, expect, test} from 'vitest'
 import {buildChapters, entryMatches, parseBidding, plainSequence, searchItems, sequenceCalls, slugify, tableRows} from './bidding'
 
@@ -8,8 +6,6 @@ const strip = entries => entries.map(entry => {
     delete copy.index
     return copy
 })
-
-const readBiddingTxt = () => fs.readFileSync(path.join(import.meta.dirname, '../../bidding.txt'), 'utf8')
 
 describe('parseBidding', () => {
     test('parses chapters, openings, continuations, tables and sections', () => {
@@ -113,57 +109,22 @@ T1T-1K
         expect(plain).not.toHaveProperty('description')
     })
 
-    test.each([
-        ['Blackwood 102 i kolorowe króle/damy', 'kolejny szczebel oprócz koloru uzgodnionego'],
-        ['Po slabych otwarciach 2C/2P i 2K', '2C/2P monokolor lub dwukolorowki, 2K w znaczeniu monokolor karowy'],
-    ])('the section "%s" of bidding.txt has a short title and a description', (title, description) => {
-        const section = parseBidding(readBiddingTxt()).find(entry => entry.type === 'section' && entry.title === title)
-
-        expect(section.description).toBe(description)
-    })
-
     test('finds openings by their short description too', () => {
         expect(entryMatches({sequence: '3T', short: 'blok', description: 'po partii kolor 7+'}, 'blok')).toBe(true)
     })
 
-    test('the 4NT opening of bidding.txt asks for specific aces', () => {
-        const entries = parseBidding(readBiddingTxt())
-        const opening = entries.find(entry => entry.type === 'opening' && entry.sequence === '4BA')
+    test('keeps the answers to an opening apart from the same sequences in a section', () => {
+        const entries = parseBidding(`@ Nasze otwarcia
+4BA          => pytanie o asy
+4BA-5T       => bez asa
+@ Konwencje
+& Blackwood
+T4BA
+4BA-5T       => 1 lub 4 wartości
+`)
 
-        expect(opening.description).toMatch(/pytanie o asy/)
-        const responses = entries.filter(entry => entry.type === 'bid' && entry.scope === '' && entry.sequence.startsWith('4BA-'))
-        expect(Object.fromEntries(responses.map(entry => [entry.sequence, entry.description]))).toEqual({
-            '4BA-5T': 'bez asa',
-            '4BA-5K': 'as karo',
-            '4BA-5C': 'as kier',
-            '4BA-5P': 'as pik',
-            '4BA-6T': 'as trefl',
-            '4BA-5BA': 'dwa asy',
-        })
-        // the Blackwood responses of the "Konwencje" chapter stay separate
-        expect(entries.find(entry => entry.sequence === '4BA-5T' && entry.scope !== '').description).toBe('1 lub 4 wartosci')
-    })
-
-    test('names every section of the interference chapter "Po interwencji …"', () => {
-        const chapters = buildChapters(parseBidding(readBiddingTxt()))
-        const interference = chapters.find(chapter => chapter.title === 'Po interwencji przeciwników')
-
-        expect(interference.items.map(item => item.entry.title)).toEqual([
-            'Po interwencji na otwarcie 1 trefl', 'Po interwencji na otwarcie 1 karo',
-            'Po interwencji na otwarcie 1 w starszy', 'Po interwencji na 1BA', 'Po interwencji na multi',
-        ])
-    })
-
-    test('parses bidding.txt', () => {
-        const entries = parseBidding(readBiddingTxt())
-
-        const openings = entries.filter(entry => entry.type === 'opening').map(entry => entry.sequence)
-        expect(openings).toContain('1T')
-        expect(openings.every(opening => !opening.startsWith('T'))).toBe(true)
-        const ids = entries.filter(entry => entry.id).map(entry => entry.id)
-        expect(new Set(ids).size).toBe(ids.length)
-        expect(entries.filter(entry => entry.type === 'chapter').map(entry => entry.title))
-            .toEqual(['Nasze otwarcia', 'Po interwencji przeciwników', 'W obronie', 'Konwencje'])
+        expect(entries.filter(entry => entry.sequence === '4BA-5T').map(entry => [entry.scope, entry.description]))
+            .toEqual([['', 'bez asa'], ['blackwood', '1 lub 4 wartości']])
     })
 })
 
@@ -195,14 +156,6 @@ pas         => brak otwarcia
             ['chapter-konwencje', 'Konwencje', ['blackwood']],
         ])
         expect(chapters[1].items[0].entries.map(entry => entry.sequence)).toEqual(['1T', '1T-1K'])
-    })
-
-    test('puts every section of bidding.txt in a chapter', () => {
-        const chapters = buildChapters(parseBidding(readBiddingTxt()))
-
-        expect(chapters.map(chapter => chapter.title)).not.toContain(null)
-        const konwencje = chapters.find(chapter => chapter.title === 'Konwencje')
-        expect(konwencje.items.map(item => item.entry.title)).toContain('Po blackwoodzie')
     })
 })
 

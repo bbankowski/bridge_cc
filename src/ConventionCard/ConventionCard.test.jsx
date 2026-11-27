@@ -4,18 +4,23 @@ import {createMemoryRouter, RouterProvider} from 'react-router'
 import {beforeEach, describe, expect, test, vi} from 'vitest'
 import ConventionCard from './ConventionCard'
 
+// the card of the tests, so editing bidding.txt does not break them (biddingFile.test.js checks the real file)
+vi.mock('../../bidding.txt?raw', () => import('./fixtures/bidding.txt?raw'))
+
 const renderCard = (url = '/cc') => {
     const router = createMemoryRouter([{path: '/cc', element: <ConventionCard/>}], {initialEntries: [url]})
     render(<RouterProvider router={router}/>)
     return router
 }
 
-test('renders the openings index and the bidding from bidding.txt', () => {
+test('renders the openings index and the bidding', () => {
     renderCard()
 
     const openings = document.querySelectorAll('.App-openings a')
-    expect(openings.length).toBeGreaterThan(10)
-    expect(openings[0]).toHaveTextContent(/^1.*12-14 równy, 15\+ z 5\+ trefli, 18\+ dowolny, 12\+ 4414$/)
+    // all openings but pass
+    expect([...openings].map(link => link.getAttribute('href').split('#')[1]))
+        .toEqual(['opening-1T', 'opening-1BA', 'opening-3T', 'opening-4BA'])
+    expect(openings[0]).toHaveTextContent(/^1\s*12-14 PC lub 15\+$/)
     expect(document.getElementById('opening-1T')).toBeInTheDocument()
     expect(document.getElementById('bid-1T-1K')).toHaveTextContent('Licytacja po 1-1: negat')
 })
@@ -24,17 +29,17 @@ test('shows the short description in the overview and the full one in the openin
     renderCard()
 
     const threeClubs = [...document.querySelectorAll('.App-openings a')].find(link => link.getAttribute('href').endsWith('#opening-3T'))
-    expect(threeClubs).toHaveTextContent(/^3\s*blok, kolor 7\+ \(przed partią słabszy\)$/)
+    expect(threeClubs).toHaveTextContent(/^3\s*blok, kolor 7\+$/)
     const section = document.getElementById('opening-3T')
     expect(section.nextElementSibling).toHaveClass('App-openingDescription')
-    expect(section.nextElementSibling).toHaveTextContent(/^po partii kolor 7\+ i dwie starsze figury.*wskazaniem wistu$/)
+    expect(section.nextElementSibling).toHaveTextContent(/^po partii kolor 7\+ i dwie starsze figury$/)
 })
 
 test('shows the description of a section under its heading, and only the title in the menu', () => {
     renderCard()
 
-    const heading = document.getElementById('blackwood-102-i-kolorowe-krole-damy')
-    expect(heading).toHaveTextContent(/^Blackwood 102 i kolorowe króle\/damy$/)
+    const heading = document.getElementById('blackwood-102')
+    expect(heading).toHaveTextContent(/^Blackwood 102$/)
     expect(heading.nextElementSibling).toHaveTextContent('kolejny szczebel oprócz koloru uzgodnionego')
 })
 
@@ -115,7 +120,7 @@ describe('chapters and menu', () => {
 
         expect(shownChapters()).toEqual(['Nasze otwarcia', 'Po interwencji przeciwników', 'W obronie', 'Konwencje'])
         const konwencje = document.getElementById('chapter-konwencje')
-        expect(within(konwencje).getByRole('heading', {name: 'Po blackwoodzie'})).toBeInTheDocument()
+        expect(within(konwencje).getByRole('heading', {name: 'Po interwencji na Blackwooda'})).toBeInTheDocument()
     })
 
     test('lists the chapters and expands the active one with its openings', () => {
